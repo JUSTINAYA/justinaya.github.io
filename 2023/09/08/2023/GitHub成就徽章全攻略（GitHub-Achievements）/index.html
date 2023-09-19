@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/aya.JPG">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/aya.JPG">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/aya.JPG">
+  <link rel="mask-icon" href="/images/aya.JPG" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.justinchoi.top","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.18.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="将各种资料整理了一下">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GitHub成就徽章全攻略（GitHub Achievements）">
+<meta property="og:url" content="http://www.justinchoi.top/2023/09/08/2023/GitHub%E6%88%90%E5%B0%B1%E5%BE%BD%E7%AB%A0%E5%85%A8%E6%94%BB%E7%95%A5%EF%BC%88GitHub-Achievements%EF%BC%89/index.html">
+<meta property="og:site_name" content="文文的短发">
+<meta property="og:description" content="将各种资料整理了一下">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://camo.githubusercontent.com/849459ac06f88476872e568dd15038ff92463b56b6c1d881eba4768c3c99f952/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f68656172742d6f6e2d796f75722d736c656576652d64656661756c742e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/52c99599bf3ab70e329e1bdadc0fe81be0ec027fce4ec29e1ba77d4cae3ec38e/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f6f70656e2d736f757263657265722d64656661756c742e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/98e693d243cde46579166501d14a9259daa92de146d9ba7d6af25255c4707974/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f7374617273747275636b2d64656661756c742e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/f1609e8e2b3083f5210bbf4a81dc33a2b31cfd964f256caddfcfe278a702b420/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f717569636b647261772d64656661756c742e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/93a470d9cb4e7f8116d53a6f6e9a75c57d0359af59d8efa0b966ec11099db35f/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f706169722d65787472616f7264696e616972652d64656661756c742e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/d4a52cfb3181d13b7a8267394f66299c39d3c9c1da254f6beea092af1c755cca/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f70756c6c2d736861726b2d64656661756c742e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/e6ce6ebed3ad198195acd59354be6eca03cc9568f9ce27db365b1504bb92e123/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f67616c6178792d627261696e2d64656661756c742e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/988603b9bc6683c1728f665e6c97539f6a3d7c7cced12c72c81731e7deb0398f/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f796f6c6f2d64656661756c742e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/84493db1ea8f017b17254903b5a4e01bf621a7e235413dd4e8ec7ca2b2b494a3/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f7075626c69632d73706f6e736f722d64656661756c742e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/50545617a2406472c9425cae4c9b5d20fd0da3f43a658c889bb4082e1b5a1e8b/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f6d6172732d323032302d636f6e7472696275746f722d64656661756c742e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/87254f3e7cbfae66011faddb066d019e7dc77f286e4a8286a55cad7d2c81b449/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f6172637469632d636f64652d7661756c742d636f6e7472696275746f722d64656661756c742e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/98e693d243cde46579166501d14a9259daa92de146d9ba7d6af25255c4707974/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f7374617273747275636b2d64656661756c742e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/16bdb4fe26890a63d9b9e7dddf91b5b9412f1739536491064ec8a93bb22a9566/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f7374617273747275636b2d62726f6e7a652e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/77926f1d9649767505abef5a38570dd034baa8b53b37c793cbe1859462cd2eb8/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f7374617273747275636b2d73696c7665722e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/b229590b555b870fdef6df68f89685248ac4b11b0c99303c01dc3eb73d91a3c1/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f7374617273747275636b2d676f6c642e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/93a470d9cb4e7f8116d53a6f6e9a75c57d0359af59d8efa0b966ec11099db35f/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f706169722d65787472616f7264696e616972652d64656661756c742e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/9021c7148e9a63787fe02e923bbda4bbaa2c2693ecf182950fdaf3f372781e90/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f706169722d65787472616f7264696e616972652d62726f6e7a652e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/3a627e47c3de6a2a35f6b7568f59593ca62c3079a5fba6d35da10a319a02b752/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f706169722d65787472616f7264696e616972652d73696c7665722e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/283629e271c7ac1eb4e1be65627ebb9a7d6f9e0867e86c94c91bf32eb08940ad/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f706169722d65787472616f7264696e616972652d676f6c642e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/d4a52cfb3181d13b7a8267394f66299c39d3c9c1da254f6beea092af1c755cca/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f70756c6c2d736861726b2d64656661756c742e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/dd1a16203414cfce058a25d1a3a66a49bb5be45012a8b7fb82652ad3328378bf/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f70756c6c2d736861726b2d62726f6e7a652e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/4213d091e09c46ba8729bc085b9eefc815d516a09e02c90c22c6a8e5eedb0f80/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f70756c6c2d736861726b2d73696c7665722e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/5bd00fa9303c0eff492cb247f636dde135bd729946fda4db71969b72aa74e076/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f70756c6c2d736861726b2d676f6c642e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/e6ce6ebed3ad198195acd59354be6eca03cc9568f9ce27db365b1504bb92e123/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f67616c6178792d627261696e2d64656661756c742e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/25524aaa1ecffdc244058957db8191eee86d7ca30392829e5239b52d8b6400b7/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f67616c6178792d627261696e2d62726f6e7a652e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/b48c2481d0974d6c1c836bf27885549464a8535f71c28b9c9cd40a73697f5bd5/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f67616c6178792d627261696e2d73696c7665722e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/670c92db3207068024ad02f0327a1974fd5c8226304b4c3a6faccaf263a5361f/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f67616c6178792d627261696e2d676f6c642e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/849459ac06f88476872e568dd15038ff92463b56b6c1d881eba4768c3c99f952/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f68656172742d6f6e2d796f75722d736c656576652d64656661756c742e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/cee7d1fb05831953ff5b74952a71bcf0bf18c4cbddc18fa0b4b32e52e01b4bf6/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f68656172742d6f6e2d796f75722d736c656576652d62726f6e7a652e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/326a859ff23caa577676ed750a85d083381d415f6304faa79408976f979e0d9b/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f68656172742d6f6e2d796f75722d736c656576652d73696c7665722e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/28e81dd97098bd8b31dfdd5901ff4e9d99d889baf6fe2910201d02f4a89077f3/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f68656172742d6f6e2d796f75722d736c656576652d676f6c642e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/52c99599bf3ab70e329e1bdadc0fe81be0ec027fce4ec29e1ba77d4cae3ec38e/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f6f70656e2d736f757263657265722d64656661756c742e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/a299c8e212b0838191281400a176e0d34df873f4c7b0275e6ca958f73c11e6c4/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f6f70656e2d736f757263657265722d62726f6e7a652e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/5de4cc7d7eeea80d20b9384313e4034f438c92aca079f2f04eefc46ae6cbc967/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f6f70656e2d736f757263657265722d73696c7665722e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/1be237d8628c5db6d24211f4205c300522d1eaecdb3d6ab5c3bf3e67527007cf/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f6f70656e2d736f757263657265722d676f6c642e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/98e693d243cde46579166501d14a9259daa92de146d9ba7d6af25255c4707974/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f7374617273747275636b2d64656661756c742e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/7f5af5adb497a801ddc9ad6ba8b1bf16a487cf46fb2dd7651a8188383d041697/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f7374617273747275636b2d64656661756c742d2d6c696768742e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/26ed2e3356c3268e51f04ae88c88818fa2d77bec49b5f36e17fec2570b473a53/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f7374617273747275636b2d64656661756c742d2d6c696768742d6d656469756d2e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/0ef6b3bf8ad252138e20ebfe6e7e60a95fc5dbe6648f6fc364069758ef42e66c/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f7374617273747275636b2d64656661756c742d2d6d656469756d2e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/f6e8547bd35aa3af75753edd38a6add5e08da08c58e56a725d75a9f3447e30b6/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f7374617273747275636b2d64656661756c742d2d6d656469756d2d6461726b2e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/8f121e9fbc3ca6cb2da99f2c1169c8d0aa0b458194c727ef707af7d02d2fbb8c/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f7374617273747275636b2d64656661756c742d2d6461726b2e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/f1609e8e2b3083f5210bbf4a81dc33a2b31cfd964f256caddfcfe278a702b420/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f717569636b647261772d64656661756c742e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/1d62914a828cfaab99381c00bc8a9b41929f48b5ef02fdf69b62248cb828ec9c/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f717569636b647261772d64656661756c742d2d6c696768742e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/676a12013829d69ab7732d6cf744012447da573efcd980c2adad92906d88d371/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f717569636b647261772d64656661756c742d2d6c696768742d6d656469756d2e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/8503450b76d881d6fc122cb4840e01e19f7fb2edc964cc6abf13940b44a92eb7/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f717569636b647261772d64656661756c742d2d6d656469756d2e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/94f6732d580f5ce8e6043535a5fdd3902465d3afa80c72850e2e9702f5672cb8/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f717569636b647261772d64656661756c742d2d6d656469756d2d6461726b2e706e67">
+<meta property="og:image" content="https://camo.githubusercontent.com/8e9f3e39ae34c0a035fb98c68483ce259d342669692db76fc35907e6b84e9748/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f717569636b647261772d64656661756c742d2d6461726b2e706e67">
+<meta property="article:published_time" content="2023-09-08T10:33:22.000Z">
+<meta property="article:modified_time" content="2023-09-08T11:10:54.677Z">
+<meta property="article:author" content="文文的短发">
+<meta property="article:tag" content="GitHub">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://camo.githubusercontent.com/849459ac06f88476872e568dd15038ff92463b56b6c1d881eba4768c3c99f952/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f68656172742d6f6e2d796f75722d736c656576652d64656661756c742e706e67">
+
+
+<link rel="canonical" href="http://www.justinchoi.top/2023/09/08/2023/GitHub%E6%88%90%E5%B0%B1%E5%BE%BD%E7%AB%A0%E5%85%A8%E6%94%BB%E7%95%A5%EF%BC%88GitHub-Achievements%EF%BC%89/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://www.justinchoi.top/2023/09/08/2023/GitHub%E6%88%90%E5%B0%B1%E5%BE%BD%E7%AB%A0%E5%85%A8%E6%94%BB%E7%95%A5%EF%BC%88GitHub-Achievements%EF%BC%89/","path":"2023/09/08/2023/GitHub成就徽章全攻略（GitHub-Achievements）/","title":"GitHub成就徽章全攻略（GitHub Achievements）"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>GitHub成就徽章全攻略（GitHub Achievements） | 文文的短发</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">文文的短发</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%90%E5%B0%B1%E5%88%97%E8%A1%A8"><span class="nav-text">成就列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%BD%E7%AB%A0%E7%AD%89%E7%BA%A7"><span class="nav-text">徽章等级</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%BD%E7%AB%A0%E7%9A%AE%E8%82%A4"><span class="nav-text">徽章皮肤</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="文文的短发"
+      src="/img/headimg.JPG">
+  <p class="site-author-name" itemprop="name">文文的短发</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/JUSTINAYA" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;JUSTINAYA" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:justinchoi929@gmail.com" title="E-Mail → mailto:justinchoi929@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://github.com/bingxueailin" title="https:&#x2F;&#x2F;github.com&#x2F;bingxueailin" rel="noopener" target="_blank">软软萌萌的[冰雪艾琳]</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="http://wonz.wang/" title="http:&#x2F;&#x2F;wonz.wang&#x2F;" rel="noopener" target="_blank">厉害的[Wonz]学长的Blog</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.justinchoi.top/2023/09/08/2023/GitHub%E6%88%90%E5%B0%B1%E5%BE%BD%E7%AB%A0%E5%85%A8%E6%94%BB%E7%95%A5%EF%BC%88GitHub-Achievements%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/headimg.JPG">
+      <meta itemprop="name" content="文文的短发">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="文文的短发">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="GitHub成就徽章全攻略（GitHub Achievements） | 文文的短发">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          GitHub成就徽章全攻略（GitHub Achievements）
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-09-08 18:33:22 / 修改时间：19:10:54" itemprop="dateCreated datePublished" datetime="2023-09-08T18:33:22+08:00">2023-09-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Github/" itemprop="url" rel="index"><span itemprop="name">Github</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><blockquote>
+<p>将各种资料整理了一下</p>
+</blockquote>
+<span id="more"></span>
+
+<h2 id="成就列表"><a href="#成就列表" class="headerlink" title="成就列表"></a>成就列表</h2><table>
+<thead>
+<tr>
+<th align="center">徽章</th>
+<th align="center">名称</th>
+<th align="center">获取方式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/849459ac06f88476872e568dd15038ff92463b56b6c1d881eba4768c3c99f952/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f68656172742d6f6e2d796f75722d736c656576652d64656661756c742e706e67"><img src="https://camo.githubusercontent.com/849459ac06f88476872e568dd15038ff92463b56b6c1d881eba4768c3c99f952/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f68656172742d6f6e2d796f75722d736c656576652d64656661756c742e706e67" alt="Achievement badge Heart On Your Sleeve"></a></td>
+<td align="center"><strong>Heart On Your Sleeve</strong><br /><strong>（真情流露）</strong></td>
+<td align="center">用❤️表情符号对GitHub上的一些事情做出反应 <br /><strong>(测试中)</strong></td>
+</tr>
+<tr>
+<td align="center"><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/52c99599bf3ab70e329e1bdadc0fe81be0ec027fce4ec29e1ba77d4cae3ec38e/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f6f70656e2d736f757263657265722d64656661756c742e706e67"><img src="https://camo.githubusercontent.com/52c99599bf3ab70e329e1bdadc0fe81be0ec027fce4ec29e1ba77d4cae3ec38e/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f6f70656e2d736f757263657265722d64656661756c742e706e67" alt="Achievement badge Open Sourcerer"></a></td>
+<td align="center"><strong>Open Sourcerer</strong><br /><strong>（开放搜索）</strong></td>
+<td align="center">用户将PRs合并到多个公开仓库中 <br /><strong>(测试中)</strong></td>
+</tr>
+<tr>
+<td align="center"><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/98e693d243cde46579166501d14a9259daa92de146d9ba7d6af25255c4707974/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f7374617273747275636b2d64656661756c742e706e67"><img src="https://camo.githubusercontent.com/98e693d243cde46579166501d14a9259daa92de146d9ba7d6af25255c4707974/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f7374617273747275636b2d64656661756c742e706e67" alt="Achievement badge Starstruck"></a></td>
+<td align="center"><strong>Starstruck</strong><br /><strong>（追星族）</strong></td>
+<td align="center">个人项目取得 <strong>16 stars</strong>及以上</td>
+</tr>
+<tr>
+<td align="center"><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/f1609e8e2b3083f5210bbf4a81dc33a2b31cfd964f256caddfcfe278a702b420/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f717569636b647261772d64656661756c742e706e67"><img src="https://camo.githubusercontent.com/f1609e8e2b3083f5210bbf4a81dc33a2b31cfd964f256caddfcfe278a702b420/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f717569636b647261772d64656661756c742e706e67" alt="Achievement badge Quickdraw"></a></td>
+<td align="center"><strong>Quickdraw</strong><br /><strong>(速成)</strong></td>
+<td align="center">提交 <strong>issue &#x2F; PR</strong> 并在 <strong>5 分钟</strong> 之内关掉</td>
+</tr>
+<tr>
+<td align="center"><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/93a470d9cb4e7f8116d53a6f6e9a75c57d0359af59d8efa0b966ec11099db35f/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f706169722d65787472616f7264696e616972652d64656661756c742e706e67"><img src="https://camo.githubusercontent.com/93a470d9cb4e7f8116d53a6f6e9a75c57d0359af59d8efa0b966ec11099db35f/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f706169722d65787472616f7264696e616972652d64656661756c742e706e67" alt="Achievement badge Pair Extraordinaire"></a></td>
+<td align="center"><strong>Pair Extraordinaire</strong><br /><strong>（优秀配对）</strong></td>
+<td align="center">在一次 <strong>PR (pull Request)</strong> 中与别人共同提交</td>
+</tr>
+<tr>
+<td align="center"><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/d4a52cfb3181d13b7a8267394f66299c39d3c9c1da254f6beea092af1c755cca/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f70756c6c2d736861726b2d64656661756c742e706e67"><img src="https://camo.githubusercontent.com/d4a52cfb3181d13b7a8267394f66299c39d3c9c1da254f6beea092af1c755cca/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f70756c6c2d736861726b2d64656661756c742e706e67" alt="Achievement badge Pull Shark"></a></td>
+<td align="center"><strong>Pull Shark</strong><br /><strong>（鲨鱼拉拉）</strong></td>
+<td align="center">提交的 <strong>PR</strong> 被兼并 <strong>2</strong> 次及以上</td>
+</tr>
+<tr>
+<td align="center"><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/e6ce6ebed3ad198195acd59354be6eca03cc9568f9ce27db365b1504bb92e123/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f67616c6178792d627261696e2d64656661756c742e706e67"><img src="https://camo.githubusercontent.com/e6ce6ebed3ad198195acd59354be6eca03cc9568f9ce27db365b1504bb92e123/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f67616c6178792d627261696e2d64656661756c742e706e67" alt="Achievement badge Galaxy Brain"></a></td>
+<td align="center"><strong>Galaxy Brain</strong><br /><strong>（银河之脑）</strong></td>
+<td align="center">回复别人的<strong>discussion</strong>并被<strong>mark</strong>为答案<strong>2</strong>次</td>
+</tr>
+<tr>
+<td align="center"><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/988603b9bc6683c1728f665e6c97539f6a3d7c7cced12c72c81731e7deb0398f/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f796f6c6f2d64656661756c742e706e67"><img src="https://camo.githubusercontent.com/988603b9bc6683c1728f665e6c97539f6a3d7c7cced12c72c81731e7deb0398f/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f796f6c6f2d64656661756c742e706e67" alt="Achievement badge YOLO"></a></td>
+<td align="center"><strong>YOLO</strong><br /><strong>（大胆去做）</strong></td>
+<td align="center"><strong>Merge</strong>未经审查的<strong>PR</strong> （耻辱之章🤣）</td>
+</tr>
+<tr>
+<td align="center"><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/84493db1ea8f017b17254903b5a4e01bf621a7e235413dd4e8ec7ca2b2b494a3/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f7075626c69632d73706f6e736f722d64656661756c742e706e67"><img src="https://camo.githubusercontent.com/84493db1ea8f017b17254903b5a4e01bf621a7e235413dd4e8ec7ca2b2b494a3/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f7075626c69632d73706f6e736f722d64656661756c742e706e67" alt="Achievement badge Public Sponsor"></a></td>
+<td align="center"><strong>Public Sponsor</strong><br /><strong>（公共赞助商）</strong></td>
+<td align="center">通过 <a target="_blank" rel="noopener" href="https://github.com/sponsors">GitHub Sponsors</a>赞助开源工作</td>
+</tr>
+<tr>
+<td align="center"><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/50545617a2406472c9425cae4c9b5d20fd0da3f43a658c889bb4082e1b5a1e8b/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f6d6172732d323032302d636f6e7472696275746f722d64656661756c742e706e67"><img src="https://camo.githubusercontent.com/50545617a2406472c9425cae4c9b5d20fd0da3f43a658c889bb4082e1b5a1e8b/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f6d6172732d323032302d636f6e7472696275746f722d64656661756c742e706e67" alt="Achievement badge Mars 2020 Contributor"></a></td>
+<td align="center"><strong>Mars 2020 Contributor</strong><br /><strong>（2020火星计划贡献者）</strong></td>
+<td align="center">为 <a target="_blank" rel="noopener" href="https://github.com/readme/featured/nasa-ingenuity-helicopter">Mars 2020 Helicopter Mission</a>贡献代码<br /><strong>（绝版）</strong></td>
+</tr>
+<tr>
+<td align="center"><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/87254f3e7cbfae66011faddb066d019e7dc77f286e4a8286a55cad7d2c81b449/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f6172637469632d636f64652d7661756c742d636f6e7472696275746f722d64656661756c742e706e67"><img src="https://camo.githubusercontent.com/87254f3e7cbfae66011faddb066d019e7dc77f286e4a8286a55cad7d2c81b449/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f6172637469632d636f64652d7661756c742d636f6e7472696275746f722d64656661756c742e706e67" alt="Achievement badge 2020 GitHub Archive Program"></a></td>
+<td align="center"><strong>Arctic Code Vault Contributor</strong><br /><strong>（北极代码贡献者）</strong></td>
+<td align="center">为 <a target="_blank" rel="noopener" href="https://archiveprogram.github.com/">2020 GitHub Archive Program</a>贡献代码<br /><strong>（绝版）</strong></td>
+</tr>
+</tbody></table>
+<h2 id="徽章等级"><a href="#徽章等级" class="headerlink" title="徽章等级"></a>徽章等级</h2><p>一些徽章可以提升等级，不同等级有不同的图案</p>
+<table>
+<thead>
+<tr>
+<th align="center">成就</th>
+<th align="center">默认</th>
+<th align="center">铜</th>
+<th align="center">银</th>
+<th align="center">金</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>Starstruck</strong><br /><strong>（追星族）</strong></td>
+<td align="center"><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/98e693d243cde46579166501d14a9259daa92de146d9ba7d6af25255c4707974/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f7374617273747275636b2d64656661756c742e706e67"><img src="https://camo.githubusercontent.com/98e693d243cde46579166501d14a9259daa92de146d9ba7d6af25255c4707974/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f7374617273747275636b2d64656661756c742e706e67" alt="Achievement badge Starstruck"></a></td>
+<td align="center"><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/16bdb4fe26890a63d9b9e7dddf91b5b9412f1739536491064ec8a93bb22a9566/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f7374617273747275636b2d62726f6e7a652e706e67"><img src="https://camo.githubusercontent.com/16bdb4fe26890a63d9b9e7dddf91b5b9412f1739536491064ec8a93bb22a9566/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f7374617273747275636b2d62726f6e7a652e706e67" alt="Bronze badge Starstruck"></a></td>
+<td align="center"><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/77926f1d9649767505abef5a38570dd034baa8b53b37c793cbe1859462cd2eb8/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f7374617273747275636b2d73696c7665722e706e67"><img src="https://camo.githubusercontent.com/77926f1d9649767505abef5a38570dd034baa8b53b37c793cbe1859462cd2eb8/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f7374617273747275636b2d73696c7665722e706e67" alt="Silver badge Starstruck"></a></td>
+<td align="center"><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/b229590b555b870fdef6df68f89685248ac4b11b0c99303c01dc3eb73d91a3c1/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f7374617273747275636b2d676f6c642e706e67"><img src="https://camo.githubusercontent.com/b229590b555b870fdef6df68f89685248ac4b11b0c99303c01dc3eb73d91a3c1/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f7374617273747275636b2d676f6c642e706e67" alt="Gold badge Starstruck"></a></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">16 stars</td>
+<td align="center">128 stars</td>
+<td align="center">512 stars</td>
+<td align="center">4096 stars</td>
+</tr>
+<tr>
+<td align="center"><strong>Pair Extraordinaire</strong><br /><strong>（优秀配对）</strong></td>
+<td align="center"><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/93a470d9cb4e7f8116d53a6f6e9a75c57d0359af59d8efa0b966ec11099db35f/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f706169722d65787472616f7264696e616972652d64656661756c742e706e67"><img src="https://camo.githubusercontent.com/93a470d9cb4e7f8116d53a6f6e9a75c57d0359af59d8efa0b966ec11099db35f/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f706169722d65787472616f7264696e616972652d64656661756c742e706e67" alt="Achievement badge Pair Extraordinaire"></a></td>
+<td align="center"><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/9021c7148e9a63787fe02e923bbda4bbaa2c2693ecf182950fdaf3f372781e90/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f706169722d65787472616f7264696e616972652d62726f6e7a652e706e67"><img src="https://camo.githubusercontent.com/9021c7148e9a63787fe02e923bbda4bbaa2c2693ecf182950fdaf3f372781e90/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f706169722d65787472616f7264696e616972652d62726f6e7a652e706e67" alt="Bronze badge Pair Extraordinaire"></a></td>
+<td align="center"><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/3a627e47c3de6a2a35f6b7568f59593ca62c3079a5fba6d35da10a319a02b752/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f706169722d65787472616f7264696e616972652d73696c7665722e706e67"><img src="https://camo.githubusercontent.com/3a627e47c3de6a2a35f6b7568f59593ca62c3079a5fba6d35da10a319a02b752/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f706169722d65787472616f7264696e616972652d73696c7665722e706e67" alt="Silver badge Pair Extraordinaire"></a></td>
+<td align="center"><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/283629e271c7ac1eb4e1be65627ebb9a7d6f9e0867e86c94c91bf32eb08940ad/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f706169722d65787472616f7264696e616972652d676f6c642e706e67"><img src="https://camo.githubusercontent.com/283629e271c7ac1eb4e1be65627ebb9a7d6f9e0867e86c94c91bf32eb08940ad/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f706169722d65787472616f7264696e616972652d676f6c642e706e67" alt="Gold badge Pair Extraordinaire"></a></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">1 pull requests</td>
+<td align="center">10 pull requests</td>
+<td align="center">24 pull requests</td>
+<td align="center">48 pull requests</td>
+</tr>
+<tr>
+<td align="center"><strong>Pull Shark</strong><br /><strong>（鲨鱼拉拉）</strong></td>
+<td align="center"><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/d4a52cfb3181d13b7a8267394f66299c39d3c9c1da254f6beea092af1c755cca/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f70756c6c2d736861726b2d64656661756c742e706e67"><img src="https://camo.githubusercontent.com/d4a52cfb3181d13b7a8267394f66299c39d3c9c1da254f6beea092af1c755cca/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f70756c6c2d736861726b2d64656661756c742e706e67" alt="Achievement badge Pull Shark"></a></td>
+<td align="center"><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/dd1a16203414cfce058a25d1a3a66a49bb5be45012a8b7fb82652ad3328378bf/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f70756c6c2d736861726b2d62726f6e7a652e706e67"><img src="https://camo.githubusercontent.com/dd1a16203414cfce058a25d1a3a66a49bb5be45012a8b7fb82652ad3328378bf/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f70756c6c2d736861726b2d62726f6e7a652e706e67" alt="Bronze badge Pull Shark"></a></td>
+<td align="center"><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/4213d091e09c46ba8729bc085b9eefc815d516a09e02c90c22c6a8e5eedb0f80/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f70756c6c2d736861726b2d73696c7665722e706e67"><img src="https://camo.githubusercontent.com/4213d091e09c46ba8729bc085b9eefc815d516a09e02c90c22c6a8e5eedb0f80/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f70756c6c2d736861726b2d73696c7665722e706e67" alt="Silver badge Pull Shark"></a></td>
+<td align="center"><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/5bd00fa9303c0eff492cb247f636dde135bd729946fda4db71969b72aa74e076/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f70756c6c2d736861726b2d676f6c642e706e67"><img src="https://camo.githubusercontent.com/5bd00fa9303c0eff492cb247f636dde135bd729946fda4db71969b72aa74e076/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f70756c6c2d736861726b2d676f6c642e706e67" alt="Gold badge Pull Shark"></a></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">2 pull requests</td>
+<td align="center">16 pull requests</td>
+<td align="center">128 pull requests</td>
+<td align="center">1024 pull requests</td>
+</tr>
+<tr>
+<td align="center"><strong>Galaxy Brain</strong><br /><strong>（银河之脑）</strong></td>
+<td align="center"><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/e6ce6ebed3ad198195acd59354be6eca03cc9568f9ce27db365b1504bb92e123/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f67616c6178792d627261696e2d64656661756c742e706e67"><img src="https://camo.githubusercontent.com/e6ce6ebed3ad198195acd59354be6eca03cc9568f9ce27db365b1504bb92e123/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f67616c6178792d627261696e2d64656661756c742e706e67" alt="Achievement badge Galaxy Brain"></a></td>
+<td align="center"><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/25524aaa1ecffdc244058957db8191eee86d7ca30392829e5239b52d8b6400b7/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f67616c6178792d627261696e2d62726f6e7a652e706e67"><img src="https://camo.githubusercontent.com/25524aaa1ecffdc244058957db8191eee86d7ca30392829e5239b52d8b6400b7/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f67616c6178792d627261696e2d62726f6e7a652e706e67" alt="Bronze badge Galaxy Brain"></a></td>
+<td align="center"><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/b48c2481d0974d6c1c836bf27885549464a8535f71c28b9c9cd40a73697f5bd5/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f67616c6178792d627261696e2d73696c7665722e706e67"><img src="https://camo.githubusercontent.com/b48c2481d0974d6c1c836bf27885549464a8535f71c28b9c9cd40a73697f5bd5/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f67616c6178792d627261696e2d73696c7665722e706e67" alt="Silver badge Galaxy Brain"></a></td>
+<td align="center"><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/670c92db3207068024ad02f0327a1974fd5c8226304b4c3a6faccaf263a5361f/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f67616c6178792d627261696e2d676f6c642e706e67"><img src="https://camo.githubusercontent.com/670c92db3207068024ad02f0327a1974fd5c8226304b4c3a6faccaf263a5361f/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f67616c6178792d627261696e2d676f6c642e706e67" alt="Gold badge Galaxy Brain"></a></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">2 answers</td>
+<td align="center">8 answers</td>
+<td align="center">16 answers</td>
+<td align="center">32 answers</td>
+</tr>
+<tr>
+<td align="center"><strong>Heart On Your Sleeve</strong><br /><strong>（真情流露）</strong></td>
+<td align="center"><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/849459ac06f88476872e568dd15038ff92463b56b6c1d881eba4768c3c99f952/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f68656172742d6f6e2d796f75722d736c656576652d64656661756c742e706e67"><img src="https://camo.githubusercontent.com/849459ac06f88476872e568dd15038ff92463b56b6c1d881eba4768c3c99f952/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f68656172742d6f6e2d796f75722d736c656576652d64656661756c742e706e67" alt="Achievement badge Heart On Your Sleeve"></a></td>
+<td align="center"><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/cee7d1fb05831953ff5b74952a71bcf0bf18c4cbddc18fa0b4b32e52e01b4bf6/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f68656172742d6f6e2d796f75722d736c656576652d62726f6e7a652e706e67"><img src="https://camo.githubusercontent.com/cee7d1fb05831953ff5b74952a71bcf0bf18c4cbddc18fa0b4b32e52e01b4bf6/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f68656172742d6f6e2d796f75722d736c656576652d62726f6e7a652e706e67" alt="Bronze badge Heart On Your Sleeve"></a></td>
+<td align="center"><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/326a859ff23caa577676ed750a85d083381d415f6304faa79408976f979e0d9b/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f68656172742d6f6e2d796f75722d736c656576652d73696c7665722e706e67"><img src="https://camo.githubusercontent.com/326a859ff23caa577676ed750a85d083381d415f6304faa79408976f979e0d9b/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f68656172742d6f6e2d796f75722d736c656576652d73696c7665722e706e67" alt="Silver badge Heart On Your Sleeve"></a></td>
+<td align="center"><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/28e81dd97098bd8b31dfdd5901ff4e9d99d889baf6fe2910201d02f4a89077f3/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f68656172742d6f6e2d796f75722d736c656576652d676f6c642e706e67"><img src="https://camo.githubusercontent.com/28e81dd97098bd8b31dfdd5901ff4e9d99d889baf6fe2910201d02f4a89077f3/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f68656172742d6f6e2d796f75722d736c656576652d676f6c642e706e67" alt="Gold badge Heart On Your Sleeve"></a></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">???</td>
+<td align="center">???</td>
+<td align="center">???</td>
+<td align="center">???</td>
+</tr>
+<tr>
+<td align="center"><strong>Open Sourcerer</strong><br /><strong>（开放搜索）</strong></td>
+<td align="center"><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/52c99599bf3ab70e329e1bdadc0fe81be0ec027fce4ec29e1ba77d4cae3ec38e/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f6f70656e2d736f757263657265722d64656661756c742e706e67"><img src="https://camo.githubusercontent.com/52c99599bf3ab70e329e1bdadc0fe81be0ec027fce4ec29e1ba77d4cae3ec38e/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f6f70656e2d736f757263657265722d64656661756c742e706e67" alt="Achievement badge Open Sourcerer"></a></td>
+<td align="center"><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/a299c8e212b0838191281400a176e0d34df873f4c7b0275e6ca958f73c11e6c4/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f6f70656e2d736f757263657265722d62726f6e7a652e706e67"><img src="https://camo.githubusercontent.com/a299c8e212b0838191281400a176e0d34df873f4c7b0275e6ca958f73c11e6c4/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f6f70656e2d736f757263657265722d62726f6e7a652e706e67" alt="Bronze badge Open Sourcerer"></a></td>
+<td align="center"><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/5de4cc7d7eeea80d20b9384313e4034f438c92aca079f2f04eefc46ae6cbc967/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f6f70656e2d736f757263657265722d73696c7665722e706e67"><img src="https://camo.githubusercontent.com/5de4cc7d7eeea80d20b9384313e4034f438c92aca079f2f04eefc46ae6cbc967/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f6f70656e2d736f757263657265722d73696c7665722e706e67" alt="Silver badge Open Sourcerer"></a></td>
+<td align="center"><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/1be237d8628c5db6d24211f4205c300522d1eaecdb3d6ab5c3bf3e67527007cf/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f6f70656e2d736f757263657265722d676f6c642e706e67"><img src="https://camo.githubusercontent.com/1be237d8628c5db6d24211f4205c300522d1eaecdb3d6ab5c3bf3e67527007cf/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f6f70656e2d736f757263657265722d676f6c642e706e67" alt="Gold badge Open Sourcerer"></a></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">???</td>
+<td align="center">???</td>
+<td align="center">???</td>
+<td align="center">???</td>
+</tr>
+</tbody></table>
+<h2 id="徽章皮肤"><a href="#徽章皮肤" class="headerlink" title="徽章皮肤"></a>徽章皮肤</h2><p>一些成就的外观取决于你的<strong>表情符号</strong>肤色偏好</p>
+<p>你可以在 <a target="_blank" rel="noopener" href="https://github.com/settings/appearance">appearance settings</a>修改你的偏好</p>
+<table>
+<thead>
+<tr>
+<th><strong>徽章</strong></th>
+<th>👋</th>
+<th>👋🏻</th>
+<th>👋🏼</th>
+<th>👋🏽</th>
+<th>👋🏾</th>
+<th>👋🏿</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Starstruck</strong><br /><strong>（追星族）</strong></td>
+<td><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/98e693d243cde46579166501d14a9259daa92de146d9ba7d6af25255c4707974/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f7374617273747275636b2d64656661756c742e706e67"><img src="https://camo.githubusercontent.com/98e693d243cde46579166501d14a9259daa92de146d9ba7d6af25255c4707974/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f7374617273747275636b2d64656661756c742e706e67" alt="Default skin tone of Starstruck"></a></td>
+<td><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/7f5af5adb497a801ddc9ad6ba8b1bf16a487cf46fb2dd7651a8188383d041697/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f7374617273747275636b2d64656661756c742d2d6c696768742e706e67"><img src="https://camo.githubusercontent.com/7f5af5adb497a801ddc9ad6ba8b1bf16a487cf46fb2dd7651a8188383d041697/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f7374617273747275636b2d64656661756c742d2d6c696768742e706e67" alt="Light skin tone of Starstruck"></a></td>
+<td><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/26ed2e3356c3268e51f04ae88c88818fa2d77bec49b5f36e17fec2570b473a53/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f7374617273747275636b2d64656661756c742d2d6c696768742d6d656469756d2e706e67"><img src="https://camo.githubusercontent.com/26ed2e3356c3268e51f04ae88c88818fa2d77bec49b5f36e17fec2570b473a53/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f7374617273747275636b2d64656661756c742d2d6c696768742d6d656469756d2e706e67" alt="Light-medium skin tone of Starstruck"></a></td>
+<td><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/0ef6b3bf8ad252138e20ebfe6e7e60a95fc5dbe6648f6fc364069758ef42e66c/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f7374617273747275636b2d64656661756c742d2d6d656469756d2e706e67"><img src="https://camo.githubusercontent.com/0ef6b3bf8ad252138e20ebfe6e7e60a95fc5dbe6648f6fc364069758ef42e66c/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f7374617273747275636b2d64656661756c742d2d6d656469756d2e706e67" alt="Medium skin tone of Starstruck"></a></td>
+<td><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/f6e8547bd35aa3af75753edd38a6add5e08da08c58e56a725d75a9f3447e30b6/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f7374617273747275636b2d64656661756c742d2d6d656469756d2d6461726b2e706e67"><img src="https://camo.githubusercontent.com/f6e8547bd35aa3af75753edd38a6add5e08da08c58e56a725d75a9f3447e30b6/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f7374617273747275636b2d64656661756c742d2d6d656469756d2d6461726b2e706e67" alt="Medium-dark skin tone of Starstruck"></a></td>
+<td><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/8f121e9fbc3ca6cb2da99f2c1169c8d0aa0b458194c727ef707af7d02d2fbb8c/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f7374617273747275636b2d64656661756c742d2d6461726b2e706e67"><img src="https://camo.githubusercontent.com/8f121e9fbc3ca6cb2da99f2c1169c8d0aa0b458194c727ef707af7d02d2fbb8c/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f7374617273747275636b2d64656661756c742d2d6461726b2e706e67" alt="Dark skin tone of Starstruck"></a></td>
+</tr>
+<tr>
+<td><strong>Quickdraw</strong><br /><strong>（速成）</strong></td>
+<td><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/f1609e8e2b3083f5210bbf4a81dc33a2b31cfd964f256caddfcfe278a702b420/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f717569636b647261772d64656661756c742e706e67"><img src="https://camo.githubusercontent.com/f1609e8e2b3083f5210bbf4a81dc33a2b31cfd964f256caddfcfe278a702b420/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f717569636b647261772d64656661756c742e706e67" alt="Default skin tone of Quickdraw"></a></td>
+<td><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/1d62914a828cfaab99381c00bc8a9b41929f48b5ef02fdf69b62248cb828ec9c/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f717569636b647261772d64656661756c742d2d6c696768742e706e67"><img src="https://camo.githubusercontent.com/1d62914a828cfaab99381c00bc8a9b41929f48b5ef02fdf69b62248cb828ec9c/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f717569636b647261772d64656661756c742d2d6c696768742e706e67" alt="Light skin tone of Quickdraw"></a></td>
+<td><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/676a12013829d69ab7732d6cf744012447da573efcd980c2adad92906d88d371/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f717569636b647261772d64656661756c742d2d6c696768742d6d656469756d2e706e67"><img src="https://camo.githubusercontent.com/676a12013829d69ab7732d6cf744012447da573efcd980c2adad92906d88d371/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f717569636b647261772d64656661756c742d2d6c696768742d6d656469756d2e706e67" alt="Light-medium skin tone of Quickdraw"></a></td>
+<td><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/8503450b76d881d6fc122cb4840e01e19f7fb2edc964cc6abf13940b44a92eb7/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f717569636b647261772d64656661756c742d2d6d656469756d2e706e67"><img src="https://camo.githubusercontent.com/8503450b76d881d6fc122cb4840e01e19f7fb2edc964cc6abf13940b44a92eb7/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f717569636b647261772d64656661756c742d2d6d656469756d2e706e67" alt="Medium skin tone of Quickdraw"></a></td>
+<td><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/94f6732d580f5ce8e6043535a5fdd3902465d3afa80c72850e2e9702f5672cb8/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f717569636b647261772d64656661756c742d2d6d656469756d2d6461726b2e706e67"><img src="https://camo.githubusercontent.com/94f6732d580f5ce8e6043535a5fdd3902465d3afa80c72850e2e9702f5672cb8/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f717569636b647261772d64656661756c742d2d6d656469756d2d6461726b2e706e67" alt="Medium-dark skin tone of Quickdraw"></a></td>
+<td><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/8e9f3e39ae34c0a035fb98c68483ce259d342669692db76fc35907e6b84e9748/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f717569636b647261772d64656661756c742d2d6461726b2e706e67"><img src="https://camo.githubusercontent.com/8e9f3e39ae34c0a035fb98c68483ce259d342669692db76fc35907e6b84e9748/68747470733a2f2f6769746875622e6769746875626173736574732e636f6d2f696d616765732f6d6f64756c65732f70726f66696c652f616368696576656d656e74732f717569636b647261772d64656661756c742d2d6461726b2e706e67" alt="Dark skin tone of Quickdraw"></a></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>参考资料：</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/github-profile-achievements/english">https://github.com/github-profile-achievements/english</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.6hu.cc/archives/59570.html">https://www.6hu.cc/archives/59570.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/jhonywalkeer/github-achivements">https://github.com/jhonywalkeer/github-achivements</a></p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/GitHub/" rel="tag"># GitHub</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/09/07/2023/Ubuntu%E9%85%8D%E7%BD%AEhadoop%EF%BC%88%E5%9F%BA%E4%BA%8EDocker%EF%BC%89/" rel="prev" title="Ubuntu配置hadoop（基于Docker）">
+                  <i class="fa fa-angle-left"></i> Ubuntu配置hadoop（基于Docker）
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/09/15/2023/%E5%85%B3%E4%BA%8E2023%E6%9A%91%E5%81%87/" rel="next" title="关于2023暑假">
+                  关于2023暑假 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">文文的短发</span>
+  </div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+    本站访客数：<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript"
+  color="0,0,0" opacity='0.3' zIndex="-1" count="75" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
+
+</body>
+</html>
