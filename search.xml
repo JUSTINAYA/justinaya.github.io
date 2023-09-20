@@ -129,56 +129,6 @@ admin.txt
       </tags>
   </entry>
   <entry>
-    <title>LATEX公式使用</title>
-    <url>/2023/09/15/2023/LATEX%E5%85%AC%E5%BC%8F%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<blockquote>
-<p>一些实用的技术</p>
-</blockquote>
-<span id="more"></span>
-<h1 id="前言">前言</h1>
-<blockquote>
-<p>最近在想写博客的时候发现我不太会用latex公式，就准备学一学</p>
-<p>网上有太多教程了，我就不重复劳动了，把一些重要的常用的copy下来，其他的转载</p>
-</blockquote>
-<h1 id="如何插入公式">如何插入公式</h1>
-<p><code>𝐿𝐴𝑇𝐸𝑋</code>
-的数学公式有两种：行中公式和独立公式（行间公式）。行中公式放在文中与其它文字混编，独立公式单独成行。</p>
-<p>行中公式可以用如下方法表示：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ 数学公式 $</span><br></pre></td></tr></table></figure>
-<p>独立公式可以用如下方法表示：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$$ 数学公式 $$</span><br></pre></td></tr></table></figure>
-<h3 id="标准函数">标准函数<a
-href="https://www.cnblogs.com/1024th/p/11623258.html#2083047927">#</a></h3>
-<p>指数</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\exp_a b = a^b, \exp b = e^b, 10^m</span><br></pre></td></tr></table></figure>
-<p><span class="math display">\[
-\exp_a b = a^b, \exp b = e^b, 10^m
-\]</span></p>
-<p>对数</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\ln c, \lg d = \log e, \log_&#123;10&#125; f</span><br></pre></td></tr></table></figure>
-<p><span class="math display">\[
-\ln c, \lg d = \log e, \log_{10} f
-\]</span></p>
-<p>三角函数</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\sin a, \cos b, \tan c, \cot d, \sec e, \csc f</span><br></pre></td></tr></table></figure>
-<p><span class="math display">\[
-\sin a, \cos b, \tan c, \cot d, \sec e, \csc f
-\]</span></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\arcsin a, \arccos b, \arctan c</span><br></pre></td></tr></table></figure>
-<p><span class="math display">\[
-\arcsin a, \arccos b, \arctan c
-\]</span></p>
-<p>其余请看这篇博文<a
-href="https://www.cnblogs.com/1024th/p/11623258.html">LaTeX公式手册(全网最全)</a></p>
-]]></content>
-      <categories>
-        <category>LATEX</category>
-      </categories>
-      <tags>
-        <tag>LATEX</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Docker创建Ubantu容器</title>
     <url>/2023/09/04/2023/Docker%E5%88%9B%E5%BB%BAUbantu%E5%AE%B9%E5%99%A8/</url>
     <content><![CDATA[<blockquote>
@@ -226,99 +176,6 @@ href="https://www.cnblogs.com/1024th/p/11623258.html">LaTeX公式手册(全网�
       <tags>
         <tag>Docker</tag>
         <tag>Ubuntu</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Taihub分享</title>
-    <url>/2023/02/01/2023/Taihub%E5%88%86%E4%BA%AB/</url>
-    <content><![CDATA[<blockquote>
-<p>关于泰的一切</p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/IMG_1790.PNG" alt="IMG_1790" style="zoom: 25%;" /></p>
-</blockquote>
-<span id="more"></span>
-<h1 id="前言">前言</h1>
-<p>孝泰是由2021年夏天一个视频引发的小众亚文化圈子，发展至今，已诞生了多数优秀的作品。在这里我进行了不完全的整理并放在了网盘上，请自行取用。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/IMG_1790.PNG" alt="IMG_1790" style="zoom: 25%;" /></p>
-<h1 id="链接">链接</h1>
-<p>https://pan.baidu.com/s/1IqRYFEZJGfA_Bg0yNdBY5w?pwd=6sa7
-提取码：6sa7</p>
-<h1 id="使用须知">使用须知</h1>
-<p>正作是tai原素材包含视频和图片多数来源于cj 番外是tai整活视频
-DLC是tai整活图片 借物表不填写⚪ 二配允许⚪ 修改允许⚪ 商用不允许×
-R18不允许×</p>
-<h1 id="补档">补档</h1>
-<h2 id="补档1">补档1</h2>
-<p>​
-孝泰为什么是神？在谈论这个问题之前，我想先说说其他梗王相较于孝泰究竟差在了哪里</p>
-<h3 id="首先是犯下傲慢之罪的哲学众将">首先是犯下傲慢之罪的哲学众将</h3>
-<p>​
-凭着niconico留下来的热度，在B站掀起一波腥风血雨，这种亚文化梗注定走不长远，事实也是如此，18年被B站制裁了之后就泯然众人，仅维持着一点热度。与之相比神就很谦卑，嘞个mang，李个逼都是神留给凡人的慈悲，神不是没有好的口头禅，只是不想通过太完美的言语让大家折服而故意不用，可笑有些人不理解神的良苦用心，竟然还用这些事来讥讽神，我劝你们好自为之。</p>
-<h3 id="然后是犯下愤怒之罪的虎哥">然后是犯下愤怒之罪的虎哥</h3>
-<p>​
-因为杀马特团长与其的口角争斗，就愤怒地与团长进行约战，违背了神在《新约》中的一句话:“还森两百多天吧，我的话就似想和大家缩，尽力zhuo到坠好的自己吧。”于是神降下了他的惩罚，虎哥不见踪影，落寞生活。</p>
-<h3 id="接着是犯下懒惰之罪的初音">接着是犯下懒惰之罪的初音</h3>
-<p>​
-自以为拿下几个畅销冠军就了不起了，自创歌姬计划。另外大家有所不知，其实每次初音发歌前，初音闭上眼睛做冥想的时候，其脑海中看见的画面，正是站在光芒之中的孝泰，那时神告诉她：“李只可到这里，不可越过。”然而，神的劝说不但没有让初音迷途知返，竟敢还不断发游戏发周边正面挑战神的威严，于是神降下了他的惩罚，初音热度渐渐下降，从公主殿下变成了葱。</p>
-<h3 id="再然后是犯下了嫉妒之罪的子润">再然后是犯下了嫉妒之罪的子润</h3>
-<p>​
-热度屡次被神击败，但口服心不服的子润，暗中嫉妒着神，甚至胆敢在赵睿英面前挑明和张国的关系。于是，在含金量更高的热度对决，即处男帮里，子润被孝泰正面击溃。不过，念在都是一个班的份上，并且践行了神的意志吸引力屡次吼神的赵睿英的火力后，神应许了他在一班的一切。</p>
-<h3 id="犯下贪婪之罪的刘华强">犯下贪婪之罪的刘华强</h3>
-<p>​
-只是部老剧，华强就夺得了2021年B站热度榜单，而这，自然是因为神的应许。神本来钦定他为自己在人间的代言人，在自己热度下去后替自己继续火热全网，为此甚至不惜亲自为华强铺路，主动退出B站圈，将一切荣耀都归给他，甚至应许他可以带走自己最爱的瓜。但最后华强却被利益蒙蔽了双眼，不再以践行神的理想为自己的理想，也不再聆听神的教诲，甚至自以荣光已经超过了神，竟允许粉丝P出孝泰卖瓜这种亵渎神尊严的图片，于是神降下了惩罚，华强从此不再正常并且拥有各种形态，而他的电瓶车将再也不能载起他最初的梦想，他的刀再也不能正常地劈瓜，他的瓜摊老板再也不能正常地发觉不对劲。</p>
-<h3 id="犯下暴食之罪的嘉然">犯下暴食之罪的嘉然</h3>
-<p>​
-在神子华强开始堕落之后，神开始寻找下一个代言人，这一次，他选中了嘉然。相较于神，嘉然无疑是不完美的，他没有神足以让众人沦陷的样貌，也没有神深不见底的名句池，舍我其谁的胆气，敏锐的词汇选择，无懈可击的步伐，但神将自己最虔诚，同时也是实力最强大的两位泰心糖暂时交给了她，并复刻了为华强的铺路操作，但由于高考的事，神认为或许是自己给的压力过大才导致了华强的堕落，于是这一次神选择了去南通，减少嘉然的心理负担，最终，嘉然成功了。然而，获得热度的嘉然不但冒大不韪给两位泰心糖新的称号嘉心糖，更妄图染指神力，只是她错误地认为身的力量来源于语言的步伐，最终她也因此犯下了暴食之罪，并得到了一大推屁用没有的嘉心糖。</p>
-<h3 id="最后犯下淫欲之罪的吴乘风">最后，犯下淫欲之罪的吴乘风</h3>
-<p>​
-2021暑假之后，神已经非常虚弱了，原神用氪金系统吸走了神的精气，神已经无力再惩罚嘉然，只有两位信徒依旧在维护神的尊严而已。此刻已经决心退隐的神在最后依然心系苏州，于是他选中了第三位神子——吴乘风。作为第三任神子，吴乘风很好地维护了神的尊严，但接连击溃鼓楼的窑子后，吴乘风遇到了石佛寺三宫四十八号的浦口淫魔，被吸走了神赋予自己的力量，于是在班干竞选中节节败退，最终泯然众人，活在男人窝中。</p>
-<h2 id="补档2">补档2</h2>
-<p>​
-2021年的最后一个16号已经过去一天，孝泰的补档已成终章，不管是好活还是烂活，重要的是慢慢的，大家，把所谓的烂活，好活……讲成了一个故事，变成了一种艺术。朦胧的感觉，迷茫的感觉，大家最初单纯只是喜欢恶搞，喜欢玩乐，渐渐的渐渐的喜欢上了孝泰的真实。
-不真实的，真实</p>
-<p>​
-那些视频我看了不下50次，最初点进去是抱着无厘头的态度看一个搞笑的抽象作品的，可没想到我被彻底的震撼到了，忍不住的看了一次又一次。</p>
-<p>​
-多年前模糊的画质，夏日漱石的配乐，王家卫文艺的台词，孝泰荒诞行为的画面。这一切听起来不可思议甚至有些魔幻的组合却拼接的是那么的恰到好处，想要赋予视频意义的同时又在鼓励观众尝试解构一帧帧画面。</p>
-<p>​
-狭窄的房间，失意的男人，狂乱的肢体动作，整部作品都旨在表达一种荒谬感，一种充斥着整个人类历史的荒诞无稽。这里没有什么东西是有价值可言的，宇宙冷漠而荒谬，而人在真正面对它时，一切的现实和理智都将崩溃</p>
-<p>​ 我愿称之为荒诞浪漫主义的开端，甚至将引领一段不可思议的潮流。</p>
-<p>你问我什么是荒诞浪漫主义？ 是莫扎特谱写的朋克摇滚乐，
-是梵高画出的二次元美少女， 是曹雪芹写下的凡人修仙传，
-是李白导演出的商业谍战片， 是方文山创作出的让子弹飞，
-是和孝泰度过的那一个夏天。</p>
-<p>​
-今天是17号。我错过了16号的补档，正如我错过了那个夏天。还记得第一次看完了视频，我惊讶于孝泰的舞蹈，看完了评论，我想哭，我想笑，我想此刻在寒冷的的冬天穿着短袖去操场上跑圈，我想和视频里的孝泰一样做一些荒诞又浪漫的事情，我想有一个无悔的青春。我想说很多话，我想做很多事，可是到最后什么也没说，什么也没做。我羡慕孝泰，真的，他把生活过成了戏剧，又在每个16号都被常常记起，当没有人再放这些视频的时候，当孝泰被科技城遗忘的时候，孝泰才能真正活在南通吧</p>
-<h2 id="补档3">补档3</h2>
-<p>是枕绿色围巾孝泰的睡姿 是上课孝泰不断闭眼点头 是红衣孝泰李个逼的声波
-是孝泰蓝色三叶草T恤衫 是体育馆孝泰飞出的鞋垫 是丝滑无法复制孝泰转身
-是钉钉视频孝泰蓝刨冰机 是一张张照片孝泰的中指 是孝泰经典套司波登大衣
-是羽毛球馆孝泰梦幻脚步 是孝泰气喘喘的相当不绰 是孝泰撑起来的零号特工
-是还森两百多天南大孝泰 是通大电科孝泰五天早八 是不可能被五等分的孝泰</p>
-<h2 id="补档4">补档4</h2>
-<p>我好想做孝泰的狗啊。</p>
-<p>可是孝泰说他喜欢的是他小弟，我哭了。</p>
-<p>我知道既不是狗也不是小弟的我为什么要哭的。因为我其实是他的同学。</p>
-<p>我从没奢望孝泰能看一眼自己。我明白的，所有人都喜欢理解余裕上手天才打钱的萌萌的狗狗或者小弟，没有人会喜欢只会躲在阴暗角落的同学。</p>
-<p>但我还是问了孝泰:“我能不能做你的狗？”</p>
-<p>我知道我是注定做不了狗的。但如果他喜欢狗，我就可以一直在身边看着他了，哪怕她怀里抱着的永远都是狗。</p>
-<p>可是他说喜欢的是他小弟。</p>
-<p>他现在还能看我，还在和我说话，是因为他小弟还没有出现，只有我这同学每天蹑手蹑脚地从阴暗角落里爬出来，远远地和他对视。</p>
-<p>等他喜欢的小弟来了的时候，我就该重新滚回我的座位了吧。</p>
-<p>但我还是好仰慕他，他能在我还在他身边的时候多看我几眼吗？</p>
-<p>孝泰说接下来的每个圣诞夜都要和大家一起过。我不知道大家指哪些人。好希望这个集合能够对我做一次胞吞。</p>
-<p>他小弟还在害怕孝泰。</p>
-<p>我会去把他爱的小弟引来的。</p>
-<p>我知道稍有不慎，我就会请他小弟吃某利来冰山熔岩蛋糕。</p>
-<p>那时候孝泰大概会往我身上扔臭鸡蛋吧。</p>
-<p>那我就成了贤蛋黄，嘻嘻。</p>
-<p>我希望他能把我扔得近一点，因为我还是好仰慕他。会一直仰慕下去的。</p>
-<p>我的灵魂透过窗户向里面看去，挂着的铃铛在轻轻鸣响，孝泰慵懒地靠在沙发上，表演得非常温顺的小弟坐在他的身旁。壁炉的火光照在他的脸庞，我冻僵的心脏在风里微微发烫。</p>
-]]></content>
-      <categories>
-        <category>Tai</category>
-      </categories>
-      <tags>
-        <tag>Tai</tag>
       </tags>
   </entry>
   <entry>
@@ -739,50 +596,146 @@ alt="Dark skin tone of Quickdraw" /></a></td>
       </tags>
   </entry>
   <entry>
-    <title>第一篇博客</title>
-    <url>/2023/01/29/2023/hello-world/</url>
-    <content><![CDATA[<p>欢迎来到我的博客！</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>二叉树遍历简单做法</title>
-    <url>/2023/02/09/2023/%E4%BA%8C%E5%8F%89%E6%A0%91%E9%81%8D%E5%8E%86%E7%AE%80%E5%8D%95%E5%81%9A%E6%B3%95/</url>
+    <title>Taihub分享</title>
+    <url>/2023/02/01/2023/Taihub%E5%88%86%E4%BA%AB/</url>
     <content><![CDATA[<blockquote>
-<p>看王道数据结构考研复习有感</p>
+<p>关于泰的一切</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/IMG_1790.PNG" alt="IMG_1790" style="zoom: 25%;" /></p>
 </blockquote>
 <span id="more"></span>
-<h1 id="问题">问题</h1>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/%E4%BA%8C%E5%8F%89%E6%A0%91.PNG" alt="二叉树" style="zoom:33%;" /></p>
-<p>给出如图所示二叉树，请你分别对其进行前序、中序、后序遍历并给出遍历结果。</p>
-<h1 id="解答">解答</h1>
-<p>这里我们除了可以用编程思想一步一步进行遍历，还有一种更为简单快速的方法，这里我称它画图法。</p>
-<h2 id="步骤一">步骤一</h2>
-<p>我们先在每个结点旁画上小圆点，这里我们以前序遍历为例，在结点左侧画上小圆点。（中序遍历在下侧，后序遍历在右侧）</p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/%E5%89%8D%E5%BA%8F.PNG" alt="前序" style="zoom:33%;" /></p>
-<h2 id="步骤二">步骤二</h2>
-<p>以根节点上方为起点，从左侧贴着二叉树画线穿过小圆点，绕一周回到起点。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/%E5%89%8D%E5%BA%8F2.PNG" alt="前序2" style="zoom:33%;" /></p>
-<h2 id="步骤三">步骤三</h2>
-<p>穿过小圆点的先后顺序便是遍历的结果。 这次遍历的结果为：</p>
-<center>
-<font color=Tomato size=6>前序：ABDECFHG</font>
-</center>
-<p>这样我们也能得到中序和后序遍历的结果了：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/%E4%B8%AD%E5%BA%8F.PNG" alt="中序" style="zoom:33%;" /></p>
-<center>
-<font color=Tomato size=6>中序：DBEAFHCG</font>
-</center>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/%E5%90%8E%E5%BA%8F.PNG" alt="后序" style="zoom:33%;" /></p>
-<center>
-<font color=Tomato size=6>后序：DEBHFGCA</font>
-</center>
+<h1 id="前言">前言</h1>
+<p>孝泰是由2021年夏天一个视频引发的小众亚文化圈子，发展至今，已诞生了多数优秀的作品。在这里我进行了不完全的整理并放在了网盘上，请自行取用。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/IMG_1790.PNG" alt="IMG_1790" style="zoom: 25%;" /></p>
+<h1 id="链接">链接</h1>
+<p>https://pan.baidu.com/s/1IqRYFEZJGfA_Bg0yNdBY5w?pwd=6sa7
+提取码：6sa7</p>
+<h1 id="使用须知">使用须知</h1>
+<p>正作是tai原素材包含视频和图片多数来源于cj 番外是tai整活视频
+DLC是tai整活图片 借物表不填写⚪ 二配允许⚪ 修改允许⚪ 商用不允许×
+R18不允许×</p>
+<h1 id="补档">补档</h1>
+<h2 id="补档1">补档1</h2>
+<p>​
+孝泰为什么是神？在谈论这个问题之前，我想先说说其他梗王相较于孝泰究竟差在了哪里</p>
+<h3 id="首先是犯下傲慢之罪的哲学众将">首先是犯下傲慢之罪的哲学众将</h3>
+<p>​
+凭着niconico留下来的热度，在B站掀起一波腥风血雨，这种亚文化梗注定走不长远，事实也是如此，18年被B站制裁了之后就泯然众人，仅维持着一点热度。与之相比神就很谦卑，嘞个mang，李个逼都是神留给凡人的慈悲，神不是没有好的口头禅，只是不想通过太完美的言语让大家折服而故意不用，可笑有些人不理解神的良苦用心，竟然还用这些事来讥讽神，我劝你们好自为之。</p>
+<h3 id="然后是犯下愤怒之罪的虎哥">然后是犯下愤怒之罪的虎哥</h3>
+<p>​
+因为杀马特团长与其的口角争斗，就愤怒地与团长进行约战，违背了神在《新约》中的一句话:“还森两百多天吧，我的话就似想和大家缩，尽力zhuo到坠好的自己吧。”于是神降下了他的惩罚，虎哥不见踪影，落寞生活。</p>
+<h3 id="接着是犯下懒惰之罪的初音">接着是犯下懒惰之罪的初音</h3>
+<p>​
+自以为拿下几个畅销冠军就了不起了，自创歌姬计划。另外大家有所不知，其实每次初音发歌前，初音闭上眼睛做冥想的时候，其脑海中看见的画面，正是站在光芒之中的孝泰，那时神告诉她：“李只可到这里，不可越过。”然而，神的劝说不但没有让初音迷途知返，竟敢还不断发游戏发周边正面挑战神的威严，于是神降下了他的惩罚，初音热度渐渐下降，从公主殿下变成了葱。</p>
+<h3 id="再然后是犯下了嫉妒之罪的子润">再然后是犯下了嫉妒之罪的子润</h3>
+<p>​
+热度屡次被神击败，但口服心不服的子润，暗中嫉妒着神，甚至胆敢在赵睿英面前挑明和张国的关系。于是，在含金量更高的热度对决，即处男帮里，子润被孝泰正面击溃。不过，念在都是一个班的份上，并且践行了神的意志吸引力屡次吼神的赵睿英的火力后，神应许了他在一班的一切。</p>
+<h3 id="犯下贪婪之罪的刘华强">犯下贪婪之罪的刘华强</h3>
+<p>​
+只是部老剧，华强就夺得了2021年B站热度榜单，而这，自然是因为神的应许。神本来钦定他为自己在人间的代言人，在自己热度下去后替自己继续火热全网，为此甚至不惜亲自为华强铺路，主动退出B站圈，将一切荣耀都归给他，甚至应许他可以带走自己最爱的瓜。但最后华强却被利益蒙蔽了双眼，不再以践行神的理想为自己的理想，也不再聆听神的教诲，甚至自以荣光已经超过了神，竟允许粉丝P出孝泰卖瓜这种亵渎神尊严的图片，于是神降下了惩罚，华强从此不再正常并且拥有各种形态，而他的电瓶车将再也不能载起他最初的梦想，他的刀再也不能正常地劈瓜，他的瓜摊老板再也不能正常地发觉不对劲。</p>
+<h3 id="犯下暴食之罪的嘉然">犯下暴食之罪的嘉然</h3>
+<p>​
+在神子华强开始堕落之后，神开始寻找下一个代言人，这一次，他选中了嘉然。相较于神，嘉然无疑是不完美的，他没有神足以让众人沦陷的样貌，也没有神深不见底的名句池，舍我其谁的胆气，敏锐的词汇选择，无懈可击的步伐，但神将自己最虔诚，同时也是实力最强大的两位泰心糖暂时交给了她，并复刻了为华强的铺路操作，但由于高考的事，神认为或许是自己给的压力过大才导致了华强的堕落，于是这一次神选择了去南通，减少嘉然的心理负担，最终，嘉然成功了。然而，获得热度的嘉然不但冒大不韪给两位泰心糖新的称号嘉心糖，更妄图染指神力，只是她错误地认为身的力量来源于语言的步伐，最终她也因此犯下了暴食之罪，并得到了一大推屁用没有的嘉心糖。</p>
+<h3 id="最后犯下淫欲之罪的吴乘风">最后，犯下淫欲之罪的吴乘风</h3>
+<p>​
+2021暑假之后，神已经非常虚弱了，原神用氪金系统吸走了神的精气，神已经无力再惩罚嘉然，只有两位信徒依旧在维护神的尊严而已。此刻已经决心退隐的神在最后依然心系苏州，于是他选中了第三位神子——吴乘风。作为第三任神子，吴乘风很好地维护了神的尊严，但接连击溃鼓楼的窑子后，吴乘风遇到了石佛寺三宫四十八号的浦口淫魔，被吸走了神赋予自己的力量，于是在班干竞选中节节败退，最终泯然众人，活在男人窝中。</p>
+<h2 id="补档2">补档2</h2>
+<p>​
+2021年的最后一个16号已经过去一天，孝泰的补档已成终章，不管是好活还是烂活，重要的是慢慢的，大家，把所谓的烂活，好活……讲成了一个故事，变成了一种艺术。朦胧的感觉，迷茫的感觉，大家最初单纯只是喜欢恶搞，喜欢玩乐，渐渐的渐渐的喜欢上了孝泰的真实。
+不真实的，真实</p>
+<p>​
+那些视频我看了不下50次，最初点进去是抱着无厘头的态度看一个搞笑的抽象作品的，可没想到我被彻底的震撼到了，忍不住的看了一次又一次。</p>
+<p>​
+多年前模糊的画质，夏日漱石的配乐，王家卫文艺的台词，孝泰荒诞行为的画面。这一切听起来不可思议甚至有些魔幻的组合却拼接的是那么的恰到好处，想要赋予视频意义的同时又在鼓励观众尝试解构一帧帧画面。</p>
+<p>​
+狭窄的房间，失意的男人，狂乱的肢体动作，整部作品都旨在表达一种荒谬感，一种充斥着整个人类历史的荒诞无稽。这里没有什么东西是有价值可言的，宇宙冷漠而荒谬，而人在真正面对它时，一切的现实和理智都将崩溃</p>
+<p>​ 我愿称之为荒诞浪漫主义的开端，甚至将引领一段不可思议的潮流。</p>
+<p>你问我什么是荒诞浪漫主义？ 是莫扎特谱写的朋克摇滚乐，
+是梵高画出的二次元美少女， 是曹雪芹写下的凡人修仙传，
+是李白导演出的商业谍战片， 是方文山创作出的让子弹飞，
+是和孝泰度过的那一个夏天。</p>
+<p>​
+今天是17号。我错过了16号的补档，正如我错过了那个夏天。还记得第一次看完了视频，我惊讶于孝泰的舞蹈，看完了评论，我想哭，我想笑，我想此刻在寒冷的的冬天穿着短袖去操场上跑圈，我想和视频里的孝泰一样做一些荒诞又浪漫的事情，我想有一个无悔的青春。我想说很多话，我想做很多事，可是到最后什么也没说，什么也没做。我羡慕孝泰，真的，他把生活过成了戏剧，又在每个16号都被常常记起，当没有人再放这些视频的时候，当孝泰被科技城遗忘的时候，孝泰才能真正活在南通吧</p>
+<h2 id="补档3">补档3</h2>
+<p>是枕绿色围巾孝泰的睡姿 是上课孝泰不断闭眼点头 是红衣孝泰李个逼的声波
+是孝泰蓝色三叶草T恤衫 是体育馆孝泰飞出的鞋垫 是丝滑无法复制孝泰转身
+是钉钉视频孝泰蓝刨冰机 是一张张照片孝泰的中指 是孝泰经典套司波登大衣
+是羽毛球馆孝泰梦幻脚步 是孝泰气喘喘的相当不绰 是孝泰撑起来的零号特工
+是还森两百多天南大孝泰 是通大电科孝泰五天早八 是不可能被五等分的孝泰</p>
+<h2 id="补档4">补档4</h2>
+<p>我好想做孝泰的狗啊。</p>
+<p>可是孝泰说他喜欢的是他小弟，我哭了。</p>
+<p>我知道既不是狗也不是小弟的我为什么要哭的。因为我其实是他的同学。</p>
+<p>我从没奢望孝泰能看一眼自己。我明白的，所有人都喜欢理解余裕上手天才打钱的萌萌的狗狗或者小弟，没有人会喜欢只会躲在阴暗角落的同学。</p>
+<p>但我还是问了孝泰:“我能不能做你的狗？”</p>
+<p>我知道我是注定做不了狗的。但如果他喜欢狗，我就可以一直在身边看着他了，哪怕她怀里抱着的永远都是狗。</p>
+<p>可是他说喜欢的是他小弟。</p>
+<p>他现在还能看我，还在和我说话，是因为他小弟还没有出现，只有我这同学每天蹑手蹑脚地从阴暗角落里爬出来，远远地和他对视。</p>
+<p>等他喜欢的小弟来了的时候，我就该重新滚回我的座位了吧。</p>
+<p>但我还是好仰慕他，他能在我还在他身边的时候多看我几眼吗？</p>
+<p>孝泰说接下来的每个圣诞夜都要和大家一起过。我不知道大家指哪些人。好希望这个集合能够对我做一次胞吞。</p>
+<p>他小弟还在害怕孝泰。</p>
+<p>我会去把他爱的小弟引来的。</p>
+<p>我知道稍有不慎，我就会请他小弟吃某利来冰山熔岩蛋糕。</p>
+<p>那时候孝泰大概会往我身上扔臭鸡蛋吧。</p>
+<p>那我就成了贤蛋黄，嘻嘻。</p>
+<p>我希望他能把我扔得近一点，因为我还是好仰慕他。会一直仰慕下去的。</p>
+<p>我的灵魂透过窗户向里面看去，挂着的铃铛在轻轻鸣响，孝泰慵懒地靠在沙发上，表演得非常温顺的小弟坐在他的身旁。壁炉的火光照在他的脸庞，我冻僵的心脏在风里微微发烫。</p>
 ]]></content>
       <categories>
-        <category>学科</category>
-        <category>数据结构</category>
+        <category>Tai</category>
       </categories>
       <tags>
-        <tag>数据结构</tag>
+        <tag>Tai</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>LATEX公式使用</title>
+    <url>/2023/09/15/2023/LATEX%E5%85%AC%E5%BC%8F%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<blockquote>
+<p>一些实用的技术</p>
+</blockquote>
+<span id="more"></span>
+<h1 id="前言">前言</h1>
+<blockquote>
+<p>最近在想写博客的时候发现我不太会用latex公式，就准备学一学</p>
+<p>网上有太多教程了，我就不重复劳动了，把一些重要的常用的copy下来，其他的转载</p>
+</blockquote>
+<h1 id="如何插入公式">如何插入公式</h1>
+<p><code>𝐿𝐴𝑇𝐸𝑋</code>
+的数学公式有两种：行中公式和独立公式（行间公式）。行中公式放在文中与其它文字混编，独立公式单独成行。</p>
+<p>行中公式可以用如下方法表示：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ 数学公式 $</span><br></pre></td></tr></table></figure>
+<p>独立公式可以用如下方法表示：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$$ 数学公式 $$</span><br></pre></td></tr></table></figure>
+<h3 id="标准函数">标准函数<a
+href="https://www.cnblogs.com/1024th/p/11623258.html#2083047927">#</a></h3>
+<p>指数</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\exp_a b = a^b, \exp b = e^b, 10^m</span><br></pre></td></tr></table></figure>
+<p><span class="math display">\[
+\exp_a b = a^b, \exp b = e^b, 10^m
+\]</span></p>
+<p>对数</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\ln c, \lg d = \log e, \log_&#123;10&#125; f</span><br></pre></td></tr></table></figure>
+<p><span class="math display">\[
+\ln c, \lg d = \log e, \log_{10} f
+\]</span></p>
+<p>三角函数</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\sin a, \cos b, \tan c, \cot d, \sec e, \csc f</span><br></pre></td></tr></table></figure>
+<p><span class="math display">\[
+\sin a, \cos b, \tan c, \cot d, \sec e, \csc f
+\]</span></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\arcsin a, \arccos b, \arctan c</span><br></pre></td></tr></table></figure>
+<p><span class="math display">\[
+\arcsin a, \arccos b, \arctan c
+\]</span></p>
+<p>其余请看这篇博文<a
+href="https://www.cnblogs.com/1024th/p/11623258.html">LaTeX公式手册(全网最全)</a></p>
+]]></content>
+      <categories>
+        <category>LATEX</category>
+      </categories>
+      <tags>
+        <tag>LATEX</tag>
       </tags>
   </entry>
   <entry>
@@ -987,6 +940,12 @@ href="http://localhost:9870/">http://localhost:9870</a>，成功打开</p>
         <tag>Docker</tag>
         <tag>Hadoop</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>第一篇博客</title>
+    <url>/2023/01/29/2023/hello-world/</url>
+    <content><![CDATA[<p>欢迎来到我的博客！</p>
+]]></content>
   </entry>
   <entry>
     <title>优化问题笔记</title>
@@ -1541,6 +1500,47 @@ alt="image-20230919141413149" />
       </tags>
   </entry>
   <entry>
+    <title>二叉树遍历简单做法</title>
+    <url>/2023/02/09/2023/%E4%BA%8C%E5%8F%89%E6%A0%91%E9%81%8D%E5%8E%86%E7%AE%80%E5%8D%95%E5%81%9A%E6%B3%95/</url>
+    <content><![CDATA[<blockquote>
+<p>看王道数据结构考研复习有感</p>
+</blockquote>
+<span id="more"></span>
+<h1 id="问题">问题</h1>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/%E4%BA%8C%E5%8F%89%E6%A0%91.PNG" alt="二叉树" style="zoom:33%;" /></p>
+<p>给出如图所示二叉树，请你分别对其进行前序、中序、后序遍历并给出遍历结果。</p>
+<h1 id="解答">解答</h1>
+<p>这里我们除了可以用编程思想一步一步进行遍历，还有一种更为简单快速的方法，这里我称它画图法。</p>
+<h2 id="步骤一">步骤一</h2>
+<p>我们先在每个结点旁画上小圆点，这里我们以前序遍历为例，在结点左侧画上小圆点。（中序遍历在下侧，后序遍历在右侧）</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/%E5%89%8D%E5%BA%8F.PNG" alt="前序" style="zoom:33%;" /></p>
+<h2 id="步骤二">步骤二</h2>
+<p>以根节点上方为起点，从左侧贴着二叉树画线穿过小圆点，绕一周回到起点。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/%E5%89%8D%E5%BA%8F2.PNG" alt="前序2" style="zoom:33%;" /></p>
+<h2 id="步骤三">步骤三</h2>
+<p>穿过小圆点的先后顺序便是遍历的结果。 这次遍历的结果为：</p>
+<center>
+<font color=Tomato size=6>前序：ABDECFHG</font>
+</center>
+<p>这样我们也能得到中序和后序遍历的结果了：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/%E4%B8%AD%E5%BA%8F.PNG" alt="中序" style="zoom:33%;" /></p>
+<center>
+<font color=Tomato size=6>中序：DBEAFHCG</font>
+</center>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/%E5%90%8E%E5%BA%8F.PNG" alt="后序" style="zoom:33%;" /></p>
+<center>
+<font color=Tomato size=6>后序：DEBHFGCA</font>
+</center>
+]]></content>
+      <categories>
+        <category>学科</category>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>美赛O奖论文研读有感</title>
     <url>/2023/02/11/2023/%E7%BE%8E%E8%B5%9BO%E5%A5%96%E8%AE%BA%E6%96%87%E7%A0%94%E8%AF%BB%E6%9C%89%E6%84%9F/</url>
     <content><![CDATA[<blockquote>
@@ -1689,6 +1689,50 @@ href="https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/">Leet
       </tags>
   </entry>
   <entry>
+    <title>重拾博客</title>
+    <url>/2023/09/03/2023/%E9%87%8D%E6%8B%BE%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<blockquote>
+<p>经过一个学期重拾个人博客</p>
+</blockquote>
+<span id="more"></span>
+<h1 id="前言">前言</h1>
+<p>在2023年暑假的时候我创建了自己的个人博客，通过github
+pages使用Hexo框架加上butterfly主题，荒废了一个学期，现在决定重新填起这个坑。</p>
+<h1 id="经过">经过</h1>
+<p>在寒假发了几个博客后，发现使用markdown写博客加入图片时不能做到可视化，而且当时还不知道图床这个东西，所以图片什么的都存到了本地，管理和存储起来十分麻烦，还给网站增加流量负载，所以弃坑了。</p>
+<p>再后来我在CSDN上发现了南邮的一个学长的博客，名叫<a
+href="https://wonzwang.blog.csdn.net/?type=blog">Wonz</a>，在他的博客中我学到了很多，也从他的友链中知道了很多学长，看着他们的博客，我也想重拾自己的坑了。</p>
+<p>有时候我也想在有些触动的时候将自己的想法记录下来，但奈何自己太懒，在这个暑假我去了一个单位实习，在实习的过程中我渐渐可以熟练地使用git，也在实习的过程中产生越来越多的想法，现在实习结束了，也想总结一下，慢慢填补这个坑吧。</p>
+<h1 id="准备">准备</h1>
+<p>之前为了网站看起来炫酷一点，我就选择了butterfly这个主题，不过这样的代价是图片太多了，而且不够简洁，过于花里胡哨，这样对网站的加载速度也有影响，也不好将注意力放在写作上。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/IMG_3840.JPG" alt="IMG_3840" style="zoom: 33%;" /></p>
+<p>所以我换了个新的主题——<strong>Next主题</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/image-20230903171120400.png" alt="image-20230903171120400" style="zoom: 33%;" /></p>
+<p>这个主题我是看的<a
+href="https://wonz.wang/">Wonz</a>学长的个人博客在用的，十分简洁，内容清晰明了，我在暑假也看到过一段话：</p>
+<blockquote>
+<p>技术博客不需要弄得太花里胡哨，简单清晰才是王道。</p>
+</blockquote>
+<p>我看见他置顶博客的描述：</p>
+<blockquote>
+<p>阮一峰大神曾经说过: 喜欢写 Blog 的人, 会经历 3 个阶段。</p>
+<p>第一阶段，刚接触 Blog，觉得很新鲜，试着选择一个免费空间来写。
+第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。
+第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。</p>
+</blockquote>
+<p>我对这话深有感触，本来我也在想要不要自己搞个服务器部署博客，发现根本没必要，还不安全，有github就很方便。</p>
+<h1 id="展望">展望</h1>
+<p>希望接下来能静下心来，将自己的所见所想记录下来，多输出些技术博客，提升自己的竞争力吧。</p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>通过Docker搭建完全分布式Hadoop集群</title>
     <url>/2023/09/19/2023/%E9%80%9A%E8%BF%87Docker%E6%90%AD%E5%BB%BA%E5%AE%8C%E5%85%A8%E5%88%86%E5%B8%83%E5%BC%8FHadoop%E9%9B%86%E7%BE%A4/</url>
     <content><![CDATA[<blockquote>
@@ -1793,50 +1837,6 @@ href="https://www.cnblogs.com/luo-c/p/15831441.html">https://www.cnblogs.com/luo
       <tags>
         <tag>Docker</tag>
         <tag>Hadoop</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>重拾博客</title>
-    <url>/2023/09/03/2023/%E9%87%8D%E6%8B%BE%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<blockquote>
-<p>经过一个学期重拾个人博客</p>
-</blockquote>
-<span id="more"></span>
-<h1 id="前言">前言</h1>
-<p>在2023年暑假的时候我创建了自己的个人博客，通过github
-pages使用Hexo框架加上butterfly主题，荒废了一个学期，现在决定重新填起这个坑。</p>
-<h1 id="经过">经过</h1>
-<p>在寒假发了几个博客后，发现使用markdown写博客加入图片时不能做到可视化，而且当时还不知道图床这个东西，所以图片什么的都存到了本地，管理和存储起来十分麻烦，还给网站增加流量负载，所以弃坑了。</p>
-<p>再后来我在CSDN上发现了南邮的一个学长的博客，名叫<a
-href="https://wonzwang.blog.csdn.net/?type=blog">Wonz</a>，在他的博客中我学到了很多，也从他的友链中知道了很多学长，看着他们的博客，我也想重拾自己的坑了。</p>
-<p>有时候我也想在有些触动的时候将自己的想法记录下来，但奈何自己太懒，在这个暑假我去了一个单位实习，在实习的过程中我渐渐可以熟练地使用git，也在实习的过程中产生越来越多的想法，现在实习结束了，也想总结一下，慢慢填补这个坑吧。</p>
-<h1 id="准备">准备</h1>
-<p>之前为了网站看起来炫酷一点，我就选择了butterfly这个主题，不过这样的代价是图片太多了，而且不够简洁，过于花里胡哨，这样对网站的加载速度也有影响，也不好将注意力放在写作上。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/IMG_3840.JPG" alt="IMG_3840" style="zoom: 33%;" /></p>
-<p>所以我换了个新的主题——<strong>Next主题</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/image-20230903171120400.png" alt="image-20230903171120400" style="zoom: 33%;" /></p>
-<p>这个主题我是看的<a
-href="https://wonz.wang/">Wonz</a>学长的个人博客在用的，十分简洁，内容清晰明了，我在暑假也看到过一段话：</p>
-<blockquote>
-<p>技术博客不需要弄得太花里胡哨，简单清晰才是王道。</p>
-</blockquote>
-<p>我看见他置顶博客的描述：</p>
-<blockquote>
-<p>阮一峰大神曾经说过: 喜欢写 Blog 的人, 会经历 3 个阶段。</p>
-<p>第一阶段，刚接触 Blog，觉得很新鲜，试着选择一个免费空间来写。
-第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。
-第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。</p>
-</blockquote>
-<p>我对这话深有感触，本来我也在想要不要自己搞个服务器部署博客，发现根本没必要，还不安全，有github就很方便。</p>
-<h1 id="展望">展望</h1>
-<p>希望接下来能静下心来，将自己的所见所想记录下来，多输出些技术博客，提升自己的竞争力吧。</p>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>博客</tag>
-        <tag>随笔</tag>
       </tags>
   </entry>
 </search>
