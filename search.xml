@@ -1,111 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>通过Docker搭建完全分布式Hadoop集群</title>
-    <url>/2023/09/19/%E9%80%9A%E8%BF%87Docker%E6%90%AD%E5%BB%BA%E5%AE%8C%E5%85%A8%E5%88%86%E5%B8%83%E5%BC%8FHadoop%E9%9B%86%E7%BE%A4/</url>
-    <content><![CDATA[<blockquote>
-<p>基于上一篇博客进行拓展</p>
-</blockquote>
-<span id="more"></span>
-<h1 id="前言">前言</h1>
-<blockquote>
-<p>上一次我们搭建了基于Docker的伪分布式Hadoop集群，这次来搭建分布式的</p>
-</blockquote>
-<h1 id="一为集群单独构建虚拟网络">一、为集群单独构建虚拟网络</h1>
-<p>现在的 Docker 网络能够提供 DNS
-解析功能，我们可以使用如下命令为接下来的 Hadoop
-集群单独构建一个虚拟的网络：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo docker network create --driver=bridge hadoop</span><br></pre></td></tr></table></figure>
-<p>使用下面这个命令查看 Docker 中的网络，可以看到刚刚创建的名为 hadoop
-的虚拟桥接网络：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo docker network ls</span><br></pre></td></tr></table></figure>
-<p><img src="C:\Users\JustinChoi\AppData\Roaming\Typora\typora-user-images\image-20230919201453731.png" alt="image-20230919201453731" style="zoom: 67%;" /></p>
-<h1 id="二进入上次搭建好的容器">二、进入上次搭建好的容器</h1>
-<p>我们通过上次制作的镜像启动一个容器：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run -dit --name=master --hostname=master hdp</span><br></pre></td></tr></table></figure>
-<p>我们进入<code>master</code>容器中</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker exec -it master /bin/bash</span><br></pre></td></tr></table></figure>
-<h1 id="三配置hadoop环境">三、配置Hadoop环境</h1>
-<p>在上一次我们已经配置了一个伪分布式的Hadoop环境，接下来我们需要对那些文件再进一步修改。</p>
-<h2 id="修改core-site.xml">1.修改<code>core-site.xml</code></h2>
-<p>打开<code>/usr/local/hadoop-3.3.1/etc/hadoop</code>路径下的<code>core-site.xml</code>:</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd /usr/local/hadoop-3.3.1</span><br><span class="line">cd etc/hadoop</span><br><span class="line">vim core-site.xml</span><br></pre></td></tr></table></figure>
-<p>修改后是这样的：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">　　&lt;!--指定nameNode的地址--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;fs.defaultFS&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;hdfs://master:8020&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">　　&lt;!--指定Hadoop数据的存储目录--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;hadoop.tmp.dir&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;/usr/local/hadoop/data&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">　　&lt;!--配置HDFS网页登陆使用的静态用户，配置这个之后才有权限可以在网页端删除文件、文件夹--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;hadoop.http.staticuser.user&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;root&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="修改hdfs-site.xml">2.修改<code>hdfs-site.xml</code></h2>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vim hdfs-site.xml</span><br></pre></td></tr></table></figure>
-<p>修改后：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">　　&lt;!--文件的存储个数--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;dfs.replication&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;3&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">　　&lt;!--nn web端访问地址，使用网页访问HDFS文件系统就是这个端口--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;dfs.namenode.http-address&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;master:9870&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">　　&lt;!--2nn web端访问地址--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;dfs.namenode.secondary.http-address&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;master:9868&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">　　&lt;!--网页查看HDFS文件内容，出现Couldn‘t preview the file报错，需要配置的参数--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;dfs.webhdfs.enabled&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;true&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="修改mapred-site.xml">3.修改<code>mapred-site.xml</code></h2>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vim mapred-site.xml</span><br></pre></td></tr></table></figure>
-<p>修改后：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">　　&lt;!--指定MapReduce程序运行在Yarn上--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;mapreduce.framework.name&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;yarn&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="修改yarn-site.xml">4.修改<code>yarn-site.xml</code></h2>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vim yarn-site.xml</span><br></pre></td></tr></table></figure>
-<p>修改后：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">　　&lt;!--指定MR走 shuffle--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;mapreduce_shuffle&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">　　&lt;!--指定ResourceManager的地址--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;yarn.resourcemanager.hostname&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;h01&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">　　&lt;!--环境变量的继承--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;yarn.nodemanager.env-whitelist&lt;/name&gt;         </span><br><span class="line">        &lt;value&gt;JAVA_HOME,HADOOP_COMMON_HOME,HADOOP_HDFS_HOME,HADOOP_CONF_DIR,CLASSPATH_PREPEND_DISTCACHE,HADOOP_YARN_HOME,HADOOP_MAPRED_HOME&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="修改workers">5.修改<code>workers</code></h2>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim workers</span><br></pre></td></tr></table></figure>
-<p>修改后：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">master</span><br><span class="line">slave1</span><br><span class="line">slave2</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>注意：master这些后面不要有空格！slave2后面，不要有空的行！自己准备起多少集群，就在这里写几个，要是准备起5个集群，就写到slave4。</p>
-</blockquote>
-<h1 id="四在docker中启动集群">四、在Docker中启动集群</h1>
-<h2 id="先将容器导出为镜像">1.先将容器导出为镜像</h2>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker commit master nethdp</span><br></pre></td></tr></table></figure>
-<h2 id="启动三个终端">2.启动三个终端</h2>
-<ul>
-<li><p>第一条命令启动的是<code>master</code>做<code>master</code>节点的，所以要开放一些端口，用来访问web页面</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run -dit --network hadoop --hostname=master --name=master -p 9870:9870 -p 8088:8088 nethdp /bin/bash</span><br></pre></td></tr></table></figure></li>
-<li><p>后面几条命令都类似，只要注意修改名字和主机名就行</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run -dit --network hadoop -hostname=slave1 --name=slave1 nethdp /bin/bash</span><br></pre></td></tr></table></figure></li>
-<li><p>第三条命令</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run -dit --network hadoop -hostname=slave2 --name=slave2 nethdp /bin/bash</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h2
-id="接下来在master主机中启动hadoop集群">3.接下来在<code>master</code>主机中启动Hadoop集群</h2>
-<p>先在hadoop安装目录进行格式化操作，不格式化操作，hdfs起不来（<strong>只有第一次启动</strong>的时候需要初始化，以后启动就不需要了，先删除所有机器的
-data和logs目录，然后再进行格式化）：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">./bin/hdfs namenode -format</span><br></pre></td></tr></table></figure>
-<p><img src="C:\Users\JustinChoi\AppData\Roaming\Typora\typora-user-images\image-20230919205754453.png" alt="image-20230919205754453" style="zoom:80%;" /></p>
-<p>然后启动HDFS集群：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">./sbin/start-dfs.sh</span><br></pre></td></tr></table></figure>
-<figure>
-<img
-src="C:\Users\JustinChoi\AppData\Roaming\Typora\typora-user-images\image-20230919210507605.png"
-alt="image-20230919210507605" />
-<figcaption aria-hidden="true">image-20230919210507605</figcaption>
-</figure>
-<p>最后，启动yarn集群管理节点：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">./sbin/start-yarn.sh</span><br></pre></td></tr></table></figure>
-<p>都启动完成后，使用 jps 命令查看：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">jps</span><br></pre></td></tr></table></figure>
-<p><img src="C:\Users\JustinChoi\AppData\Roaming\Typora\typora-user-images\image-20230919210554410.png" alt="image-20230919210554410" style="zoom:80%;" /></p>
-<p>可以看到，除了Jps，一共有5个进程，因为这里没有将
-nameNode、ResourceManager、SecondaryNameNode分开部署，所以都在
-h01这一台机器上，实际生产中，应该是需要分开部署的。</p>
-<p>至此，Hadoop 集群已经构建好了。</p>
-<h1 id="五网页访问">五、网页访问</h1>
-<h2 id="浏览器访问本机的9870端口">1.浏览器访问本机的9870端口</h2>
-<p><img src="C:\Users\JustinChoi\AppData\Roaming\Typora\typora-user-images\image-20230919210729977.png" alt="image-20230919210729977" style="zoom: 67%;" /></p>
-<h2 id="浏览器访问本机的8088端口">2.浏览器访问本机的8088端口</h2>
-<p><img src="C:\Users\JustinChoi\AppData\Roaming\Typora\typora-user-images\image-20230919210811664.png" alt="image-20230919210811664" style="zoom:67%;" /></p>
-<blockquote>
-<p>参考：</p>
-<p>https://www.cnblogs.com/luo-c/p/15831441.html</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Docker</category>
-        <category>Hadoop</category>
-      </categories>
-      <tags>
-        <tag>Docker</tag>
-        <tag>Hadoop</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>2023美赛经验分享</title>
     <url>/2023/02/23/2023/2023%E7%BE%8E%E8%B5%9B%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/</url>
     <content><![CDATA[<blockquote>
@@ -751,6 +646,99 @@ alt="Dark skin tone of Quickdraw" /></a></td>
       </tags>
   </entry>
   <entry>
+    <title>Taihub分享</title>
+    <url>/2023/02/01/2023/Taihub%E5%88%86%E4%BA%AB/</url>
+    <content><![CDATA[<blockquote>
+<p>关于泰的一切</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/IMG_1790.PNG" alt="IMG_1790" style="zoom: 25%;" /></p>
+</blockquote>
+<span id="more"></span>
+<h1 id="前言">前言</h1>
+<p>孝泰是由2021年夏天一个视频引发的小众亚文化圈子，发展至今，已诞生了多数优秀的作品。在这里我进行了不完全的整理并放在了网盘上，请自行取用。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/IMG_1790.PNG" alt="IMG_1790" style="zoom: 25%;" /></p>
+<h1 id="链接">链接</h1>
+<p>https://pan.baidu.com/s/1IqRYFEZJGfA_Bg0yNdBY5w?pwd=6sa7
+提取码：6sa7</p>
+<h1 id="使用须知">使用须知</h1>
+<p>正作是tai原素材包含视频和图片多数来源于cj 番外是tai整活视频
+DLC是tai整活图片 借物表不填写⚪ 二配允许⚪ 修改允许⚪ 商用不允许×
+R18不允许×</p>
+<h1 id="补档">补档</h1>
+<h2 id="补档1">补档1</h2>
+<p>​
+孝泰为什么是神？在谈论这个问题之前，我想先说说其他梗王相较于孝泰究竟差在了哪里</p>
+<h3 id="首先是犯下傲慢之罪的哲学众将">首先是犯下傲慢之罪的哲学众将</h3>
+<p>​
+凭着niconico留下来的热度，在B站掀起一波腥风血雨，这种亚文化梗注定走不长远，事实也是如此，18年被B站制裁了之后就泯然众人，仅维持着一点热度。与之相比神就很谦卑，嘞个mang，李个逼都是神留给凡人的慈悲，神不是没有好的口头禅，只是不想通过太完美的言语让大家折服而故意不用，可笑有些人不理解神的良苦用心，竟然还用这些事来讥讽神，我劝你们好自为之。</p>
+<h3 id="然后是犯下愤怒之罪的虎哥">然后是犯下愤怒之罪的虎哥</h3>
+<p>​
+因为杀马特团长与其的口角争斗，就愤怒地与团长进行约战，违背了神在《新约》中的一句话:“还森两百多天吧，我的话就似想和大家缩，尽力zhuo到坠好的自己吧。”于是神降下了他的惩罚，虎哥不见踪影，落寞生活。</p>
+<h3 id="接着是犯下懒惰之罪的初音">接着是犯下懒惰之罪的初音</h3>
+<p>​
+自以为拿下几个畅销冠军就了不起了，自创歌姬计划。另外大家有所不知，其实每次初音发歌前，初音闭上眼睛做冥想的时候，其脑海中看见的画面，正是站在光芒之中的孝泰，那时神告诉她：“李只可到这里，不可越过。”然而，神的劝说不但没有让初音迷途知返，竟敢还不断发游戏发周边正面挑战神的威严，于是神降下了他的惩罚，初音热度渐渐下降，从公主殿下变成了葱。</p>
+<h3 id="再然后是犯下了嫉妒之罪的子润">再然后是犯下了嫉妒之罪的子润</h3>
+<p>​
+热度屡次被神击败，但口服心不服的子润，暗中嫉妒着神，甚至胆敢在赵睿英面前挑明和张国的关系。于是，在含金量更高的热度对决，即处男帮里，子润被孝泰正面击溃。不过，念在都是一个班的份上，并且践行了神的意志吸引力屡次吼神的赵睿英的火力后，神应许了他在一班的一切。</p>
+<h3 id="犯下贪婪之罪的刘华强">犯下贪婪之罪的刘华强</h3>
+<p>​
+只是部老剧，华强就夺得了2021年B站热度榜单，而这，自然是因为神的应许。神本来钦定他为自己在人间的代言人，在自己热度下去后替自己继续火热全网，为此甚至不惜亲自为华强铺路，主动退出B站圈，将一切荣耀都归给他，甚至应许他可以带走自己最爱的瓜。但最后华强却被利益蒙蔽了双眼，不再以践行神的理想为自己的理想，也不再聆听神的教诲，甚至自以荣光已经超过了神，竟允许粉丝P出孝泰卖瓜这种亵渎神尊严的图片，于是神降下了惩罚，华强从此不再正常并且拥有各种形态，而他的电瓶车将再也不能载起他最初的梦想，他的刀再也不能正常地劈瓜，他的瓜摊老板再也不能正常地发觉不对劲。</p>
+<h3 id="犯下暴食之罪的嘉然">犯下暴食之罪的嘉然</h3>
+<p>​
+在神子华强开始堕落之后，神开始寻找下一个代言人，这一次，他选中了嘉然。相较于神，嘉然无疑是不完美的，他没有神足以让众人沦陷的样貌，也没有神深不见底的名句池，舍我其谁的胆气，敏锐的词汇选择，无懈可击的步伐，但神将自己最虔诚，同时也是实力最强大的两位泰心糖暂时交给了她，并复刻了为华强的铺路操作，但由于高考的事，神认为或许是自己给的压力过大才导致了华强的堕落，于是这一次神选择了去南通，减少嘉然的心理负担，最终，嘉然成功了。然而，获得热度的嘉然不但冒大不韪给两位泰心糖新的称号嘉心糖，更妄图染指神力，只是她错误地认为身的力量来源于语言的步伐，最终她也因此犯下了暴食之罪，并得到了一大推屁用没有的嘉心糖。</p>
+<h3 id="最后犯下淫欲之罪的吴乘风">最后，犯下淫欲之罪的吴乘风</h3>
+<p>​
+2021暑假之后，神已经非常虚弱了，原神用氪金系统吸走了神的精气，神已经无力再惩罚嘉然，只有两位信徒依旧在维护神的尊严而已。此刻已经决心退隐的神在最后依然心系苏州，于是他选中了第三位神子——吴乘风。作为第三任神子，吴乘风很好地维护了神的尊严，但接连击溃鼓楼的窑子后，吴乘风遇到了石佛寺三宫四十八号的浦口淫魔，被吸走了神赋予自己的力量，于是在班干竞选中节节败退，最终泯然众人，活在男人窝中。</p>
+<h2 id="补档2">补档2</h2>
+<p>​
+2021年的最后一个16号已经过去一天，孝泰的补档已成终章，不管是好活还是烂活，重要的是慢慢的，大家，把所谓的烂活，好活……讲成了一个故事，变成了一种艺术。朦胧的感觉，迷茫的感觉，大家最初单纯只是喜欢恶搞，喜欢玩乐，渐渐的渐渐的喜欢上了孝泰的真实。
+不真实的，真实</p>
+<p>​
+那些视频我看了不下50次，最初点进去是抱着无厘头的态度看一个搞笑的抽象作品的，可没想到我被彻底的震撼到了，忍不住的看了一次又一次。</p>
+<p>​
+多年前模糊的画质，夏日漱石的配乐，王家卫文艺的台词，孝泰荒诞行为的画面。这一切听起来不可思议甚至有些魔幻的组合却拼接的是那么的恰到好处，想要赋予视频意义的同时又在鼓励观众尝试解构一帧帧画面。</p>
+<p>​
+狭窄的房间，失意的男人，狂乱的肢体动作，整部作品都旨在表达一种荒谬感，一种充斥着整个人类历史的荒诞无稽。这里没有什么东西是有价值可言的，宇宙冷漠而荒谬，而人在真正面对它时，一切的现实和理智都将崩溃</p>
+<p>​ 我愿称之为荒诞浪漫主义的开端，甚至将引领一段不可思议的潮流。</p>
+<p>你问我什么是荒诞浪漫主义？ 是莫扎特谱写的朋克摇滚乐，
+是梵高画出的二次元美少女， 是曹雪芹写下的凡人修仙传，
+是李白导演出的商业谍战片， 是方文山创作出的让子弹飞，
+是和孝泰度过的那一个夏天。</p>
+<p>​
+今天是17号。我错过了16号的补档，正如我错过了那个夏天。还记得第一次看完了视频，我惊讶于孝泰的舞蹈，看完了评论，我想哭，我想笑，我想此刻在寒冷的的冬天穿着短袖去操场上跑圈，我想和视频里的孝泰一样做一些荒诞又浪漫的事情，我想有一个无悔的青春。我想说很多话，我想做很多事，可是到最后什么也没说，什么也没做。我羡慕孝泰，真的，他把生活过成了戏剧，又在每个16号都被常常记起，当没有人再放这些视频的时候，当孝泰被科技城遗忘的时候，孝泰才能真正活在南通吧</p>
+<h2 id="补档3">补档3</h2>
+<p>是枕绿色围巾孝泰的睡姿 是上课孝泰不断闭眼点头 是红衣孝泰李个逼的声波
+是孝泰蓝色三叶草T恤衫 是体育馆孝泰飞出的鞋垫 是丝滑无法复制孝泰转身
+是钉钉视频孝泰蓝刨冰机 是一张张照片孝泰的中指 是孝泰经典套司波登大衣
+是羽毛球馆孝泰梦幻脚步 是孝泰气喘喘的相当不绰 是孝泰撑起来的零号特工
+是还森两百多天南大孝泰 是通大电科孝泰五天早八 是不可能被五等分的孝泰</p>
+<h2 id="补档4">补档4</h2>
+<p>我好想做孝泰的狗啊。</p>
+<p>可是孝泰说他喜欢的是他小弟，我哭了。</p>
+<p>我知道既不是狗也不是小弟的我为什么要哭的。因为我其实是他的同学。</p>
+<p>我从没奢望孝泰能看一眼自己。我明白的，所有人都喜欢理解余裕上手天才打钱的萌萌的狗狗或者小弟，没有人会喜欢只会躲在阴暗角落的同学。</p>
+<p>但我还是问了孝泰:“我能不能做你的狗？”</p>
+<p>我知道我是注定做不了狗的。但如果他喜欢狗，我就可以一直在身边看着他了，哪怕她怀里抱着的永远都是狗。</p>
+<p>可是他说喜欢的是他小弟。</p>
+<p>他现在还能看我，还在和我说话，是因为他小弟还没有出现，只有我这同学每天蹑手蹑脚地从阴暗角落里爬出来，远远地和他对视。</p>
+<p>等他喜欢的小弟来了的时候，我就该重新滚回我的座位了吧。</p>
+<p>但我还是好仰慕他，他能在我还在他身边的时候多看我几眼吗？</p>
+<p>孝泰说接下来的每个圣诞夜都要和大家一起过。我不知道大家指哪些人。好希望这个集合能够对我做一次胞吞。</p>
+<p>他小弟还在害怕孝泰。</p>
+<p>我会去把他爱的小弟引来的。</p>
+<p>我知道稍有不慎，我就会请他小弟吃某利来冰山熔岩蛋糕。</p>
+<p>那时候孝泰大概会往我身上扔臭鸡蛋吧。</p>
+<p>那我就成了贤蛋黄，嘻嘻。</p>
+<p>我希望他能把我扔得近一点，因为我还是好仰慕他。会一直仰慕下去的。</p>
+<p>我的灵魂透过窗户向里面看去，挂着的铃铛在轻轻鸣响，孝泰慵懒地靠在沙发上，表演得非常温顺的小弟坐在他的身旁。壁炉的火光照在他的脸庞，我冻僵的心脏在风里微微发烫。</p>
+]]></content>
+      <categories>
+        <category>Tai</category>
+      </categories>
+      <tags>
+        <tag>Tai</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Ubuntu配置hadoop（基于Docker）</title>
     <url>/2023/09/07/2023/Ubuntu%E9%85%8D%E7%BD%AEhadoop%EF%BC%88%E5%9F%BA%E4%BA%8EDocker%EF%BC%89/</url>
     <content><![CDATA[<blockquote>
@@ -954,6 +942,12 @@ href="http://localhost:9870/">http://localhost:9870</a>，成功打开</p>
       </tags>
   </entry>
   <entry>
+    <title>第一篇博客</title>
+    <url>/2023/01/29/2023/hello-world/</url>
+    <content><![CDATA[<p>欢迎来到我的博客！</p>
+]]></content>
+  </entry>
+  <entry>
     <title>二叉树遍历简单做法</title>
     <url>/2023/02/09/2023/%E4%BA%8C%E5%8F%89%E6%A0%91%E9%81%8D%E5%8E%86%E7%AE%80%E5%8D%95%E5%81%9A%E6%B3%95/</url>
     <content><![CDATA[<blockquote>
@@ -992,105 +986,6 @@ href="http://localhost:9870/">http://localhost:9870</a>，成功打开</p>
       </categories>
       <tags>
         <tag>数据结构</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>第一篇博客</title>
-    <url>/2023/01/29/2023/hello-world/</url>
-    <content><![CDATA[<p>欢迎来到我的博客！</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Taihub分享</title>
-    <url>/2023/02/01/2023/Taihub%E5%88%86%E4%BA%AB/</url>
-    <content><![CDATA[<blockquote>
-<p>关于泰的一切</p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/IMG_1790.PNG" alt="IMG_1790" style="zoom: 25%;" /></p>
-</blockquote>
-<span id="more"></span>
-<h1 id="前言">前言</h1>
-<p>孝泰是由2021年夏天一个视频引发的小众亚文化圈子，发展至今，已诞生了多数优秀的作品。在这里我进行了不完全的整理并放在了网盘上，请自行取用。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/IMG_1790.PNG" alt="IMG_1790" style="zoom: 25%;" /></p>
-<h1 id="链接">链接</h1>
-<p>https://pan.baidu.com/s/1IqRYFEZJGfA_Bg0yNdBY5w?pwd=6sa7
-提取码：6sa7</p>
-<h1 id="使用须知">使用须知</h1>
-<p>正作是tai原素材包含视频和图片多数来源于cj 番外是tai整活视频
-DLC是tai整活图片 借物表不填写⚪ 二配允许⚪ 修改允许⚪ 商用不允许×
-R18不允许×</p>
-<h1 id="补档">补档</h1>
-<h2 id="补档1">补档1</h2>
-<p>​
-孝泰为什么是神？在谈论这个问题之前，我想先说说其他梗王相较于孝泰究竟差在了哪里</p>
-<h3 id="首先是犯下傲慢之罪的哲学众将">首先是犯下傲慢之罪的哲学众将</h3>
-<p>​
-凭着niconico留下来的热度，在B站掀起一波腥风血雨，这种亚文化梗注定走不长远，事实也是如此，18年被B站制裁了之后就泯然众人，仅维持着一点热度。与之相比神就很谦卑，嘞个mang，李个逼都是神留给凡人的慈悲，神不是没有好的口头禅，只是不想通过太完美的言语让大家折服而故意不用，可笑有些人不理解神的良苦用心，竟然还用这些事来讥讽神，我劝你们好自为之。</p>
-<h3 id="然后是犯下愤怒之罪的虎哥">然后是犯下愤怒之罪的虎哥</h3>
-<p>​
-因为杀马特团长与其的口角争斗，就愤怒地与团长进行约战，违背了神在《新约》中的一句话:“还森两百多天吧，我的话就似想和大家缩，尽力zhuo到坠好的自己吧。”于是神降下了他的惩罚，虎哥不见踪影，落寞生活。</p>
-<h3 id="接着是犯下懒惰之罪的初音">接着是犯下懒惰之罪的初音</h3>
-<p>​
-自以为拿下几个畅销冠军就了不起了，自创歌姬计划。另外大家有所不知，其实每次初音发歌前，初音闭上眼睛做冥想的时候，其脑海中看见的画面，正是站在光芒之中的孝泰，那时神告诉她：“李只可到这里，不可越过。”然而，神的劝说不但没有让初音迷途知返，竟敢还不断发游戏发周边正面挑战神的威严，于是神降下了他的惩罚，初音热度渐渐下降，从公主殿下变成了葱。</p>
-<h3 id="再然后是犯下了嫉妒之罪的子润">再然后是犯下了嫉妒之罪的子润</h3>
-<p>​
-热度屡次被神击败，但口服心不服的子润，暗中嫉妒着神，甚至胆敢在赵睿英面前挑明和张国的关系。于是，在含金量更高的热度对决，即处男帮里，子润被孝泰正面击溃。不过，念在都是一个班的份上，并且践行了神的意志吸引力屡次吼神的赵睿英的火力后，神应许了他在一班的一切。</p>
-<h3 id="犯下贪婪之罪的刘华强">犯下贪婪之罪的刘华强</h3>
-<p>​
-只是部老剧，华强就夺得了2021年B站热度榜单，而这，自然是因为神的应许。神本来钦定他为自己在人间的代言人，在自己热度下去后替自己继续火热全网，为此甚至不惜亲自为华强铺路，主动退出B站圈，将一切荣耀都归给他，甚至应许他可以带走自己最爱的瓜。但最后华强却被利益蒙蔽了双眼，不再以践行神的理想为自己的理想，也不再聆听神的教诲，甚至自以荣光已经超过了神，竟允许粉丝P出孝泰卖瓜这种亵渎神尊严的图片，于是神降下了惩罚，华强从此不再正常并且拥有各种形态，而他的电瓶车将再也不能载起他最初的梦想，他的刀再也不能正常地劈瓜，他的瓜摊老板再也不能正常地发觉不对劲。</p>
-<h3 id="犯下暴食之罪的嘉然">犯下暴食之罪的嘉然</h3>
-<p>​
-在神子华强开始堕落之后，神开始寻找下一个代言人，这一次，他选中了嘉然。相较于神，嘉然无疑是不完美的，他没有神足以让众人沦陷的样貌，也没有神深不见底的名句池，舍我其谁的胆气，敏锐的词汇选择，无懈可击的步伐，但神将自己最虔诚，同时也是实力最强大的两位泰心糖暂时交给了她，并复刻了为华强的铺路操作，但由于高考的事，神认为或许是自己给的压力过大才导致了华强的堕落，于是这一次神选择了去南通，减少嘉然的心理负担，最终，嘉然成功了。然而，获得热度的嘉然不但冒大不韪给两位泰心糖新的称号嘉心糖，更妄图染指神力，只是她错误地认为身的力量来源于语言的步伐，最终她也因此犯下了暴食之罪，并得到了一大推屁用没有的嘉心糖。</p>
-<h3 id="最后犯下淫欲之罪的吴乘风">最后，犯下淫欲之罪的吴乘风</h3>
-<p>​
-2021暑假之后，神已经非常虚弱了，原神用氪金系统吸走了神的精气，神已经无力再惩罚嘉然，只有两位信徒依旧在维护神的尊严而已。此刻已经决心退隐的神在最后依然心系苏州，于是他选中了第三位神子——吴乘风。作为第三任神子，吴乘风很好地维护了神的尊严，但接连击溃鼓楼的窑子后，吴乘风遇到了石佛寺三宫四十八号的浦口淫魔，被吸走了神赋予自己的力量，于是在班干竞选中节节败退，最终泯然众人，活在男人窝中。</p>
-<h2 id="补档2">补档2</h2>
-<p>​
-2021年的最后一个16号已经过去一天，孝泰的补档已成终章，不管是好活还是烂活，重要的是慢慢的，大家，把所谓的烂活，好活……讲成了一个故事，变成了一种艺术。朦胧的感觉，迷茫的感觉，大家最初单纯只是喜欢恶搞，喜欢玩乐，渐渐的渐渐的喜欢上了孝泰的真实。
-不真实的，真实</p>
-<p>​
-那些视频我看了不下50次，最初点进去是抱着无厘头的态度看一个搞笑的抽象作品的，可没想到我被彻底的震撼到了，忍不住的看了一次又一次。</p>
-<p>​
-多年前模糊的画质，夏日漱石的配乐，王家卫文艺的台词，孝泰荒诞行为的画面。这一切听起来不可思议甚至有些魔幻的组合却拼接的是那么的恰到好处，想要赋予视频意义的同时又在鼓励观众尝试解构一帧帧画面。</p>
-<p>​
-狭窄的房间，失意的男人，狂乱的肢体动作，整部作品都旨在表达一种荒谬感，一种充斥着整个人类历史的荒诞无稽。这里没有什么东西是有价值可言的，宇宙冷漠而荒谬，而人在真正面对它时，一切的现实和理智都将崩溃</p>
-<p>​ 我愿称之为荒诞浪漫主义的开端，甚至将引领一段不可思议的潮流。</p>
-<p>你问我什么是荒诞浪漫主义？ 是莫扎特谱写的朋克摇滚乐，
-是梵高画出的二次元美少女， 是曹雪芹写下的凡人修仙传，
-是李白导演出的商业谍战片， 是方文山创作出的让子弹飞，
-是和孝泰度过的那一个夏天。</p>
-<p>​
-今天是17号。我错过了16号的补档，正如我错过了那个夏天。还记得第一次看完了视频，我惊讶于孝泰的舞蹈，看完了评论，我想哭，我想笑，我想此刻在寒冷的的冬天穿着短袖去操场上跑圈，我想和视频里的孝泰一样做一些荒诞又浪漫的事情，我想有一个无悔的青春。我想说很多话，我想做很多事，可是到最后什么也没说，什么也没做。我羡慕孝泰，真的，他把生活过成了戏剧，又在每个16号都被常常记起，当没有人再放这些视频的时候，当孝泰被科技城遗忘的时候，孝泰才能真正活在南通吧</p>
-<h2 id="补档3">补档3</h2>
-<p>是枕绿色围巾孝泰的睡姿 是上课孝泰不断闭眼点头 是红衣孝泰李个逼的声波
-是孝泰蓝色三叶草T恤衫 是体育馆孝泰飞出的鞋垫 是丝滑无法复制孝泰转身
-是钉钉视频孝泰蓝刨冰机 是一张张照片孝泰的中指 是孝泰经典套司波登大衣
-是羽毛球馆孝泰梦幻脚步 是孝泰气喘喘的相当不绰 是孝泰撑起来的零号特工
-是还森两百多天南大孝泰 是通大电科孝泰五天早八 是不可能被五等分的孝泰</p>
-<h2 id="补档4">补档4</h2>
-<p>我好想做孝泰的狗啊。</p>
-<p>可是孝泰说他喜欢的是他小弟，我哭了。</p>
-<p>我知道既不是狗也不是小弟的我为什么要哭的。因为我其实是他的同学。</p>
-<p>我从没奢望孝泰能看一眼自己。我明白的，所有人都喜欢理解余裕上手天才打钱的萌萌的狗狗或者小弟，没有人会喜欢只会躲在阴暗角落的同学。</p>
-<p>但我还是问了孝泰:“我能不能做你的狗？”</p>
-<p>我知道我是注定做不了狗的。但如果他喜欢狗，我就可以一直在身边看着他了，哪怕她怀里抱着的永远都是狗。</p>
-<p>可是他说喜欢的是他小弟。</p>
-<p>他现在还能看我，还在和我说话，是因为他小弟还没有出现，只有我这同学每天蹑手蹑脚地从阴暗角落里爬出来，远远地和他对视。</p>
-<p>等他喜欢的小弟来了的时候，我就该重新滚回我的座位了吧。</p>
-<p>但我还是好仰慕他，他能在我还在他身边的时候多看我几眼吗？</p>
-<p>孝泰说接下来的每个圣诞夜都要和大家一起过。我不知道大家指哪些人。好希望这个集合能够对我做一次胞吞。</p>
-<p>他小弟还在害怕孝泰。</p>
-<p>我会去把他爱的小弟引来的。</p>
-<p>我知道稍有不慎，我就会请他小弟吃某利来冰山熔岩蛋糕。</p>
-<p>那时候孝泰大概会往我身上扔臭鸡蛋吧。</p>
-<p>那我就成了贤蛋黄，嘻嘻。</p>
-<p>我希望他能把我扔得近一点，因为我还是好仰慕他。会一直仰慕下去的。</p>
-<p>我的灵魂透过窗户向里面看去，挂着的铃铛在轻轻鸣响，孝泰慵懒地靠在沙发上，表演得非常温顺的小弟坐在他的身旁。壁炉的火光照在他的脸庞，我冻僵的心脏在风里微微发烫。</p>
-]]></content>
-      <categories>
-        <category>Tai</category>
-      </categories>
-      <tags>
-        <tag>Tai</tag>
       </tags>
   </entry>
   <entry>
@@ -1372,6 +1267,53 @@ class="math inline">\(\{x^k\}\)</span>如果迭代在有限步内终止，那么
       </tags>
   </entry>
   <entry>
+    <title>关于2023暑假</title>
+    <url>/2023/09/15/2023/%E5%85%B3%E4%BA%8E2023%E6%9A%91%E5%81%87/</url>
+    <content><![CDATA[<blockquote>
+<p>给忙碌的暑假一个交代</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/IMG_2971.jpeg" style="zoom:80%;" /></p>
+</blockquote>
+<span id="more"></span>
+<h1 id="前言">前言</h1>
+<p>这篇总结拖了很久，一直没有很充裕的时间来回忆和总结这个暑假的实习（也是我太懒了），所以我准备用每天的碎片时间来对我这个暑假做一个总结。</p>
+<h1 id="实习">实习</h1>
+<p>在这个暑假我找到我的第一份<code>实习</code>，也是托关系找来的，在暑假前我一直在刷脉脉和知乎，我也是被网上的言论给影响了，当时我一直有股信念，本科能找到不错的工作就没有必要读研了，特别是像现在这样的经济形势，说不定读三年研究生出来能找到的工作还不如本科时候找到的，所以我在暑假就很想学<code>技术</code>，就推掉了数模国赛转而去实习。</p>
+<h2 id="七月">七月</h2>
+<p>在七月十号左右我入职了，当时我的<code>mentor</code>还没来，就把显示器插排什么的都放到工位，本来以为我是来做大数据相关工作的，所以就把各类db软件下载了下来，然后开始学习</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/IMG_2957.jpeg" alt="IMG_2957" style="zoom: 50%;" /></p>
+<p>第二天公司老总和我谈了谈，我当时很迷茫的一点是要不要读研，老总和我讲了很多，说未来是人工智能的天下，并且给我配的导师是搞人工智能的，技术很厉害，让我多和他学习，而且说不建议我读研。不过我当时想，ai已经卷成这样了，很多硕士都找不到工作，搞ai还不读研那不是自寻死路吗，当然这也是当时的想法，经历的多了之后想法会不断产生变化。</p>
+<h3 id="初遇mentor">初遇mentor</h3>
+<p>在周五左右我第一次见到了我的mentor，看起来很和善，我们也找了个时间谈了一下，他给我介绍了人工智能目前的状况，并十分建议我读研，而且最好到国外去读（毕竟国外学习和开发的环境要自由些），他说目前公司就只有他一个人搞ai，说我来还挺高兴的，这样可以有人一起讨论，而且十分愿意教我。</p>
+<p>说实话我在之前也没接触过ai，也没想过去做ai，这次实习属于是我对ai的启蒙。</p>
+<h3 id="学习">学习</h3>
+<p>一开始因为我对ai没什么了解，所以mentor给了我很多资料，并且让我去看<code>吴恩达的deep learning</code>，听说是英文的我还害怕了一下，等到实际在学习的时候就会发现基本上没有什么障碍，不得不说很多外国的课程是真的高质量，由浅入深、通俗易懂。</p>
+<p>我花了一周时间认真看完了这门课，对神经网络有了一定的了解，也意识到人工智能底层就是数学，就是<code>高数+线性代数+概率论+统计学</code>的集合。</p>
+<h2 id="八月">八月</h2>
+<p>mentor和我说我来的时间其实很不巧，因为公司做事是阶段性的，在我来的期间正好公司没有什么业务拓展，所以我就只好看看公司以前的项目代码。</p>
+<h3 id="e集运">e集运</h3>
+<p>e集运是我接触的第一个项目，mentor很详细的给我梳理了整个项目的流程框架，在这个项目我也学到很多，像<code>Docker</code>，<code>git</code>等，我准备再之后新写一篇博客具体梳理一下这个项目。</p>
+<h3 id="github">Github</h3>
+<p>因为拉公司项目什么的需要用到<code>git</code>，所以我也仔细学习了一下git的相关技术，我也真正理解了<code>GitHub</code>的正确打开姿势，很遗憾我到现在才真正学会了github，以后要开始代码管理咯。</p>
+<h3 id="新项目">新项目</h3>
+<p>我也接触到了一些公司准备新进行的项目，通过做项目我才了解我的技术远远不够，像各种数据库的使用，我们专业将数据库这门课放到了大三下学期，我认为这是极不合理的，数据库是工作时必备的技术，所以我十分建议早点把数据库学起来。</p>
+<p>新项目是语言大模型和功能调用的融合，我其实没做什么，只是一直在pull代码看其他员工是怎么写的，就只是这样我也学到了很多。</p>
+<h3 id="kaggle天池">Kaggle/天池</h3>
+<p>在一开始的时候mentor就跟我说，如果要短期内学到很多东西，那就去打个比赛，像他自己就在打比赛，他十分推荐我去打<code>Kaggle</code>，当时我觉得，比赛什么时候都可以打，但公司项目不是什么时候都能接触的，所以就没选择打比赛，现在开学了，我也准备打一场kaggle看看，提升自己。</p>
+<h3 id="分别">分别</h3>
+<p>我的实习是做到8月25号，是个周五，在周一的时候mentor兴冲冲找到我说：“来活了！他们准备在之前e集运那个项目再做拓展。”唉，还是挺可惜的，那个时候已经没有时间做了。</p>
+<p>最后要分别的前一天mentor又找到我聊了聊，聊到未来的方向，我当时还是想着ai太卷了，想做java开发什么的，到现在有些改观，现在我感觉未来ai的门槛会越来越低。</p>
+<h1 id="未来">未来</h1>
+<p>在暑期末的时候，我爸妈带我去做了职业规划，找的是抖音上的水哥职说，也在苏州，最后也是确定要出国了。</p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>凸集（Convex Set）</title>
     <url>/2023/09/19/2023/%E5%87%B8%E9%9B%86%EF%BC%88Convex-Set%EF%BC%89/</url>
     <content><![CDATA[<blockquote>
@@ -1599,53 +1541,6 @@ alt="image-20230919141413149" />
       </tags>
   </entry>
   <entry>
-    <title>关于2023暑假</title>
-    <url>/2023/09/15/2023/%E5%85%B3%E4%BA%8E2023%E6%9A%91%E5%81%87/</url>
-    <content><![CDATA[<blockquote>
-<p>给忙碌的暑假一个交代</p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/IMG_2971.jpeg" style="zoom:80%;" /></p>
-</blockquote>
-<span id="more"></span>
-<h1 id="前言">前言</h1>
-<p>这篇总结拖了很久，一直没有很充裕的时间来回忆和总结这个暑假的实习（也是我太懒了），所以我准备用每天的碎片时间来对我这个暑假做一个总结。</p>
-<h1 id="实习">实习</h1>
-<p>在这个暑假我找到我的第一份<code>实习</code>，也是托关系找来的，在暑假前我一直在刷脉脉和知乎，我也是被网上的言论给影响了，当时我一直有股信念，本科能找到不错的工作就没有必要读研了，特别是像现在这样的经济形势，说不定读三年研究生出来能找到的工作还不如本科时候找到的，所以我在暑假就很想学<code>技术</code>，就推掉了数模国赛转而去实习。</p>
-<h2 id="七月">七月</h2>
-<p>在七月十号左右我入职了，当时我的<code>mentor</code>还没来，就把显示器插排什么的都放到工位，本来以为我是来做大数据相关工作的，所以就把各类db软件下载了下来，然后开始学习</p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/IMG_2957.jpeg" alt="IMG_2957" style="zoom: 50%;" /></p>
-<p>第二天公司老总和我谈了谈，我当时很迷茫的一点是要不要读研，老总和我讲了很多，说未来是人工智能的天下，并且给我配的导师是搞人工智能的，技术很厉害，让我多和他学习，而且说不建议我读研。不过我当时想，ai已经卷成这样了，很多硕士都找不到工作，搞ai还不读研那不是自寻死路吗，当然这也是当时的想法，经历的多了之后想法会不断产生变化。</p>
-<h3 id="初遇mentor">初遇mentor</h3>
-<p>在周五左右我第一次见到了我的mentor，看起来很和善，我们也找了个时间谈了一下，他给我介绍了人工智能目前的状况，并十分建议我读研，而且最好到国外去读（毕竟国外学习和开发的环境要自由些），他说目前公司就只有他一个人搞ai，说我来还挺高兴的，这样可以有人一起讨论，而且十分愿意教我。</p>
-<p>说实话我在之前也没接触过ai，也没想过去做ai，这次实习属于是我对ai的启蒙。</p>
-<h3 id="学习">学习</h3>
-<p>一开始因为我对ai没什么了解，所以mentor给了我很多资料，并且让我去看<code>吴恩达的deep learning</code>，听说是英文的我还害怕了一下，等到实际在学习的时候就会发现基本上没有什么障碍，不得不说很多外国的课程是真的高质量，由浅入深、通俗易懂。</p>
-<p>我花了一周时间认真看完了这门课，对神经网络有了一定的了解，也意识到人工智能底层就是数学，就是<code>高数+线性代数+概率论+统计学</code>的集合。</p>
-<h2 id="八月">八月</h2>
-<p>mentor和我说我来的时间其实很不巧，因为公司做事是阶段性的，在我来的期间正好公司没有什么业务拓展，所以我就只好看看公司以前的项目代码。</p>
-<h3 id="e集运">e集运</h3>
-<p>e集运是我接触的第一个项目，mentor很详细的给我梳理了整个项目的流程框架，在这个项目我也学到很多，像<code>Docker</code>，<code>git</code>等，我准备再之后新写一篇博客具体梳理一下这个项目。</p>
-<h3 id="github">Github</h3>
-<p>因为拉公司项目什么的需要用到<code>git</code>，所以我也仔细学习了一下git的相关技术，我也真正理解了<code>GitHub</code>的正确打开姿势，很遗憾我到现在才真正学会了github，以后要开始代码管理咯。</p>
-<h3 id="新项目">新项目</h3>
-<p>我也接触到了一些公司准备新进行的项目，通过做项目我才了解我的技术远远不够，像各种数据库的使用，我们专业将数据库这门课放到了大三下学期，我认为这是极不合理的，数据库是工作时必备的技术，所以我十分建议早点把数据库学起来。</p>
-<p>新项目是语言大模型和功能调用的融合，我其实没做什么，只是一直在pull代码看其他员工是怎么写的，就只是这样我也学到了很多。</p>
-<h3 id="kaggle天池">Kaggle/天池</h3>
-<p>在一开始的时候mentor就跟我说，如果要短期内学到很多东西，那就去打个比赛，像他自己就在打比赛，他十分推荐我去打<code>Kaggle</code>，当时我觉得，比赛什么时候都可以打，但公司项目不是什么时候都能接触的，所以就没选择打比赛，现在开学了，我也准备打一场kaggle看看，提升自己。</p>
-<h3 id="分别">分别</h3>
-<p>我的实习是做到8月25号，是个周五，在周一的时候mentor兴冲冲找到我说：“来活了！他们准备在之前e集运那个项目再做拓展。”唉，还是挺可惜的，那个时候已经没有时间做了。</p>
-<p>最后要分别的前一天mentor又找到我聊了聊，聊到未来的方向，我当时还是想着ai太卷了，想做java开发什么的，到现在有些改观，现在我感觉未来ai的门槛会越来越低。</p>
-<h1 id="未来">未来</h1>
-<p>在暑期末的时候，我爸妈带我去做了职业规划，找的是抖音上的水哥职说，也在苏州，最后也是确定要出国了。</p>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>博客</tag>
-        <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>美赛O奖论文研读有感</title>
     <url>/2023/02/11/2023/%E7%BE%8E%E8%B5%9BO%E5%A5%96%E8%AE%BA%E6%96%87%E7%A0%94%E8%AF%BB%E6%9C%89%E6%84%9F/</url>
     <content><![CDATA[<blockquote>
@@ -1835,6 +1730,112 @@ href="https://wonz.wang/">Wonz</a>学长的个人博客在用的，十分简洁�
       <tags>
         <tag>博客</tag>
         <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>通过Docker搭建完全分布式Hadoop集群</title>
+    <url>/2023/09/19/2023/%E9%80%9A%E8%BF%87Docker%E6%90%AD%E5%BB%BA%E5%AE%8C%E5%85%A8%E5%88%86%E5%B8%83%E5%BC%8FHadoop%E9%9B%86%E7%BE%A4/</url>
+    <content><![CDATA[<blockquote>
+<p>基于上一篇博客进行拓展</p>
+</blockquote>
+<span id="more"></span>
+<h1 id="前言">前言</h1>
+<blockquote>
+<p><a
+href="https://www.justinchoi.top/2023/09/07/2023/Ubuntu%E9%85%8D%E7%BD%AEhadoop%EF%BC%88%E5%9F%BA%E4%BA%8EDocker%EF%BC%89/">上一次</a>我们搭建了基于Docker的伪分布式Hadoop集群，这次来搭建分布式的</p>
+</blockquote>
+<h1 id="一为集群单独构建虚拟网络">一、为集群单独构建虚拟网络</h1>
+<p>现在的 Docker 网络能够提供 DNS
+解析功能，我们可以使用如下命令为接下来的 Hadoop
+集群单独构建一个虚拟的网络：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo docker network create --driver=bridge hadoop</span><br></pre></td></tr></table></figure>
+<p>使用下面这个命令查看 Docker 中的网络，可以看到刚刚创建的名为 hadoop
+的虚拟桥接网络：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo docker network ls</span><br></pre></td></tr></table></figure>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309201145415.png" alt="image-20230919201453731" style="zoom: 67%;" /></p>
+<h1 id="二进入上次搭建好的容器">二、进入上次搭建好的容器</h1>
+<p>我们通过上次制作的镜像启动一个容器：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run -dit --name=master --hostname=master hdp</span><br></pre></td></tr></table></figure>
+<p>我们进入<code>master</code>容器中</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker exec -it master /bin/bash</span><br></pre></td></tr></table></figure>
+<h1 id="三配置hadoop环境">三、配置Hadoop环境</h1>
+<p>在上一次我们已经配置了一个伪分布式的Hadoop环境，接下来我们需要对那些文件再进一步修改。</p>
+<h2 id="修改core-site.xml">1.修改<code>core-site.xml</code></h2>
+<p>打开<code>/usr/local/hadoop-3.3.1/etc/hadoop</code>路径下的<code>core-site.xml</code>:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd /usr/local/hadoop-3.3.1</span><br><span class="line">cd etc/hadoop</span><br><span class="line">vim core-site.xml</span><br></pre></td></tr></table></figure>
+<p>修改后是这样的：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">　　&lt;!--指定nameNode的地址--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;fs.defaultFS&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;hdfs://master:8020&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">　　&lt;!--指定Hadoop数据的存储目录--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;hadoop.tmp.dir&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;/usr/local/hadoop/data&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">　　&lt;!--配置HDFS网页登陆使用的静态用户，配置这个之后才有权限可以在网页端删除文件、文件夹--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;hadoop.http.staticuser.user&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;root&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="修改hdfs-site.xml">2.修改<code>hdfs-site.xml</code></h2>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vim hdfs-site.xml</span><br></pre></td></tr></table></figure>
+<p>修改后：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">　　&lt;!--文件的存储个数--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;dfs.replication&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;3&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">　　&lt;!--nn web端访问地址，使用网页访问HDFS文件系统就是这个端口--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;dfs.namenode.http-address&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;master:9870&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">　　&lt;!--2nn web端访问地址--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;dfs.namenode.secondary.http-address&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;master:9868&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">　　&lt;!--网页查看HDFS文件内容，出现Couldn‘t preview the file报错，需要配置的参数--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;dfs.webhdfs.enabled&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;true&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="修改mapred-site.xml">3.修改<code>mapred-site.xml</code></h2>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vim mapred-site.xml</span><br></pre></td></tr></table></figure>
+<p>修改后：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">　　&lt;!--指定MapReduce程序运行在Yarn上--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;mapreduce.framework.name&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;yarn&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="修改yarn-site.xml">4.修改<code>yarn-site.xml</code></h2>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vim yarn-site.xml</span><br></pre></td></tr></table></figure>
+<p>修改后：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">　　&lt;!--指定MR走 shuffle--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;mapreduce_shuffle&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">　　&lt;!--指定ResourceManager的地址--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;yarn.resourcemanager.hostname&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;h01&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">　　&lt;!--环境变量的继承--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;yarn.nodemanager.env-whitelist&lt;/name&gt;         </span><br><span class="line">        &lt;value&gt;JAVA_HOME,HADOOP_COMMON_HOME,HADOOP_HDFS_HOME,HADOOP_CONF_DIR,CLASSPATH_PREPEND_DISTCACHE,HADOOP_YARN_HOME,HADOOP_MAPRED_HOME&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="修改workers">5.修改<code>workers</code></h2>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim workers</span><br></pre></td></tr></table></figure>
+<p>修改后：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">master</span><br><span class="line">slave1</span><br><span class="line">slave2</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意：master这些后面不要有空格！slave2后面，不要有空的行！自己准备起多少集群，就在这里写几个，要是准备起5个集群，就写到slave4。</p>
+</blockquote>
+<h1 id="四在docker中启动集群">四、在Docker中启动集群</h1>
+<h2 id="先将容器导出为镜像">1.先将容器导出为镜像</h2>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker commit master nethdp</span><br></pre></td></tr></table></figure>
+<h2 id="启动三个终端">2.启动三个终端</h2>
+<ul>
+<li><p>第一条命令启动的是<code>master</code>做<code>master</code>节点的，所以要开放一些端口，用来访问web页面</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run -dit --network hadoop --hostname=master --name=master -p 9870:9870 -p 8088:8088 nethdp /bin/bash</span><br></pre></td></tr></table></figure></li>
+<li><p>后面几条命令都类似，只要注意修改名字和主机名就行</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run -dit --network hadoop -hostname=slave1 --name=slave1 nethdp /bin/bash</span><br></pre></td></tr></table></figure></li>
+<li><p>第三条命令</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run -dit --network hadoop -hostname=slave2 --name=slave2 nethdp /bin/bash</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2
+id="接下来在master主机中启动hadoop集群">3.接下来在<code>master</code>主机中启动Hadoop集群</h2>
+<p>先在hadoop安装目录进行格式化操作，不格式化操作，hdfs起不来（<strong>只有第一次启动</strong>的时候需要初始化，以后启动就不需要了，先删除所有机器的
+data和logs目录，然后再进行格式化）：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">./bin/hdfs namenode -format</span><br></pre></td></tr></table></figure>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309201145608.png" alt="image-20230919205754453" style="zoom:80%;" /></p>
+<p>然后启动HDFS集群：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">./sbin/start-dfs.sh</span><br></pre></td></tr></table></figure>
+<figure>
+<img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309201145588.png"
+alt="image-20230919210507605" />
+<figcaption aria-hidden="true">image-20230919210507605</figcaption>
+</figure>
+<p>最后，启动yarn集群管理节点：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">./sbin/start-yarn.sh</span><br></pre></td></tr></table></figure>
+<p>都启动完成后，使用 jps 命令查看：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">jps</span><br></pre></td></tr></table></figure>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309201145662.png" alt="image-20230919210554410" style="zoom:80%;" /></p>
+<p>可以看到，除了Jps，一共有5个进程，因为这里没有将
+nameNode、ResourceManager、SecondaryNameNode分开部署，所以都在
+h01这一台机器上，实际生产中，应该是需要分开部署的。</p>
+<p>至此，Hadoop 集群已经构建好了。</p>
+<h1 id="五网页访问">五、网页访问</h1>
+<h2 id="浏览器访问本机的9870端口">1.浏览器访问本机的9870端口</h2>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309201145278.png" alt="image-20230919210729977" style="zoom: 67%;" /></p>
+<h2 id="浏览器访问本机的8088端口">2.浏览器访问本机的8088端口</h2>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309201145164.png" alt="image-20230919210811664" style="zoom:67%;" /></p>
+<blockquote>
+<p>参考：</p>
+<p>https://www.cnblogs.com/luo-c/p/15831441.html</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Docker</category>
+        <category>Hadoop</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+        <tag>Hadoop</tag>
       </tags>
   </entry>
 </search>

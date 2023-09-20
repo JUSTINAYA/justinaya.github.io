@@ -22,29 +22,29 @@
     <meta name="description" content="基于上一篇博客进行拓展">
 <meta property="og:type" content="article">
 <meta property="og:title" content="通过Docker搭建完全分布式Hadoop集群">
-<meta property="og:url" content="http://www.justinchoi.top/2023/09/19/%E9%80%9A%E8%BF%87Docker%E6%90%AD%E5%BB%BA%E5%AE%8C%E5%85%A8%E5%88%86%E5%B8%83%E5%BC%8FHadoop%E9%9B%86%E7%BE%A4/index.html">
+<meta property="og:url" content="http://www.justinchoi.top/2023/09/19/2023/%E9%80%9A%E8%BF%87Docker%E6%90%AD%E5%BB%BA%E5%AE%8C%E5%85%A8%E5%88%86%E5%B8%83%E5%BC%8FHadoop%E9%9B%86%E7%BE%A4/index.html">
 <meta property="og:site_name" content="文文的短发">
 <meta property="og:description" content="基于上一篇博客进行拓展">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="c:\Users\JustinChoi\AppData\Roaming\Typora\typora-user-images\image-20230919201453731.png">
-<meta property="og:image" content="c:\Users\JustinChoi\AppData\Roaming\Typora\typora-user-images\image-20230919205754453.png">
-<meta property="og:image" content="c:\Users\JustinChoi\AppData\Roaming\Typora\typora-user-images\image-20230919210554410.png">
-<meta property="og:image" content="c:\Users\JustinChoi\AppData\Roaming\Typora\typora-user-images\image-20230919210729977.png">
-<meta property="og:image" content="c:\Users\JustinChoi\AppData\Roaming\Typora\typora-user-images\image-20230919210811664.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309201145415.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309201145608.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309201145662.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309201145278.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309201145164.png">
 <meta property="article:published_time" content="2023-09-19T12:05:12.000Z">
-<meta property="article:modified_time" content="2023-09-19T13:11:23.576Z">
+<meta property="article:modified_time" content="2023-09-20T03:46:47.024Z">
 <meta property="article:author" content="文文的短发">
 <meta property="article:tag" content="Docker">
 <meta property="article:tag" content="Hadoop">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="c:\Users\JustinChoi\AppData\Roaming\Typora\typora-user-images\image-20230919201453731.png">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309201145415.png">
 
 
-<link rel="canonical" href="http://www.justinchoi.top/2023/09/19/%E9%80%9A%E8%BF%87Docker%E6%90%AD%E5%BB%BA%E5%AE%8C%E5%85%A8%E5%88%86%E5%B8%83%E5%BC%8FHadoop%E9%9B%86%E7%BE%A4/">
+<link rel="canonical" href="http://www.justinchoi.top/2023/09/19/2023/%E9%80%9A%E8%BF%87Docker%E6%90%AD%E5%BB%BA%E5%AE%8C%E5%85%A8%E5%88%86%E5%B8%83%E5%BC%8FHadoop%E9%9B%86%E7%BE%A4/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://www.justinchoi.top/2023/09/19/%E9%80%9A%E8%BF%87Docker%E6%90%AD%E5%BB%BA%E5%AE%8C%E5%85%A8%E5%88%86%E5%B8%83%E5%BC%8FHadoop%E9%9B%86%E7%BE%A4/","path":"2023/09/19/通过Docker搭建完全分布式Hadoop集群/","title":"通过Docker搭建完全分布式Hadoop集群"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://www.justinchoi.top/2023/09/19/2023/%E9%80%9A%E8%BF%87Docker%E6%90%AD%E5%BB%BA%E5%AE%8C%E5%85%A8%E5%88%86%E5%B8%83%E5%BC%8FHadoop%E9%9B%86%E7%BE%A4/","path":"2023/09/19/2023/通过Docker搭建完全分布式Hadoop集群/","title":"通过Docker搭建完全分布式Hadoop集群"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>通过Docker搭建完全分布式Hadoop集群 | 文文的短发</title>
@@ -226,7 +226,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.justinchoi.top/2023/09/19/%E9%80%9A%E8%BF%87Docker%E6%90%AD%E5%BB%BA%E5%AE%8C%E5%85%A8%E5%88%86%E5%B8%83%E5%BC%8FHadoop%E9%9B%86%E7%BE%A4/">
+    <link itemprop="mainEntityOfPage" href="http://www.justinchoi.top/2023/09/19/2023/%E9%80%9A%E8%BF%87Docker%E6%90%AD%E5%BB%BA%E5%AE%8C%E5%85%A8%E5%88%86%E5%B8%83%E5%BC%8FHadoop%E9%9B%86%E7%BE%A4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/img/headimg.JPG">
@@ -254,9 +254,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2023-09-19 20:05:12 / 修改时间：21:11:23" itemprop="dateCreated datePublished" datetime="2023-09-19T20:05:12+08:00">2023-09-19</time>
+      <time title="创建时间：2023-09-19 20:05:12" itemprop="dateCreated datePublished" datetime="2023-09-19T20:05:12+08:00">2023-09-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-09-20 11:46:47" itemprop="dateModified" datetime="2023-09-20T11:46:47+08:00">2023-09-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -287,7 +293,8 @@
 <span id="more"></span>
 <h1 id="前言">前言</h1>
 <blockquote>
-<p>上一次我们搭建了基于Docker的伪分布式Hadoop集群，这次来搭建分布式的</p>
+<p><a
+href="https://www.justinchoi.top/2023/09/07/2023/Ubuntu%E9%85%8D%E7%BD%AEhadoop%EF%BC%88%E5%9F%BA%E4%BA%8EDocker%EF%BC%89/">上一次</a>我们搭建了基于Docker的伪分布式Hadoop集群，这次来搭建分布式的</p>
 </blockquote>
 <h1 id="一为集群单独构建虚拟网络">一、为集群单独构建虚拟网络</h1>
 <p>现在的 Docker 网络能够提供 DNS
@@ -297,7 +304,7 @@
 <p>使用下面这个命令查看 Docker 中的网络，可以看到刚刚创建的名为 hadoop
 的虚拟桥接网络：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker network ls</span><br></pre></td></tr></table></figure>
-<p><img src="C:\Users\JustinChoi\AppData\Roaming\Typora\typora-user-images\image-20230919201453731.png" alt="image-20230919201453731" style="zoom: 67%;" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309201145415.png" alt="image-20230919201453731" style="zoom: 67%;" /></p>
 <h1 id="二进入上次搭建好的容器">二、进入上次搭建好的容器</h1>
 <p>我们通过上次制作的镜像启动一个容器：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -dit --name=master --hostname=master hdp</span><br></pre></td></tr></table></figure>
@@ -346,12 +353,12 @@ id="接下来在master主机中启动hadoop集群">3.接下来在<code>master</c
 <p>先在hadoop安装目录进行格式化操作，不格式化操作，hdfs起不来（<strong>只有第一次启动</strong>的时候需要初始化，以后启动就不需要了，先删除所有机器的
 data和logs目录，然后再进行格式化）：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./bin/hdfs namenode -format</span><br></pre></td></tr></table></figure>
-<p><img src="C:\Users\JustinChoi\AppData\Roaming\Typora\typora-user-images\image-20230919205754453.png" alt="image-20230919205754453" style="zoom:80%;" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309201145608.png" alt="image-20230919205754453" style="zoom:80%;" /></p>
 <p>然后启动HDFS集群：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./sbin/start-dfs.sh</span><br></pre></td></tr></table></figure>
 <figure>
 <img
-src="C:\Users\JustinChoi\AppData\Roaming\Typora\typora-user-images\image-20230919210507605.png"
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309201145588.png"
 alt="image-20230919210507605" />
 <figcaption aria-hidden="true">image-20230919210507605</figcaption>
 </figure>
@@ -359,16 +366,16 @@ alt="image-20230919210507605" />
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./sbin/start-yarn.sh</span><br></pre></td></tr></table></figure>
 <p>都启动完成后，使用 jps 命令查看：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jps</span><br></pre></td></tr></table></figure>
-<p><img src="C:\Users\JustinChoi\AppData\Roaming\Typora\typora-user-images\image-20230919210554410.png" alt="image-20230919210554410" style="zoom:80%;" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309201145662.png" alt="image-20230919210554410" style="zoom:80%;" /></p>
 <p>可以看到，除了Jps，一共有5个进程，因为这里没有将
 nameNode、ResourceManager、SecondaryNameNode分开部署，所以都在
 h01这一台机器上，实际生产中，应该是需要分开部署的。</p>
 <p>至此，Hadoop 集群已经构建好了。</p>
 <h1 id="五网页访问">五、网页访问</h1>
 <h2 id="浏览器访问本机的9870端口">1.浏览器访问本机的9870端口</h2>
-<p><img src="C:\Users\JustinChoi\AppData\Roaming\Typora\typora-user-images\image-20230919210729977.png" alt="image-20230919210729977" style="zoom: 67%;" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309201145278.png" alt="image-20230919210729977" style="zoom: 67%;" /></p>
 <h2 id="浏览器访问本机的8088端口">2.浏览器访问本机的8088端口</h2>
-<p><img src="C:\Users\JustinChoi\AppData\Roaming\Typora\typora-user-images\image-20230919210811664.png" alt="image-20230919210811664" style="zoom:67%;" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309201145164.png" alt="image-20230919210811664" style="zoom:67%;" /></p>
 <blockquote>
 <p>参考：</p>
 <p>https://www.cnblogs.com/luo-c/p/15831441.html</p>
