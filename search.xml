@@ -1,6 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>2023美赛经验分享</title>
+    <url>/2023/02/23/2023/2023%E7%BE%8E%E8%B5%9B%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/</url>
+    <content><![CDATA[<blockquote>
+<p>2023美赛参赛有感</p>
+</blockquote>
+<span id="more"></span>
+<h1 id="前言">前言</h1>
+<p>2023年美赛已经告一段落，我也在这一次的比赛中收获良多，因此，我也在此将自己本次参赛的一些心得进行分享，希望能在一定程度上帮助有需要的人。</p>
+<h1 id="赛前">赛前</h1>
+<h2 id="组队">组队</h2>
+<p>我在很早（大概是大一下学期的暑假）就有了参加美赛的想法，当时就在表白墙找了队友，准备在暑假里学一学的，但出于一些原因，最后没能坚持下来。到快美赛报名的时候，我的两个室友已经组好了队，缺一个论文手，我想我也有点word使用功底，就和他们一起组了队。舍友或者朋友之间组队有一个好处，就是大家之间基本上知根知底的，都知道对方是什么样的人，会比较靠谱，而这样的坏处就是专业方向基本一致，像我们三个都是计软院的，我是数据科学与大数据技术的，两个舍友是软件工程的。其实我认为不需要太过追求专业多样化，比如数学专业的建模手，计算机专业的编程手，文科专业的论文手这样的，首先不一定专业对口专业性就强，其次互相之间如果不是很熟悉的话容易出事，造成两人建模甚至一人建模这样子。我认为<code>靠谱</code>还是找队友的第一标准。</p>
+<h2 id="准备">准备</h2>
+<p>在赛前最好还是了解下参赛流程还有比赛需要的知识，可以在网上找找获奖大佬的经验分享或者问问学校里参赛过的同学，像我就是向院里获F奖的学长请教了，他所分享的经验也让我收获颇深，还给我发了一些论文和模版啥的，我也在比赛的时候用上了；还有就是看了我们学校获O奖的学长宋浩然在B站作出的分享，多多少少也有帮助吧。</p>
+<h3 id="关于编程">关于编程</h3>
+<p>编程手至少需要会<code>Matlab</code>，像我们组的编程手就是用<code>Matlab</code>还有<code>SPSS</code>，如果是画图，我还推荐<code>Python</code>和<code>Jupyter Notebook</code>，Jupyter
+Notebook本质上也是Python，Python有很多第三方库软件包的支持，网上也有很多的教程，可以画出一些“高大上”的图，在机器学习和数据分析这两方面也有着得天独厚的优势，在这里我分享几个常用的库：</p>
+<blockquote>
+<ol type="1">
+<li>numpy</li>
+<li>matplotlib</li>
+<li>pandas</li>
+</ol>
+</blockquote>
+<p>这些库不管是用来做数据分析或者画图都很有用，网上也有很多的教程，在这里就不过多赘述了。</p>
+<h3 id="关于建模">关于建模</h3>
+<p>建模手主要还是得了解各种<code>模型</code>：</p>
+<blockquote>
+<p>优化模型</p>
+<p>预测模型</p>
+<p>分类模型</p>
+<p>评价模型</p>
+<p>······</p>
+</blockquote>
+<p>我们的建模手是跟着B站的<code>数学建模清风</code>在学，感觉还挺不错的，经典的模型一定要懂，也要多看看O奖论文，其实很多O奖论文的模型看似高大上，其实也只是高级套皮而已，我们只需要在比赛的时候现学现卖就行。</p>
+<h3 id="关于论文">关于论文</h3>
+<p>论文写作工具可以用<code>Word</code>，也有不少人推荐使用<code>Latex</code>，本次比赛里我使用了Word进行写作，我来讲讲这两个工具各自的优点：</p>
+<p><strong>Word</strong></p>
+<blockquote>
+<ol type="1">
+<li>上手快，所见及所得</li>
+<li>功能强大，基本上你的要求它都可以满足</li>
+<li>教程十分多，不懂的上网都能查得到</li>
+</ol>
+</blockquote>
+<p><strong>Latex</strong></p>
+<blockquote>
+<ol type="1">
+<li>不需要自己排版</li>
+<li>排版美观</li>
+</ol>
+</blockquote>
+<p>这两个工具可以自行选择，Latex麻烦的一点就是需要会编程语言，学习成本大，不能可视化。不过现在也有能让Latex可视化的网站，感觉还挺好。这次比赛我用的是Word，因为有模版，用起来还是很顺手的。</p>
+<p>英文写作的话我们这次完全使用的<code>有道翻译</code>进行机翻，正确率还是很高的，不过翻完还是得自己看一下表达的意思对不对。其余的话我也推荐<code>谷歌翻译</code>，<code>DeepL</code>，翻译文献的话用<code>知云文献翻译</code>，当然还有一个人工智能，懂得都懂，这里不多说。</p>
+<h1 id="赛中">赛中</h1>
+<p>经历这次比赛，我觉得<code>时间分配</code>还是十分重要的，这次我们选择了E题，我想也是最多人选择的一题。但在做第一问的时候建模手卡住了，导致论文手也在坐牢，做出第一问已经是比赛的第三天了，导致后面的流程就很紧张，还好最后是顺利完成了。</p>
+<p>关于比赛中网上一些提供思路的或者卖思路的，我觉得看看就好，他们弄的或许看上去做的很对，但也有可能有致命漏洞，自己参加的比赛终究还是靠自己。</p>
+<p>这次最让我们感到坐牢的可能还是数据的查找，国内的网站几乎不会有特别符合题目需求的数据，这时候就需要翻墙到外网看看，墙外的世界还是很明朗的</p>
+<p>可能队友会在一些问题上产生分歧，就像这次比赛时我们组员也对美国的GDP和中国的GDP不能直接换算进行了争吵，我的评价是最好还是能控制情绪，用愉快的氛围进行比赛，弄的太紧张了也不好，必要的时候做出一些退步。</p>
+<h1 id="总结">总结</h1>
+<p>这次比赛也算是我大学生涯中参加的第一次比较重大的比赛，总的来说还是很有收获的，两个队友也挺靠谱的，是一段珍贵的经历。</p>
+]]></content>
+      <categories>
+        <category>学科</category>
+        <category>数学建模</category>
+      </categories>
+      <tags>
+        <tag>美赛</tag>
+        <tag>数学建模</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>凸优化问题</title>
     <url>/2023/09/21/%E5%87%B8%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[<blockquote>
@@ -199,77 +270,6 @@ problem）</h3>
       </tags>
   </entry>
   <entry>
-    <title>2023美赛经验分享</title>
-    <url>/2023/02/23/2023/2023%E7%BE%8E%E8%B5%9B%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/</url>
-    <content><![CDATA[<blockquote>
-<p>2023美赛参赛有感</p>
-</blockquote>
-<span id="more"></span>
-<h1 id="前言">前言</h1>
-<p>2023年美赛已经告一段落，我也在这一次的比赛中收获良多，因此，我也在此将自己本次参赛的一些心得进行分享，希望能在一定程度上帮助有需要的人。</p>
-<h1 id="赛前">赛前</h1>
-<h2 id="组队">组队</h2>
-<p>我在很早（大概是大一下学期的暑假）就有了参加美赛的想法，当时就在表白墙找了队友，准备在暑假里学一学的，但出于一些原因，最后没能坚持下来。到快美赛报名的时候，我的两个室友已经组好了队，缺一个论文手，我想我也有点word使用功底，就和他们一起组了队。舍友或者朋友之间组队有一个好处，就是大家之间基本上知根知底的，都知道对方是什么样的人，会比较靠谱，而这样的坏处就是专业方向基本一致，像我们三个都是计软院的，我是数据科学与大数据技术的，两个舍友是软件工程的。其实我认为不需要太过追求专业多样化，比如数学专业的建模手，计算机专业的编程手，文科专业的论文手这样的，首先不一定专业对口专业性就强，其次互相之间如果不是很熟悉的话容易出事，造成两人建模甚至一人建模这样子。我认为<code>靠谱</code>还是找队友的第一标准。</p>
-<h2 id="准备">准备</h2>
-<p>在赛前最好还是了解下参赛流程还有比赛需要的知识，可以在网上找找获奖大佬的经验分享或者问问学校里参赛过的同学，像我就是向院里获F奖的学长请教了，他所分享的经验也让我收获颇深，还给我发了一些论文和模版啥的，我也在比赛的时候用上了；还有就是看了我们学校获O奖的学长宋浩然在B站作出的分享，多多少少也有帮助吧。</p>
-<h3 id="关于编程">关于编程</h3>
-<p>编程手至少需要会<code>Matlab</code>，像我们组的编程手就是用<code>Matlab</code>还有<code>SPSS</code>，如果是画图，我还推荐<code>Python</code>和<code>Jupyter Notebook</code>，Jupyter
-Notebook本质上也是Python，Python有很多第三方库软件包的支持，网上也有很多的教程，可以画出一些“高大上”的图，在机器学习和数据分析这两方面也有着得天独厚的优势，在这里我分享几个常用的库：</p>
-<blockquote>
-<ol type="1">
-<li>numpy</li>
-<li>matplotlib</li>
-<li>pandas</li>
-</ol>
-</blockquote>
-<p>这些库不管是用来做数据分析或者画图都很有用，网上也有很多的教程，在这里就不过多赘述了。</p>
-<h3 id="关于建模">关于建模</h3>
-<p>建模手主要还是得了解各种<code>模型</code>：</p>
-<blockquote>
-<p>优化模型</p>
-<p>预测模型</p>
-<p>分类模型</p>
-<p>评价模型</p>
-<p>······</p>
-</blockquote>
-<p>我们的建模手是跟着B站的<code>数学建模清风</code>在学，感觉还挺不错的，经典的模型一定要懂，也要多看看O奖论文，其实很多O奖论文的模型看似高大上，其实也只是高级套皮而已，我们只需要在比赛的时候现学现卖就行。</p>
-<h3 id="关于论文">关于论文</h3>
-<p>论文写作工具可以用<code>Word</code>，也有不少人推荐使用<code>Latex</code>，本次比赛里我使用了Word进行写作，我来讲讲这两个工具各自的优点：</p>
-<p><strong>Word</strong></p>
-<blockquote>
-<ol type="1">
-<li>上手快，所见及所得</li>
-<li>功能强大，基本上你的要求它都可以满足</li>
-<li>教程十分多，不懂的上网都能查得到</li>
-</ol>
-</blockquote>
-<p><strong>Latex</strong></p>
-<blockquote>
-<ol type="1">
-<li>不需要自己排版</li>
-<li>排版美观</li>
-</ol>
-</blockquote>
-<p>这两个工具可以自行选择，Latex麻烦的一点就是需要会编程语言，学习成本大，不能可视化。不过现在也有能让Latex可视化的网站，感觉还挺好。这次比赛我用的是Word，因为有模版，用起来还是很顺手的。</p>
-<p>英文写作的话我们这次完全使用的<code>有道翻译</code>进行机翻，正确率还是很高的，不过翻完还是得自己看一下表达的意思对不对。其余的话我也推荐<code>谷歌翻译</code>，<code>DeepL</code>，翻译文献的话用<code>知云文献翻译</code>，当然还有一个人工智能，懂得都懂，这里不多说。</p>
-<h1 id="赛中">赛中</h1>
-<p>经历这次比赛，我觉得<code>时间分配</code>还是十分重要的，这次我们选择了E题，我想也是最多人选择的一题。但在做第一问的时候建模手卡住了，导致论文手也在坐牢，做出第一问已经是比赛的第三天了，导致后面的流程就很紧张，还好最后是顺利完成了。</p>
-<p>关于比赛中网上一些提供思路的或者卖思路的，我觉得看看就好，他们弄的或许看上去做的很对，但也有可能有致命漏洞，自己参加的比赛终究还是靠自己。</p>
-<p>这次最让我们感到坐牢的可能还是数据的查找，国内的网站几乎不会有特别符合题目需求的数据，这时候就需要翻墙到外网看看，墙外的世界还是很明朗的</p>
-<p>可能队友会在一些问题上产生分歧，就像这次比赛时我们组员也对美国的GDP和中国的GDP不能直接换算进行了争吵，我的评价是最好还是能控制情绪，用愉快的氛围进行比赛，弄的太紧张了也不好，必要的时候做出一些退步。</p>
-<h1 id="总结">总结</h1>
-<p>这次比赛也算是我大学生涯中参加的第一次比较重大的比赛，总的来说还是很有收获的，两个队友也挺靠谱的，是一段珍贵的经历。</p>
-]]></content>
-      <categories>
-        <category>学科</category>
-        <category>数学建模</category>
-      </categories>
-      <tags>
-        <tag>美赛</tag>
-        <tag>数学建模</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>LATEX公式使用</title>
     <url>/2023/09/15/2023/LATEX%E5%85%AC%E5%BC%8F%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<blockquote>
@@ -377,6 +377,47 @@ admin.txt
       </tags>
   </entry>
   <entry>
+    <title>二叉树遍历简单做法</title>
+    <url>/2023/02/09/2023/%E4%BA%8C%E5%8F%89%E6%A0%91%E9%81%8D%E5%8E%86%E7%AE%80%E5%8D%95%E5%81%9A%E6%B3%95/</url>
+    <content><![CDATA[<blockquote>
+<p>看王道数据结构考研复习有感</p>
+</blockquote>
+<span id="more"></span>
+<h1 id="问题">问题</h1>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/%E4%BA%8C%E5%8F%89%E6%A0%91.PNG" alt="二叉树" style="zoom:33%;" /></p>
+<p>给出如图所示二叉树，请你分别对其进行前序、中序、后序遍历并给出遍历结果。</p>
+<h1 id="解答">解答</h1>
+<p>这里我们除了可以用编程思想一步一步进行遍历，还有一种更为简单快速的方法，这里我称它画图法。</p>
+<h2 id="步骤一">步骤一</h2>
+<p>我们先在每个结点旁画上小圆点，这里我们以前序遍历为例，在结点左侧画上小圆点。（中序遍历在下侧，后序遍历在右侧）</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/%E5%89%8D%E5%BA%8F.PNG" alt="前序" style="zoom:33%;" /></p>
+<h2 id="步骤二">步骤二</h2>
+<p>以根节点上方为起点，从左侧贴着二叉树画线穿过小圆点，绕一周回到起点。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/%E5%89%8D%E5%BA%8F2.PNG" alt="前序2" style="zoom:33%;" /></p>
+<h2 id="步骤三">步骤三</h2>
+<p>穿过小圆点的先后顺序便是遍历的结果。 这次遍历的结果为：</p>
+<center>
+<font color=Tomato size=6>前序：ABDECFHG</font>
+</center>
+<p>这样我们也能得到中序和后序遍历的结果了：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/%E4%B8%AD%E5%BA%8F.PNG" alt="中序" style="zoom:33%;" /></p>
+<center>
+<font color=Tomato size=6>中序：DBEAFHCG</font>
+</center>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/%E5%90%8E%E5%BA%8F.PNG" alt="后序" style="zoom:33%;" /></p>
+<center>
+<font color=Tomato size=6>后序：DEBHFGCA</font>
+</center>
+]]></content>
+      <categories>
+        <category>学科</category>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Taihub分享</title>
     <url>/2023/02/01/2023/Taihub%E5%88%86%E4%BA%AB/</url>
     <content><![CDATA[<blockquote>
@@ -467,6 +508,53 @@ R18不允许×</p>
       </categories>
       <tags>
         <tag>Tai</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于2023暑假</title>
+    <url>/2023/09/15/2023/%E5%85%B3%E4%BA%8E2023%E6%9A%91%E5%81%87/</url>
+    <content><![CDATA[<blockquote>
+<p>给忙碌的暑假一个交代</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/IMG_2971.jpeg" style="zoom:80%;" /></p>
+</blockquote>
+<span id="more"></span>
+<h1 id="前言">前言</h1>
+<p>这篇总结拖了很久，一直没有很充裕的时间来回忆和总结这个暑假的实习（也是我太懒了），所以我准备用每天的碎片时间来对我这个暑假做一个总结。</p>
+<h1 id="实习">实习</h1>
+<p>在这个暑假我找到我的第一份<code>实习</code>，也是托关系找来的，在暑假前我一直在刷脉脉和知乎，我也是被网上的言论给影响了，当时我一直有股信念，本科能找到不错的工作就没有必要读研了，特别是像现在这样的经济形势，说不定读三年研究生出来能找到的工作还不如本科时候找到的，所以我在暑假就很想学<code>技术</code>，就推掉了数模国赛转而去实习。</p>
+<h2 id="七月">七月</h2>
+<p>在七月十号左右我入职了，当时我的<code>mentor</code>还没来，就把显示器插排什么的都放到工位，本来以为我是来做大数据相关工作的，所以就把各类db软件下载了下来，然后开始学习</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/IMG_2957.jpeg" alt="IMG_2957" style="zoom: 50%;" /></p>
+<p>第二天公司老总和我谈了谈，我当时很迷茫的一点是要不要读研，老总和我讲了很多，说未来是人工智能的天下，并且给我配的导师是搞人工智能的，技术很厉害，让我多和他学习，而且说不建议我读研。不过我当时想，ai已经卷成这样了，很多硕士都找不到工作，搞ai还不读研那不是自寻死路吗，当然这也是当时的想法，经历的多了之后想法会不断产生变化。</p>
+<h3 id="初遇mentor">初遇mentor</h3>
+<p>在周五左右我第一次见到了我的mentor，看起来很和善，我们也找了个时间谈了一下，他给我介绍了人工智能目前的状况，并十分建议我读研，而且最好到国外去读（毕竟国外学习和开发的环境要自由些），他说目前公司就只有他一个人搞ai，说我来还挺高兴的，这样可以有人一起讨论，而且十分愿意教我。</p>
+<p>说实话我在之前也没接触过ai，也没想过去做ai，这次实习属于是我对ai的启蒙。</p>
+<h3 id="学习">学习</h3>
+<p>一开始因为我对ai没什么了解，所以mentor给了我很多资料，并且让我去看<code>吴恩达的deep learning</code>，听说是英文的我还害怕了一下，等到实际在学习的时候就会发现基本上没有什么障碍，不得不说很多外国的课程是真的高质量，由浅入深、通俗易懂。</p>
+<p>我花了一周时间认真看完了这门课，对神经网络有了一定的了解，也意识到人工智能底层就是数学，就是<code>高数+线性代数+概率论+统计学</code>的集合。</p>
+<h2 id="八月">八月</h2>
+<p>mentor和我说我来的时间其实很不巧，因为公司做事是阶段性的，在我来的期间正好公司没有什么业务拓展，所以我就只好看看公司以前的项目代码。</p>
+<h3 id="e集运">e集运</h3>
+<p>e集运是我接触的第一个项目，mentor很详细的给我梳理了整个项目的流程框架，在这个项目我也学到很多，像<code>Docker</code>，<code>git</code>等，我准备再之后新写一篇博客具体梳理一下这个项目。</p>
+<h3 id="github">Github</h3>
+<p>因为拉公司项目什么的需要用到<code>git</code>，所以我也仔细学习了一下git的相关技术，我也真正理解了<code>GitHub</code>的正确打开姿势，很遗憾我到现在才真正学会了github，以后要开始代码管理咯。</p>
+<h3 id="新项目">新项目</h3>
+<p>我也接触到了一些公司准备新进行的项目，通过做项目我才了解我的技术远远不够，像各种数据库的使用，我们专业将数据库这门课放到了大三下学期，我认为这是极不合理的，数据库是工作时必备的技术，所以我十分建议早点把数据库学起来。</p>
+<p>新项目是语言大模型和功能调用的融合，我其实没做什么，只是一直在pull代码看其他员工是怎么写的，就只是这样我也学到了很多。</p>
+<h3 id="kaggle天池">Kaggle/天池</h3>
+<p>在一开始的时候mentor就跟我说，如果要短期内学到很多东西，那就去打个比赛，像他自己就在打比赛，他十分推荐我去打<code>Kaggle</code>，当时我觉得，比赛什么时候都可以打，但公司项目不是什么时候都能接触的，所以就没选择打比赛，现在开学了，我也准备打一场kaggle看看，提升自己。</p>
+<h3 id="分别">分别</h3>
+<p>我的实习是做到8月25号，是个周五，在周一的时候mentor兴冲冲找到我说：“来活了！他们准备在之前e集运那个项目再做拓展。”唉，还是挺可惜的，那个时候已经没有时间做了。</p>
+<p>最后要分别的前一天mentor又找到我聊了聊，聊到未来的方向，我当时还是想着ai太卷了，想做java开发什么的，到现在有些改观，现在我感觉未来ai的门槛会越来越低。</p>
+<h1 id="未来">未来</h1>
+<p>在暑期末的时候，我爸妈带我去做了职业规划，找的是抖音上的水哥职说，也在苏州，最后也是确定要出国了。</p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
@@ -887,84 +975,46 @@ alt="Dark skin tone of Quickdraw" /></a></td>
       </tags>
   </entry>
   <entry>
-    <title>二叉树遍历简单做法</title>
-    <url>/2023/02/09/2023/%E4%BA%8C%E5%8F%89%E6%A0%91%E9%81%8D%E5%8E%86%E7%AE%80%E5%8D%95%E5%81%9A%E6%B3%95/</url>
-    <content><![CDATA[<blockquote>
-<p>看王道数据结构考研复习有感</p>
-</blockquote>
-<span id="more"></span>
-<h1 id="问题">问题</h1>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/%E4%BA%8C%E5%8F%89%E6%A0%91.PNG" alt="二叉树" style="zoom:33%;" /></p>
-<p>给出如图所示二叉树，请你分别对其进行前序、中序、后序遍历并给出遍历结果。</p>
-<h1 id="解答">解答</h1>
-<p>这里我们除了可以用编程思想一步一步进行遍历，还有一种更为简单快速的方法，这里我称它画图法。</p>
-<h2 id="步骤一">步骤一</h2>
-<p>我们先在每个结点旁画上小圆点，这里我们以前序遍历为例，在结点左侧画上小圆点。（中序遍历在下侧，后序遍历在右侧）</p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/%E5%89%8D%E5%BA%8F.PNG" alt="前序" style="zoom:33%;" /></p>
-<h2 id="步骤二">步骤二</h2>
-<p>以根节点上方为起点，从左侧贴着二叉树画线穿过小圆点，绕一周回到起点。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/%E5%89%8D%E5%BA%8F2.PNG" alt="前序2" style="zoom:33%;" /></p>
-<h2 id="步骤三">步骤三</h2>
-<p>穿过小圆点的先后顺序便是遍历的结果。 这次遍历的结果为：</p>
-<center>
-<font color=Tomato size=6>前序：ABDECFHG</font>
-</center>
-<p>这样我们也能得到中序和后序遍历的结果了：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/%E4%B8%AD%E5%BA%8F.PNG" alt="中序" style="zoom:33%;" /></p>
-<center>
-<font color=Tomato size=6>中序：DBEAFHCG</font>
-</center>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/%E5%90%8E%E5%BA%8F.PNG" alt="后序" style="zoom:33%;" /></p>
-<center>
-<font color=Tomato size=6>后序：DEBHFGCA</font>
-</center>
+    <title>第一篇博客</title>
+    <url>/2023/01/29/2023/hello-world/</url>
+    <content><![CDATA[<p>欢迎来到我的博客！</p>
 ]]></content>
-      <categories>
-        <category>学科</category>
-        <category>数据结构</category>
-      </categories>
-      <tags>
-        <tag>数据结构</tag>
-      </tags>
   </entry>
   <entry>
-    <title>关于2023暑假</title>
-    <url>/2023/09/15/2023/%E5%85%B3%E4%BA%8E2023%E6%9A%91%E5%81%87/</url>
+    <title>重拾博客</title>
+    <url>/2023/09/03/2023/%E9%87%8D%E6%8B%BE%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<blockquote>
-<p>给忙碌的暑假一个交代</p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/IMG_2971.jpeg" style="zoom:80%;" /></p>
+<p>经过一个学期重拾个人博客</p>
 </blockquote>
 <span id="more"></span>
 <h1 id="前言">前言</h1>
-<p>这篇总结拖了很久，一直没有很充裕的时间来回忆和总结这个暑假的实习（也是我太懒了），所以我准备用每天的碎片时间来对我这个暑假做一个总结。</p>
-<h1 id="实习">实习</h1>
-<p>在这个暑假我找到我的第一份<code>实习</code>，也是托关系找来的，在暑假前我一直在刷脉脉和知乎，我也是被网上的言论给影响了，当时我一直有股信念，本科能找到不错的工作就没有必要读研了，特别是像现在这样的经济形势，说不定读三年研究生出来能找到的工作还不如本科时候找到的，所以我在暑假就很想学<code>技术</code>，就推掉了数模国赛转而去实习。</p>
-<h2 id="七月">七月</h2>
-<p>在七月十号左右我入职了，当时我的<code>mentor</code>还没来，就把显示器插排什么的都放到工位，本来以为我是来做大数据相关工作的，所以就把各类db软件下载了下来，然后开始学习</p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/IMG_2957.jpeg" alt="IMG_2957" style="zoom: 50%;" /></p>
-<p>第二天公司老总和我谈了谈，我当时很迷茫的一点是要不要读研，老总和我讲了很多，说未来是人工智能的天下，并且给我配的导师是搞人工智能的，技术很厉害，让我多和他学习，而且说不建议我读研。不过我当时想，ai已经卷成这样了，很多硕士都找不到工作，搞ai还不读研那不是自寻死路吗，当然这也是当时的想法，经历的多了之后想法会不断产生变化。</p>
-<h3 id="初遇mentor">初遇mentor</h3>
-<p>在周五左右我第一次见到了我的mentor，看起来很和善，我们也找了个时间谈了一下，他给我介绍了人工智能目前的状况，并十分建议我读研，而且最好到国外去读（毕竟国外学习和开发的环境要自由些），他说目前公司就只有他一个人搞ai，说我来还挺高兴的，这样可以有人一起讨论，而且十分愿意教我。</p>
-<p>说实话我在之前也没接触过ai，也没想过去做ai，这次实习属于是我对ai的启蒙。</p>
-<h3 id="学习">学习</h3>
-<p>一开始因为我对ai没什么了解，所以mentor给了我很多资料，并且让我去看<code>吴恩达的deep learning</code>，听说是英文的我还害怕了一下，等到实际在学习的时候就会发现基本上没有什么障碍，不得不说很多外国的课程是真的高质量，由浅入深、通俗易懂。</p>
-<p>我花了一周时间认真看完了这门课，对神经网络有了一定的了解，也意识到人工智能底层就是数学，就是<code>高数+线性代数+概率论+统计学</code>的集合。</p>
-<h2 id="八月">八月</h2>
-<p>mentor和我说我来的时间其实很不巧，因为公司做事是阶段性的，在我来的期间正好公司没有什么业务拓展，所以我就只好看看公司以前的项目代码。</p>
-<h3 id="e集运">e集运</h3>
-<p>e集运是我接触的第一个项目，mentor很详细的给我梳理了整个项目的流程框架，在这个项目我也学到很多，像<code>Docker</code>，<code>git</code>等，我准备再之后新写一篇博客具体梳理一下这个项目。</p>
-<h3 id="github">Github</h3>
-<p>因为拉公司项目什么的需要用到<code>git</code>，所以我也仔细学习了一下git的相关技术，我也真正理解了<code>GitHub</code>的正确打开姿势，很遗憾我到现在才真正学会了github，以后要开始代码管理咯。</p>
-<h3 id="新项目">新项目</h3>
-<p>我也接触到了一些公司准备新进行的项目，通过做项目我才了解我的技术远远不够，像各种数据库的使用，我们专业将数据库这门课放到了大三下学期，我认为这是极不合理的，数据库是工作时必备的技术，所以我十分建议早点把数据库学起来。</p>
-<p>新项目是语言大模型和功能调用的融合，我其实没做什么，只是一直在pull代码看其他员工是怎么写的，就只是这样我也学到了很多。</p>
-<h3 id="kaggle天池">Kaggle/天池</h3>
-<p>在一开始的时候mentor就跟我说，如果要短期内学到很多东西，那就去打个比赛，像他自己就在打比赛，他十分推荐我去打<code>Kaggle</code>，当时我觉得，比赛什么时候都可以打，但公司项目不是什么时候都能接触的，所以就没选择打比赛，现在开学了，我也准备打一场kaggle看看，提升自己。</p>
-<h3 id="分别">分别</h3>
-<p>我的实习是做到8月25号，是个周五，在周一的时候mentor兴冲冲找到我说：“来活了！他们准备在之前e集运那个项目再做拓展。”唉，还是挺可惜的，那个时候已经没有时间做了。</p>
-<p>最后要分别的前一天mentor又找到我聊了聊，聊到未来的方向，我当时还是想着ai太卷了，想做java开发什么的，到现在有些改观，现在我感觉未来ai的门槛会越来越低。</p>
-<h1 id="未来">未来</h1>
-<p>在暑期末的时候，我爸妈带我去做了职业规划，找的是抖音上的水哥职说，也在苏州，最后也是确定要出国了。</p>
+<p>在2023年暑假的时候我创建了自己的个人博客，通过github
+pages使用Hexo框架加上butterfly主题，荒废了一个学期，现在决定重新填起这个坑。</p>
+<h1 id="经过">经过</h1>
+<p>在寒假发了几个博客后，发现使用markdown写博客加入图片时不能做到可视化，而且当时还不知道图床这个东西，所以图片什么的都存到了本地，管理和存储起来十分麻烦，还给网站增加流量负载，所以弃坑了。</p>
+<p>再后来我在CSDN上发现了南邮的一个学长的博客，名叫<a
+href="https://wonzwang.blog.csdn.net/?type=blog">Wonz</a>，在他的博客中我学到了很多，也从他的友链中知道了很多学长，看着他们的博客，我也想重拾自己的坑了。</p>
+<p>有时候我也想在有些触动的时候将自己的想法记录下来，但奈何自己太懒，在这个暑假我去了一个单位实习，在实习的过程中我渐渐可以熟练地使用git，也在实习的过程中产生越来越多的想法，现在实习结束了，也想总结一下，慢慢填补这个坑吧。</p>
+<h1 id="准备">准备</h1>
+<p>之前为了网站看起来炫酷一点，我就选择了butterfly这个主题，不过这样的代价是图片太多了，而且不够简洁，过于花里胡哨，这样对网站的加载速度也有影响，也不好将注意力放在写作上。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/IMG_3840.JPG" alt="IMG_3840" style="zoom: 33%;" /></p>
+<p>所以我换了个新的主题——<strong>Next主题</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/image-20230903171120400.png" alt="image-20230903171120400" style="zoom: 33%;" /></p>
+<p>这个主题我是看的<a
+href="https://wonz.wang/">Wonz</a>学长的个人博客在用的，十分简洁，内容清晰明了，我在暑假也看到过一段话：</p>
+<blockquote>
+<p>技术博客不需要弄得太花里胡哨，简单清晰才是王道。</p>
+</blockquote>
+<p>我看见他置顶博客的描述：</p>
+<blockquote>
+<p>阮一峰大神曾经说过: 喜欢写 Blog 的人, 会经历 3 个阶段。</p>
+<p>第一阶段，刚接触 Blog，觉得很新鲜，试着选择一个免费空间来写。
+第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。
+第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。</p>
+</blockquote>
+<p>我对这话深有感触，本来我也在想要不要自己搞个服务器部署博客，发现根本没必要，还不安全，有github就很方便。</p>
+<h1 id="展望">展望</h1>
+<p>希望接下来能静下心来，将自己的所见所想记录下来，多输出些技术博客，提升自己的竞争力吧。</p>
 ]]></content>
       <categories>
         <category>随笔</category>
@@ -972,6 +1022,86 @@ alt="Dark skin tone of Quickdraw" /></a></td>
       <tags>
         <tag>博客</tag>
         <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>美赛O奖论文研读有感</title>
+    <url>/2023/02/11/2023/%E7%BE%8E%E8%B5%9BO%E5%A5%96%E8%AE%BA%E6%96%87%E7%A0%94%E8%AF%BB%E6%9C%89%E6%84%9F/</url>
+    <content><![CDATA[<blockquote>
+<p>美赛O奖论文研读有感</p>
+</blockquote>
+<span id="more"></span>
+<h1 id="前言">前言</h1>
+<p>最近我在备战数学建模美赛时，重点研读了两篇O奖论文，一篇是宋浩然大佬仿照的的2020年A题的论文，另一篇是2020年C题的一篇O奖论文。</p>
+<h1 id="经验">经验</h1>
+<h2 id="关于突出点">关于突出点</h2>
+<p>两篇论文都使用了大量图片去佐证自己的观点，而且图片都很工整好看，很吸引人。不仅是流程图，它们也将数据可视化做到极致，真正做到了直观+美观。</p>
+<h2 id="关于编程">关于编程</h2>
+<p>两篇论文都使用到了<code>Matlab</code>和<code>Python</code>语言，Python可能在处理大数据上有着更大的优势，因为Python的各种第三方包使用起来实在很方便，学习成本也低。这里我推荐两本学习用Python做数据分析的书：</p>
+<blockquote>
+<p>《利用Python进行数据分析第二版》：主要内容是数据处理，pandas，numpy，matplotlib的使用方法，较为详细</p>
+<p>《Python数据科学手册》：一部分和上面那本内容重叠，后面也有讲一些机器学习模型的介绍和使用</p>
+</blockquote>
+<h2 id="关于图片">关于图片</h2>
+<p>两篇论文的图片都很精美，图片像流程图之类的可以用PPT或者亿图图示之类的软件画，像数据可视化则可以使用Python来完成，比如使用第三方库<code>matplotlib</code>进行绘图。</p>
+]]></content>
+      <categories>
+        <category>学科</category>
+        <category>数学建模</category>
+      </categories>
+      <tags>
+        <tag>美赛</tag>
+        <tag>数学建模</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Docker创建Ubantu容器</title>
+    <url>/2023/09/04/2023/Docker/Docker%E5%88%9B%E5%BB%BAUbantu%E5%AE%B9%E5%99%A8/</url>
+    <content><![CDATA[<blockquote>
+<p>为Docker创建一个Ubantu容器</p>
+</blockquote>
+<span id="more"></span>
+<h1 id="前言">前言</h1>
+<p>今天上了<code>大数据挖掘</code>和<code>Linux程序设计</code>的第一课，发现老师都要求在电脑上搞个虚拟机方便以后的操作，所以我准备使用安装Ubantu的Docker容器来作为虚拟机使用。</p>
+<h1 id="操作">操作</h1>
+<h2 id="基础命令">基础命令</h2>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run [option] 镜像名 [像容器中传入的命令]</span><br></pre></td></tr></table></figure>
+<h3 id="常用可选说明">常用可选说明</h3>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">-</span>i 表示以“交互模式”运行容器</span><br><span class="line"> <span class="operator">-</span>t 表示容器启动后会进入其命令行。加入这两个参数后，容器创建就能登录进去。即 分配一个伪终端。</span><br><span class="line"> <span class="comment">--name 为创建的容器命名</span></span><br><span class="line"> <span class="operator">-</span>v 表示目录映射关系(前者是宿主机目录，后者是映射到宿主机上的目录，即 宿主机目录:容器中目录)，可以使 用多个<span class="operator">-</span>v 做多个目录或文件映射。注意:最好做目录映射，在宿主机上做修改，然后 共享到容器上。</span><br><span class="line"> <span class="operator">-</span>d 在run后面加上<span class="operator">-</span>d参数,则会创建一个守护式容器在后台运行(这样创建容器后不 会自动登录容器，如果只加<span class="operator">-</span>i <span class="operator">-</span>t 两个参数，        创建后就会自动进去容器)。</span><br><span class="line"> <span class="operator">-</span>p 表示端口映射，前者是宿主机端口，后者是容器内的映射端口。可以使用多个<span class="operator">-</span>p 做多个端口映射</span><br><span class="line"> <span class="operator">-</span>e 为容器设置环境变量</span><br><span class="line"> <span class="comment">--network=host 表示将主机的网络环境映射到容器中，容器的网络与主机相同</span></span><br></pre></td></tr></table></figure>
+<h3 id="交互式容器">交互式容器</h3>
+<p>例如，创建一个交互式容器，并命名为myubuntu</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run -it --name=myubuntu ubuntu /bin/bash</span><br></pre></td></tr></table></figure>
+<p>在容器中可以随意执行linux命令，就是一个ubuntu的环境，当执行exit命令退出时，该容器也随之停止</p>
+<h3 id="守护式容器">守护式容器</h3>
+<p>创建一个守护式容器:如果对于一个需要长期运行的容器来说，我们可以创建一个守护式容器。在容器内部exit退出时，容器也不会停止。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run -dit --name=myubuntu2 ubuntu</span><br></pre></td></tr></table></figure>
+<h3 id="进入已运行的容器">进入已运行的容器</h3>
+<p>docker exec -it 容器名或容器id 进入后执行的第一个命令</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker exec -it myubuntu2 /bin/bash</span><br></pre></td></tr></table></figure>
+<h3 id="查看容器">查看容器</h3>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 列出本机正在运行的容器</span><br><span class="line">docker container ls</span><br><span class="line"></span><br><span class="line"># 列出本机所有容器，包括已经终止运行的</span><br><span class="line">docker container ls --all</span><br></pre></td></tr></table></figure>
+<h3 id="停止与启动容器">停止与启动容器</h3>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 停止一个已经在运行的容器</span><br><span class="line">docker container stop 容器名或容器id</span><br><span class="line"></span><br><span class="line"># 启动一个已经停止的容器</span><br><span class="line">docker container start 容器名或容器id</span><br><span class="line"></span><br><span class="line"># kill掉一个已经在运行的容器</span><br><span class="line">docker container kill 容器名或容器id</span><br></pre></td></tr></table></figure>
+<h3 id="删除容器">删除容器</h3>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker container rm 容器名或容器id</span><br></pre></td></tr></table></figure>
+<h3 id="将容器保存为镜像">将容器保存为镜像</h3>
+<p>我们可以通过如下命令将容器保存为镜像</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker commit 容器名 镜像名</span><br></pre></td></tr></table></figure>
+<h3 id="镜像备份与迁移">镜像备份与迁移</h3>
+<p>我们可以通过save命令将镜像打包成文件，拷贝给别人使用</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker save -o 保存的文件名 镜像名</span><br></pre></td></tr></table></figure>
+<p>如:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker save -o ./ubuntu.tar ubuntu</span><br></pre></td></tr></table></figure>
+<p>在拿到镜像文件后，可以通过load方法，将镜像加载到本地</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker load -i ./ubuntu.tar</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Docker</category>
+        <category>Ubuntu</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+        <tag>Ubuntu</tag>
       </tags>
   </entry>
   <entry>
@@ -1090,136 +1220,6 @@ href="https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/">Leet
       <tags>
         <tag>刷题</tag>
         <tag>解题技巧</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>第一篇博客</title>
-    <url>/2023/01/29/2023/hello-world/</url>
-    <content><![CDATA[<p>欢迎来到我的博客！</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>美赛O奖论文研读有感</title>
-    <url>/2023/02/11/2023/%E7%BE%8E%E8%B5%9BO%E5%A5%96%E8%AE%BA%E6%96%87%E7%A0%94%E8%AF%BB%E6%9C%89%E6%84%9F/</url>
-    <content><![CDATA[<blockquote>
-<p>美赛O奖论文研读有感</p>
-</blockquote>
-<span id="more"></span>
-<h1 id="前言">前言</h1>
-<p>最近我在备战数学建模美赛时，重点研读了两篇O奖论文，一篇是宋浩然大佬仿照的的2020年A题的论文，另一篇是2020年C题的一篇O奖论文。</p>
-<h1 id="经验">经验</h1>
-<h2 id="关于突出点">关于突出点</h2>
-<p>两篇论文都使用了大量图片去佐证自己的观点，而且图片都很工整好看，很吸引人。不仅是流程图，它们也将数据可视化做到极致，真正做到了直观+美观。</p>
-<h2 id="关于编程">关于编程</h2>
-<p>两篇论文都使用到了<code>Matlab</code>和<code>Python</code>语言，Python可能在处理大数据上有着更大的优势，因为Python的各种第三方包使用起来实在很方便，学习成本也低。这里我推荐两本学习用Python做数据分析的书：</p>
-<blockquote>
-<p>《利用Python进行数据分析第二版》：主要内容是数据处理，pandas，numpy，matplotlib的使用方法，较为详细</p>
-<p>《Python数据科学手册》：一部分和上面那本内容重叠，后面也有讲一些机器学习模型的介绍和使用</p>
-</blockquote>
-<h2 id="关于图片">关于图片</h2>
-<p>两篇论文的图片都很精美，图片像流程图之类的可以用PPT或者亿图图示之类的软件画，像数据可视化则可以使用Python来完成，比如使用第三方库<code>matplotlib</code>进行绘图。</p>
-]]></content>
-      <categories>
-        <category>学科</category>
-        <category>数学建模</category>
-      </categories>
-      <tags>
-        <tag>美赛</tag>
-        <tag>数学建模</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>重拾博客</title>
-    <url>/2023/09/03/2023/%E9%87%8D%E6%8B%BE%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<blockquote>
-<p>经过一个学期重拾个人博客</p>
-</blockquote>
-<span id="more"></span>
-<h1 id="前言">前言</h1>
-<p>在2023年暑假的时候我创建了自己的个人博客，通过github
-pages使用Hexo框架加上butterfly主题，荒废了一个学期，现在决定重新填起这个坑。</p>
-<h1 id="经过">经过</h1>
-<p>在寒假发了几个博客后，发现使用markdown写博客加入图片时不能做到可视化，而且当时还不知道图床这个东西，所以图片什么的都存到了本地，管理和存储起来十分麻烦，还给网站增加流量负载，所以弃坑了。</p>
-<p>再后来我在CSDN上发现了南邮的一个学长的博客，名叫<a
-href="https://wonzwang.blog.csdn.net/?type=blog">Wonz</a>，在他的博客中我学到了很多，也从他的友链中知道了很多学长，看着他们的博客，我也想重拾自己的坑了。</p>
-<p>有时候我也想在有些触动的时候将自己的想法记录下来，但奈何自己太懒，在这个暑假我去了一个单位实习，在实习的过程中我渐渐可以熟练地使用git，也在实习的过程中产生越来越多的想法，现在实习结束了，也想总结一下，慢慢填补这个坑吧。</p>
-<h1 id="准备">准备</h1>
-<p>之前为了网站看起来炫酷一点，我就选择了butterfly这个主题，不过这样的代价是图片太多了，而且不够简洁，过于花里胡哨，这样对网站的加载速度也有影响，也不好将注意力放在写作上。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/IMG_3840.JPG" alt="IMG_3840" style="zoom: 33%;" /></p>
-<p>所以我换了个新的主题——<strong>Next主题</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/image-20230903171120400.png" alt="image-20230903171120400" style="zoom: 33%;" /></p>
-<p>这个主题我是看的<a
-href="https://wonz.wang/">Wonz</a>学长的个人博客在用的，十分简洁，内容清晰明了，我在暑假也看到过一段话：</p>
-<blockquote>
-<p>技术博客不需要弄得太花里胡哨，简单清晰才是王道。</p>
-</blockquote>
-<p>我看见他置顶博客的描述：</p>
-<blockquote>
-<p>阮一峰大神曾经说过: 喜欢写 Blog 的人, 会经历 3 个阶段。</p>
-<p>第一阶段，刚接触 Blog，觉得很新鲜，试着选择一个免费空间来写。
-第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。
-第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。</p>
-</blockquote>
-<p>我对这话深有感触，本来我也在想要不要自己搞个服务器部署博客，发现根本没必要，还不安全，有github就很方便。</p>
-<h1 id="展望">展望</h1>
-<p>希望接下来能静下心来，将自己的所见所想记录下来，多输出些技术博客，提升自己的竞争力吧。</p>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>博客</tag>
-        <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Docker创建Ubantu容器</title>
-    <url>/2023/09/04/2023/Docker/Docker%E5%88%9B%E5%BB%BAUbantu%E5%AE%B9%E5%99%A8/</url>
-    <content><![CDATA[<blockquote>
-<p>为Docker创建一个Ubantu容器</p>
-</blockquote>
-<span id="more"></span>
-<h1 id="前言">前言</h1>
-<p>今天上了<code>大数据挖掘</code>和<code>Linux程序设计</code>的第一课，发现老师都要求在电脑上搞个虚拟机方便以后的操作，所以我准备使用安装Ubantu的Docker容器来作为虚拟机使用。</p>
-<h1 id="操作">操作</h1>
-<h2 id="基础命令">基础命令</h2>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run [option] 镜像名 [像容器中传入的命令]</span><br></pre></td></tr></table></figure>
-<h3 id="常用可选说明">常用可选说明</h3>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">-</span>i 表示以“交互模式”运行容器</span><br><span class="line"> <span class="operator">-</span>t 表示容器启动后会进入其命令行。加入这两个参数后，容器创建就能登录进去。即 分配一个伪终端。</span><br><span class="line"> <span class="comment">--name 为创建的容器命名</span></span><br><span class="line"> <span class="operator">-</span>v 表示目录映射关系(前者是宿主机目录，后者是映射到宿主机上的目录，即 宿主机目录:容器中目录)，可以使 用多个<span class="operator">-</span>v 做多个目录或文件映射。注意:最好做目录映射，在宿主机上做修改，然后 共享到容器上。</span><br><span class="line"> <span class="operator">-</span>d 在run后面加上<span class="operator">-</span>d参数,则会创建一个守护式容器在后台运行(这样创建容器后不 会自动登录容器，如果只加<span class="operator">-</span>i <span class="operator">-</span>t 两个参数，        创建后就会自动进去容器)。</span><br><span class="line"> <span class="operator">-</span>p 表示端口映射，前者是宿主机端口，后者是容器内的映射端口。可以使用多个<span class="operator">-</span>p 做多个端口映射</span><br><span class="line"> <span class="operator">-</span>e 为容器设置环境变量</span><br><span class="line"> <span class="comment">--network=host 表示将主机的网络环境映射到容器中，容器的网络与主机相同</span></span><br></pre></td></tr></table></figure>
-<h3 id="交互式容器">交互式容器</h3>
-<p>例如，创建一个交互式容器，并命名为myubuntu</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run -it --name=myubuntu ubuntu /bin/bash</span><br></pre></td></tr></table></figure>
-<p>在容器中可以随意执行linux命令，就是一个ubuntu的环境，当执行exit命令退出时，该容器也随之停止</p>
-<h3 id="守护式容器">守护式容器</h3>
-<p>创建一个守护式容器:如果对于一个需要长期运行的容器来说，我们可以创建一个守护式容器。在容器内部exit退出时，容器也不会停止。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run -dit --name=myubuntu2 ubuntu</span><br></pre></td></tr></table></figure>
-<h3 id="进入已运行的容器">进入已运行的容器</h3>
-<p>docker exec -it 容器名或容器id 进入后执行的第一个命令</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker exec -it myubuntu2 /bin/bash</span><br></pre></td></tr></table></figure>
-<h3 id="查看容器">查看容器</h3>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 列出本机正在运行的容器</span><br><span class="line">docker container ls</span><br><span class="line"></span><br><span class="line"># 列出本机所有容器，包括已经终止运行的</span><br><span class="line">docker container ls --all</span><br></pre></td></tr></table></figure>
-<h3 id="停止与启动容器">停止与启动容器</h3>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 停止一个已经在运行的容器</span><br><span class="line">docker container stop 容器名或容器id</span><br><span class="line"></span><br><span class="line"># 启动一个已经停止的容器</span><br><span class="line">docker container start 容器名或容器id</span><br><span class="line"></span><br><span class="line"># kill掉一个已经在运行的容器</span><br><span class="line">docker container kill 容器名或容器id</span><br></pre></td></tr></table></figure>
-<h3 id="删除容器">删除容器</h3>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker container rm 容器名或容器id</span><br></pre></td></tr></table></figure>
-<h3 id="将容器保存为镜像">将容器保存为镜像</h3>
-<p>我们可以通过如下命令将容器保存为镜像</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker commit 容器名 镜像名</span><br></pre></td></tr></table></figure>
-<h3 id="镜像备份与迁移">镜像备份与迁移</h3>
-<p>我们可以通过save命令将镜像打包成文件，拷贝给别人使用</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker save -o 保存的文件名 镜像名</span><br></pre></td></tr></table></figure>
-<p>如:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker save -o ./ubuntu.tar ubuntu</span><br></pre></td></tr></table></figure>
-<p>在拿到镜像文件后，可以通过load方法，将镜像加载到本地</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker load -i ./ubuntu.tar</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Docker</category>
-        <category>Ubuntu</category>
-      </categories>
-      <tags>
-        <tag>Docker</tag>
-        <tag>Ubuntu</tag>
       </tags>
   </entry>
   <entry>
@@ -1414,6 +1414,113 @@ href="http://localhost:9870/">http://localhost:9870</a>，成功打开</p>
 <blockquote>
 <p>参考链接：</p>
 <p>https://blog.csdn.net/weixin_58707437/article/details/127931069</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Docker</category>
+        <category>Hadoop</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+        <tag>Hadoop</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>通过Docker搭建完全分布式Hadoop集群</title>
+    <url>/2023/09/19/2023/Docker/%E9%80%9A%E8%BF%87Docker%E6%90%AD%E5%BB%BA%E5%AE%8C%E5%85%A8%E5%88%86%E5%B8%83%E5%BC%8FHadoop%E9%9B%86%E7%BE%A4/</url>
+    <content><![CDATA[<blockquote>
+<p>基于上一篇博客进行拓展</p>
+</blockquote>
+<span id="more"></span>
+<h1 id="前言">前言</h1>
+<blockquote>
+<p><a
+href="https://www.justinchoi.top/2023/09/07/2023/Ubuntu%E9%85%8D%E7%BD%AEhadoop%EF%BC%88%E5%9F%BA%E4%BA%8EDocker%EF%BC%89/">上一次</a>我们搭建了基于Docker的伪分布式Hadoop集群，这次来搭建分布式的</p>
+</blockquote>
+<h1 id="一为集群单独构建虚拟网络">一、为集群单独构建虚拟网络</h1>
+<p>现在的 Docker 网络能够提供 DNS
+解析功能，我们可以使用如下命令为接下来的 Hadoop
+集群单独构建一个虚拟的网络：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo docker network create --driver=bridge hadoop</span><br></pre></td></tr></table></figure>
+<p>使用下面这个命令查看 Docker 中的网络，可以看到刚刚创建的名为 hadoop
+的虚拟桥接网络：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo docker network ls</span><br></pre></td></tr></table></figure>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309201145415.png" alt="image-20230919201453731" style="zoom: 67%;" /></p>
+<h1 id="二进入上次搭建好的容器">二、进入上次搭建好的容器</h1>
+<p>我们通过上次制作的镜像启动一个容器：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run -dit --name=master --hostname=master hdp</span><br></pre></td></tr></table></figure>
+<p>我们进入<code>master</code>容器中</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker exec -it master /bin/bash</span><br></pre></td></tr></table></figure>
+<h1 id="三配置hadoop环境">三、配置Hadoop环境</h1>
+<p>在上一次我们已经配置了一个伪分布式的Hadoop环境，接下来我们需要对那些文件再进一步修改。</p>
+<h2 id="修改core-site.xml">1.修改<code>core-site.xml</code></h2>
+<p>打开<code>/usr/local/hadoop-3.3.1/etc/hadoop</code>路径下的<code>core-site.xml</code>:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd /usr/local/hadoop-3.3.1</span><br><span class="line">cd etc/hadoop</span><br><span class="line">vim core-site.xml</span><br></pre></td></tr></table></figure>
+<p>修改后是这样的：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">　　&lt;!--指定nameNode的地址--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;fs.defaultFS&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;hdfs://master:8020&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">　　&lt;!--指定Hadoop数据的存储目录--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;hadoop.tmp.dir&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;/usr/local/hadoop/data&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">　　&lt;!--配置HDFS网页登陆使用的静态用户，配置这个之后才有权限可以在网页端删除文件、文件夹--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;hadoop.http.staticuser.user&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;root&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="修改hdfs-site.xml">2.修改<code>hdfs-site.xml</code></h2>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vim hdfs-site.xml</span><br></pre></td></tr></table></figure>
+<p>修改后：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">　　&lt;!--文件的存储个数--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;dfs.replication&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;3&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">　　&lt;!--nn web端访问地址，使用网页访问HDFS文件系统就是这个端口--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;dfs.namenode.http-address&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;master:9870&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">　　&lt;!--2nn web端访问地址--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;dfs.namenode.secondary.http-address&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;master:9868&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">　　&lt;!--网页查看HDFS文件内容，出现Couldn‘t preview the file报错，需要配置的参数--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;dfs.webhdfs.enabled&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;true&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="修改mapred-site.xml">3.修改<code>mapred-site.xml</code></h2>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vim mapred-site.xml</span><br></pre></td></tr></table></figure>
+<p>修改后：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">　　&lt;!--指定MapReduce程序运行在Yarn上--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;mapreduce.framework.name&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;yarn&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="修改yarn-site.xml">4.修改<code>yarn-site.xml</code></h2>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vim yarn-site.xml</span><br></pre></td></tr></table></figure>
+<p>修改后：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">　　&lt;!--指定MR走 shuffle--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;mapreduce_shuffle&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">　　&lt;!--指定ResourceManager的地址--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;yarn.resourcemanager.hostname&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;h01&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">　　&lt;!--环境变量的继承--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;yarn.nodemanager.env-whitelist&lt;/name&gt;         </span><br><span class="line">        &lt;value&gt;JAVA_HOME,HADOOP_COMMON_HOME,HADOOP_HDFS_HOME,HADOOP_CONF_DIR,CLASSPATH_PREPEND_DISTCACHE,HADOOP_YARN_HOME,HADOOP_MAPRED_HOME&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="修改workers">5.修改<code>workers</code></h2>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim workers</span><br></pre></td></tr></table></figure>
+<p>修改后：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">master</span><br><span class="line">slave1</span><br><span class="line">slave2</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意：master这些后面不要有空格！slave2后面，不要有空的行！自己准备起多少集群，就在这里写几个，要是准备起5个集群，就写到slave4。</p>
+</blockquote>
+<h1 id="四在docker中启动集群">四、在Docker中启动集群</h1>
+<h2 id="先将容器导出为镜像">1.先将容器导出为镜像</h2>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker commit master nethdp</span><br></pre></td></tr></table></figure>
+<h2 id="启动三个终端">2.启动三个终端</h2>
+<ul>
+<li><p>第一条命令启动的是<code>master</code>做<code>master</code>节点的，所以要开放一些端口，用来访问web页面</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run -dit --network hadoop --hostname=master --name=master -p 9870:9870 -p 8088:8088 nethdp /bin/bash</span><br></pre></td></tr></table></figure></li>
+<li><p>后面几条命令都类似，只要注意修改名字和主机名就行</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run -dit --network hadoop -hostname=slave1 --name=slave1 nethdp /bin/bash</span><br></pre></td></tr></table></figure></li>
+<li><p>第三条命令</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run -dit --network hadoop -hostname=slave2 --name=slave2 nethdp /bin/bash</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2
+id="接下来在master主机中启动hadoop集群">3.接下来在<code>master</code>主机中启动Hadoop集群</h2>
+<p>先在hadoop安装目录进行格式化操作，不格式化操作，hdfs起不来（<strong>只有第一次启动</strong>的时候需要初始化，以后启动就不需要了，先删除所有机器的
+data和logs目录，然后再进行格式化）：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">./bin/hdfs namenode -format</span><br></pre></td></tr></table></figure>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309201145608.png" alt="image-20230919205754453" style="zoom:80%;" /></p>
+<p>然后启动HDFS集群：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">./sbin/start-dfs.sh</span><br></pre></td></tr></table></figure>
+<figure>
+<img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309201145588.png"
+alt="image-20230919210507605" />
+<figcaption aria-hidden="true">image-20230919210507605</figcaption>
+</figure>
+<p>最后，启动yarn集群管理节点：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">./sbin/start-yarn.sh</span><br></pre></td></tr></table></figure>
+<p>都启动完成后，使用 jps 命令查看：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">jps</span><br></pre></td></tr></table></figure>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309201145662.png" alt="image-20230919210554410" style="zoom:80%;" /></p>
+<p>可以看到，除了Jps，一共有5个进程，因为这里没有将
+nameNode、ResourceManager、SecondaryNameNode分开部署，所以都在
+h01这一台机器上，实际生产中，应该是需要分开部署的。</p>
+<p>至此，Hadoop 集群已经构建好了。</p>
+<h1 id="五网页访问">五、网页访问</h1>
+<h2 id="浏览器访问本机的9870端口">1.浏览器访问本机的9870端口</h2>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309201145278.png" alt="image-20230919210729977" style="zoom: 67%;" /></p>
+<h2 id="浏览器访问本机的8088端口">2.浏览器访问本机的8088端口</h2>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309201145164.png" alt="image-20230919210811664" style="zoom:67%;" /></p>
+<blockquote>
+<p>参考：</p>
+<p><a
+href="https://www.cnblogs.com/luo-c/p/15831441.html">https://www.cnblogs.com/luo-c/p/15831441.html</a></p>
 </blockquote>
 ]]></content>
       <categories>
@@ -1915,113 +2022,6 @@ f^*(y)=\sup_{x\in domf}(y^Tx-f(x))
       <tags>
         <tag>学科</tag>
         <tag>最优化方法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>通过Docker搭建完全分布式Hadoop集群</title>
-    <url>/2023/09/19/2023/Docker/%E9%80%9A%E8%BF%87Docker%E6%90%AD%E5%BB%BA%E5%AE%8C%E5%85%A8%E5%88%86%E5%B8%83%E5%BC%8FHadoop%E9%9B%86%E7%BE%A4/</url>
-    <content><![CDATA[<blockquote>
-<p>基于上一篇博客进行拓展</p>
-</blockquote>
-<span id="more"></span>
-<h1 id="前言">前言</h1>
-<blockquote>
-<p><a
-href="https://www.justinchoi.top/2023/09/07/2023/Ubuntu%E9%85%8D%E7%BD%AEhadoop%EF%BC%88%E5%9F%BA%E4%BA%8EDocker%EF%BC%89/">上一次</a>我们搭建了基于Docker的伪分布式Hadoop集群，这次来搭建分布式的</p>
-</blockquote>
-<h1 id="一为集群单独构建虚拟网络">一、为集群单独构建虚拟网络</h1>
-<p>现在的 Docker 网络能够提供 DNS
-解析功能，我们可以使用如下命令为接下来的 Hadoop
-集群单独构建一个虚拟的网络：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo docker network create --driver=bridge hadoop</span><br></pre></td></tr></table></figure>
-<p>使用下面这个命令查看 Docker 中的网络，可以看到刚刚创建的名为 hadoop
-的虚拟桥接网络：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo docker network ls</span><br></pre></td></tr></table></figure>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309201145415.png" alt="image-20230919201453731" style="zoom: 67%;" /></p>
-<h1 id="二进入上次搭建好的容器">二、进入上次搭建好的容器</h1>
-<p>我们通过上次制作的镜像启动一个容器：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run -dit --name=master --hostname=master hdp</span><br></pre></td></tr></table></figure>
-<p>我们进入<code>master</code>容器中</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker exec -it master /bin/bash</span><br></pre></td></tr></table></figure>
-<h1 id="三配置hadoop环境">三、配置Hadoop环境</h1>
-<p>在上一次我们已经配置了一个伪分布式的Hadoop环境，接下来我们需要对那些文件再进一步修改。</p>
-<h2 id="修改core-site.xml">1.修改<code>core-site.xml</code></h2>
-<p>打开<code>/usr/local/hadoop-3.3.1/etc/hadoop</code>路径下的<code>core-site.xml</code>:</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd /usr/local/hadoop-3.3.1</span><br><span class="line">cd etc/hadoop</span><br><span class="line">vim core-site.xml</span><br></pre></td></tr></table></figure>
-<p>修改后是这样的：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">　　&lt;!--指定nameNode的地址--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;fs.defaultFS&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;hdfs://master:8020&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">　　&lt;!--指定Hadoop数据的存储目录--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;hadoop.tmp.dir&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;/usr/local/hadoop/data&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">　　&lt;!--配置HDFS网页登陆使用的静态用户，配置这个之后才有权限可以在网页端删除文件、文件夹--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;hadoop.http.staticuser.user&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;root&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="修改hdfs-site.xml">2.修改<code>hdfs-site.xml</code></h2>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vim hdfs-site.xml</span><br></pre></td></tr></table></figure>
-<p>修改后：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">　　&lt;!--文件的存储个数--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;dfs.replication&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;3&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">　　&lt;!--nn web端访问地址，使用网页访问HDFS文件系统就是这个端口--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;dfs.namenode.http-address&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;master:9870&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">　　&lt;!--2nn web端访问地址--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;dfs.namenode.secondary.http-address&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;master:9868&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">　　&lt;!--网页查看HDFS文件内容，出现Couldn‘t preview the file报错，需要配置的参数--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;dfs.webhdfs.enabled&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;true&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="修改mapred-site.xml">3.修改<code>mapred-site.xml</code></h2>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vim mapred-site.xml</span><br></pre></td></tr></table></figure>
-<p>修改后：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">　　&lt;!--指定MapReduce程序运行在Yarn上--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;mapreduce.framework.name&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;yarn&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="修改yarn-site.xml">4.修改<code>yarn-site.xml</code></h2>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vim yarn-site.xml</span><br></pre></td></tr></table></figure>
-<p>修改后：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">　　&lt;!--指定MR走 shuffle--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;mapreduce_shuffle&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">　　&lt;!--指定ResourceManager的地址--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;yarn.resourcemanager.hostname&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;h01&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">　　&lt;!--环境变量的继承--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;yarn.nodemanager.env-whitelist&lt;/name&gt;         </span><br><span class="line">        &lt;value&gt;JAVA_HOME,HADOOP_COMMON_HOME,HADOOP_HDFS_HOME,HADOOP_CONF_DIR,CLASSPATH_PREPEND_DISTCACHE,HADOOP_YARN_HOME,HADOOP_MAPRED_HOME&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="修改workers">5.修改<code>workers</code></h2>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim workers</span><br></pre></td></tr></table></figure>
-<p>修改后：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">master</span><br><span class="line">slave1</span><br><span class="line">slave2</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>注意：master这些后面不要有空格！slave2后面，不要有空的行！自己准备起多少集群，就在这里写几个，要是准备起5个集群，就写到slave4。</p>
-</blockquote>
-<h1 id="四在docker中启动集群">四、在Docker中启动集群</h1>
-<h2 id="先将容器导出为镜像">1.先将容器导出为镜像</h2>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker commit master nethdp</span><br></pre></td></tr></table></figure>
-<h2 id="启动三个终端">2.启动三个终端</h2>
-<ul>
-<li><p>第一条命令启动的是<code>master</code>做<code>master</code>节点的，所以要开放一些端口，用来访问web页面</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run -dit --network hadoop --hostname=master --name=master -p 9870:9870 -p 8088:8088 nethdp /bin/bash</span><br></pre></td></tr></table></figure></li>
-<li><p>后面几条命令都类似，只要注意修改名字和主机名就行</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run -dit --network hadoop -hostname=slave1 --name=slave1 nethdp /bin/bash</span><br></pre></td></tr></table></figure></li>
-<li><p>第三条命令</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run -dit --network hadoop -hostname=slave2 --name=slave2 nethdp /bin/bash</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h2
-id="接下来在master主机中启动hadoop集群">3.接下来在<code>master</code>主机中启动Hadoop集群</h2>
-<p>先在hadoop安装目录进行格式化操作，不格式化操作，hdfs起不来（<strong>只有第一次启动</strong>的时候需要初始化，以后启动就不需要了，先删除所有机器的
-data和logs目录，然后再进行格式化）：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">./bin/hdfs namenode -format</span><br></pre></td></tr></table></figure>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309201145608.png" alt="image-20230919205754453" style="zoom:80%;" /></p>
-<p>然后启动HDFS集群：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">./sbin/start-dfs.sh</span><br></pre></td></tr></table></figure>
-<figure>
-<img
-src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309201145588.png"
-alt="image-20230919210507605" />
-<figcaption aria-hidden="true">image-20230919210507605</figcaption>
-</figure>
-<p>最后，启动yarn集群管理节点：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">./sbin/start-yarn.sh</span><br></pre></td></tr></table></figure>
-<p>都启动完成后，使用 jps 命令查看：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">jps</span><br></pre></td></tr></table></figure>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309201145662.png" alt="image-20230919210554410" style="zoom:80%;" /></p>
-<p>可以看到，除了Jps，一共有5个进程，因为这里没有将
-nameNode、ResourceManager、SecondaryNameNode分开部署，所以都在
-h01这一台机器上，实际生产中，应该是需要分开部署的。</p>
-<p>至此，Hadoop 集群已经构建好了。</p>
-<h1 id="五网页访问">五、网页访问</h1>
-<h2 id="浏览器访问本机的9870端口">1.浏览器访问本机的9870端口</h2>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309201145278.png" alt="image-20230919210729977" style="zoom: 67%;" /></p>
-<h2 id="浏览器访问本机的8088端口">2.浏览器访问本机的8088端口</h2>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309201145164.png" alt="image-20230919210811664" style="zoom:67%;" /></p>
-<blockquote>
-<p>参考：</p>
-<p><a
-href="https://www.cnblogs.com/luo-c/p/15831441.html">https://www.cnblogs.com/luo-c/p/15831441.html</a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Docker</category>
-        <category>Hadoop</category>
-      </categories>
-      <tags>
-        <tag>Docker</tag>
-        <tag>Hadoop</tag>
       </tags>
   </entry>
   <entry>
