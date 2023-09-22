@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/aya.JPG">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/aya.JPG">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/aya.JPG">
+  <link rel="mask-icon" href="/images/aya.JPG" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.justinchoi.top","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.18.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="优化问题的标准形式 一般优化问题 优化问题 \[ \min f_0(x).\\ \text{s.t.}\ \ f_i(x)\le0,\quad i&#x3D;1,...,m\\ h_i(x)&#x3D;0,\quad i&#x3D;1,..., \]  其中  \(x&#x3D;(x_1,x_2,...,x_n)\)：优化变量(variable) \(f_0: \mathbb{R}^n\rightarrow\m">
+<meta property="og:type" content="article">
+<meta property="og:title" content="凸优化问题">
+<meta property="og:url" content="http://www.justinchoi.top/2023/09/21/%E5%87%B8%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:site_name" content="文文的短发">
+<meta property="og:description" content="优化问题的标准形式 一般优化问题 优化问题 \[ \min f_0(x).\\ \text{s.t.}\ \ f_i(x)\le0,\quad i&#x3D;1,...,m\\ h_i(x)&#x3D;0,\quad i&#x3D;1,..., \]  其中  \(x&#x3D;(x_1,x_2,...,x_n)\)：优化变量(variable) \(f_0: \mathbb{R}^n\rightarrow\m">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211803862.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211803986.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211806319.png">
+<meta property="og:image" content="c:\Users\JustinChoi\AppData\Roaming\Typora\typora-user-images\image-20230921182738352.png">
+<meta property="og:image" content="c:\Users\JustinChoi\AppData\Roaming\Typora\typora-user-images\image-20230921184237723.png">
+<meta property="og:image" content="c:\Users\JustinChoi\AppData\Roaming\Typora\typora-user-images\image-20230921202149224.png">
+<meta property="article:published_time" content="2023-09-21T09:06:49.000Z">
+<meta property="article:modified_time" content="2023-09-21T12:56:24.083Z">
+<meta property="article:author" content="文文的短发">
+<meta property="article:tag" content="学科">
+<meta property="article:tag" content="最优化方法">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211803862.png">
+
+
+<link rel="canonical" href="http://www.justinchoi.top/2023/09/21/%E5%87%B8%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://www.justinchoi.top/2023/09/21/%E5%87%B8%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98/","path":"2023/09/21/凸优化问题/","title":"凸优化问题"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>凸优化问题 | 文文的短发</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">文文的短发</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98%E7%9A%84%E6%A0%87%E5%87%86%E5%BD%A2%E5%BC%8F"><span class="nav-text">优化问题的标准形式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E8%88%AC%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98"><span class="nav-text">一般优化问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98"><span class="nav-text">优化问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98%E7%9A%84%E6%9C%80%E4%BC%98%E8%A7%A3"><span class="nav-text">优化问题的最优解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B1%80%E9%83%A8%E6%9C%80%E4%BC%98%E8%A7%A3locally-optimal"><span class="nav-text">局部最优解（Locally optimal）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8D%E5%90%8C%E8%A7%A3%E9%9B%86%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-text">不同解集的关系</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%87%B8%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98"><span class="nav-text">凸优化问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%8D%E8%A6%81%E6%80%A7%E8%B4%A8%E5%B1%80%E9%83%A8%E6%9C%80%E4%BC%98%E5%85%A8%E9%83%A8%E6%9C%80%E4%BC%98"><span class="nav-text">重要性质：局部最优&#x3D;全部最优</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%80%E9%83%A8%E6%9C%80%E4%BC%98%E5%85%A8%E9%83%A8%E6%9C%80%E4%BC%98"><span class="nav-text">局部最优&#x3D;全部最优</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%80%E4%BC%98%E6%9D%A1%E4%BB%B6"><span class="nav-text">最优条件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AF%E5%BE%AE%E7%9B%AE%E6%A0%87%E5%87%BD%E6%95%B0%E4%B8%8B%E7%9A%84%E6%9C%80%E4%BC%98%E6%9D%A1%E4%BB%B6"><span class="nav-text">可微目标函数下的最优条件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%87%B8%E5%87%BD%E6%95%B0%E7%9A%84%E4%B8%80%E9%98%B6%E6%9D%A1%E4%BB%B6"><span class="nav-text">凸函数的一阶条件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%80%E4%BC%98%E6%9D%A1%E4%BB%B6-1"><span class="nav-text">最优条件</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%80%E4%BC%98%E6%9D%A1%E4%BB%B6%E7%89%B9%E6%AE%8A%E6%83%85%E5%86%B5"><span class="nav-text">最优条件（特殊情况）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A0%E7%BA%A6%E6%9D%9F%E9%97%AE%E9%A2%98"><span class="nav-text">无约束问题：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AD%89%E5%BC%8F%E7%BA%A6%E6%9D%9F%E9%97%AE%E9%A2%98"><span class="nav-text">等式约束问题：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E8%A7%84%E5%88%92linear-programming"><span class="nav-text">线性规划（Linear Programming）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E6%AC%A1%E8%A7%84%E5%88%92quadratic-programming"><span class="nav-text">二次规划（Quadratic
+Programming）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E6%AC%A1%E7%BA%A6%E6%9D%9F%E4%BA%8C%E6%AC%A1%E8%A7%84%E5%88%92qcqp"><span class="nav-text">二次约束二次规划（QCQP）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%8B-%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E9%97%AE%E9%A2%98least-squares-problem"><span class="nav-text">例-最小二乘问题（Least
+Squares Problem）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%8B-%E6%8A%95%E8%B5%84%E7%BB%84%E5%90%88%E9%97%AE%E9%A2%98portfolio-problem"><span class="nav-text">例-投资组合问题（portfolio
+problem）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B8%E5%9E%8B%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98"><span class="nav-text">典型优化问题</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="文文的短发"
+      src="/img/headimg.JPG">
+  <p class="site-author-name" itemprop="name">文文的短发</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/JUSTINAYA" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;JUSTINAYA" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:justinchoi929@gmail.com" title="E-Mail → mailto:justinchoi929@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://github.com/bingxueailin" title="https:&#x2F;&#x2F;github.com&#x2F;bingxueailin" rel="noopener" target="_blank">软软萌萌的[冰雪艾琳]</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="http://wonz.wang/" title="http:&#x2F;&#x2F;wonz.wang&#x2F;" rel="noopener" target="_blank">厉害的[Wonz]学长的Blog</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://www.cnblogs.com/Asaka-QianXiang/" title="https:&#x2F;&#x2F;www.cnblogs.com&#x2F;Asaka-QianXiang&#x2F;" rel="noopener" target="_blank">绩点高的[药佬]的Blog</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.justinchoi.top/2023/09/21/%E5%87%B8%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/headimg.JPG">
+      <meta itemprop="name" content="文文的短发">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="文文的短发">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="凸优化问题 | 文文的短发">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          凸优化问题
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-09-21 17:06:49 / 修改时间：20:56:24" itemprop="dateCreated datePublished" datetime="2023-09-21T17:06:49+08:00">2023-09-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%9C%80%E4%BC%98%E5%8C%96%E6%96%B9%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">最优化方法</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="优化问题的标准形式">优化问题的标准形式</h1>
+<h2 id="一般优化问题">一般优化问题</h2>
+<h3 id="优化问题">优化问题</h3>
+<p><span class="math display">\[
+\min f_0(x).\\
+\text{s.t.}\ \ f_i(x)\le0,\quad i=1,...,m\\
+h_i(x)=0,\quad i=1,...,
+\]</span></p>
+<blockquote>
+<p>其中</p>
+<ul>
+<li><span
+class="math inline">\(x=(x_1,x_2,...,x_n)\)</span>：优化变量(variable)</li>
+<li><span class="math inline">\(f_0:
+\mathbb{R}^n\rightarrow\mathbb{R}\)</span>：目标函数(Objective
+function)</li>
+<li><span class="math inline">\(f_i:
+\mathbb{R}^n\rightarrow\mathbb{R},i=1,...m\)</span>：不等式约束(Constraints)</li>
+<li><span class="math inline">\(h_i:
+\mathbb{R}^n\rightarrow\mathbb{R},i=1,...p\)</span>：等式约束(Constraints)</li>
+<li><span class="math inline">\(m=p=0：\)</span>无约束问题</li>
+</ul>
+</blockquote>
+<h2 id="优化问题的最优解">优化问题的最优解</h2>
+<ul>
+<li><p>优化问题的域(domain) <span class="math display">\[
+D=\bigcap_{i=0}^m domf_i\cap\bigcap_{i=1}^p domh_i
+\]</span></p></li>
+<li><p>可行解集（feasible set） <span class="math display">\[
+𝑋 = \{𝑥 ∈ 𝐷且所有约束条件可以满⾜\}
+\]</span></p></li>
+<li><p>问题的最优值（optimal value） <span class="math display">\[
+p^* = \inf\{f_0(𝑥)|𝑥 ∈ 𝑋_f\}
+\]</span></p></li>
+<li><p>最优解（optimal point/solution） <span class="math display">\[
+若x^*可⾏，且f_0(x^*)=p^*
+\]</span></p></li>
+<li><p>最优解集（optimal set） <span class="math display">\[
+x_{opt}=\{x|x\in X_f,f_0(x^*)=p^*\}
+\]</span></p></li>
+<li><p><span class="math inline">\(\varepsilon\)</span>-次优解集（ <span
+class="math inline">\(\varepsilon\)</span>–suboptimal set） <span
+class="math display">\[
+X_\varepsilon=\{x|x\in X_f,f_0(x^*)\le p^*+\varepsilon\}
+\]</span></p></li>
+</ul>
+<h2 id="局部最优解locally-optimal">局部最优解（Locally optimal）</h2>
+<ul>
+<li>𝑥为局部最优解，如果<span class="math inline">\(\exist
+R&gt;0\)</span>使得<span
+class="math inline">\(x\)</span>为以下问题的最优解：</li>
+<li>所有局部最优解构成的解集为<span
+class="math inline">\(X_loc\)</span></li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211803862.png" alt="image-20230921180256354" style="zoom:50%;" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211803986.png" alt="image-20230921180309308" style="zoom:67%;" /></p>
+<h2 id="不同解集的关系">不同解集的关系</h2>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211806319.png" alt="image-20230921180644673" style="zoom:80%;" /></p>
+<h1 id="凸优化问题">凸优化问题</h1>
+<figure>
+<img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211807398.png"
+alt="image-20230921180734622" />
+<figcaption aria-hidden="true">image-20230921180734622</figcaption>
+</figure>
+<p>例：</p>
+<figure>
+<img
+src="C:\Users\JustinChoi\AppData\Roaming\Typora\typora-user-images\image-20230921181430569.png"
+alt="image-20230921181430569" />
+<figcaption aria-hidden="true">image-20230921181430569</figcaption>
+</figure>
+<figure>
+<img
+src="C:\Users\JustinChoi\AppData\Roaming\Typora\typora-user-images\image-20230921181450725.png"
+alt="image-20230921181450725" />
+<figcaption aria-hidden="true">image-20230921181450725</figcaption>
+</figure>
+<figure>
+<img
+src="C:\Users\JustinChoi\AppData\Roaming\Typora\typora-user-images\image-20230921181528931.png"
+alt="image-20230921181528931" />
+<figcaption aria-hidden="true">image-20230921181528931</figcaption>
+</figure>
+<h2 id="重要性质局部最优全部最优">重要性质：局部最优=全部最优</h2>
+<h3 id="局部最优全部最优">局部最优=全部最优</h3>
+<ul>
+<li><p>局部最优：存在<span
+class="math inline">\(R&gt;0\)</span>使得<span
+class="math inline">\(x\)</span>为以下问题的最优解： <span
+class="math display">\[
+\min(overz)\quad f_0(z)\\
+\text{s.t.}\quad\quad f_i(z)\le0,\quad i  =1,...,m\\
+\quad \quad \quad h_i(z)=1,\quad i  =1,...,p\\
+\|z-x\|_2\le R
+\]</span></p></li>
+<li><p>全局最优：<span class="math inline">\(p^*=\inf \{f_0(x)|x\in
+D_f\},\quad f_0(x^*)=p^*\)</span></p></li>
+</ul>
+<h2 id="最优条件">最优条件</h2>
+<h3 id="可微目标函数下的最优条件">可微目标函数下的最优条件</h3>
+<h4 id="凸函数的一阶条件">凸函数的一阶条件</h4>
+<ul>
+<li><span class="math inline">\(f_0\)</span>可微，则<span
+class="math inline">\(f_0\)</span>为凸函数<span
+class="math inline">\(\Rightarrow domf\)</span>为凸集</li>
+<li><span class="math inline">\(f_0(y)\ge f_0(x)+\nabla f_0^T (x)(y-x),
+\forall x,y\in dom f\)</span></li>
+</ul>
+<h4 id="最优条件-1">最优条件</h4>
+<ul>
+<li><span class="math inline">\(x\in X\)</span>最优<span
+class="math inline">\(\Leftrightarrow \nabla f_0(x)^T (y-x)\ge0 \text{
+for all }y\in X\)</span></li>
+</ul>
+<p><img src="C:\Users\JustinChoi\AppData\Roaming\Typora\typora-user-images\image-20230921182738352.png" alt="image-20230921182738352" style="zoom:67%;" /></p>
+<h2 id="最优条件特殊情况">最优条件（特殊情况）</h2>
+<h3 id="无约束问题">无约束问题：</h3>
+<p><span class="math inline">\(x\)</span>为最优解的充分必要条件 <span
+class="math display">\[
+x\in \text{dom}f_0,\quad \nabla f_0(x)=0
+\]</span></p>
+<h3 id="等式约束问题">等式约束问题：</h3>
+<p><span class="math display">\[
+\min\quad f_0(x)\quad \text{s.t.}\quad Ax=b
+\]</span></p>
+<p><span
+class="math inline">\(x\)</span>为最优解的充分必要条件。存在<span
+class="math inline">\(v\)</span>使得 <span class="math display">\[
+x\in \text{dom}f_0,\quad Ax=b,\quad \nabla f_0(x)+A^Tv=0
+\]</span></p>
+<h2 id="线性规划linear-programming">线性规划（Linear Programming）</h2>
+<p><span class="math display">\[ {align*}
+\min\quad c^Tx+d\\
+\text{s.t.}\quad Gx\le h\\
+Ax=b
+\]</span> {align*}</p>
+<figure>
+<img
+src="C:\Users\JustinChoi\AppData\Roaming\Typora\typora-user-images\image-20230921183845593.png"
+alt="image-20230921183845593" />
+<figcaption aria-hidden="true">image-20230921183845593</figcaption>
+</figure>
+<h2 id="二次规划quadratic-programming">二次规划（Quadratic
+Programming）</h2>
+<p><span class="math display">\[
+\min\quad (1/2)x^TPx+q^Tx+r\\
+\text{s.t.}\quad Gx\le h\\
+Ax=b
+\]</span></p>
+<ul>
+<li><span class="math inline">\(P\in S^n_+\)</span>，凸优化问题</li>
+<li>可行解时多面体，虚线为等高线</li>
+</ul>
+<p><img src="C:\Users\JustinChoi\AppData\Roaming\Typora\typora-user-images\image-20230921184237723.png" alt="image-20230921184237723" style="zoom:67%;" /></p>
+<h2 id="二次约束二次规划qcqp">二次约束二次规划（QCQP）</h2>
+<p><span class="math display">\[
+\min\quad (1/2)x^TP_0x+q_0^Tx+r_0\\
+\text{s.t.}\quad (1/2)x^TP_ix+q_i^Tx+r_i\le0,\quad i=1,...,m\\
+Ax=b
+\]</span></p>
+<ul>
+<li><span class="math inline">\(P\in
+S^n_+\)</span>，目标函数与不等式约束都是二次凸函数</li>
+<li>可行解集为m个椭球和⼀个仿射集的交集</li>
+</ul>
+<h3 id="例-最小二乘问题least-squares-problem">例-最小二乘问题（Least
+Squares Problem）</h3>
+<p><span class="math display">\[
+\min\|Xw-y\|^2_2\\
+\min\quad w^TX^TXw-2y^TXw+y^Ty
+\]</span></p>
+<p><img src="C:\Users\JustinChoi\AppData\Roaming\Typora\typora-user-images\image-20230921202149224.png" alt="image-20230921202149224" style="zoom:50%;" /></p>
+<ul>
+<li>无约束QP问题</li>
+<li>解析解：<span class="math inline">\((X^TX)^{-1}X^Ty\)</span></li>
+<li>假设有约束<span class="math inline">\(u_i\le w_i\le
+l_i\)</span>，则是一个具有等式约束的QP问题</li>
+</ul>
+<h3 id="例-投资组合问题portfolio-problem">例-投资组合问题（portfolio
+problem）</h3>
+<h1 id="典型优化问题">典型优化问题</h1>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%AD%A6%E7%A7%91/" rel="tag"># 学科</a>
+              <a href="/tags/%E6%9C%80%E4%BC%98%E5%8C%96%E6%96%B9%E6%B3%95/" rel="tag"># 最优化方法</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/09/21/2023/%E6%9C%80%E4%BC%98%E5%8C%96/%E5%87%B8%E5%87%BD%E6%95%B0%EF%BC%88Convex-Function%EF%BC%89/" rel="prev" title="凸函数（Convex Function）">
+                  <i class="fa fa-angle-left"></i> 凸函数（Convex Function）
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">文文的短发</span>
+  </div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+    本站访客数：<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+
+  
+  <script type="text/javascript"
+  color="0,0,0" opacity='0.3' zIndex="-1" count="75" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
+
+</body>
+</html>
