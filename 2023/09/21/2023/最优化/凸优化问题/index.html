@@ -19,12 +19,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.justinchoi.top","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.18.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="凸优化问题   优化问题的标准形式 一般优化问题 优化问题 \[ \min f_0(x).\\ \text{s.t.}\ \ f_i(x)\le0,\quad i&#x3D;1,...,m\\ h_i(x)&#x3D;0,\quad i&#x3D;1,..., \]  其中  \(x&#x3D;(x_1,x_2,...,x_n)\)：优化变量(variable) \(f_0: \mathbb{R}^n">
+    <meta name="description" content="凸优化问题">
 <meta property="og:type" content="article">
 <meta property="og:title" content="凸优化问题">
 <meta property="og:url" content="http://www.justinchoi.top/2023/09/21/2023/%E6%9C%80%E4%BC%98%E5%8C%96/%E5%87%B8%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="文文的短发">
-<meta property="og:description" content="凸优化问题   优化问题的标准形式 一般优化问题 优化问题 \[ \min f_0(x).\\ \text{s.t.}\ \ f_i(x)\le0,\quad i&#x3D;1,...,m\\ h_i(x)&#x3D;0,\quad i&#x3D;1,..., \]  其中  \(x&#x3D;(x_1,x_2,...,x_n)\)：优化变量(variable) \(f_0: \mathbb{R}^n">
+<meta property="og:description" content="凸优化问题">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211803862.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211803986.png">
@@ -33,7 +33,7 @@
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309221758169.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309221758196.png">
 <meta property="article:published_time" content="2023-09-21T09:06:49.000Z">
-<meta property="article:modified_time" content="2023-09-22T09:58:47.940Z">
+<meta property="article:modified_time" content="2023-09-27T05:32:51.973Z">
 <meta property="article:author" content="文文的短发">
 <meta property="article:tag" content="学科">
 <meta property="article:tag" content="最优化方法">
@@ -151,10 +151,10 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98%E7%9A%84%E6%A0%87%E5%87%86%E5%BD%A2%E5%BC%8F"><span class="nav-text">优化问题的标准形式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E8%88%AC%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98"><span class="nav-text">一般优化问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98"><span class="nav-text">优化问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98%E7%9A%84%E6%9C%80%E4%BC%98%E8%A7%A3"><span class="nav-text">优化问题的最优解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B1%80%E9%83%A8%E6%9C%80%E4%BC%98%E8%A7%A3locally-optimal"><span class="nav-text">局部最优解（Locally optimal）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8D%E5%90%8C%E8%A7%A3%E9%9B%86%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-text">不同解集的关系</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%87%B8%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98"><span class="nav-text">凸优化问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%8D%E8%A6%81%E6%80%A7%E8%B4%A8%E5%B1%80%E9%83%A8%E6%9C%80%E4%BC%98%E5%85%A8%E9%83%A8%E6%9C%80%E4%BC%98"><span class="nav-text">重要性质：局部最优&#x3D;全部最优</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%80%E9%83%A8%E6%9C%80%E4%BC%98%E5%85%A8%E9%83%A8%E6%9C%80%E4%BC%98"><span class="nav-text">局部最优&#x3D;全部最优</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%80%E4%BC%98%E6%9D%A1%E4%BB%B6"><span class="nav-text">最优条件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AF%E5%BE%AE%E7%9B%AE%E6%A0%87%E5%87%BD%E6%95%B0%E4%B8%8B%E7%9A%84%E6%9C%80%E4%BC%98%E6%9D%A1%E4%BB%B6"><span class="nav-text">可微目标函数下的最优条件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%87%B8%E5%87%BD%E6%95%B0%E7%9A%84%E4%B8%80%E9%98%B6%E6%9D%A1%E4%BB%B6"><span class="nav-text">凸函数的一阶条件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%80%E4%BC%98%E6%9D%A1%E4%BB%B6-1"><span class="nav-text">最优条件</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%80%E4%BC%98%E6%9D%A1%E4%BB%B6%E7%89%B9%E6%AE%8A%E6%83%85%E5%86%B5"><span class="nav-text">最优条件（特殊情况）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A0%E7%BA%A6%E6%9D%9F%E9%97%AE%E9%A2%98"><span class="nav-text">无约束问题：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AD%89%E5%BC%8F%E7%BA%A6%E6%9D%9F%E9%97%AE%E9%A2%98"><span class="nav-text">等式约束问题：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E8%A7%84%E5%88%92linear-programming"><span class="nav-text">线性规划（Linear Programming）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E6%AC%A1%E8%A7%84%E5%88%92quadratic-programming"><span class="nav-text">二次规划（Quadratic
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98%E7%9A%84%E6%A0%87%E5%87%86%E5%BD%A2%E5%BC%8F"><span class="nav-text">优化问题的标准形式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E8%88%AC%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98"><span class="nav-text">一般优化问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98"><span class="nav-text">优化问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98%E7%9A%84%E6%9C%80%E4%BC%98%E8%A7%A3"><span class="nav-text">优化问题的最优解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B1%80%E9%83%A8%E6%9C%80%E4%BC%98%E8%A7%A3locally-optimal"><span class="nav-text">局部最优解（Locally optimal）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8D%E5%90%8C%E8%A7%A3%E9%9B%86%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-text">不同解集的关系</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%87%B8%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98"><span class="nav-text">凸优化问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%8D%E8%A6%81%E6%80%A7%E8%B4%A8%E5%B1%80%E9%83%A8%E6%9C%80%E4%BC%98%E5%85%A8%E9%83%A8%E6%9C%80%E4%BC%98"><span class="nav-text">重要性质：局部最优&#x3D;全部最优</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%80%E9%83%A8%E6%9C%80%E4%BC%98%E5%85%A8%E9%83%A8%E6%9C%80%E4%BC%98"><span class="nav-text">局部最优&#x3D;全部最优</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%80%E4%BC%98%E6%9D%A1%E4%BB%B6"><span class="nav-text">最优条件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AF%E5%BE%AE%E7%9B%AE%E6%A0%87%E5%87%BD%E6%95%B0%E4%B8%8B%E7%9A%84%E6%9C%80%E4%BC%98%E6%9D%A1%E4%BB%B6"><span class="nav-text">可微目标函数下的最优条件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%87%B8%E5%87%BD%E6%95%B0%E7%9A%84%E4%B8%80%E9%98%B6%E6%9D%A1%E4%BB%B6"><span class="nav-text">凸函数的一阶条件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%80%E4%BC%98%E6%9D%A1%E4%BB%B6-1"><span class="nav-text">最优条件</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%80%E4%BC%98%E6%9D%A1%E4%BB%B6%E7%89%B9%E6%AE%8A%E6%83%85%E5%86%B5"><span class="nav-text">最优条件（特殊情况）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A0%E7%BA%A6%E6%9D%9F%E9%97%AE%E9%A2%98"><span class="nav-text">无约束问题：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AD%89%E5%BC%8F%E7%BA%A6%E6%9D%9F%E9%97%AE%E9%A2%98"><span class="nav-text">等式约束问题：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B8%E5%9E%8B%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98"><span class="nav-text">典型优化问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E8%A7%84%E5%88%92linear-programming"><span class="nav-text">线性规划（Linear Programming）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E6%AC%A1%E8%A7%84%E5%88%92quadratic-programming"><span class="nav-text">二次规划（Quadratic
 Programming）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E6%AC%A1%E7%BA%A6%E6%9D%9F%E4%BA%8C%E6%AC%A1%E8%A7%84%E5%88%92qcqp"><span class="nav-text">二次约束二次规划（QCQP）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%8B-%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E9%97%AE%E9%A2%98least-squares-problem"><span class="nav-text">例-最小二乘问题（Least
 Squares Problem）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%8B-%E6%8A%95%E8%B5%84%E7%BB%84%E5%90%88%E9%97%AE%E9%A2%98portfolio-problem"><span class="nav-text">例-投资组合问题（portfolio
-problem）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B8%E5%9E%8B%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98"><span class="nav-text">典型优化问题</span></a></li></ol></div>
+problem）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%8D%E5%90%88%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98"><span class="nav-text">复合优化问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#l1%E6%AD%A3%E5%88%99%E5%8C%96%E4%B8%8El2%E6%AD%A3%E5%88%99%E5%8C%96"><span class="nav-text">l1正则化与l2正则化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9F%A9%E9%98%B5%E4%BC%98%E5%8C%96"><span class="nav-text">矩阵优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%8B-%E4%BD%8E%E7%A7%A9%E7%9F%A9%E9%98%B5%E6%81%A2%E5%A4%8D"><span class="nav-text">例-低秩矩阵恢复</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B4%E6%95%B0%E8%A7%84%E5%88%92%E9%9D%9E%E5%87%B8"><span class="nav-text">整数规划（非凸）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%8B-%E4%BB%93%E5%BA%93%E4%BD%8D%E7%BD%AE%E9%80%89%E5%8F%96%E9%97%AE%E9%A2%98"><span class="nav-text">例-仓库位置选取问题</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -269,7 +269,7 @@ problem）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-09-22 17:58:47" itemprop="dateModified" datetime="2023-09-22T17:58:47+08:00">2023-09-22</time>
+      <time title="修改时间：2023-09-27 13:32:51" itemprop="dateModified" datetime="2023-09-27T13:32:51+08:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -293,7 +293,7 @@ problem）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><
     <div class="post-body" itemprop="articleBody"><blockquote>
 <p>凸优化问题</p>
 </blockquote>
-<!---more-->
+<span id="more"></span>
 <h1 id="优化问题的标准形式">优化问题的标准形式</h1>
 <h2 id="一般优化问题">一般优化问题</h2>
 <h3 id="优化问题">优化问题</h3>
@@ -362,19 +362,19 @@ alt="image-20230921180734622" />
 <p>例：</p>
 <figure>
 <img
-src="C:\Users\JustinChoi\AppData\Roaming\Typora\typora-user-images\image-20230921181430569.png"
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309271332232.png"
 alt="image-20230921181430569" />
 <figcaption aria-hidden="true">image-20230921181430569</figcaption>
 </figure>
 <figure>
 <img
-src="C:\Users\JustinChoi\AppData\Roaming\Typora\typora-user-images\image-20230921181450725.png"
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309271332037.png"
 alt="image-20230921181450725" />
 <figcaption aria-hidden="true">image-20230921181450725</figcaption>
 </figure>
 <figure>
 <img
-src="C:\Users\JustinChoi\AppData\Roaming\Typora\typora-user-images\image-20230921181528931.png"
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309271332730.png"
 alt="image-20230921181528931" />
 <figcaption aria-hidden="true">image-20230921181528931</figcaption>
 </figure>
@@ -425,6 +425,7 @@ class="math inline">\(x\)</span>为最优解的充分必要条件。存在<span
 class="math inline">\(v\)</span>使得 <span class="math display">\[
 x\in \text{dom}f_0,\quad Ax=b,\quad \nabla f_0(x)+A^Tv=0
 \]</span></p>
+<h1 id="典型优化问题">典型优化问题</h1>
 <h2 id="线性规划linear-programming">线性规划（Linear Programming）</h2>
 <p><span class="math display">\[ {align*}
 \min\quad c^Tx+d\\
@@ -475,7 +476,98 @@ l_i\)</span>，则是一个具有等式约束的QP问题</li>
 </ul>
 <h3 id="例-投资组合问题portfolio-problem">例-投资组合问题（portfolio
 problem）</h3>
-<h1 id="典型优化问题">典型优化问题</h1>
+<p><span class="math display">\[
+\begin{aligned}
+&amp; \max \sum_{i=1}^n x_i p_i . \\
+&amp; \text { s.t. } \sum_{i=1}^n x_i \leq B, x_i \geq 0
+\end{aligned}
+\]</span></p>
+<p>其中<span class="math inline">\(x_i\)</span>为第<span
+class="math inline">\(i\)</span>种产品的投资额，<span
+class="math inline">\(B\)</span>为总资金， <span
+class="math inline">\(p_i\)</span>为收益率</p>
+<ul>
+<li>在实际情况中， <span
+class="math inline">\(p_i\)</span>⼀般为概率分布
+<ul>
+<li><span class="math inline">\(\bar{p}=[1.05, 1.05, 1]\)</span></li>
+<li><span class="math inline">\(\sum =[1.2, 2, 0]\)</span></li>
+</ul></li>
+</ul>
+<p><span class="math display">\[
+\begin{array}{ll}
+\min &amp; \sum_{i=1}^n X^T \sum X \\
+\text { s.t. } &amp; \bar{p}^T X \geq r_{\text {min }}, I^T X=B, X \geq
+0
+\end{array}
+\]</span></p>
+<h2 id="复合优化问题">复合优化问题</h2>
+<p><span class="math display">\[
+\min \psi (x)=f(x)+h(x)
+\]</span></p>
+<p>其中，<span
+class="math inline">\(f(x)\)</span>一般是凸的、光滑的，<span
+class="math inline">\(h(x)\)</span>一般是凸的，但不一定光滑</p>
+<p>应用场景：</p>
+<ul>
+<li>岭回归：<span class="math inline">\(f(x)\)</span>为最小二乘，<span
+class="math inline">\(h(x)=\|x\|_2\)</span></li>
+<li>Lasso：<span class="math inline">\(f(x)\)</span>为最小二乘，<span
+class="math inline">\(h(x)=\|x\| _1\)</span></li>
+<li>l1范数正则化逻辑回归：<span class="math inline">\(f(x)=\sum_{i=1}^m
+\ln(1+\exp(-b_i\cdot a^T_i x)),h(x)=\|x\|_1\)</span></li>
+<li>l1范数正则化支持向量机：<span
+class="math inline">\(Cf(x)=\sum_{i=1}^m \max\{1+(-b_i(a^T_i x
++y),0\},h(x)=\|x\|_1\)</span></li>
+</ul>
+<h3 id="l1正则化与l2正则化">l1正则化与l2正则化</h3>
+<figure>
+<img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309271318100.png"
+alt="image-20230927131817702" />
+<figcaption aria-hidden="true">image-20230927131817702</figcaption>
+</figure>
+<h2 id="矩阵优化">矩阵优化</h2>
+<p><span class="math display">\[
+\min \quad\psi (x)
+\]</span></p>
+<ul>
+<li><span class="math inline">\(X包含n\times n个元素\)</span></li>
+<li>半定规划</li>
+</ul>
+<p><span class="math display">\[
+\begin{aligned}
+\min &amp; c^{\mathrm{T}} x \\
+\text { s.t. } &amp; x_1 A_1+x_2 A_2+\cdots+x_n A_n+B \preceq 0 \\
+&amp; G x=h,
+\end{aligned}
+\]</span></p>
+<h3 id="例-低秩矩阵恢复">例-低秩矩阵恢复</h3>
+<figure>
+<img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309271329954.png"
+alt="image-20230927132945693" />
+<figcaption aria-hidden="true">image-20230927132945693</figcaption>
+</figure>
+<h2 id="整数规划非凸">整数规划（非凸）</h2>
+<p><span class="math display">\[
+\begin{array}{ll}
+\min &amp; c^{\top} x \\
+\text { s.t. } &amp; A x \leqslant b, \\
+&amp; x_i \geqslant 0, i=1,2, \cdots, n, \\
+&amp; x_i \in \mathbb{Z}, i=1,2, \cdots, n,
+\end{array}
+\]</span></p>
+<blockquote>
+<p>其中Z为所有的整数集合</p>
+</blockquote>
+<h3 id="例-仓库位置选取问题">例-仓库位置选取问题</h3>
+<figure>
+<img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309271332262.png"
+alt="image-20230927133202477" />
+<figcaption aria-hidden="true">image-20230927133202477</figcaption>
+</figure>
 
     </div>
 

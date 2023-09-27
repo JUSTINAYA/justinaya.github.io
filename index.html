@@ -251,7 +251,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-09-22 17:58:47" itemprop="dateModified" datetime="2023-09-22T17:58:47+08:00">2023-09-22</time>
+      <time title="修改时间：2023-09-27 13:32:51" itemprop="dateModified" datetime="2023-09-27T13:32:51+08:00">2023-09-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -276,190 +276,14 @@
           <blockquote>
 <p>凸优化问题</p>
 </blockquote>
-<!---more-->
-<h1 id="优化问题的标准形式">优化问题的标准形式</h1>
-<h2 id="一般优化问题">一般优化问题</h2>
-<h3 id="优化问题">优化问题</h3>
-<p><span class="math display">\[
-\min f_0(x).\\
-\text{s.t.}\ \ f_i(x)\le0,\quad i=1,...,m\\
-h_i(x)=0,\quad i=1,...,
-\]</span></p>
-<blockquote>
-<p>其中</p>
-<ul>
-<li><span
-class="math inline">\(x=(x_1,x_2,...,x_n)\)</span>：优化变量(variable)</li>
-<li><span class="math inline">\(f_0:
-\mathbb{R}^n\rightarrow\mathbb{R}\)</span>：目标函数(Objective
-function)</li>
-<li><span class="math inline">\(f_i:
-\mathbb{R}^n\rightarrow\mathbb{R},i=1,...m\)</span>：不等式约束(Constraints)</li>
-<li><span class="math inline">\(h_i:
-\mathbb{R}^n\rightarrow\mathbb{R},i=1,...p\)</span>：等式约束(Constraints)</li>
-<li><span class="math inline">\(m=p=0：\)</span>无约束问题</li>
-</ul>
-</blockquote>
-<h2 id="优化问题的最优解">优化问题的最优解</h2>
-<ul>
-<li><p>优化问题的域(domain) <span class="math display">\[
-D=\bigcap_{i=0}^m domf_i\cap\bigcap_{i=1}^p domh_i
-\]</span></p></li>
-<li><p>可行解集（feasible set） <span class="math display">\[
-𝑋 = \{𝑥 ∈ 𝐷且所有约束条件可以满⾜\}
-\]</span></p></li>
-<li><p>问题的最优值（optimal value） <span class="math display">\[
-p^* = \inf\{f_0(𝑥)|𝑥 ∈ 𝑋_f\}
-\]</span></p></li>
-<li><p>最优解（optimal point/solution） <span class="math display">\[
-若x^*可⾏，且f_0(x^*)=p^*
-\]</span></p></li>
-<li><p>最优解集（optimal set） <span class="math display">\[
-x_{opt}=\{x|x\in X_f,f_0(x^*)=p^*\}
-\]</span></p></li>
-<li><p><span class="math inline">\(\varepsilon\)</span>-次优解集（ <span
-class="math inline">\(\varepsilon\)</span>–suboptimal set） <span
-class="math display">\[
-X_\varepsilon=\{x|x\in X_f,f_0(x^*)\le p^*+\varepsilon\}
-\]</span></p></li>
-</ul>
-<h2 id="局部最优解locally-optimal">局部最优解（Locally optimal）</h2>
-<ul>
-<li>𝑥为局部最优解，如果<span class="math inline">\(\exist
-R&gt;0\)</span>使得<span
-class="math inline">\(x\)</span>为以下问题的最优解：</li>
-<li>所有局部最优解构成的解集为<span
-class="math inline">\(X_loc\)</span></li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211803862.png" alt="image-20230921180256354" style="zoom:50%;" /></p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211803986.png" alt="image-20230921180309308" style="zoom:67%;" /></p>
-<h2 id="不同解集的关系">不同解集的关系</h2>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211806319.png" alt="image-20230921180644673" style="zoom:80%;" /></p>
-<h1 id="凸优化问题">凸优化问题</h1>
-<figure>
-<img
-src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211807398.png"
-alt="image-20230921180734622" />
-<figcaption aria-hidden="true">image-20230921180734622</figcaption>
-</figure>
-<p>例：</p>
-<figure>
-<img
-src="C:\Users\JustinChoi\AppData\Roaming\Typora\typora-user-images\image-20230921181430569.png"
-alt="image-20230921181430569" />
-<figcaption aria-hidden="true">image-20230921181430569</figcaption>
-</figure>
-<figure>
-<img
-src="C:\Users\JustinChoi\AppData\Roaming\Typora\typora-user-images\image-20230921181450725.png"
-alt="image-20230921181450725" />
-<figcaption aria-hidden="true">image-20230921181450725</figcaption>
-</figure>
-<figure>
-<img
-src="C:\Users\JustinChoi\AppData\Roaming\Typora\typora-user-images\image-20230921181528931.png"
-alt="image-20230921181528931" />
-<figcaption aria-hidden="true">image-20230921181528931</figcaption>
-</figure>
-<h2 id="重要性质局部最优全部最优">重要性质：局部最优=全部最优</h2>
-<h3 id="局部最优全部最优">局部最优=全部最优</h3>
-<ul>
-<li><p>局部最优：存在<span
-class="math inline">\(R&gt;0\)</span>使得<span
-class="math inline">\(x\)</span>为以下问题的最优解： <span
-class="math display">\[
-\min(overz)\quad f_0(z)\\
-\text{s.t.}\quad\quad f_i(z)\le0,\quad i  =1,...,m\\
-\quad \quad \quad h_i(z)=1,\quad i  =1,...,p\\
-\|z-x\|_2\le R
-\]</span></p></li>
-<li><p>全局最优：<span class="math inline">\(p^*=\inf \{f_0(x)|x\in
-D_f\},\quad f_0(x^*)=p^*\)</span></p></li>
-</ul>
-<h2 id="最优条件">最优条件</h2>
-<h3 id="可微目标函数下的最优条件">可微目标函数下的最优条件</h3>
-<h4 id="凸函数的一阶条件">凸函数的一阶条件</h4>
-<ul>
-<li><span class="math inline">\(f_0\)</span>可微，则<span
-class="math inline">\(f_0\)</span>为凸函数<span
-class="math inline">\(\Rightarrow domf\)</span>为凸集</li>
-<li><span class="math inline">\(f_0(y)\ge f_0(x)+\nabla f_0^T (x)(y-x),
-\forall x,y\in dom f\)</span></li>
-</ul>
-<h4 id="最优条件-1">最优条件</h4>
-<ul>
-<li><span class="math inline">\(x\in X\)</span>最优<span
-class="math inline">\(\Leftrightarrow \nabla f_0(x)^T (y-x)\ge0 \text{
-for all }y\in X\)</span></li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309221758437.png" alt="image-20230921182738352" style="zoom:67%;" /></p>
-<h2 id="最优条件特殊情况">最优条件（特殊情况）</h2>
-<h3 id="无约束问题">无约束问题：</h3>
-<p><span class="math inline">\(x\)</span>为最优解的充分必要条件 <span
-class="math display">\[
-x\in \text{dom}f_0,\quad \nabla f_0(x)=0
-\]</span></p>
-<h3 id="等式约束问题">等式约束问题：</h3>
-<p><span class="math display">\[
-\min\quad f_0(x)\quad \text{s.t.}\quad Ax=b
-\]</span></p>
-<p><span
-class="math inline">\(x\)</span>为最优解的充分必要条件。存在<span
-class="math inline">\(v\)</span>使得 <span class="math display">\[
-x\in \text{dom}f_0,\quad Ax=b,\quad \nabla f_0(x)+A^Tv=0
-\]</span></p>
-<h2 id="线性规划linear-programming">线性规划（Linear Programming）</h2>
-<p><span class="math display">\[ {align*}
-\min\quad c^Tx+d\\
-\text{s.t.}\quad Gx\le h\\
-Ax=b
-\]</span> {align*}</p>
-<figure>
-<img
-src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309221758062.png"
-alt="image-20230921183845593" />
-<figcaption aria-hidden="true">image-20230921183845593</figcaption>
-</figure>
-<h2 id="二次规划quadratic-programming">二次规划（Quadratic
-Programming）</h2>
-<p><span class="math display">\[
-\min\quad (1/2)x^TPx+q^Tx+r\\
-\text{s.t.}\quad Gx\le h\\
-Ax=b
-\]</span></p>
-<ul>
-<li><span class="math inline">\(P\in S^n_+\)</span>，凸优化问题</li>
-<li>可行解时多面体，虚线为等高线</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309221758169.png" alt="image-20230921184237723" style="zoom:67%;" /></p>
-<h2 id="二次约束二次规划qcqp">二次约束二次规划（QCQP）</h2>
-<p><span class="math display">\[
-\min\quad (1/2)x^TP_0x+q_0^Tx+r_0\\
-\text{s.t.}\quad (1/2)x^TP_ix+q_i^Tx+r_i\le0,\quad i=1,...,m\\
-Ax=b
-\]</span></p>
-<ul>
-<li><span class="math inline">\(P\in
-S^n_+\)</span>，目标函数与不等式约束都是二次凸函数</li>
-<li>可行解集为m个椭球和⼀个仿射集的交集</li>
-</ul>
-<h3 id="例-最小二乘问题least-squares-problem">例-最小二乘问题（Least
-Squares Problem）</h3>
-<p><span class="math display">\[
-\min\|Xw-y\|^2_2\\
-\min\quad w^TX^TXw-2y^TXw+y^Ty
-\]</span></p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309221758196.png" alt="image-20230921202149224" style="zoom:50%;" /></p>
-<ul>
-<li>无约束QP问题</li>
-<li>解析解：<span class="math inline">\((X^TX)^{-1}X^Ty\)</span></li>
-<li>假设有约束<span class="math inline">\(u_i\le w_i\le
-l_i\)</span>，则是一个具有等式约束的QP问题</li>
-</ul>
-<h3 id="例-投资组合问题portfolio-problem">例-投资组合问题（portfolio
-problem）</h3>
-<h1 id="典型优化问题">典型优化问题</h1>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/09/21/2023/%E6%9C%80%E4%BC%98%E5%8C%96/%E5%87%B8%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
