@@ -129,149 +129,6 @@ admin.txt
       </tags>
   </entry>
   <entry>
-    <title>LATEX公式使用</title>
-    <url>/2023/09/15/2023/LATEX%E5%85%AC%E5%BC%8F%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<blockquote>
-<p>一些实用的技术</p>
-</blockquote>
-<span id="more"></span>
-<h1 id="前言">前言</h1>
-<blockquote>
-<p>最近在想写博客的时候发现我不太会用latex公式，就准备学一学</p>
-<p>网上有太多教程了，我就不重复劳动了，把一些重要的常用的copy下来，其他的转载</p>
-</blockquote>
-<h1 id="如何插入公式">如何插入公式</h1>
-<p><code>𝐿𝐴𝑇𝐸𝑋</code>
-的数学公式有两种：行中公式和独立公式（行间公式）。行中公式放在文中与其它文字混编，独立公式单独成行。</p>
-<p>行中公式可以用如下方法表示：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ 数学公式 $</span><br></pre></td></tr></table></figure>
-<p>独立公式可以用如下方法表示：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$$ 数学公式 $$</span><br></pre></td></tr></table></figure>
-<h3 id="标准函数">标准函数<a
-href="https://www.cnblogs.com/1024th/p/11623258.html#2083047927">#</a></h3>
-<p>指数</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\exp_a b = a^b, \exp b = e^b, 10^m</span><br></pre></td></tr></table></figure>
-<p><span class="math display">\[
-\exp_a b = a^b, \exp b = e^b, 10^m
-\]</span></p>
-<p>对数</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\ln c, \lg d = \log e, \log_&#123;10&#125; f</span><br></pre></td></tr></table></figure>
-<p><span class="math display">\[
-\ln c, \lg d = \log e, \log_{10} f
-\]</span></p>
-<p>三角函数</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\sin a, \cos b, \tan c, \cot d, \sec e, \csc f</span><br></pre></td></tr></table></figure>
-<p><span class="math display">\[
-\sin a, \cos b, \tan c, \cot d, \sec e, \csc f
-\]</span></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\arcsin a, \arccos b, \arctan c</span><br></pre></td></tr></table></figure>
-<p><span class="math display">\[
-\arcsin a, \arccos b, \arctan c
-\]</span></p>
-<p>其余请看这篇博文<a
-href="https://www.cnblogs.com/1024th/p/11623258.html">LaTeX公式手册(全网最全)</a></p>
-]]></content>
-      <categories>
-        <category>LATEX</category>
-      </categories>
-      <tags>
-        <tag>LATEX</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Taihub分享</title>
-    <url>/2023/02/01/2023/Taihub%E5%88%86%E4%BA%AB/</url>
-    <content><![CDATA[<blockquote>
-<p>关于泰的一切</p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/IMG_1790.PNG" alt="IMG_1790" style="zoom: 25%;" /></p>
-</blockquote>
-<span id="more"></span>
-<h1 id="前言">前言</h1>
-<p>孝泰是由2021年夏天一个视频引发的小众亚文化圈子，发展至今，已诞生了多数优秀的作品。在这里我进行了不完全的整理并放在了网盘上，请自行取用。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/IMG_1790.PNG" alt="IMG_1790" style="zoom: 25%;" /></p>
-<h1 id="链接">链接</h1>
-<p>https://pan.baidu.com/s/1IqRYFEZJGfA_Bg0yNdBY5w?pwd=6sa7
-提取码：6sa7</p>
-<h1 id="使用须知">使用须知</h1>
-<p>正作是tai原素材包含视频和图片多数来源于cj 番外是tai整活视频
-DLC是tai整活图片 借物表不填写⚪ 二配允许⚪ 修改允许⚪ 商用不允许×
-R18不允许×</p>
-<h1 id="补档">补档</h1>
-<h2 id="补档1">补档1</h2>
-<p>​
-孝泰为什么是神？在谈论这个问题之前，我想先说说其他梗王相较于孝泰究竟差在了哪里</p>
-<h3 id="首先是犯下傲慢之罪的哲学众将">首先是犯下傲慢之罪的哲学众将</h3>
-<p>​
-凭着niconico留下来的热度，在B站掀起一波腥风血雨，这种亚文化梗注定走不长远，事实也是如此，18年被B站制裁了之后就泯然众人，仅维持着一点热度。与之相比神就很谦卑，嘞个mang，李个逼都是神留给凡人的慈悲，神不是没有好的口头禅，只是不想通过太完美的言语让大家折服而故意不用，可笑有些人不理解神的良苦用心，竟然还用这些事来讥讽神，我劝你们好自为之。</p>
-<h3 id="然后是犯下愤怒之罪的虎哥">然后是犯下愤怒之罪的虎哥</h3>
-<p>​
-因为杀马特团长与其的口角争斗，就愤怒地与团长进行约战，违背了神在《新约》中的一句话:“还森两百多天吧，我的话就似想和大家缩，尽力zhuo到坠好的自己吧。”于是神降下了他的惩罚，虎哥不见踪影，落寞生活。</p>
-<h3 id="接着是犯下懒惰之罪的初音">接着是犯下懒惰之罪的初音</h3>
-<p>​
-自以为拿下几个畅销冠军就了不起了，自创歌姬计划。另外大家有所不知，其实每次初音发歌前，初音闭上眼睛做冥想的时候，其脑海中看见的画面，正是站在光芒之中的孝泰，那时神告诉她：“李只可到这里，不可越过。”然而，神的劝说不但没有让初音迷途知返，竟敢还不断发游戏发周边正面挑战神的威严，于是神降下了他的惩罚，初音热度渐渐下降，从公主殿下变成了葱。</p>
-<h3 id="再然后是犯下了嫉妒之罪的子润">再然后是犯下了嫉妒之罪的子润</h3>
-<p>​
-热度屡次被神击败，但口服心不服的子润，暗中嫉妒着神，甚至胆敢在赵睿英面前挑明和张国的关系。于是，在含金量更高的热度对决，即处男帮里，子润被孝泰正面击溃。不过，念在都是一个班的份上，并且践行了神的意志吸引力屡次吼神的赵睿英的火力后，神应许了他在一班的一切。</p>
-<h3 id="犯下贪婪之罪的刘华强">犯下贪婪之罪的刘华强</h3>
-<p>​
-只是部老剧，华强就夺得了2021年B站热度榜单，而这，自然是因为神的应许。神本来钦定他为自己在人间的代言人，在自己热度下去后替自己继续火热全网，为此甚至不惜亲自为华强铺路，主动退出B站圈，将一切荣耀都归给他，甚至应许他可以带走自己最爱的瓜。但最后华强却被利益蒙蔽了双眼，不再以践行神的理想为自己的理想，也不再聆听神的教诲，甚至自以荣光已经超过了神，竟允许粉丝P出孝泰卖瓜这种亵渎神尊严的图片，于是神降下了惩罚，华强从此不再正常并且拥有各种形态，而他的电瓶车将再也不能载起他最初的梦想，他的刀再也不能正常地劈瓜，他的瓜摊老板再也不能正常地发觉不对劲。</p>
-<h3 id="犯下暴食之罪的嘉然">犯下暴食之罪的嘉然</h3>
-<p>​
-在神子华强开始堕落之后，神开始寻找下一个代言人，这一次，他选中了嘉然。相较于神，嘉然无疑是不完美的，他没有神足以让众人沦陷的样貌，也没有神深不见底的名句池，舍我其谁的胆气，敏锐的词汇选择，无懈可击的步伐，但神将自己最虔诚，同时也是实力最强大的两位泰心糖暂时交给了她，并复刻了为华强的铺路操作，但由于高考的事，神认为或许是自己给的压力过大才导致了华强的堕落，于是这一次神选择了去南通，减少嘉然的心理负担，最终，嘉然成功了。然而，获得热度的嘉然不但冒大不韪给两位泰心糖新的称号嘉心糖，更妄图染指神力，只是她错误地认为身的力量来源于语言的步伐，最终她也因此犯下了暴食之罪，并得到了一大推屁用没有的嘉心糖。</p>
-<h3 id="最后犯下淫欲之罪的吴乘风">最后，犯下淫欲之罪的吴乘风</h3>
-<p>​
-2021暑假之后，神已经非常虚弱了，原神用氪金系统吸走了神的精气，神已经无力再惩罚嘉然，只有两位信徒依旧在维护神的尊严而已。此刻已经决心退隐的神在最后依然心系苏州，于是他选中了第三位神子——吴乘风。作为第三任神子，吴乘风很好地维护了神的尊严，但接连击溃鼓楼的窑子后，吴乘风遇到了石佛寺三宫四十八号的浦口淫魔，被吸走了神赋予自己的力量，于是在班干竞选中节节败退，最终泯然众人，活在男人窝中。</p>
-<h2 id="补档2">补档2</h2>
-<p>​
-2021年的最后一个16号已经过去一天，孝泰的补档已成终章，不管是好活还是烂活，重要的是慢慢的，大家，把所谓的烂活，好活……讲成了一个故事，变成了一种艺术。朦胧的感觉，迷茫的感觉，大家最初单纯只是喜欢恶搞，喜欢玩乐，渐渐的渐渐的喜欢上了孝泰的真实。
-不真实的，真实</p>
-<p>​
-那些视频我看了不下50次，最初点进去是抱着无厘头的态度看一个搞笑的抽象作品的，可没想到我被彻底的震撼到了，忍不住的看了一次又一次。</p>
-<p>​
-多年前模糊的画质，夏日漱石的配乐，王家卫文艺的台词，孝泰荒诞行为的画面。这一切听起来不可思议甚至有些魔幻的组合却拼接的是那么的恰到好处，想要赋予视频意义的同时又在鼓励观众尝试解构一帧帧画面。</p>
-<p>​
-狭窄的房间，失意的男人，狂乱的肢体动作，整部作品都旨在表达一种荒谬感，一种充斥着整个人类历史的荒诞无稽。这里没有什么东西是有价值可言的，宇宙冷漠而荒谬，而人在真正面对它时，一切的现实和理智都将崩溃</p>
-<p>​ 我愿称之为荒诞浪漫主义的开端，甚至将引领一段不可思议的潮流。</p>
-<p>你问我什么是荒诞浪漫主义？ 是莫扎特谱写的朋克摇滚乐，
-是梵高画出的二次元美少女， 是曹雪芹写下的凡人修仙传，
-是李白导演出的商业谍战片， 是方文山创作出的让子弹飞，
-是和孝泰度过的那一个夏天。</p>
-<p>​
-今天是17号。我错过了16号的补档，正如我错过了那个夏天。还记得第一次看完了视频，我惊讶于孝泰的舞蹈，看完了评论，我想哭，我想笑，我想此刻在寒冷的的冬天穿着短袖去操场上跑圈，我想和视频里的孝泰一样做一些荒诞又浪漫的事情，我想有一个无悔的青春。我想说很多话，我想做很多事，可是到最后什么也没说，什么也没做。我羡慕孝泰，真的，他把生活过成了戏剧，又在每个16号都被常常记起，当没有人再放这些视频的时候，当孝泰被科技城遗忘的时候，孝泰才能真正活在南通吧</p>
-<h2 id="补档3">补档3</h2>
-<p>是枕绿色围巾孝泰的睡姿 是上课孝泰不断闭眼点头 是红衣孝泰李个逼的声波
-是孝泰蓝色三叶草T恤衫 是体育馆孝泰飞出的鞋垫 是丝滑无法复制孝泰转身
-是钉钉视频孝泰蓝刨冰机 是一张张照片孝泰的中指 是孝泰经典套司波登大衣
-是羽毛球馆孝泰梦幻脚步 是孝泰气喘喘的相当不绰 是孝泰撑起来的零号特工
-是还森两百多天南大孝泰 是通大电科孝泰五天早八 是不可能被五等分的孝泰</p>
-<h2 id="补档4">补档4</h2>
-<p>我好想做孝泰的狗啊。</p>
-<p>可是孝泰说他喜欢的是他小弟，我哭了。</p>
-<p>我知道既不是狗也不是小弟的我为什么要哭的。因为我其实是他的同学。</p>
-<p>我从没奢望孝泰能看一眼自己。我明白的，所有人都喜欢理解余裕上手天才打钱的萌萌的狗狗或者小弟，没有人会喜欢只会躲在阴暗角落的同学。</p>
-<p>但我还是问了孝泰:“我能不能做你的狗？”</p>
-<p>我知道我是注定做不了狗的。但如果他喜欢狗，我就可以一直在身边看着他了，哪怕她怀里抱着的永远都是狗。</p>
-<p>可是他说喜欢的是他小弟。</p>
-<p>他现在还能看我，还在和我说话，是因为他小弟还没有出现，只有我这同学每天蹑手蹑脚地从阴暗角落里爬出来，远远地和他对视。</p>
-<p>等他喜欢的小弟来了的时候，我就该重新滚回我的座位了吧。</p>
-<p>但我还是好仰慕他，他能在我还在他身边的时候多看我几眼吗？</p>
-<p>孝泰说接下来的每个圣诞夜都要和大家一起过。我不知道大家指哪些人。好希望这个集合能够对我做一次胞吞。</p>
-<p>他小弟还在害怕孝泰。</p>
-<p>我会去把他爱的小弟引来的。</p>
-<p>我知道稍有不慎，我就会请他小弟吃某利来冰山熔岩蛋糕。</p>
-<p>那时候孝泰大概会往我身上扔臭鸡蛋吧。</p>
-<p>那我就成了贤蛋黄，嘻嘻。</p>
-<p>我希望他能把我扔得近一点，因为我还是好仰慕他。会一直仰慕下去的。</p>
-<p>我的灵魂透过窗户向里面看去，挂着的铃铛在轻轻鸣响，孝泰慵懒地靠在沙发上，表演得非常温顺的小弟坐在他的身旁。壁炉的火光照在他的脸庞，我冻僵的心脏在风里微微发烫。</p>
-]]></content>
-      <categories>
-        <category>Tai</category>
-      </categories>
-      <tags>
-        <tag>Tai</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>GitHub成就徽章全攻略（GitHub Achievements）</title>
     <url>/2023/09/08/2023/GitHub%E6%88%90%E5%B0%B1%E5%BE%BD%E7%AB%A0%E5%85%A8%E6%94%BB%E7%95%A5%EF%BC%88GitHub-Achievements%EF%BC%89/</url>
     <content><![CDATA[<blockquote>
@@ -689,10 +546,200 @@ alt="Dark skin tone of Quickdraw" /></a></td>
       </tags>
   </entry>
   <entry>
+    <title>LATEX公式使用</title>
+    <url>/2023/09/15/2023/LATEX%E5%85%AC%E5%BC%8F%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<blockquote>
+<p>一些实用的技术</p>
+</blockquote>
+<span id="more"></span>
+<h1 id="前言">前言</h1>
+<blockquote>
+<p>最近在想写博客的时候发现我不太会用latex公式，就准备学一学</p>
+<p>网上有太多教程了，我就不重复劳动了，把一些重要的常用的copy下来，其他的转载</p>
+</blockquote>
+<h1 id="如何插入公式">如何插入公式</h1>
+<p><code>𝐿𝐴𝑇𝐸𝑋</code>
+的数学公式有两种：行中公式和独立公式（行间公式）。行中公式放在文中与其它文字混编，独立公式单独成行。</p>
+<p>行中公式可以用如下方法表示：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ 数学公式 $</span><br></pre></td></tr></table></figure>
+<p>独立公式可以用如下方法表示：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$$ 数学公式 $$</span><br></pre></td></tr></table></figure>
+<h3 id="标准函数">标准函数<a
+href="https://www.cnblogs.com/1024th/p/11623258.html#2083047927">#</a></h3>
+<p>指数</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\exp_a b = a^b, \exp b = e^b, 10^m</span><br></pre></td></tr></table></figure>
+<p><span class="math display">\[
+\exp_a b = a^b, \exp b = e^b, 10^m
+\]</span></p>
+<p>对数</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\ln c, \lg d = \log e, \log_&#123;10&#125; f</span><br></pre></td></tr></table></figure>
+<p><span class="math display">\[
+\ln c, \lg d = \log e, \log_{10} f
+\]</span></p>
+<p>三角函数</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\sin a, \cos b, \tan c, \cot d, \sec e, \csc f</span><br></pre></td></tr></table></figure>
+<p><span class="math display">\[
+\sin a, \cos b, \tan c, \cot d, \sec e, \csc f
+\]</span></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\arcsin a, \arccos b, \arctan c</span><br></pre></td></tr></table></figure>
+<p><span class="math display">\[
+\arcsin a, \arccos b, \arctan c
+\]</span></p>
+<p>其余请看这篇博文<a
+href="https://www.cnblogs.com/1024th/p/11623258.html">LaTeX公式手册(全网最全)</a></p>
+]]></content>
+      <categories>
+        <category>LATEX</category>
+      </categories>
+      <tags>
+        <tag>LATEX</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Taihub分享</title>
+    <url>/2023/02/01/2023/Taihub%E5%88%86%E4%BA%AB/</url>
+    <content><![CDATA[<blockquote>
+<p>关于泰的一切</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/IMG_1790.PNG" alt="IMG_1790" style="zoom: 25%;" /></p>
+</blockquote>
+<span id="more"></span>
+<h1 id="前言">前言</h1>
+<p>孝泰是由2021年夏天一个视频引发的小众亚文化圈子，发展至今，已诞生了多数优秀的作品。在这里我进行了不完全的整理并放在了网盘上，请自行取用。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/IMG_1790.PNG" alt="IMG_1790" style="zoom: 25%;" /></p>
+<h1 id="链接">链接</h1>
+<p>https://pan.baidu.com/s/1IqRYFEZJGfA_Bg0yNdBY5w?pwd=6sa7
+提取码：6sa7</p>
+<h1 id="使用须知">使用须知</h1>
+<p>正作是tai原素材包含视频和图片多数来源于cj 番外是tai整活视频
+DLC是tai整活图片 借物表不填写⚪ 二配允许⚪ 修改允许⚪ 商用不允许×
+R18不允许×</p>
+<h1 id="补档">补档</h1>
+<h2 id="补档1">补档1</h2>
+<p>​
+孝泰为什么是神？在谈论这个问题之前，我想先说说其他梗王相较于孝泰究竟差在了哪里</p>
+<h3 id="首先是犯下傲慢之罪的哲学众将">首先是犯下傲慢之罪的哲学众将</h3>
+<p>​
+凭着niconico留下来的热度，在B站掀起一波腥风血雨，这种亚文化梗注定走不长远，事实也是如此，18年被B站制裁了之后就泯然众人，仅维持着一点热度。与之相比神就很谦卑，嘞个mang，李个逼都是神留给凡人的慈悲，神不是没有好的口头禅，只是不想通过太完美的言语让大家折服而故意不用，可笑有些人不理解神的良苦用心，竟然还用这些事来讥讽神，我劝你们好自为之。</p>
+<h3 id="然后是犯下愤怒之罪的虎哥">然后是犯下愤怒之罪的虎哥</h3>
+<p>​
+因为杀马特团长与其的口角争斗，就愤怒地与团长进行约战，违背了神在《新约》中的一句话:“还森两百多天吧，我的话就似想和大家缩，尽力zhuo到坠好的自己吧。”于是神降下了他的惩罚，虎哥不见踪影，落寞生活。</p>
+<h3 id="接着是犯下懒惰之罪的初音">接着是犯下懒惰之罪的初音</h3>
+<p>​
+自以为拿下几个畅销冠军就了不起了，自创歌姬计划。另外大家有所不知，其实每次初音发歌前，初音闭上眼睛做冥想的时候，其脑海中看见的画面，正是站在光芒之中的孝泰，那时神告诉她：“李只可到这里，不可越过。”然而，神的劝说不但没有让初音迷途知返，竟敢还不断发游戏发周边正面挑战神的威严，于是神降下了他的惩罚，初音热度渐渐下降，从公主殿下变成了葱。</p>
+<h3 id="再然后是犯下了嫉妒之罪的子润">再然后是犯下了嫉妒之罪的子润</h3>
+<p>​
+热度屡次被神击败，但口服心不服的子润，暗中嫉妒着神，甚至胆敢在赵睿英面前挑明和张国的关系。于是，在含金量更高的热度对决，即处男帮里，子润被孝泰正面击溃。不过，念在都是一个班的份上，并且践行了神的意志吸引力屡次吼神的赵睿英的火力后，神应许了他在一班的一切。</p>
+<h3 id="犯下贪婪之罪的刘华强">犯下贪婪之罪的刘华强</h3>
+<p>​
+只是部老剧，华强就夺得了2021年B站热度榜单，而这，自然是因为神的应许。神本来钦定他为自己在人间的代言人，在自己热度下去后替自己继续火热全网，为此甚至不惜亲自为华强铺路，主动退出B站圈，将一切荣耀都归给他，甚至应许他可以带走自己最爱的瓜。但最后华强却被利益蒙蔽了双眼，不再以践行神的理想为自己的理想，也不再聆听神的教诲，甚至自以荣光已经超过了神，竟允许粉丝P出孝泰卖瓜这种亵渎神尊严的图片，于是神降下了惩罚，华强从此不再正常并且拥有各种形态，而他的电瓶车将再也不能载起他最初的梦想，他的刀再也不能正常地劈瓜，他的瓜摊老板再也不能正常地发觉不对劲。</p>
+<h3 id="犯下暴食之罪的嘉然">犯下暴食之罪的嘉然</h3>
+<p>​
+在神子华强开始堕落之后，神开始寻找下一个代言人，这一次，他选中了嘉然。相较于神，嘉然无疑是不完美的，他没有神足以让众人沦陷的样貌，也没有神深不见底的名句池，舍我其谁的胆气，敏锐的词汇选择，无懈可击的步伐，但神将自己最虔诚，同时也是实力最强大的两位泰心糖暂时交给了她，并复刻了为华强的铺路操作，但由于高考的事，神认为或许是自己给的压力过大才导致了华强的堕落，于是这一次神选择了去南通，减少嘉然的心理负担，最终，嘉然成功了。然而，获得热度的嘉然不但冒大不韪给两位泰心糖新的称号嘉心糖，更妄图染指神力，只是她错误地认为身的力量来源于语言的步伐，最终她也因此犯下了暴食之罪，并得到了一大推屁用没有的嘉心糖。</p>
+<h3 id="最后犯下淫欲之罪的吴乘风">最后，犯下淫欲之罪的吴乘风</h3>
+<p>​
+2021暑假之后，神已经非常虚弱了，原神用氪金系统吸走了神的精气，神已经无力再惩罚嘉然，只有两位信徒依旧在维护神的尊严而已。此刻已经决心退隐的神在最后依然心系苏州，于是他选中了第三位神子——吴乘风。作为第三任神子，吴乘风很好地维护了神的尊严，但接连击溃鼓楼的窑子后，吴乘风遇到了石佛寺三宫四十八号的浦口淫魔，被吸走了神赋予自己的力量，于是在班干竞选中节节败退，最终泯然众人，活在男人窝中。</p>
+<h2 id="补档2">补档2</h2>
+<p>​
+2021年的最后一个16号已经过去一天，孝泰的补档已成终章，不管是好活还是烂活，重要的是慢慢的，大家，把所谓的烂活，好活……讲成了一个故事，变成了一种艺术。朦胧的感觉，迷茫的感觉，大家最初单纯只是喜欢恶搞，喜欢玩乐，渐渐的渐渐的喜欢上了孝泰的真实。
+不真实的，真实</p>
+<p>​
+那些视频我看了不下50次，最初点进去是抱着无厘头的态度看一个搞笑的抽象作品的，可没想到我被彻底的震撼到了，忍不住的看了一次又一次。</p>
+<p>​
+多年前模糊的画质，夏日漱石的配乐，王家卫文艺的台词，孝泰荒诞行为的画面。这一切听起来不可思议甚至有些魔幻的组合却拼接的是那么的恰到好处，想要赋予视频意义的同时又在鼓励观众尝试解构一帧帧画面。</p>
+<p>​
+狭窄的房间，失意的男人，狂乱的肢体动作，整部作品都旨在表达一种荒谬感，一种充斥着整个人类历史的荒诞无稽。这里没有什么东西是有价值可言的，宇宙冷漠而荒谬，而人在真正面对它时，一切的现实和理智都将崩溃</p>
+<p>​ 我愿称之为荒诞浪漫主义的开端，甚至将引领一段不可思议的潮流。</p>
+<p>你问我什么是荒诞浪漫主义？ 是莫扎特谱写的朋克摇滚乐，
+是梵高画出的二次元美少女， 是曹雪芹写下的凡人修仙传，
+是李白导演出的商业谍战片， 是方文山创作出的让子弹飞，
+是和孝泰度过的那一个夏天。</p>
+<p>​
+今天是17号。我错过了16号的补档，正如我错过了那个夏天。还记得第一次看完了视频，我惊讶于孝泰的舞蹈，看完了评论，我想哭，我想笑，我想此刻在寒冷的的冬天穿着短袖去操场上跑圈，我想和视频里的孝泰一样做一些荒诞又浪漫的事情，我想有一个无悔的青春。我想说很多话，我想做很多事，可是到最后什么也没说，什么也没做。我羡慕孝泰，真的，他把生活过成了戏剧，又在每个16号都被常常记起，当没有人再放这些视频的时候，当孝泰被科技城遗忘的时候，孝泰才能真正活在南通吧</p>
+<h2 id="补档3">补档3</h2>
+<p>是枕绿色围巾孝泰的睡姿 是上课孝泰不断闭眼点头 是红衣孝泰李个逼的声波
+是孝泰蓝色三叶草T恤衫 是体育馆孝泰飞出的鞋垫 是丝滑无法复制孝泰转身
+是钉钉视频孝泰蓝刨冰机 是一张张照片孝泰的中指 是孝泰经典套司波登大衣
+是羽毛球馆孝泰梦幻脚步 是孝泰气喘喘的相当不绰 是孝泰撑起来的零号特工
+是还森两百多天南大孝泰 是通大电科孝泰五天早八 是不可能被五等分的孝泰</p>
+<h2 id="补档4">补档4</h2>
+<p>我好想做孝泰的狗啊。</p>
+<p>可是孝泰说他喜欢的是他小弟，我哭了。</p>
+<p>我知道既不是狗也不是小弟的我为什么要哭的。因为我其实是他的同学。</p>
+<p>我从没奢望孝泰能看一眼自己。我明白的，所有人都喜欢理解余裕上手天才打钱的萌萌的狗狗或者小弟，没有人会喜欢只会躲在阴暗角落的同学。</p>
+<p>但我还是问了孝泰:“我能不能做你的狗？”</p>
+<p>我知道我是注定做不了狗的。但如果他喜欢狗，我就可以一直在身边看着他了，哪怕她怀里抱着的永远都是狗。</p>
+<p>可是他说喜欢的是他小弟。</p>
+<p>他现在还能看我，还在和我说话，是因为他小弟还没有出现，只有我这同学每天蹑手蹑脚地从阴暗角落里爬出来，远远地和他对视。</p>
+<p>等他喜欢的小弟来了的时候，我就该重新滚回我的座位了吧。</p>
+<p>但我还是好仰慕他，他能在我还在他身边的时候多看我几眼吗？</p>
+<p>孝泰说接下来的每个圣诞夜都要和大家一起过。我不知道大家指哪些人。好希望这个集合能够对我做一次胞吞。</p>
+<p>他小弟还在害怕孝泰。</p>
+<p>我会去把他爱的小弟引来的。</p>
+<p>我知道稍有不慎，我就会请他小弟吃某利来冰山熔岩蛋糕。</p>
+<p>那时候孝泰大概会往我身上扔臭鸡蛋吧。</p>
+<p>那我就成了贤蛋黄，嘻嘻。</p>
+<p>我希望他能把我扔得近一点，因为我还是好仰慕他。会一直仰慕下去的。</p>
+<p>我的灵魂透过窗户向里面看去，挂着的铃铛在轻轻鸣响，孝泰慵懒地靠在沙发上，表演得非常温顺的小弟坐在他的身旁。壁炉的火光照在他的脸庞，我冻僵的心脏在风里微微发烫。</p>
+]]></content>
+      <categories>
+        <category>Tai</category>
+      </categories>
+      <tags>
+        <tag>Tai</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>第一篇博客</title>
     <url>/2023/01/29/2023/hello-world/</url>
     <content><![CDATA[<p>欢迎来到我的博客！</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>关于2023暑假</title>
+    <url>/2023/09/15/2023/%E5%85%B3%E4%BA%8E2023%E6%9A%91%E5%81%87/</url>
+    <content><![CDATA[<blockquote>
+<p>给忙碌的暑假一个交代</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/IMG_2971.jpeg" style="zoom:80%;" /></p>
+</blockquote>
+<span id="more"></span>
+<h1 id="前言">前言</h1>
+<p>这篇总结拖了很久，一直没有很充裕的时间来回忆和总结这个暑假的实习（也是我太懒了），所以我准备用每天的碎片时间来对我这个暑假做一个总结。</p>
+<h1 id="实习">实习</h1>
+<p>在这个暑假我找到我的第一份<code>实习</code>，也是托关系找来的，在暑假前我一直在刷脉脉和知乎，我也是被网上的言论给影响了，当时我一直有股信念，本科能找到不错的工作就没有必要读研了，特别是像现在这样的经济形势，说不定读三年研究生出来能找到的工作还不如本科时候找到的，所以我在暑假就很想学<code>技术</code>，就推掉了数模国赛转而去实习。</p>
+<h2 id="七月">七月</h2>
+<p>在七月十号左右我入职了，当时我的<code>mentor</code>还没来，就把显示器插排什么的都放到工位，本来以为我是来做大数据相关工作的，所以就把各类db软件下载了下来，然后开始学习</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/IMG_2957.jpeg" alt="IMG_2957" style="zoom: 50%;" /></p>
+<p>第二天公司老总和我谈了谈，我当时很迷茫的一点是要不要读研，老总和我讲了很多，说未来是人工智能的天下，并且给我配的导师是搞人工智能的，技术很厉害，让我多和他学习，而且说不建议我读研。不过我当时想，ai已经卷成这样了，很多硕士都找不到工作，搞ai还不读研那不是自寻死路吗，当然这也是当时的想法，经历的多了之后想法会不断产生变化。</p>
+<h3 id="初遇mentor">初遇mentor</h3>
+<p>在周五左右我第一次见到了我的mentor，看起来很和善，我们也找了个时间谈了一下，他给我介绍了人工智能目前的状况，并十分建议我读研，而且最好到国外去读（毕竟国外学习和开发的环境要自由些），他说目前公司就只有他一个人搞ai，说我来还挺高兴的，这样可以有人一起讨论，而且十分愿意教我。</p>
+<p>说实话我在之前也没接触过ai，也没想过去做ai，这次实习属于是我对ai的启蒙。</p>
+<h3 id="学习">学习</h3>
+<p>一开始因为我对ai没什么了解，所以mentor给了我很多资料，并且让我去看<code>吴恩达的deep learning</code>，听说是英文的我还害怕了一下，等到实际在学习的时候就会发现基本上没有什么障碍，不得不说很多外国的课程是真的高质量，由浅入深、通俗易懂。</p>
+<p>我花了一周时间认真看完了这门课，对神经网络有了一定的了解，也意识到人工智能底层就是数学，就是<code>高数+线性代数+概率论+统计学</code>的集合。</p>
+<h2 id="八月">八月</h2>
+<p>mentor和我说我来的时间其实很不巧，因为公司做事是阶段性的，在我来的期间正好公司没有什么业务拓展，所以我就只好看看公司以前的项目代码。</p>
+<h3 id="e集运">e集运</h3>
+<p>e集运是我接触的第一个项目，mentor很详细的给我梳理了整个项目的流程框架，在这个项目我也学到很多，像<code>Docker</code>，<code>git</code>等，我准备再之后新写一篇博客具体梳理一下这个项目。</p>
+<h3 id="github">Github</h3>
+<p>因为拉公司项目什么的需要用到<code>git</code>，所以我也仔细学习了一下git的相关技术，我也真正理解了<code>GitHub</code>的正确打开姿势，很遗憾我到现在才真正学会了github，以后要开始代码管理咯。</p>
+<h3 id="新项目">新项目</h3>
+<p>我也接触到了一些公司准备新进行的项目，通过做项目我才了解我的技术远远不够，像各种数据库的使用，我们专业将数据库这门课放到了大三下学期，我认为这是极不合理的，数据库是工作时必备的技术，所以我十分建议早点把数据库学起来。</p>
+<p>新项目是语言大模型和功能调用的融合，我其实没做什么，只是一直在pull代码看其他员工是怎么写的，就只是这样我也学到了很多。</p>
+<h3 id="kaggle天池">Kaggle/天池</h3>
+<p>在一开始的时候mentor就跟我说，如果要短期内学到很多东西，那就去打个比赛，像他自己就在打比赛，他十分推荐我去打<code>Kaggle</code>，当时我觉得，比赛什么时候都可以打，但公司项目不是什么时候都能接触的，所以就没选择打比赛，现在开学了，我也准备打一场kaggle看看，提升自己。</p>
+<h3 id="分别">分别</h3>
+<p>我的实习是做到8月25号，是个周五，在周一的时候mentor兴冲冲找到我说：“来活了！他们准备在之前e集运那个项目再做拓展。”唉，还是挺可惜的，那个时候已经没有时间做了。</p>
+<p>最后要分别的前一天mentor又找到我聊了聊，聊到未来的方向，我当时还是想着ai太卷了，想做java开发什么的，到现在有些改观，现在我感觉未来ai的门槛会越来越低。</p>
+<h1 id="未来">未来</h1>
+<p>在暑期末的时候，我爸妈带我去做了职业规划，找的是抖音上的水哥职说，也在苏州，最后也是确定要出国了。</p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>随笔</tag>
+      </tags>
   </entry>
   <entry>
     <title>二叉树遍历简单做法</title>
@@ -733,6 +780,80 @@ alt="Dark skin tone of Quickdraw" /></a></td>
       </categories>
       <tags>
         <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>美赛O奖论文研读有感</title>
+    <url>/2023/02/11/2023/%E7%BE%8E%E8%B5%9BO%E5%A5%96%E8%AE%BA%E6%96%87%E7%A0%94%E8%AF%BB%E6%9C%89%E6%84%9F/</url>
+    <content><![CDATA[<blockquote>
+<p>美赛O奖论文研读有感</p>
+</blockquote>
+<span id="more"></span>
+<h1 id="前言">前言</h1>
+<p>最近我在备战数学建模美赛时，重点研读了两篇O奖论文，一篇是宋浩然大佬仿照的的2020年A题的论文，另一篇是2020年C题的一篇O奖论文。</p>
+<h1 id="经验">经验</h1>
+<h2 id="关于突出点">关于突出点</h2>
+<p>两篇论文都使用了大量图片去佐证自己的观点，而且图片都很工整好看，很吸引人。不仅是流程图，它们也将数据可视化做到极致，真正做到了直观+美观。</p>
+<h2 id="关于编程">关于编程</h2>
+<p>两篇论文都使用到了<code>Matlab</code>和<code>Python</code>语言，Python可能在处理大数据上有着更大的优势，因为Python的各种第三方包使用起来实在很方便，学习成本也低。这里我推荐两本学习用Python做数据分析的书：</p>
+<blockquote>
+<p>《利用Python进行数据分析第二版》：主要内容是数据处理，pandas，numpy，matplotlib的使用方法，较为详细</p>
+<p>《Python数据科学手册》：一部分和上面那本内容重叠，后面也有讲一些机器学习模型的介绍和使用</p>
+</blockquote>
+<h2 id="关于图片">关于图片</h2>
+<p>两篇论文的图片都很精美，图片像流程图之类的可以用PPT或者亿图图示之类的软件画，像数据可视化则可以使用Python来完成，比如使用第三方库<code>matplotlib</code>进行绘图。</p>
+]]></content>
+      <categories>
+        <category>学科</category>
+        <category>数学建模</category>
+      </categories>
+      <tags>
+        <tag>美赛</tag>
+        <tag>数学建模</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>重拾博客</title>
+    <url>/2023/09/03/2023/%E9%87%8D%E6%8B%BE%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<blockquote>
+<p>经过一个学期重拾个人博客</p>
+</blockquote>
+<span id="more"></span>
+<h1 id="前言">前言</h1>
+<p>在2023年暑假的时候我创建了自己的个人博客，通过github
+pages使用Hexo框架加上butterfly主题，荒废了一个学期，现在决定重新填起这个坑。</p>
+<h1 id="经过">经过</h1>
+<p>在寒假发了几个博客后，发现使用markdown写博客加入图片时不能做到可视化，而且当时还不知道图床这个东西，所以图片什么的都存到了本地，管理和存储起来十分麻烦，还给网站增加流量负载，所以弃坑了。</p>
+<p>再后来我在CSDN上发现了南邮的一个学长的博客，名叫<a
+href="https://wonzwang.blog.csdn.net/?type=blog">Wonz</a>，在他的博客中我学到了很多，也从他的友链中知道了很多学长，看着他们的博客，我也想重拾自己的坑了。</p>
+<p>有时候我也想在有些触动的时候将自己的想法记录下来，但奈何自己太懒，在这个暑假我去了一个单位实习，在实习的过程中我渐渐可以熟练地使用git，也在实习的过程中产生越来越多的想法，现在实习结束了，也想总结一下，慢慢填补这个坑吧。</p>
+<h1 id="准备">准备</h1>
+<p>之前为了网站看起来炫酷一点，我就选择了butterfly这个主题，不过这样的代价是图片太多了，而且不够简洁，过于花里胡哨，这样对网站的加载速度也有影响，也不好将注意力放在写作上。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/IMG_3840.JPG" alt="IMG_3840" style="zoom: 33%;" /></p>
+<p>所以我换了个新的主题——<strong>Next主题</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/image-20230903171120400.png" alt="image-20230903171120400" style="zoom: 33%;" /></p>
+<p>这个主题我是看的<a
+href="https://wonz.wang/">Wonz</a>学长的个人博客在用的，十分简洁，内容清晰明了，我在暑假也看到过一段话：</p>
+<blockquote>
+<p>技术博客不需要弄得太花里胡哨，简单清晰才是王道。</p>
+</blockquote>
+<p>我看见他置顶博客的描述：</p>
+<blockquote>
+<p>阮一峰大神曾经说过: 喜欢写 Blog 的人, 会经历 3 个阶段。</p>
+<p>第一阶段，刚接触 Blog，觉得很新鲜，试着选择一个免费空间来写。
+第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。
+第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。</p>
+</blockquote>
+<p>我对这话深有感触，本来我也在想要不要自己搞个服务器部署博客，发现根本没必要，还不安全，有github就很方便。</p>
+<h1 id="展望">展望</h1>
+<p>希望接下来能静下心来，将自己的所见所想记录下来，多输出些技术博客，提升自己的竞争力吧。</p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
@@ -851,230 +972,6 @@ href="https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/">Leet
       <tags>
         <tag>刷题</tag>
         <tag>解题技巧</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>美赛O奖论文研读有感</title>
-    <url>/2023/02/11/2023/%E7%BE%8E%E8%B5%9BO%E5%A5%96%E8%AE%BA%E6%96%87%E7%A0%94%E8%AF%BB%E6%9C%89%E6%84%9F/</url>
-    <content><![CDATA[<blockquote>
-<p>美赛O奖论文研读有感</p>
-</blockquote>
-<span id="more"></span>
-<h1 id="前言">前言</h1>
-<p>最近我在备战数学建模美赛时，重点研读了两篇O奖论文，一篇是宋浩然大佬仿照的的2020年A题的论文，另一篇是2020年C题的一篇O奖论文。</p>
-<h1 id="经验">经验</h1>
-<h2 id="关于突出点">关于突出点</h2>
-<p>两篇论文都使用了大量图片去佐证自己的观点，而且图片都很工整好看，很吸引人。不仅是流程图，它们也将数据可视化做到极致，真正做到了直观+美观。</p>
-<h2 id="关于编程">关于编程</h2>
-<p>两篇论文都使用到了<code>Matlab</code>和<code>Python</code>语言，Python可能在处理大数据上有着更大的优势，因为Python的各种第三方包使用起来实在很方便，学习成本也低。这里我推荐两本学习用Python做数据分析的书：</p>
-<blockquote>
-<p>《利用Python进行数据分析第二版》：主要内容是数据处理，pandas，numpy，matplotlib的使用方法，较为详细</p>
-<p>《Python数据科学手册》：一部分和上面那本内容重叠，后面也有讲一些机器学习模型的介绍和使用</p>
-</blockquote>
-<h2 id="关于图片">关于图片</h2>
-<p>两篇论文的图片都很精美，图片像流程图之类的可以用PPT或者亿图图示之类的软件画，像数据可视化则可以使用Python来完成，比如使用第三方库<code>matplotlib</code>进行绘图。</p>
-]]></content>
-      <categories>
-        <category>学科</category>
-        <category>数学建模</category>
-      </categories>
-      <tags>
-        <tag>美赛</tag>
-        <tag>数学建模</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>重拾博客</title>
-    <url>/2023/09/03/2023/%E9%87%8D%E6%8B%BE%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<blockquote>
-<p>经过一个学期重拾个人博客</p>
-</blockquote>
-<span id="more"></span>
-<h1 id="前言">前言</h1>
-<p>在2023年暑假的时候我创建了自己的个人博客，通过github
-pages使用Hexo框架加上butterfly主题，荒废了一个学期，现在决定重新填起这个坑。</p>
-<h1 id="经过">经过</h1>
-<p>在寒假发了几个博客后，发现使用markdown写博客加入图片时不能做到可视化，而且当时还不知道图床这个东西，所以图片什么的都存到了本地，管理和存储起来十分麻烦，还给网站增加流量负载，所以弃坑了。</p>
-<p>再后来我在CSDN上发现了南邮的一个学长的博客，名叫<a
-href="https://wonzwang.blog.csdn.net/?type=blog">Wonz</a>，在他的博客中我学到了很多，也从他的友链中知道了很多学长，看着他们的博客，我也想重拾自己的坑了。</p>
-<p>有时候我也想在有些触动的时候将自己的想法记录下来，但奈何自己太懒，在这个暑假我去了一个单位实习，在实习的过程中我渐渐可以熟练地使用git，也在实习的过程中产生越来越多的想法，现在实习结束了，也想总结一下，慢慢填补这个坑吧。</p>
-<h1 id="准备">准备</h1>
-<p>之前为了网站看起来炫酷一点，我就选择了butterfly这个主题，不过这样的代价是图片太多了，而且不够简洁，过于花里胡哨，这样对网站的加载速度也有影响，也不好将注意力放在写作上。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/IMG_3840.JPG" alt="IMG_3840" style="zoom: 33%;" /></p>
-<p>所以我换了个新的主题——<strong>Next主题</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/image-20230903171120400.png" alt="image-20230903171120400" style="zoom: 33%;" /></p>
-<p>这个主题我是看的<a
-href="https://wonz.wang/">Wonz</a>学长的个人博客在用的，十分简洁，内容清晰明了，我在暑假也看到过一段话：</p>
-<blockquote>
-<p>技术博客不需要弄得太花里胡哨，简单清晰才是王道。</p>
-</blockquote>
-<p>我看见他置顶博客的描述：</p>
-<blockquote>
-<p>阮一峰大神曾经说过: 喜欢写 Blog 的人, 会经历 3 个阶段。</p>
-<p>第一阶段，刚接触 Blog，觉得很新鲜，试着选择一个免费空间来写。
-第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。
-第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。</p>
-</blockquote>
-<p>我对这话深有感触，本来我也在想要不要自己搞个服务器部署博客，发现根本没必要，还不安全，有github就很方便。</p>
-<h1 id="展望">展望</h1>
-<p>希望接下来能静下心来，将自己的所见所想记录下来，多输出些技术博客，提升自己的竞争力吧。</p>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>博客</tag>
-        <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于2023暑假</title>
-    <url>/2023/09/15/2023/%E5%85%B3%E4%BA%8E2023%E6%9A%91%E5%81%87/</url>
-    <content><![CDATA[<blockquote>
-<p>给忙碌的暑假一个交代</p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/IMG_2971.jpeg" style="zoom:80%;" /></p>
-</blockquote>
-<span id="more"></span>
-<h1 id="前言">前言</h1>
-<p>这篇总结拖了很久，一直没有很充裕的时间来回忆和总结这个暑假的实习（也是我太懒了），所以我准备用每天的碎片时间来对我这个暑假做一个总结。</p>
-<h1 id="实习">实习</h1>
-<p>在这个暑假我找到我的第一份<code>实习</code>，也是托关系找来的，在暑假前我一直在刷脉脉和知乎，我也是被网上的言论给影响了，当时我一直有股信念，本科能找到不错的工作就没有必要读研了，特别是像现在这样的经济形势，说不定读三年研究生出来能找到的工作还不如本科时候找到的，所以我在暑假就很想学<code>技术</code>，就推掉了数模国赛转而去实习。</p>
-<h2 id="七月">七月</h2>
-<p>在七月十号左右我入职了，当时我的<code>mentor</code>还没来，就把显示器插排什么的都放到工位，本来以为我是来做大数据相关工作的，所以就把各类db软件下载了下来，然后开始学习</p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/IMG_2957.jpeg" alt="IMG_2957" style="zoom: 50%;" /></p>
-<p>第二天公司老总和我谈了谈，我当时很迷茫的一点是要不要读研，老总和我讲了很多，说未来是人工智能的天下，并且给我配的导师是搞人工智能的，技术很厉害，让我多和他学习，而且说不建议我读研。不过我当时想，ai已经卷成这样了，很多硕士都找不到工作，搞ai还不读研那不是自寻死路吗，当然这也是当时的想法，经历的多了之后想法会不断产生变化。</p>
-<h3 id="初遇mentor">初遇mentor</h3>
-<p>在周五左右我第一次见到了我的mentor，看起来很和善，我们也找了个时间谈了一下，他给我介绍了人工智能目前的状况，并十分建议我读研，而且最好到国外去读（毕竟国外学习和开发的环境要自由些），他说目前公司就只有他一个人搞ai，说我来还挺高兴的，这样可以有人一起讨论，而且十分愿意教我。</p>
-<p>说实话我在之前也没接触过ai，也没想过去做ai，这次实习属于是我对ai的启蒙。</p>
-<h3 id="学习">学习</h3>
-<p>一开始因为我对ai没什么了解，所以mentor给了我很多资料，并且让我去看<code>吴恩达的deep learning</code>，听说是英文的我还害怕了一下，等到实际在学习的时候就会发现基本上没有什么障碍，不得不说很多外国的课程是真的高质量，由浅入深、通俗易懂。</p>
-<p>我花了一周时间认真看完了这门课，对神经网络有了一定的了解，也意识到人工智能底层就是数学，就是<code>高数+线性代数+概率论+统计学</code>的集合。</p>
-<h2 id="八月">八月</h2>
-<p>mentor和我说我来的时间其实很不巧，因为公司做事是阶段性的，在我来的期间正好公司没有什么业务拓展，所以我就只好看看公司以前的项目代码。</p>
-<h3 id="e集运">e集运</h3>
-<p>e集运是我接触的第一个项目，mentor很详细的给我梳理了整个项目的流程框架，在这个项目我也学到很多，像<code>Docker</code>，<code>git</code>等，我准备再之后新写一篇博客具体梳理一下这个项目。</p>
-<h3 id="github">Github</h3>
-<p>因为拉公司项目什么的需要用到<code>git</code>，所以我也仔细学习了一下git的相关技术，我也真正理解了<code>GitHub</code>的正确打开姿势，很遗憾我到现在才真正学会了github，以后要开始代码管理咯。</p>
-<h3 id="新项目">新项目</h3>
-<p>我也接触到了一些公司准备新进行的项目，通过做项目我才了解我的技术远远不够，像各种数据库的使用，我们专业将数据库这门课放到了大三下学期，我认为这是极不合理的，数据库是工作时必备的技术，所以我十分建议早点把数据库学起来。</p>
-<p>新项目是语言大模型和功能调用的融合，我其实没做什么，只是一直在pull代码看其他员工是怎么写的，就只是这样我也学到了很多。</p>
-<h3 id="kaggle天池">Kaggle/天池</h3>
-<p>在一开始的时候mentor就跟我说，如果要短期内学到很多东西，那就去打个比赛，像他自己就在打比赛，他十分推荐我去打<code>Kaggle</code>，当时我觉得，比赛什么时候都可以打，但公司项目不是什么时候都能接触的，所以就没选择打比赛，现在开学了，我也准备打一场kaggle看看，提升自己。</p>
-<h3 id="分别">分别</h3>
-<p>我的实习是做到8月25号，是个周五，在周一的时候mentor兴冲冲找到我说：“来活了！他们准备在之前e集运那个项目再做拓展。”唉，还是挺可惜的，那个时候已经没有时间做了。</p>
-<p>最后要分别的前一天mentor又找到我聊了聊，聊到未来的方向，我当时还是想着ai太卷了，想做java开发什么的，到现在有些改观，现在我感觉未来ai的门槛会越来越低。</p>
-<h1 id="未来">未来</h1>
-<p>在暑期末的时候，我爸妈带我去做了职业规划，找的是抖音上的水哥职说，也在苏州，最后也是确定要出国了。</p>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>博客</tag>
-        <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Docker创建Ubantu容器</title>
-    <url>/2023/09/04/2023/Docker/Docker%E5%88%9B%E5%BB%BAUbantu%E5%AE%B9%E5%99%A8/</url>
-    <content><![CDATA[<blockquote>
-<p>为Docker创建一个Ubantu容器</p>
-</blockquote>
-<span id="more"></span>
-<h1 id="前言">前言</h1>
-<p>今天上了<code>大数据挖掘</code>和<code>Linux程序设计</code>的第一课，发现老师都要求在电脑上搞个虚拟机方便以后的操作，所以我准备使用安装Ubantu的Docker容器来作为虚拟机使用。</p>
-<h1 id="操作">操作</h1>
-<h2 id="基础命令">基础命令</h2>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run [option] 镜像名 [像容器中传入的命令]</span><br></pre></td></tr></table></figure>
-<h3 id="常用可选说明">常用可选说明</h3>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">-</span>i 表示以“交互模式”运行容器</span><br><span class="line"> <span class="operator">-</span>t 表示容器启动后会进入其命令行。加入这两个参数后，容器创建就能登录进去。即 分配一个伪终端。</span><br><span class="line"> <span class="comment">--name 为创建的容器命名</span></span><br><span class="line"> <span class="operator">-</span>v 表示目录映射关系(前者是宿主机目录，后者是映射到宿主机上的目录，即 宿主机目录:容器中目录)，可以使 用多个<span class="operator">-</span>v 做多个目录或文件映射。注意:最好做目录映射，在宿主机上做修改，然后 共享到容器上。</span><br><span class="line"> <span class="operator">-</span>d 在run后面加上<span class="operator">-</span>d参数,则会创建一个守护式容器在后台运行(这样创建容器后不 会自动登录容器，如果只加<span class="operator">-</span>i <span class="operator">-</span>t 两个参数，        创建后就会自动进去容器)。</span><br><span class="line"> <span class="operator">-</span>p 表示端口映射，前者是宿主机端口，后者是容器内的映射端口。可以使用多个<span class="operator">-</span>p 做多个端口映射</span><br><span class="line"> <span class="operator">-</span>e 为容器设置环境变量</span><br><span class="line"> <span class="comment">--network=host 表示将主机的网络环境映射到容器中，容器的网络与主机相同</span></span><br></pre></td></tr></table></figure>
-<h3 id="交互式容器">交互式容器</h3>
-<p>例如，创建一个交互式容器，并命名为myubuntu</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run -it --name=myubuntu ubuntu /bin/bash</span><br></pre></td></tr></table></figure>
-<p>在容器中可以随意执行linux命令，就是一个ubuntu的环境，当执行exit命令退出时，该容器也随之停止</p>
-<h3 id="守护式容器">守护式容器</h3>
-<p>创建一个守护式容器:如果对于一个需要长期运行的容器来说，我们可以创建一个守护式容器。在容器内部exit退出时，容器也不会停止。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run -dit --name=myubuntu2 ubuntu</span><br></pre></td></tr></table></figure>
-<h3 id="进入已运行的容器">进入已运行的容器</h3>
-<p>docker exec -it 容器名或容器id 进入后执行的第一个命令</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker exec -it myubuntu2 /bin/bash</span><br></pre></td></tr></table></figure>
-<h3 id="查看容器">查看容器</h3>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 列出本机正在运行的容器</span><br><span class="line">docker container ls</span><br><span class="line"></span><br><span class="line"># 列出本机所有容器，包括已经终止运行的</span><br><span class="line">docker container ls --all</span><br></pre></td></tr></table></figure>
-<h3 id="停止与启动容器">停止与启动容器</h3>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 停止一个已经在运行的容器</span><br><span class="line">docker container stop 容器名或容器id</span><br><span class="line"></span><br><span class="line"># 启动一个已经停止的容器</span><br><span class="line">docker container start 容器名或容器id</span><br><span class="line"></span><br><span class="line"># kill掉一个已经在运行的容器</span><br><span class="line">docker container kill 容器名或容器id</span><br></pre></td></tr></table></figure>
-<h3 id="删除容器">删除容器</h3>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker container rm 容器名或容器id</span><br></pre></td></tr></table></figure>
-<h3 id="将容器保存为镜像">将容器保存为镜像</h3>
-<p>我们可以通过如下命令将容器保存为镜像</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker commit 容器名 镜像名</span><br></pre></td></tr></table></figure>
-<h3 id="镜像备份与迁移">镜像备份与迁移</h3>
-<p>我们可以通过save命令将镜像打包成文件，拷贝给别人使用</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker save -o 保存的文件名 镜像名</span><br></pre></td></tr></table></figure>
-<p>如:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker save -o ./ubuntu.tar ubuntu</span><br></pre></td></tr></table></figure>
-<p>在拿到镜像文件后，可以通过load方法，将镜像加载到本地</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker load -i ./ubuntu.tar</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Docker</category>
-        <category>Ubuntu</category>
-      </categories>
-      <tags>
-        <tag>Docker</tag>
-        <tag>Ubuntu</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java创建线程的方式</title>
-    <url>/2024/03/23/Java/Java%E5%88%9B%E5%BB%BA%E7%BA%BF%E7%A8%8B%E7%9A%84%E6%96%B9%E5%BC%8F/</url>
-    <content><![CDATA[<blockquote>
-<p>一些创建线程的方式</p>
-</blockquote>
-<span id="more"></span>
-<h1 id="如何创建线程">如何创建线程</h1>
-<p>一般来说，创建线程有很多种方式，例如继承<code>Thread</code>类、实现<code>Runnable</code>接口、实现<code>Callable</code>接口、使用线程池、使用<code>CompletableFuture</code>类等等。</p>
-<p>不过，这些方式其实并没有真正创建出线程。准确点来说，这些都属于是在
-Java 代码中使用多线程的方法。</p>
-<p>严格来说，Java
-就只有一种方式可以创建线程，那就是通过<code>new Thread().start()</code>创建。不管是哪种方式，最终还是依赖于<code>new Thread().start()</code>。</p>
-<h2 id="继承tread类">继承Tread类</h2>
-<p>这是最普通的方式，继承<code>Thread</code>类，重写<code>run</code>方法，如下：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ExtendsThread</span> <span class="keyword">extends</span> <span class="title class_">Thread</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;1......&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">ExtendsThread</span>().start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="实现runnable接口">实现Runnable接口</h3>
-<p>这也是一种常见的方式，实现<code>Runnable</code>接口并重写<code>run</code>方法，如下：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ImplementsRunnable</span> <span class="keyword">implements</span> <span class="title class_">Runnable</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;2......&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">ImplementsRunnable</span> <span class="variable">runnable</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ImplementsRunnable</span>();</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">Thread</span>(runnable).start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>与继承<code>Thread</code>接口不同的是，Java当中是单继承，当一个类继承了<code>Thread</code>类后就无法再继承其他的类，通过实现<code>Runnable</code>接口并重写<code>run</code>方法，可以再实现继承其他类。</p>
-<h3 id="实现callable接口">实现Callable接口</h3>
-<p>和上一种方式类似，这里需要去重写<code>Callable</code>接口的<code>call</code>方法，并配合<code>FutureTask</code>使用，只不过这种方式可以使用<code>get()</code>方法拿到线程执行完的返回值，如下：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ImplementsCallable</span> <span class="keyword">implements</span> <span class="title class_">Callable</span>&lt;String&gt; &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">call</span><span class="params">()</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;3......&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Justin&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        <span class="type">ImplementsCallable</span> <span class="variable">callable</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ImplementsCallable</span>();</span><br><span class="line">        FutureTask&lt;String&gt; futureTask = <span class="keyword">new</span> <span class="title class_">FutureTask</span>&lt;&gt;(callable);</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">Thread</span>(futureTask).start();</span><br><span class="line">        System.out.println(futureTask.get());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="使用executorservice线程池">使用ExecutorService线程池</h3>
-<p>这种属于进阶方式，可以通过<code>Executors</code>创建线程池，也可以自定义线程池，如下：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">UseExecutorService</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">ExecutorService</span> <span class="variable">poolA</span> <span class="operator">=</span> Executors.newFixedThreadPool(<span class="number">2</span>);</span><br><span class="line">        poolA.execute(()-&gt;&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;4A......&quot;</span>);</span><br><span class="line">        &#125;);</span><br><span class="line">        poolA.shutdown();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 又或者自定义线程池</span></span><br><span class="line">        <span class="type">ThreadPoolExecutor</span> <span class="variable">poolB</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ThreadPoolExecutor</span>(<span class="number">2</span>, <span class="number">3</span>, <span class="number">0</span>,</span><br><span class="line">                TimeUnit.SECONDS, <span class="keyword">new</span> <span class="title class_">LinkedBlockingQueue</span>&lt;Runnable&gt;(<span class="number">3</span>),</span><br><span class="line">                Executors.defaultThreadFactory(), <span class="keyword">new</span> <span class="title class_">ThreadPoolExecutor</span>.AbortPolicy());</span><br><span class="line">        poolB.submit(()-&gt;&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;4B......&quot;</span>);</span><br><span class="line">        &#125;);</span><br><span class="line">        poolB.shutdown();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="注意点">注意点</h2>
-<p>创建线程的方式十分多样，最少都能有上面的四种答案，那这真的对吗？可以说对，但严格意义上来说，又不对。</p>
-<p>抛开后面一些先不谈，咱们就聊最开始的三种：“继承<code>Thread</code>类、实现<code>Runnable</code>接口、实现<code>Callable</code>接口”，这应该是广为人知的答案。</p>
-<p>那么此时来看个例子：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ImplementsRunnable</span> <span class="keyword">implements</span> <span class="title class_">Runnable</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(Thread.currentThread().getName()</span><br><span class="line">                + <span class="string">&quot;：小猫爱吃鱼&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这里定义了一个类，实现了<code>Runnable</code>接口并重写了<code>run</code>方法，按前面的说法，这种方式是不是创建了一条线程？答案是<code>Yes</code>，可问题来了，请你告诉我，该如何启动这条所谓的“线程”呢？</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="type">ImplementsRunnable</span> <span class="variable">runnable</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ImplementsRunnable</span>();</span><br><span class="line">    runnable.run();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>难道像上面这样嘛？来看看运行结果：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">main：小猫爱吃鱼</span><br></pre></td></tr></table></figure>
-<p>结果很显然，打印出的线程名字为：<code>main</code>，代表目前是主线程在运行，和调用普通方法没任何区别，那究竟该如何创建一条线程呀？要这样做：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="type">ImplementsRunnable</span> <span class="variable">runnable</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ImplementsRunnable</span>();</span><br><span class="line">    <span class="keyword">new</span> <span class="title class_">Thread</span>(runnable).start();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>先<code>new</code>出<code>Runnable</code>对象，接着再<code>new</code>一个<code>Thread</code>对象，然后把<code>Runnable</code>丢给<code>Thread</code>，接着调用<code>start()</code>方法，此时才能真正意义上创建一条线程，运行结果如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Thread-0：小猫爱吃鱼</span><br></pre></td></tr></table></figure>
-<p>此时线程名字变成了<code>Thread-0</code>，这意味着输出“小猫爱吃鱼”这句话的代码，并不是<code>main</code>线程在执行了，实现了<code>Runnable</code>接口的<code>ImplementsRunnable</code>类，并不能被称为一条线程，包括所谓的<code>Callable、FutureTask……</code>，都不能创建出真正的线程。</p>
-<p>换到前面所提出的三种方式中，只有继承<code>Thread</code>类，才能真正创建一条线程，如下：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ExtendsThread</span> <span class="keyword">extends</span> <span class="title class_">Thread</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(Thread.currentThread().getName()</span><br><span class="line">                + <span class="string">&quot;：小猫爱吃鱼&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">ExtendsThread</span>().start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 运行结果：</span></span><br><span class="line"><span class="comment">//      Thread-0：竹子爱熊猫</span></span><br></pre></td></tr></table></figure>
-<p>因为当你用一个类，继承<code>Thread</code>类时，它内部所有的方法，都会被继承过来，所以当前类可以直接调用<code>start()</code>方法启动，更具体点来说，<strong>在<code>Java</code>中，创建线程的方式就只有一种：调用<code>Thread.start()</code>方法</strong>！只有这种形式，才能在真正意义上创建一条线程！</p>
-]]></content>
-      <categories>
-        <category>Java八股</category>
-        <category>并发</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>八股</tag>
       </tags>
   </entry>
   <entry>
@@ -1388,6 +1285,270 @@ href="https://www.cnblogs.com/luo-c/p/15831441.html">https://www.cnblogs.com/luo
       </tags>
   </entry>
   <entry>
+    <title>凸函数（Convex Function）</title>
+    <url>/2023/09/21/2023/%E6%9C%80%E4%BC%98%E5%8C%96/%E5%87%B8%E5%87%BD%E6%95%B0%EF%BC%88Convex-Function%EF%BC%89/</url>
+    <content><![CDATA[<blockquote>
+<p>第三课：凸函数</p>
+</blockquote>
+<span id="more"></span>
+<h1 id="凸函数的定义">凸函数的定义</h1>
+<h2 id="定义1">定义1</h2>
+<p>对于一个函数<span
+class="math inline">\(f:\mathbb{R}^n\rightarrow\mathbb{R}\)</span>，如果<span
+class="math inline">\(domf\)</span>为凸集，且： <span
+class="math display">\[
+f(\theta x+(1-\theta)y)\le\theta f(x)+(1-\theta)f(y)
+\]</span> 对所有的<span class="math inline">\(x,y\in domf,0\le\theta\le
+1\)</span>成立，则<span
+class="math inline">\(f\)</span>为（下）凸函数</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211258794.png" alt="image-20230921125358565" style="zoom:67%;" /></p>
+<blockquote>
+<p>连接凸函数的图像上任意两点的线段都在函数图像上方</p>
+</blockquote>
+<ul>
+<li><p><span class="math inline">\(f\)</span>是凸函数，则<span
+class="math inline">\(-f\)</span>是凹函数</p></li>
+<li><p>如果<span class="math inline">\(dom f\)</span>是凸集，且 <span
+class="math display">\[
+f(\theta x+(1-\theta)y)&lt;\theta f(x)+(1-\theta)f(y)
+\]</span></p></li>
+</ul>
+<blockquote>
+<p>对所有的<span class="math inline">\(x,y\in domf,x\neq y,0&lt;\theta
+&lt;1\)</span>成立，则<span
+class="math inline">\(f\)</span>是严格凸函数</p>
+</blockquote>
+<h2 id="定义2">定义2</h2>
+<ul>
+<li><p><span
+class="math inline">\(f\)</span>是凸函数的充分必要条件为：<span
+class="math inline">\(\forall x,v\in
+domf,g(t)=f(x+tv)\)</span>是凸函数</p></li>
+<li><p>证明</p></li>
+</ul>
+<h2 id="定义3一阶条件">定义3（一阶条件）</h2>
+<ul>
+<li><p>可微：如果<span class="math inline">\(dom
+f\)</span>为开集，且函数的导数： <span class="math display">\[
+\nabla f(x)=(\frac{\partial f(x)}{\partial x_1},\frac{\partial
+f(x)}{\partial x_2},···,\frac{\partial f(x)}{\partial x_n})
+\]</span> 对所有定义域中的值都存在，则函数<span
+class="math inline">\(f\)</span>可微</p></li>
+<li><p>一阶条件：对于可微函数<span
+class="math inline">\(f\)</span>，如果<span
+class="math inline">\(domf\)</span>为凸集，则<span
+class="math inline">\(f\)</span>为凸函数当且仅当： <span
+class="math display">\[
+f(y)\ge f(x)+\nabla f(x)^T (y-x)\quad \text{for all }x,y\in domf
+\]</span></p></li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211258727.png" alt="image-20230921125426877" style="zoom:67%;" /></p>
+<blockquote>
+<p>意义：凸函数在局部的一阶泰勒展开是对函数值的低估</p>
+</blockquote>
+<h3 id="一阶条件的证明">一阶条件的证明</h3>
+<ul>
+<li><p>=&gt;</p>
+<p>f</p></li>
+<li><p>&lt;=</p></li>
+</ul>
+<h2 id="定义4二阶条件">定义4（二阶条件）</h2>
+<ul>
+<li><p>二阶可微：如果<span
+class="math inline">\(domf\)</span>为开集，且函数的<span
+class="math inline">\(Hessian\)</span>矩阵满足<span
+class="math inline">\(\nabla^2 f(x)\in S^n\)</span> <span
+class="math display">\[
+\nabla^2 f(x)_{ij}=\frac{\partial^2 f(x)}{\partial x_i \partial
+x_j},i,j=1,...,.
+\]</span> 对所有定义域中的值都存在，则函数<span
+class="math inline">\(f\)</span>二阶可微</p></li>
+<li><p>二阶条件：对于二阶可微函数<span
+class="math inline">\(f\)</span>，如果定义域为凸集</p>
+<ul>
+<li><p><span class="math inline">\(f\)</span>为凸函数当且仅当： <span
+class="math display">\[
+\nabla^2 f(x)\succeq 0\quad \text{for all }x\in domf
+\]</span></p></li>
+<li><p>如果对所有定义域内的<span
+class="math inline">\(x\)</span>满足<span class="math inline">\(\nabla^2
+f(x)\succ 0\)</span>，则<span
+class="math inline">\(f\)</span>为严格凸函数</p></li>
+</ul></li>
+</ul>
+<h1 id="常见的凸函数">常见的凸函数</h1>
+<h2 id="一维空间举例">一维空间举例</h2>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211258649.png" alt="image-20230921125640656" style="zoom: 67%;" /></p>
+<h2 id="向量范数">向量范数</h2>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211258592.png" alt="image-20230921125652921" style="zoom: 67%;" /></p>
+<h2 id="多维空间举例">多维空间举例</h2>
+<h3 id="多维向量rn">多维向量<span
+class="math inline">\(R^n\)</span></h3>
+<ul>
+<li>仿射函数：<span class="math inline">\(f(x)=a^Tx+b\)</span></li>
+<li>范数函数：<span
+class="math inline">\(\|x\|_p=(\sum_{i=1}^{n}|x_i|^p)^{\frac{1}{p}}\quad\text{for
+}p\ge1\)</span></li>
+<li>极大值函数：<span
+class="math inline">\(f(x)=\max\{x_1,...,x_n\},x\in R^m\)</span></li>
+<li><span class="math inline">\(L0\)</span>范数：<span
+class="math inline">\(x\)</span>中非零元素的个数</li>
+</ul>
+<h3 id="例二次函数">例：二次函数</h3>
+<ul>
+<li><p>二次函数：<span
+class="math inline">\(f(x)=\frac{1}{2}x^TPx+q^Tx+r,P\in S^n\)</span>
+<span class="math display">\[
+\nabla f(x)=Px+q,\quad\nabla^2f(x)=P
+\]</span> 当P为半正定矩阵<span class="math inline">\((P\succeq
+0)\)</span>时为凸函数</p></li>
+<li><p>最小二乘目标函数：<span
+class="math inline">\(f(x)=\|Ax-b\|^2_2\)</span> <span
+class="math display">\[
+\nabla f(x)=2A^T(Ax-b),\quad\nabla^2 f(x)=2A^TA
+\]</span> 对任意的<span
+class="math inline">\(A\)</span>都为凸函数</p></li>
+<li><p>二次函数比线性函数：<span
+class="math inline">\(f(x,y)=x^2/y\)</span>对所有的<span
+class="math inline">\(y&gt;0\)</span>都为凸函数</p></li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211258784.png" alt="image-20230921125739507" style="zoom:67%;" /></p>
+<h2 id="半正定矩阵的性质">半正定矩阵的性质</h2>
+<p>矩阵<strong>A</strong>为行列式，则存在以下性质：</p>
+<ul>
+<li><strong>A</strong>的特征值均为负的。</li>
+<li>存在n阶实矩阵<strong>C</strong>，使<span
+class="math inline">\(A=C^TC.\)</span></li>
+<li><strong>A</strong>的行列式是负的</li>
+</ul>
+<h1 id="保持凸性的操作">保持凸性的操作</h1>
+<h2
+id="验证个函数是否是凸函数的方法">验证⼀个函数是否是凸函数的方法</h2>
+<ol type="1">
+<li>根据3种定义</li>
+<li>验证函数是由多个相对简单的凸函数通过一些保持凸性的操作来得到</li>
+</ol>
+<h2 id="保持凸性的操作1非负加权和">保持凸性的操作1：非负加权和</h2>
+<ul>
+<li>命题：若<span
+class="math inline">\(f_1,...,f_m\)</span>为凸函数，则<span
+class="math inline">\(f=\sum^m_{i=1}w_if_i\)</span>为凸函数，<span
+class="math inline">\(w_i\ge0\)</span></li>
+<li>证明
+<ol type="1">
+<li>定义域是否为凸集</li>
+</ol></li>
+</ul>
+<h2 id="保持凸性的操作2仿射组合">保持凸性的操作2：仿射组合</h2>
+<ul>
+<li>命题：若<span class="math inline">\(f\)</span>为凸函数，则<span
+class="math inline">\(𝑓(𝐴𝑥+𝑏)\)</span>为凸函数</li>
+<li>证明</li>
+</ul>
+<h2 id="保持凸性的操作3最大化极大化">保持凸性的操作3：最大化/极大化</h2>
+<h3 id="最大化与极大化">最大化与极大化</h3>
+<ul>
+<li><p><span class="math inline">\(\max\)</span>：最大值</p></li>
+<li><p><span class="math inline">\(\sup\)</span>：上确界</p></li>
+<li><p>命题：若<span
+class="math inline">\(f_1,...,f_m\)</span>为凸函数，则<span
+class="math inline">\(f(x)=\max\{f_1(x),...,f_m(x)\}\)</span>为凸函数</p>
+<ul>
+<li>证明：</li>
+</ul></li>
+<li><p>命题：若<span class="math inline">\(f(x,y)\)</span>对所有<span
+class="math inline">\(y\in A\)</span>为关于<span
+class="math inline">\(x\)</span>的凸函数，则<span
+class="math inline">\(f(x)=\sup_{y\in A}f(x,y)\)</span>为凸函数</p></li>
+</ul>
+<h2
+id="保持凸性的操作4标量函数的组合">保持凸性的操作4：标量函数的组合</h2>
+<p>对于函数<span class="math inline">\(g:R^n\to R^k\)</span>与函数<span
+class="math inline">\(h:R^k\to R\)</span>，函数组合为<span
+class="math inline">\(f(x)=h(g(x))\)</span></p>
+<p>考虑<span class="math inline">\(n=k=1\)</span>的情况</p>
+<p><span class="math inline">\(f\)</span>为凸函数如果：<span
+class="math inline">\(\begin{cases}g是凸函数，h是凹函数，h递增\\g是凹函数，h是凸函数，h递减\end{cases}\)</span>
+<span class="math display">\[
+f&#39;&#39;(x)=h&#39;&#39;(g(x)g&#39;(x))^2+h&#39;(g(x))g&#39;&#39;(x).
+\]</span></p>
+<blockquote>
+<p>例：</p>
+<p><span class="math inline">\(\exp
+g(x)当g是凸函数时为凸函数\)</span></p>
+<p><span
+class="math inline">\(1/g(x)当g是凹函数且为正时为凸函数\)</span></p>
+</blockquote>
+<h1 id="共轭函数conjugate-function">共轭函数（conjugate function）</h1>
+<h2 id="函数f的共轭定义">函数<span
+class="math inline">\(f\)</span>的共轭定义</h2>
+<p><span class="math display">\[
+f^*(y)=\sup_{x\in domf}(y^Tx-f(x))
+\]</span></p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211700984.png" alt="image-20230921170043534" style="zoom:80%;" /></p>
+<blockquote>
+<p>性质：<span class="math inline">\(f^*(y)\)</span>一定为凸函数</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>最优化方法</category>
+      </categories>
+      <tags>
+        <tag>学科</tag>
+        <tag>最优化方法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Docker创建Ubantu容器</title>
+    <url>/2023/09/04/2023/Docker/Docker%E5%88%9B%E5%BB%BAUbantu%E5%AE%B9%E5%99%A8/</url>
+    <content><![CDATA[<blockquote>
+<p>为Docker创建一个Ubantu容器</p>
+</blockquote>
+<span id="more"></span>
+<h1 id="前言">前言</h1>
+<p>今天上了<code>大数据挖掘</code>和<code>Linux程序设计</code>的第一课，发现老师都要求在电脑上搞个虚拟机方便以后的操作，所以我准备使用安装Ubantu的Docker容器来作为虚拟机使用。</p>
+<h1 id="操作">操作</h1>
+<h2 id="基础命令">基础命令</h2>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run [option] 镜像名 [像容器中传入的命令]</span><br></pre></td></tr></table></figure>
+<h3 id="常用可选说明">常用可选说明</h3>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">-</span>i 表示以“交互模式”运行容器</span><br><span class="line"> <span class="operator">-</span>t 表示容器启动后会进入其命令行。加入这两个参数后，容器创建就能登录进去。即 分配一个伪终端。</span><br><span class="line"> <span class="comment">--name 为创建的容器命名</span></span><br><span class="line"> <span class="operator">-</span>v 表示目录映射关系(前者是宿主机目录，后者是映射到宿主机上的目录，即 宿主机目录:容器中目录)，可以使 用多个<span class="operator">-</span>v 做多个目录或文件映射。注意:最好做目录映射，在宿主机上做修改，然后 共享到容器上。</span><br><span class="line"> <span class="operator">-</span>d 在run后面加上<span class="operator">-</span>d参数,则会创建一个守护式容器在后台运行(这样创建容器后不 会自动登录容器，如果只加<span class="operator">-</span>i <span class="operator">-</span>t 两个参数，        创建后就会自动进去容器)。</span><br><span class="line"> <span class="operator">-</span>p 表示端口映射，前者是宿主机端口，后者是容器内的映射端口。可以使用多个<span class="operator">-</span>p 做多个端口映射</span><br><span class="line"> <span class="operator">-</span>e 为容器设置环境变量</span><br><span class="line"> <span class="comment">--network=host 表示将主机的网络环境映射到容器中，容器的网络与主机相同</span></span><br></pre></td></tr></table></figure>
+<h3 id="交互式容器">交互式容器</h3>
+<p>例如，创建一个交互式容器，并命名为myubuntu</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run -it --name=myubuntu ubuntu /bin/bash</span><br></pre></td></tr></table></figure>
+<p>在容器中可以随意执行linux命令，就是一个ubuntu的环境，当执行exit命令退出时，该容器也随之停止</p>
+<h3 id="守护式容器">守护式容器</h3>
+<p>创建一个守护式容器:如果对于一个需要长期运行的容器来说，我们可以创建一个守护式容器。在容器内部exit退出时，容器也不会停止。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run -dit --name=myubuntu2 ubuntu</span><br></pre></td></tr></table></figure>
+<h3 id="进入已运行的容器">进入已运行的容器</h3>
+<p>docker exec -it 容器名或容器id 进入后执行的第一个命令</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker exec -it myubuntu2 /bin/bash</span><br></pre></td></tr></table></figure>
+<h3 id="查看容器">查看容器</h3>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 列出本机正在运行的容器</span><br><span class="line">docker container ls</span><br><span class="line"></span><br><span class="line"># 列出本机所有容器，包括已经终止运行的</span><br><span class="line">docker container ls --all</span><br></pre></td></tr></table></figure>
+<h3 id="停止与启动容器">停止与启动容器</h3>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 停止一个已经在运行的容器</span><br><span class="line">docker container stop 容器名或容器id</span><br><span class="line"></span><br><span class="line"># 启动一个已经停止的容器</span><br><span class="line">docker container start 容器名或容器id</span><br><span class="line"></span><br><span class="line"># kill掉一个已经在运行的容器</span><br><span class="line">docker container kill 容器名或容器id</span><br></pre></td></tr></table></figure>
+<h3 id="删除容器">删除容器</h3>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker container rm 容器名或容器id</span><br></pre></td></tr></table></figure>
+<h3 id="将容器保存为镜像">将容器保存为镜像</h3>
+<p>我们可以通过如下命令将容器保存为镜像</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker commit 容器名 镜像名</span><br></pre></td></tr></table></figure>
+<h3 id="镜像备份与迁移">镜像备份与迁移</h3>
+<p>我们可以通过save命令将镜像打包成文件，拷贝给别人使用</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker save -o 保存的文件名 镜像名</span><br></pre></td></tr></table></figure>
+<p>如:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker save -o ./ubuntu.tar ubuntu</span><br></pre></td></tr></table></figure>
+<p>在拿到镜像文件后，可以通过load方法，将镜像加载到本地</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker load -i ./ubuntu.tar</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Docker</category>
+        <category>Ubuntu</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>优化问题笔记</title>
     <url>/2023/09/17/2023/%E6%9C%80%E4%BC%98%E5%8C%96/%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<blockquote>
@@ -1656,6 +1817,233 @@ class="math inline">\(\{x^k\}\)</span>如果迭代在有限步内终止，那么
 <ul>
 <li>通过引入变量等方法，讲⼀个复杂的优化问题拆分成多个相对简单的问题</li>
 </ul>
+]]></content>
+      <categories>
+        <category>最优化方法</category>
+      </categories>
+      <tags>
+        <tag>学科</tag>
+        <tag>最优化方法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>凸集（Convex Set）</title>
+    <url>/2023/09/19/2023/%E6%9C%80%E4%BC%98%E5%8C%96/%E5%87%B8%E9%9B%86%EF%BC%88Convex-Set%EF%BC%89/</url>
+    <content><![CDATA[<blockquote>
+<p>第二课：凸集(Convex Set)</p>
+</blockquote>
+<span id="more"></span>
+<h1 id="重要定义">重要定义</h1>
+<h2 id="仿射集">仿射集</h2>
+<h3 id="直线">直线：</h3>
+<p>对于穿过<span
+class="math inline">\(x_1,x_2\)</span>两个不同的点的直线，所有满足以下条件的点：
+<span class="math display">\[
+x=\theta x_1+(1-\theta)x_2,\theta\in\mathbb{R}
+\]</span>
+<img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191452821.png" alt="image-20230919141052729" style="zoom:67%;" /></p>
+<h3 id="仿射集-1">仿射集</h3>
+<p>一个集合<span class="math inline">\(C\)</span>是仿射集，若<span
+class="math inline">\(\forall x_1,x_2\in C\)</span>，连接<span
+class="math inline">\(x_1,x_2\)</span>的直线也在<span
+class="math inline">\(C\)</span>内</p>
+<blockquote>
+<p>思考：</p>
+<ul>
+<li>该条直线上所有的点组成的集合（是）</li>
+<li>空集、点、线段是仿射集吗？（空集是，点是，线段不是）</li>
+<li>实数集、正实数集、整数集是仿射集吗？（实数集是、正实数集不是、整数集不是）</li>
+</ul>
+</blockquote>
+<h2 id="凸集convex-set">凸集（Convex Set）</h2>
+<h3 id="线段">线段：</h3>
+<p>对于穿过<span
+class="math inline">\(x_1,x_2\)</span>两点的直线，所有满足以下条件的点:
+<span class="math display">\[
+x=\theta x_1+(1-\theta)x_2,0\le\theta\le1
+\]</span></p>
+<h3 id="凸集">凸集：</h3>
+<p>集合中任意两点组成的线段仍在该集合中： <span class="math display">\[
+x_1,x_2\in C,0\le\theta\le1.\Rightarrow\theta x_1+(1-\theta)x_2\in C
+\]</span> 例子：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191452541.png" alt="image-20230919141112752"  /></p>
+<blockquote>
+<p>思考：</p>
+<ul>
+<li>点、直线（点是，直线也是）</li>
+<li>实数集、正实数集、整数集是否为凸集（都不是）</li>
+<li>仿射集是否为凸集（是）</li>
+</ul>
+</blockquote>
+<h2 id="凸组合与凸包">凸组合与凸包</h2>
+<h3 id="凸组合convex-combination">凸组合（Convex Combination）：</h3>
+<p>对于任意点k个点：<span
+class="math inline">\(x_1,x_2,...,x_k\)</span>，凸组合是以下的形式：
+<span class="math display">\[
+x=\theta_1 x_1+\theta_2 x_2+···\theta_k x_k
+\]</span></p>
+<blockquote>
+<p>其中<span
+class="math inline">\(\theta_1+\theta_2+···+\theta_k=1,\theta_i\ge0\)</span></p>
+</blockquote>
+<p><span class="math inline">\(C\)</span>为凸集<span
+class="math inline">\(\Leftrightarrow\)</span><span
+class="math inline">\(C\)</span>中任意元素点凸组合属于<span
+class="math inline">\(C\)</span></p>
+<h3 id="凸包convex-hull">凸包（Convex Hull）：</h3>
+<p><span class="math inline">\(conv C\)</span>：所有集合<span
+class="math inline">\(C\)</span>中的点的凸组合，是包含<span
+class="math inline">\(S\)</span>的最小的凸集</p>
+<p>用一个绳子连起来：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191452529.png" alt="image-20230919141134184" style="zoom:80%;" /></p>
+<h2 id="凸锥convex-cone">凸锥（Convex Cone）</h2>
+<h3 id="锥">锥：</h3>
+<p><span class="math inline">\(C\)</span>为锥<span
+class="math inline">\(\Leftrightarrow\)</span>对于<span
+class="math inline">\(C\)</span>中任意的点<span
+class="math inline">\(x\)</span>，<span class="math inline">\(\theta
+x\in C,\theta\ge0\)</span></p>
+<h3 id="凸锥">凸锥：</h3>
+<p>对于任意的两个点：<span
+class="math inline">\(x_1,x_2\)</span>，凸锥是以下的形式： <span
+class="math display">\[
+x=\theta_1 x_1+\theta_2 x_2
+\]</span></p>
+<blockquote>
+<p>其中<span
+class="math inline">\(\theta_1\ge0,\theta_2\ge0\)</span></p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/image-20230919141149722.png" alt="image-20230919141149722" style="zoom:67%;" /></p>
+<blockquote>
+<p>思考：</p>
+<ul>
+<li>原点是否一定在凸锥上？（是）</li>
+<li>经过原点的射线（是）</li>
+<li>经过原点的直线（是）</li>
+<li>凸锥是凸集吗？（是）</li>
+</ul>
+</blockquote>
+<h2 id="仿射集凸集凸锥的关系">仿射集、凸集、凸锥的关系</h2>
+<h3 id="定义">定义：</h3>
+<ul>
+<li>仿射集：<span
+class="math inline">\(\theta_1+\theta_2=1\)</span></li>
+<li>凸集：<span
+class="math inline">\(\theta_1+\theta_2=1,\theta_i\ge0\)</span></li>
+<li>凸锥：<span class="math inline">\(\theta_i\ge0\)</span></li>
+</ul>
+<h3 id="关系">关系：</h3>
+<ul>
+<li>仿射集<span class="math inline">\(\subseteq\)</span>凸集</li>
+<li>凸锥<span class="math inline">\(\subseteq\)</span>凸集</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191452743.png" alt="image-20230919141203364" style="zoom:67%;" /></p>
+<h1 id="几种重要的凸集">几种重要的凸集</h1>
+<h2 id="超平面和半空间">超平面和半空间</h2>
+<h3 id="超平面">超平面：</h3>
+<p>满足以下条件的点的集合： <span class="math display">\[
+\{x|a^T \boldsymbol{x}=b\}(a\neq0)
+\]</span>
+<img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191452636.png" alt="image-20230919141218903" style="zoom:67%;" /></p>
+<blockquote>
+<p>超平面是仿射的，也是凸的</p>
+</blockquote>
+<h3 id="半空间">半空间：</h3>
+<p><span class="math display">\[
+\{x|a^T\boldsymbol{x}\le b(a\neq0)\}
+\]</span></p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191452865.png" alt="image-20230919141230877" style="zoom:67%;" /></p>
+<h2 id="多面体">多面体</h2>
+<ul>
+<li><span class="math inline">\(\{x|Ax\le b,Cx=d\}\)</span></li>
+<li><span class="math inline">\(A\in R^{m\times n},C\in R^{p\times
+n}\)</span></li>
+<li>多面体是有限个半空间和超平面的交集</li>
+<li>多面体是凸集</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191452106.png" alt="image-20230919141245402" style="zoom:67%;" /></p>
+<h2 id="对称半正定矩阵">对称半正定矩阵</h2>
+<h3 id="预备知识">预备知识：</h3>
+<h4 id="对称矩阵sn">对称矩阵<span
+class="math inline">\(S^n\)</span>：</h4>
+<p>是指以主对角线为对称轴，各元素对应相等的矩阵 <span
+class="math display">\[
+\begin{bmatrix}
+a_{11}&amp;a_{12}&amp;a_{13}&amp;···&amp;a_{1n}\\
+a_{21}&amp;a_{22}&amp;a_{23}&amp;···&amp;a_{2n}\\
+a_{31}&amp;a_{32}&amp;a_{33}&amp;···&amp;a_{3n}\\
+\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+a_{m1}&amp;a_{m2}&amp;a_{m3}&amp;···&amp;a_{mn}
+\end{bmatrix}
+\]</span></p>
+<h3 id="对称半正定矩阵-1">对称半正定矩阵：</h3>
+<p>给定一个大小为<span class="math inline">\(n\times
+n\)</span>的<strong>实对称矩阵</strong><span
+class="math inline">\(A\)</span>，若对于任意长度的<span
+class="math inline">\(n\)</span>的非零向量<span
+class="math inline">\(x\)</span>，有<span
+class="math inline">\(x^TAx\ge0\)</span>恒成立，则矩阵<span
+class="math inline">\(A\)</span>是一个半 正定矩阵</p>
+<blockquote>
+<p>堆成正定矩阵<span class="math inline">\(S^n_{++}\)</span></p>
+</blockquote>
+<h3 id="对称半正定矩阵集合">对称半正定矩阵集合：</h3>
+<p><span class="math display">\[
+S^n_+=\{X\in S^n|X\succeq0\}
+\]</span></p>
+<blockquote>
+<p>对称半正定矩阵集合是凸锥</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191452865.png" alt="image-20230919141303814" style="zoom:67%;" /></p>
+<h2 id="球与椭球">球与椭球</h2>
+<h3 id="球">球：</h3>
+<p>满足以下条件的点的集合： <span class="math display">\[
+B(x_c,r)=\{x|\|x-x_c\|_2\le r\}=\{x_c+ru|\|u\|_2\le1\}
+\]</span></p>
+<h3 id="椭球">椭球：</h3>
+<p><span class="math display">\[
+\{x|(x-x_c)^TP^{-1}(x-x_c)\le1\},P\in S^n_{++}
+\]</span></p>
+<blockquote>
+<p>球是凸集</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191453505.png" alt="image-20230919141315764" style="zoom:67%;" /></p>
+<h1 id="保凸的运算">保凸的运算</h1>
+<h2 id="交集">交集</h2>
+<p>定理：任意多个凸集的交集为凸集</p>
+<h2 id="仿射变换">仿射变换</h2>
+<p>定理：设<span
+class="math inline">\(f:\mathbb{R}^n\rightarrow\mathbb{R}^m\)</span>是仿射变换<span
+class="math inline">\((f(x)=Ax+b, A\in\mathbb{R}^{m\times n},b\in
+\mathbb{R}^m)\)</span>则：</p>
+<p>（1）凸集在<span class="math inline">\(f\)</span>下的像是凸集： <span
+class="math display">\[
+S\subseteq\mathbb{R}^n是凸集\Rightarrow
+f(S)\overset{\text{def}}{=}\{f(x)|x\in S\}是凸集；
+\]</span> （2）凸集在<span
+class="math inline">\(f\)</span>下的原像是凸集： <span
+class="math display">\[
+C\subseteq\mathbb{R}^m\Rightarrow
+f^{-1}(C)\overset{\text{def}}{=}\{x\in\mathbb{R}^n|f(x)\in C\}是凸集.
+\]</span></p>
+<blockquote>
+<p>缩放、平移和投影都是仿射变换</p>
+</blockquote>
+<h1 id="分离超平面定理">分离超平面定理</h1>
+<p>如果<span class="math inline">\(C\)</span>和<span
+class="math inline">\(D\)</span>是不相交的两个凸集，则存在非零向量<span
+class="math inline">\(a\)</span>和常数<span
+class="math inline">\(b\)</span>，使得 <span class="math display">\[
+a^Tx\le b, \forall x\in C,且a^Tx\ge b,\forall x\in D,
+\]</span>
+<img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191453319.png" alt="image-20230919141339133" style="zoom:80%;" /></p>
+<h1 id="支撑超平面定理">支撑超平面定理</h1>
+<figure>
+<img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191453641.png"
+alt="image-20230919141413149" />
+<figcaption aria-hidden="true">image-20230919141413149</figcaption>
+</figure>
 ]]></content>
       <categories>
         <category>最优化方法</category>
@@ -1956,444 +2344,99 @@ alt="image-20230927133202477" />
       </tags>
   </entry>
   <entry>
-    <title>凸函数（Convex Function）</title>
-    <url>/2023/09/21/2023/%E6%9C%80%E4%BC%98%E5%8C%96/%E5%87%B8%E5%87%BD%E6%95%B0%EF%BC%88Convex-Function%EF%BC%89/</url>
+    <title>Java创建线程的方式</title>
+    <url>/2024/03/23/Java/%E5%B9%B6%E5%8F%91/Java%E5%88%9B%E5%BB%BA%E7%BA%BF%E7%A8%8B%E7%9A%84%E6%96%B9%E5%BC%8F/</url>
     <content><![CDATA[<blockquote>
-<p>第三课：凸函数</p>
+<p>一些创建线程的方式</p>
 </blockquote>
 <span id="more"></span>
-<h1 id="凸函数的定义">凸函数的定义</h1>
-<h2 id="定义1">定义1</h2>
-<p>对于一个函数<span
-class="math inline">\(f:\mathbb{R}^n\rightarrow\mathbb{R}\)</span>，如果<span
-class="math inline">\(domf\)</span>为凸集，且： <span
-class="math display">\[
-f(\theta x+(1-\theta)y)\le\theta f(x)+(1-\theta)f(y)
-\]</span> 对所有的<span class="math inline">\(x,y\in domf,0\le\theta\le
-1\)</span>成立，则<span
-class="math inline">\(f\)</span>为（下）凸函数</p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211258794.png" alt="image-20230921125358565" style="zoom:67%;" /></p>
-<blockquote>
-<p>连接凸函数的图像上任意两点的线段都在函数图像上方</p>
-</blockquote>
-<ul>
-<li><p><span class="math inline">\(f\)</span>是凸函数，则<span
-class="math inline">\(-f\)</span>是凹函数</p></li>
-<li><p>如果<span class="math inline">\(dom f\)</span>是凸集，且 <span
-class="math display">\[
-f(\theta x+(1-\theta)y)&lt;\theta f(x)+(1-\theta)f(y)
-\]</span></p></li>
-</ul>
-<blockquote>
-<p>对所有的<span class="math inline">\(x,y\in domf,x\neq y,0&lt;\theta
-&lt;1\)</span>成立，则<span
-class="math inline">\(f\)</span>是严格凸函数</p>
-</blockquote>
-<h2 id="定义2">定义2</h2>
-<ul>
-<li><p><span
-class="math inline">\(f\)</span>是凸函数的充分必要条件为：<span
-class="math inline">\(\forall x,v\in
-domf,g(t)=f(x+tv)\)</span>是凸函数</p></li>
-<li><p>证明</p></li>
-</ul>
-<h2 id="定义3一阶条件">定义3（一阶条件）</h2>
-<ul>
-<li><p>可微：如果<span class="math inline">\(dom
-f\)</span>为开集，且函数的导数： <span class="math display">\[
-\nabla f(x)=(\frac{\partial f(x)}{\partial x_1},\frac{\partial
-f(x)}{\partial x_2},···,\frac{\partial f(x)}{\partial x_n})
-\]</span> 对所有定义域中的值都存在，则函数<span
-class="math inline">\(f\)</span>可微</p></li>
-<li><p>一阶条件：对于可微函数<span
-class="math inline">\(f\)</span>，如果<span
-class="math inline">\(domf\)</span>为凸集，则<span
-class="math inline">\(f\)</span>为凸函数当且仅当： <span
-class="math display">\[
-f(y)\ge f(x)+\nabla f(x)^T (y-x)\quad \text{for all }x,y\in domf
-\]</span></p></li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211258727.png" alt="image-20230921125426877" style="zoom:67%;" /></p>
-<blockquote>
-<p>意义：凸函数在局部的一阶泰勒展开是对函数值的低估</p>
-</blockquote>
-<h3 id="一阶条件的证明">一阶条件的证明</h3>
-<ul>
-<li><p>=&gt;</p>
-<p>f</p></li>
-<li><p>&lt;=</p></li>
-</ul>
-<h2 id="定义4二阶条件">定义4（二阶条件）</h2>
-<ul>
-<li><p>二阶可微：如果<span
-class="math inline">\(domf\)</span>为开集，且函数的<span
-class="math inline">\(Hessian\)</span>矩阵满足<span
-class="math inline">\(\nabla^2 f(x)\in S^n\)</span> <span
-class="math display">\[
-\nabla^2 f(x)_{ij}=\frac{\partial^2 f(x)}{\partial x_i \partial
-x_j},i,j=1,...,.
-\]</span> 对所有定义域中的值都存在，则函数<span
-class="math inline">\(f\)</span>二阶可微</p></li>
-<li><p>二阶条件：对于二阶可微函数<span
-class="math inline">\(f\)</span>，如果定义域为凸集</p>
-<ul>
-<li><p><span class="math inline">\(f\)</span>为凸函数当且仅当： <span
-class="math display">\[
-\nabla^2 f(x)\succeq 0\quad \text{for all }x\in domf
-\]</span></p></li>
-<li><p>如果对所有定义域内的<span
-class="math inline">\(x\)</span>满足<span class="math inline">\(\nabla^2
-f(x)\succ 0\)</span>，则<span
-class="math inline">\(f\)</span>为严格凸函数</p></li>
-</ul></li>
-</ul>
-<h1 id="常见的凸函数">常见的凸函数</h1>
-<h2 id="一维空间举例">一维空间举例</h2>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211258649.png" alt="image-20230921125640656" style="zoom: 67%;" /></p>
-<h2 id="向量范数">向量范数</h2>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211258592.png" alt="image-20230921125652921" style="zoom: 67%;" /></p>
-<h2 id="多维空间举例">多维空间举例</h2>
-<h3 id="多维向量rn">多维向量<span
-class="math inline">\(R^n\)</span></h3>
-<ul>
-<li>仿射函数：<span class="math inline">\(f(x)=a^Tx+b\)</span></li>
-<li>范数函数：<span
-class="math inline">\(\|x\|_p=(\sum_{i=1}^{n}|x_i|^p)^{\frac{1}{p}}\quad\text{for
-}p\ge1\)</span></li>
-<li>极大值函数：<span
-class="math inline">\(f(x)=\max\{x_1,...,x_n\},x\in R^m\)</span></li>
-<li><span class="math inline">\(L0\)</span>范数：<span
-class="math inline">\(x\)</span>中非零元素的个数</li>
-</ul>
-<h3 id="例二次函数">例：二次函数</h3>
-<ul>
-<li><p>二次函数：<span
-class="math inline">\(f(x)=\frac{1}{2}x^TPx+q^Tx+r,P\in S^n\)</span>
-<span class="math display">\[
-\nabla f(x)=Px+q,\quad\nabla^2f(x)=P
-\]</span> 当P为半正定矩阵<span class="math inline">\((P\succeq
-0)\)</span>时为凸函数</p></li>
-<li><p>最小二乘目标函数：<span
-class="math inline">\(f(x)=\|Ax-b\|^2_2\)</span> <span
-class="math display">\[
-\nabla f(x)=2A^T(Ax-b),\quad\nabla^2 f(x)=2A^TA
-\]</span> 对任意的<span
-class="math inline">\(A\)</span>都为凸函数</p></li>
-<li><p>二次函数比线性函数：<span
-class="math inline">\(f(x,y)=x^2/y\)</span>对所有的<span
-class="math inline">\(y&gt;0\)</span>都为凸函数</p></li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211258784.png" alt="image-20230921125739507" style="zoom:67%;" /></p>
-<h2 id="半正定矩阵的性质">半正定矩阵的性质</h2>
-<p>矩阵<strong>A</strong>为行列式，则存在以下性质：</p>
-<ul>
-<li><strong>A</strong>的特征值均为负的。</li>
-<li>存在n阶实矩阵<strong>C</strong>，使<span
-class="math inline">\(A=C^TC.\)</span></li>
-<li><strong>A</strong>的行列式是负的</li>
-</ul>
-<h1 id="保持凸性的操作">保持凸性的操作</h1>
-<h2
-id="验证个函数是否是凸函数的方法">验证⼀个函数是否是凸函数的方法</h2>
-<ol type="1">
-<li>根据3种定义</li>
-<li>验证函数是由多个相对简单的凸函数通过一些保持凸性的操作来得到</li>
-</ol>
-<h2 id="保持凸性的操作1非负加权和">保持凸性的操作1：非负加权和</h2>
-<ul>
-<li>命题：若<span
-class="math inline">\(f_1,...,f_m\)</span>为凸函数，则<span
-class="math inline">\(f=\sum^m_{i=1}w_if_i\)</span>为凸函数，<span
-class="math inline">\(w_i\ge0\)</span></li>
-<li>证明
-<ol type="1">
-<li>定义域是否为凸集</li>
-</ol></li>
-</ul>
-<h2 id="保持凸性的操作2仿射组合">保持凸性的操作2：仿射组合</h2>
-<ul>
-<li>命题：若<span class="math inline">\(f\)</span>为凸函数，则<span
-class="math inline">\(𝑓(𝐴𝑥+𝑏)\)</span>为凸函数</li>
-<li>证明</li>
-</ul>
-<h2 id="保持凸性的操作3最大化极大化">保持凸性的操作3：最大化/极大化</h2>
-<h3 id="最大化与极大化">最大化与极大化</h3>
-<ul>
-<li><p><span class="math inline">\(\max\)</span>：最大值</p></li>
-<li><p><span class="math inline">\(\sup\)</span>：上确界</p></li>
-<li><p>命题：若<span
-class="math inline">\(f_1,...,f_m\)</span>为凸函数，则<span
-class="math inline">\(f(x)=\max\{f_1(x),...,f_m(x)\}\)</span>为凸函数</p>
-<ul>
-<li>证明：</li>
-</ul></li>
-<li><p>命题：若<span class="math inline">\(f(x,y)\)</span>对所有<span
-class="math inline">\(y\in A\)</span>为关于<span
-class="math inline">\(x\)</span>的凸函数，则<span
-class="math inline">\(f(x)=\sup_{y\in A}f(x,y)\)</span>为凸函数</p></li>
-</ul>
-<h2
-id="保持凸性的操作4标量函数的组合">保持凸性的操作4：标量函数的组合</h2>
-<p>对于函数<span class="math inline">\(g:R^n\to R^k\)</span>与函数<span
-class="math inline">\(h:R^k\to R\)</span>，函数组合为<span
-class="math inline">\(f(x)=h(g(x))\)</span></p>
-<p>考虑<span class="math inline">\(n=k=1\)</span>的情况</p>
-<p><span class="math inline">\(f\)</span>为凸函数如果：<span
-class="math inline">\(\begin{cases}g是凸函数，h是凹函数，h递增\\g是凹函数，h是凸函数，h递减\end{cases}\)</span>
-<span class="math display">\[
-f&#39;&#39;(x)=h&#39;&#39;(g(x)g&#39;(x))^2+h&#39;(g(x))g&#39;&#39;(x).
-\]</span></p>
-<blockquote>
-<p>例：</p>
-<p><span class="math inline">\(\exp
-g(x)当g是凸函数时为凸函数\)</span></p>
-<p><span
-class="math inline">\(1/g(x)当g是凹函数且为正时为凸函数\)</span></p>
-</blockquote>
-<h1 id="共轭函数conjugate-function">共轭函数（conjugate function）</h1>
-<h2 id="函数f的共轭定义">函数<span
-class="math inline">\(f\)</span>的共轭定义</h2>
-<p><span class="math display">\[
-f^*(y)=\sup_{x\in domf}(y^Tx-f(x))
-\]</span></p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211700984.png" alt="image-20230921170043534" style="zoom:80%;" /></p>
-<blockquote>
-<p>性质：<span class="math inline">\(f^*(y)\)</span>一定为凸函数</p>
-</blockquote>
+<h1 id="如何创建线程">如何创建线程</h1>
+<p>一般来说，创建线程有很多种方式，例如继承<code>Thread</code>类、实现<code>Runnable</code>接口、实现<code>Callable</code>接口、使用线程池、使用<code>CompletableFuture</code>类等等。</p>
+<p>不过，这些方式其实并没有真正创建出线程。准确点来说，这些都属于是在
+Java 代码中使用多线程的方法。</p>
+<p>严格来说，Java
+就只有一种方式可以创建线程，那就是通过<code>new Thread().start()</code>创建。不管是哪种方式，最终还是依赖于<code>new Thread().start()</code>。</p>
+<h2 id="继承tread类">继承Tread类</h2>
+<p>这是最普通的方式，继承<code>Thread</code>类，重写<code>run</code>方法，如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ExtendsThread</span> <span class="keyword">extends</span> <span class="title class_">Thread</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;1......&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">ExtendsThread</span>().start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="实现runnable接口">实现Runnable接口</h3>
+<p>这也是一种常见的方式，实现<code>Runnable</code>接口并重写<code>run</code>方法，如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ImplementsRunnable</span> <span class="keyword">implements</span> <span class="title class_">Runnable</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;2......&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">ImplementsRunnable</span> <span class="variable">runnable</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ImplementsRunnable</span>();</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">Thread</span>(runnable).start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>与继承<code>Thread</code>接口不同的是，Java当中是单继承，当一个类继承了<code>Thread</code>类后就无法再继承其他的类，通过实现<code>Runnable</code>接口并重写<code>run</code>方法，可以再实现继承其他类。</p>
+<h3 id="实现callable接口">实现Callable接口</h3>
+<p>和上一种方式类似，这里需要去重写<code>Callable</code>接口的<code>call</code>方法，并配合<code>FutureTask</code>使用，只不过这种方式可以使用<code>get()</code>方法拿到线程执行完的返回值，如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ImplementsCallable</span> <span class="keyword">implements</span> <span class="title class_">Callable</span>&lt;String&gt; &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">call</span><span class="params">()</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;3......&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Justin&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        <span class="type">ImplementsCallable</span> <span class="variable">callable</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ImplementsCallable</span>();</span><br><span class="line">        FutureTask&lt;String&gt; futureTask = <span class="keyword">new</span> <span class="title class_">FutureTask</span>&lt;&gt;(callable);</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">Thread</span>(futureTask).start();</span><br><span class="line">        System.out.println(futureTask.get());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="使用executorservice线程池">使用ExecutorService线程池</h3>
+<p>这种属于进阶方式，可以通过<code>Executors</code>创建线程池，也可以自定义线程池，如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">UseExecutorService</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">ExecutorService</span> <span class="variable">poolA</span> <span class="operator">=</span> Executors.newFixedThreadPool(<span class="number">2</span>);</span><br><span class="line">        poolA.execute(()-&gt;&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;4A......&quot;</span>);</span><br><span class="line">        &#125;);</span><br><span class="line">        poolA.shutdown();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 又或者自定义线程池</span></span><br><span class="line">        <span class="type">ThreadPoolExecutor</span> <span class="variable">poolB</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ThreadPoolExecutor</span>(<span class="number">2</span>, <span class="number">3</span>, <span class="number">0</span>,</span><br><span class="line">                TimeUnit.SECONDS, <span class="keyword">new</span> <span class="title class_">LinkedBlockingQueue</span>&lt;Runnable&gt;(<span class="number">3</span>),</span><br><span class="line">                Executors.defaultThreadFactory(), <span class="keyword">new</span> <span class="title class_">ThreadPoolExecutor</span>.AbortPolicy());</span><br><span class="line">        poolB.submit(()-&gt;&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;4B......&quot;</span>);</span><br><span class="line">        &#125;);</span><br><span class="line">        poolB.shutdown();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="注意点">注意点</h2>
+<p>创建线程的方式十分多样，最少都能有上面的四种答案，那这真的对吗？可以说对，但严格意义上来说，又不对。</p>
+<p>抛开后面一些先不谈，咱们就聊最开始的三种：“继承<code>Thread</code>类、实现<code>Runnable</code>接口、实现<code>Callable</code>接口”，这应该是广为人知的答案。</p>
+<p>那么此时来看个例子：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ImplementsRunnable</span> <span class="keyword">implements</span> <span class="title class_">Runnable</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(Thread.currentThread().getName()</span><br><span class="line">                + <span class="string">&quot;：小猫爱吃鱼&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里定义了一个类，实现了<code>Runnable</code>接口并重写了<code>run</code>方法，按前面的说法，这种方式是不是创建了一条线程？答案是<code>Yes</code>，可问题来了，请你告诉我，该如何启动这条所谓的“线程”呢？</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="type">ImplementsRunnable</span> <span class="variable">runnable</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ImplementsRunnable</span>();</span><br><span class="line">    runnable.run();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>难道像上面这样嘛？来看看运行结果：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">main：小猫爱吃鱼</span><br></pre></td></tr></table></figure>
+<p>结果很显然，打印出的线程名字为：<code>main</code>，代表目前是主线程在运行，和调用普通方法没任何区别，那究竟该如何创建一条线程呀？要这样做：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="type">ImplementsRunnable</span> <span class="variable">runnable</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ImplementsRunnable</span>();</span><br><span class="line">    <span class="keyword">new</span> <span class="title class_">Thread</span>(runnable).start();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>先<code>new</code>出<code>Runnable</code>对象，接着再<code>new</code>一个<code>Thread</code>对象，然后把<code>Runnable</code>丢给<code>Thread</code>，接着调用<code>start()</code>方法，此时才能真正意义上创建一条线程，运行结果如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Thread-0：小猫爱吃鱼</span><br></pre></td></tr></table></figure>
+<p>此时线程名字变成了<code>Thread-0</code>，这意味着输出“小猫爱吃鱼”这句话的代码，并不是<code>main</code>线程在执行了，实现了<code>Runnable</code>接口的<code>ImplementsRunnable</code>类，并不能被称为一条线程，包括所谓的<code>Callable、FutureTask……</code>，都不能创建出真正的线程。</p>
+<p>换到前面所提出的三种方式中，只有继承<code>Thread</code>类，才能真正创建一条线程，如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ExtendsThread</span> <span class="keyword">extends</span> <span class="title class_">Thread</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(Thread.currentThread().getName()</span><br><span class="line">                + <span class="string">&quot;：小猫爱吃鱼&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">ExtendsThread</span>().start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 运行结果：</span></span><br><span class="line"><span class="comment">//      Thread-0：竹子爱熊猫</span></span><br></pre></td></tr></table></figure>
+<p>因为当你用一个类，继承<code>Thread</code>类时，它内部所有的方法，都会被继承过来，所以当前类可以直接调用<code>start()</code>方法启动，更具体点来说，<strong>在<code>Java</code>中，创建线程的方式就只有一种：调用<code>Thread.start()</code>方法</strong>！只有这种形式，才能在真正意义上创建一条线程！</p>
 ]]></content>
       <categories>
-        <category>最优化方法</category>
+        <category>Java八股</category>
+        <category>并发</category>
       </categories>
       <tags>
-        <tag>学科</tag>
-        <tag>最优化方法</tag>
+        <tag>Java</tag>
+        <tag>八股</tag>
       </tags>
   </entry>
   <entry>
-    <title>凸集（Convex Set）</title>
-    <url>/2023/09/19/2023/%E6%9C%80%E4%BC%98%E5%8C%96/%E5%87%B8%E9%9B%86%EF%BC%88Convex-Set%EF%BC%89/</url>
+    <title>volatile关键字</title>
+    <url>/2024/03/23/Java/%E5%B9%B6%E5%8F%91/volatile%E5%85%B3%E9%94%AE%E5%AD%97/</url>
     <content><![CDATA[<blockquote>
-<p>第二课：凸集(Convex Set)</p>
+<p>关于volatile关键字的一些问题</p>
 </blockquote>
 <span id="more"></span>
-<h1 id="重要定义">重要定义</h1>
-<h2 id="仿射集">仿射集</h2>
-<h3 id="直线">直线：</h3>
-<p>对于穿过<span
-class="math inline">\(x_1,x_2\)</span>两个不同的点的直线，所有满足以下条件的点：
-<span class="math display">\[
-x=\theta x_1+(1-\theta)x_2,\theta\in\mathbb{R}
-\]</span>
-<img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191452821.png" alt="image-20230919141052729" style="zoom:67%;" /></p>
-<h3 id="仿射集-1">仿射集</h3>
-<p>一个集合<span class="math inline">\(C\)</span>是仿射集，若<span
-class="math inline">\(\forall x_1,x_2\in C\)</span>，连接<span
-class="math inline">\(x_1,x_2\)</span>的直线也在<span
-class="math inline">\(C\)</span>内</p>
-<blockquote>
-<p>思考：</p>
-<ul>
-<li>该条直线上所有的点组成的集合（是）</li>
-<li>空集、点、线段是仿射集吗？（空集是，点是，线段不是）</li>
-<li>实数集、正实数集、整数集是仿射集吗？（实数集是、正实数集不是、整数集不是）</li>
-</ul>
-</blockquote>
-<h2 id="凸集convex-set">凸集（Convex Set）</h2>
-<h3 id="线段">线段：</h3>
-<p>对于穿过<span
-class="math inline">\(x_1,x_2\)</span>两点的直线，所有满足以下条件的点:
-<span class="math display">\[
-x=\theta x_1+(1-\theta)x_2,0\le\theta\le1
-\]</span></p>
-<h3 id="凸集">凸集：</h3>
-<p>集合中任意两点组成的线段仍在该集合中： <span class="math display">\[
-x_1,x_2\in C,0\le\theta\le1.\Rightarrow\theta x_1+(1-\theta)x_2\in C
-\]</span> 例子：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191452541.png" alt="image-20230919141112752"  /></p>
-<blockquote>
-<p>思考：</p>
-<ul>
-<li>点、直线（点是，直线也是）</li>
-<li>实数集、正实数集、整数集是否为凸集（都不是）</li>
-<li>仿射集是否为凸集（是）</li>
-</ul>
-</blockquote>
-<h2 id="凸组合与凸包">凸组合与凸包</h2>
-<h3 id="凸组合convex-combination">凸组合（Convex Combination）：</h3>
-<p>对于任意点k个点：<span
-class="math inline">\(x_1,x_2,...,x_k\)</span>，凸组合是以下的形式：
-<span class="math display">\[
-x=\theta_1 x_1+\theta_2 x_2+···\theta_k x_k
-\]</span></p>
-<blockquote>
-<p>其中<span
-class="math inline">\(\theta_1+\theta_2+···+\theta_k=1,\theta_i\ge0\)</span></p>
-</blockquote>
-<p><span class="math inline">\(C\)</span>为凸集<span
-class="math inline">\(\Leftrightarrow\)</span><span
-class="math inline">\(C\)</span>中任意元素点凸组合属于<span
-class="math inline">\(C\)</span></p>
-<h3 id="凸包convex-hull">凸包（Convex Hull）：</h3>
-<p><span class="math inline">\(conv C\)</span>：所有集合<span
-class="math inline">\(C\)</span>中的点的凸组合，是包含<span
-class="math inline">\(S\)</span>的最小的凸集</p>
-<p>用一个绳子连起来：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191452529.png" alt="image-20230919141134184" style="zoom:80%;" /></p>
-<h2 id="凸锥convex-cone">凸锥（Convex Cone）</h2>
-<h3 id="锥">锥：</h3>
-<p><span class="math inline">\(C\)</span>为锥<span
-class="math inline">\(\Leftrightarrow\)</span>对于<span
-class="math inline">\(C\)</span>中任意的点<span
-class="math inline">\(x\)</span>，<span class="math inline">\(\theta
-x\in C,\theta\ge0\)</span></p>
-<h3 id="凸锥">凸锥：</h3>
-<p>对于任意的两个点：<span
-class="math inline">\(x_1,x_2\)</span>，凸锥是以下的形式： <span
-class="math display">\[
-x=\theta_1 x_1+\theta_2 x_2
-\]</span></p>
-<blockquote>
-<p>其中<span
-class="math inline">\(\theta_1\ge0,\theta_2\ge0\)</span></p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/image-20230919141149722.png" alt="image-20230919141149722" style="zoom:67%;" /></p>
-<blockquote>
-<p>思考：</p>
-<ul>
-<li>原点是否一定在凸锥上？（是）</li>
-<li>经过原点的射线（是）</li>
-<li>经过原点的直线（是）</li>
-<li>凸锥是凸集吗？（是）</li>
-</ul>
-</blockquote>
-<h2 id="仿射集凸集凸锥的关系">仿射集、凸集、凸锥的关系</h2>
-<h3 id="定义">定义：</h3>
-<ul>
-<li>仿射集：<span
-class="math inline">\(\theta_1+\theta_2=1\)</span></li>
-<li>凸集：<span
-class="math inline">\(\theta_1+\theta_2=1,\theta_i\ge0\)</span></li>
-<li>凸锥：<span class="math inline">\(\theta_i\ge0\)</span></li>
-</ul>
-<h3 id="关系">关系：</h3>
-<ul>
-<li>仿射集<span class="math inline">\(\subseteq\)</span>凸集</li>
-<li>凸锥<span class="math inline">\(\subseteq\)</span>凸集</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191452743.png" alt="image-20230919141203364" style="zoom:67%;" /></p>
-<h1 id="几种重要的凸集">几种重要的凸集</h1>
-<h2 id="超平面和半空间">超平面和半空间</h2>
-<h3 id="超平面">超平面：</h3>
-<p>满足以下条件的点的集合： <span class="math display">\[
-\{x|a^T \boldsymbol{x}=b\}(a\neq0)
-\]</span>
-<img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191452636.png" alt="image-20230919141218903" style="zoom:67%;" /></p>
-<blockquote>
-<p>超平面是仿射的，也是凸的</p>
-</blockquote>
-<h3 id="半空间">半空间：</h3>
-<p><span class="math display">\[
-\{x|a^T\boldsymbol{x}\le b(a\neq0)\}
-\]</span></p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191452865.png" alt="image-20230919141230877" style="zoom:67%;" /></p>
-<h2 id="多面体">多面体</h2>
-<ul>
-<li><span class="math inline">\(\{x|Ax\le b,Cx=d\}\)</span></li>
-<li><span class="math inline">\(A\in R^{m\times n},C\in R^{p\times
-n}\)</span></li>
-<li>多面体是有限个半空间和超平面的交集</li>
-<li>多面体是凸集</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191452106.png" alt="image-20230919141245402" style="zoom:67%;" /></p>
-<h2 id="对称半正定矩阵">对称半正定矩阵</h2>
-<h3 id="预备知识">预备知识：</h3>
-<h4 id="对称矩阵sn">对称矩阵<span
-class="math inline">\(S^n\)</span>：</h4>
-<p>是指以主对角线为对称轴，各元素对应相等的矩阵 <span
-class="math display">\[
-\begin{bmatrix}
-a_{11}&amp;a_{12}&amp;a_{13}&amp;···&amp;a_{1n}\\
-a_{21}&amp;a_{22}&amp;a_{23}&amp;···&amp;a_{2n}\\
-a_{31}&amp;a_{32}&amp;a_{33}&amp;···&amp;a_{3n}\\
-\vdots&amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
-a_{m1}&amp;a_{m2}&amp;a_{m3}&amp;···&amp;a_{mn}
-\end{bmatrix}
-\]</span></p>
-<h3 id="对称半正定矩阵-1">对称半正定矩阵：</h3>
-<p>给定一个大小为<span class="math inline">\(n\times
-n\)</span>的<strong>实对称矩阵</strong><span
-class="math inline">\(A\)</span>，若对于任意长度的<span
-class="math inline">\(n\)</span>的非零向量<span
-class="math inline">\(x\)</span>，有<span
-class="math inline">\(x^TAx\ge0\)</span>恒成立，则矩阵<span
-class="math inline">\(A\)</span>是一个半 正定矩阵</p>
-<blockquote>
-<p>堆成正定矩阵<span class="math inline">\(S^n_{++}\)</span></p>
-</blockquote>
-<h3 id="对称半正定矩阵集合">对称半正定矩阵集合：</h3>
-<p><span class="math display">\[
-S^n_+=\{X\in S^n|X\succeq0\}
-\]</span></p>
-<blockquote>
-<p>对称半正定矩阵集合是凸锥</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191452865.png" alt="image-20230919141303814" style="zoom:67%;" /></p>
-<h2 id="球与椭球">球与椭球</h2>
-<h3 id="球">球：</h3>
-<p>满足以下条件的点的集合： <span class="math display">\[
-B(x_c,r)=\{x|\|x-x_c\|_2\le r\}=\{x_c+ru|\|u\|_2\le1\}
-\]</span></p>
-<h3 id="椭球">椭球：</h3>
-<p><span class="math display">\[
-\{x|(x-x_c)^TP^{-1}(x-x_c)\le1\},P\in S^n_{++}
-\]</span></p>
-<blockquote>
-<p>球是凸集</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191453505.png" alt="image-20230919141315764" style="zoom:67%;" /></p>
-<h1 id="保凸的运算">保凸的运算</h1>
-<h2 id="交集">交集</h2>
-<p>定理：任意多个凸集的交集为凸集</p>
-<h2 id="仿射变换">仿射变换</h2>
-<p>定理：设<span
-class="math inline">\(f:\mathbb{R}^n\rightarrow\mathbb{R}^m\)</span>是仿射变换<span
-class="math inline">\((f(x)=Ax+b, A\in\mathbb{R}^{m\times n},b\in
-\mathbb{R}^m)\)</span>则：</p>
-<p>（1）凸集在<span class="math inline">\(f\)</span>下的像是凸集： <span
-class="math display">\[
-S\subseteq\mathbb{R}^n是凸集\Rightarrow
-f(S)\overset{\text{def}}{=}\{f(x)|x\in S\}是凸集；
-\]</span> （2）凸集在<span
-class="math inline">\(f\)</span>下的原像是凸集： <span
-class="math display">\[
-C\subseteq\mathbb{R}^m\Rightarrow
-f^{-1}(C)\overset{\text{def}}{=}\{x\in\mathbb{R}^n|f(x)\in C\}是凸集.
-\]</span></p>
-<blockquote>
-<p>缩放、平移和投影都是仿射变换</p>
-</blockquote>
-<h1 id="分离超平面定理">分离超平面定理</h1>
-<p>如果<span class="math inline">\(C\)</span>和<span
-class="math inline">\(D\)</span>是不相交的两个凸集，则存在非零向量<span
-class="math inline">\(a\)</span>和常数<span
-class="math inline">\(b\)</span>，使得 <span class="math display">\[
-a^Tx\le b, \forall x\in C,且a^Tx\ge b,\forall x\in D,
-\]</span>
-<img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191453319.png" alt="image-20230919141339133" style="zoom:80%;" /></p>
-<h1 id="支撑超平面定理">支撑超平面定理</h1>
+<h1 id="java内存模型是什么">Java内存模型是什么</h1>
+<p>如下面两张图所示（这里JavaGuide画的图就很好，直接拿来了，侵删），变量是放在主存中的，每个线程都有自己的工作线程（本地内存），线程运行时将主存中的数据复制到工作内存当中，对数据的任何操作都是基于自己的工作内存进行的，之后再将更新后的数据刷新到主存。</p>
+<p><strong>当前线程不能直接操作主存和其他线程工作内存中的数据。</strong></p>
 <figure>
 <img
-src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191453641.png"
-alt="image-20230919141413149" />
-<figcaption aria-hidden="true">image-20230919141413149</figcaption>
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232024135.png"
+alt="JMM(Java 内存模型)" />
+<figcaption aria-hidden="true">JMM(Java 内存模型)</figcaption>
 </figure>
+<figure>
+<img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232024275.png"
+alt="JMM(Java 内存模型)强制在主存中进行读取" />
+<figcaption aria-hidden="true">JMM(Java
+内存模型)强制在主存中进行读取</figcaption>
+</figure>
+<h1 id="volatile关键字的作用">volatile关键字的作用</h1>
+<p><strong>volatile关键字保证了变量的立即可见性</strong></p>
+<p><code>线程A</code>与<code>线程B</code>并发运行时可能出现这种情况，如果<code>线程A</code>修改了工作内存中的数据且还未同步到主存，那么<code>线程B</code>读取的主存中的数据就不是最新值。当变量被volatile关键字修饰后，任何线程对它的写操作都会强制将工作内存中的最新值刷新到主存，同时使其他线程工作内存中的变量缓存无效，这样其他线程使用缓存时就会重新到主存中读取最新值。</p>
+<p>即如果我们将变量声明为 <strong><code>volatile</code></strong>
+，这就指示
+JVM，这个变量是共享且不稳定的，每次使用它都到主存中进行读取。</p>
+<p><strong><code>volatile</code>
+关键字能保证数据的可见性，但不能保证数据的原子性。<code>synchronized</code>
+关键字两者都能保证。</strong></p>
 ]]></content>
       <categories>
-        <category>最优化方法</category>
+        <category>Java八股</category>
+        <category>并发</category>
       </categories>
       <tags>
-        <tag>学科</tag>
-        <tag>最优化方法</tag>
+        <tag>Java</tag>
+        <tag>八股</tag>
+        <tag>并发</tag>
       </tags>
   </entry>
 </search>
