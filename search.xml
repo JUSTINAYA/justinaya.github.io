@@ -1,154 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Java当中的各种锁</title>
-    <url>/2024/03/23/Java%E5%BD%93%E4%B8%AD%E7%9A%84%E5%90%84%E7%A7%8D%E9%94%81/</url>
-    <content><![CDATA[<blockquote>
-<p>15种锁！</p>
-</blockquote>
-<span id="more"></span>
-<h1 id="乐观锁">乐观锁</h1>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232110652.png" alt="image-20240323210351234" style="zoom: 67%;" /></p>
-<p><strong>乐观锁是一种乐观思想</strong>，假定当前环境是读多写少，遇到并发写的概率比较低，读数据时认为别的线程不会正在进行修改（所以没有上锁）。写数据时，判断当前与期望值是否相同，如果相同则进行更新（更新期间加锁，保证是原子性的）。</p>
-<p>即假设数据修改不会造成冲突，在数据提交更新时才进行冲突检测。</p>
-<p><strong>Java中的乐观锁：</strong>
-CAS，比较并替换，比较当前值（主内存中的值），与预期值（当前线程中的值，主内存中值的一份拷贝）是否一样，一样则更新，否则继续进行CAS操作。</p>
-<p>如上图所示，可以同时进行读操作，读的时候其他线程不能进行写操作。</p>
-<h1 id="悲观锁">悲观锁</h1>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232110830.png" alt="image-20240323210903997" style="zoom: 67%;" /></p>
-<p><strong>悲观锁是一种悲观思想</strong>，即认为写多读少，遇到并发写的可能性高，每次去拿数据的时候都认为其他线程会修改，所以每次读写数据都会认为其他线程会修改，所以每次读写数据时都会上锁。其他线程想要读写这个数据时，会被这个线程block，直到这个线程释放锁然后其他线程获取到锁。</p>
-<p>即数据修改前，假设一定会发生冲突，先尝试为它加锁。</p>
-<p><strong>Java中的悲观锁：</strong>
-synchronized修饰的方法和方法块、ReentrantLock。</p>
-<p>如上图所示，只能有一个线程进行读操作或者写操作，其他线程的读写操作均不能进行。</p>
-<h1 id="自旋锁">自旋锁</h1>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232110895.png" alt="image-20240323211029664" style="zoom: 67%;" /></p>
-<p><strong>自旋锁是一种技术：</strong>
-为了让线程等待，我们只须让线程执行一个忙循环（自旋）。</p>
-<p>现在绝大多数的个人电脑和服务器都是多路（核）处理器系统，如果物理机器有一个以上的处理器或者处理器核心，能让两个或以上的线程同时并行执行，就可以让后面请求锁的那个线程“稍等一会”，但不放弃处理器的执行时间，看看持有锁的线程是否很快就会释放锁。</p>
-<p><strong>自旋锁的优点：</strong>
-避免了线程切换的开销。挂起线程和恢复线程的操作都需要转入内核态中完成，这些操作给Java虚拟机的并发性能带来了很大的压力。</p>
-<p><strong>自旋锁的缺点：</strong>
-占用处理器的时间，如果占用的时间很长，会白白消耗处理器资源，而不会做任何有价值的工作，带来性能的浪费。因此自旋等待的时间必须有一定的限度，如果自旋超过了限定的次数仍然没有成功获得锁，就应当使用传统的方式去挂起线程。</p>
-<p>自旋次数默认值：10次，可以使用参数<code>-XX:PreBlockSpin</code>来自行更改。</p>
-<p><strong>自适应自旋：</strong>
-自适应意味着自旋的时间不再是固定的，而是由前一次在同一个锁上的自旋时间及锁的拥有者的状态来决定的。有了自适应自旋，随着程序运行时间的增长及性能监控信息的不断完善，虚拟机对程序锁的状态预测就会越来越精准。</p>
-<p><strong>Java中的自旋锁：</strong>
-CAS操作中的比较操作失败后的自旋等待。</p>
-<h1 id="可重入锁">可重入锁</h1>
-<p><strong>可重入锁是一种技术：</strong>
-任意线程在获取到锁之后能够再次获取该锁而不会被锁所阻塞。</p>
-<p><strong>可重入锁的原理：</strong> 为每个锁关联一个计数器。</p>
-<ul>
-<li>首次获取锁：计数器置为1.</li>
-<li>再次获取锁：计数器加1</li>
-<li>释放锁：释放锁时，进行计数自减。计数器为0则代表锁被当前线程释放。</li>
-</ul>
-<p><strong>Java中的可重入锁：</strong>
-ReentrantLock、synchronized修饰的方法或代码段。</p>
-<p><strong>可重入锁的作用：</strong> 避免死锁。</p>
-<p><strong>面试题1：</strong>
-可重入锁如果加了两把，但是只释放了一把会出现什么问题？</p>
-<p>答：程序卡死，线程不能出来，也就是说我们申请了几把锁，就需要释放几把锁。</p>
-<p><strong>面试题2：</strong>
-如果只加了一把锁，释放两次会出现什么问题？</p>
-<p>答：会报错，java.lang.IllegalMonitorStateException。</p>
-<h1 id="读写锁">读写锁</h1>
-<p><strong>读写锁是一种技术：</strong>
-通过ReentrantReadWriteLock类来实现。为了提高性能， Java
-提供了读写锁，在读的地方使用读锁，在写的地方使用写锁，灵活控制，如果没有写锁的情况下，读是无阻塞的，在一定程度上提高了程序的执行效率。读写锁分为读锁和写锁，多个读锁不互斥，读锁与写锁互斥，这是由
-jvm 自己控制的。</p>
-<p><strong>读锁：</strong>
-允许多个线程获取读锁，同时访问同一个资源。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232116006.png" alt="image-20240323211616975" style="zoom:67%;" /></p>
-<p><strong>写锁：</strong>
-只允许一个线程获取写锁，不允许同时访问同一个资源。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232116455.png" alt="image-20240323211655063" style="zoom:67%;" /></p>
-<p><strong>Java中的读写锁：</strong>ReentrantReadWriteLock</p>
-<h1 id="公平锁">公平锁</h1>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232120587.png" alt="image-20240323211822932" style="zoom:67%;" /></p>
-<p><strong>公平锁是一种思想：</strong>
-多个线程竞争锁时直接进入队列排队，按照申请锁的顺序来获取锁，先到先得。在并发环境中，每个线程会先查看此锁维护的等待队列，如果当前等待队列为空，则占有锁，如果等待队列不为空，则加入到等待队列的末尾，按照FIFO的原则从队列中拿到线程，然后占有锁。</p>
-<h1 id="非公平锁">非公平锁</h1>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232121397.png" alt="image-20240323212125844" style="zoom:67%;" /></p>
-<p><strong>非公平锁是一种思想：</strong>
-多个线程竞争锁时，线程先尝试获取锁，如果获取不到，则再采用公平锁的方式，进入等待队列。多个线程获取锁的顺序，不是按照先到先得的顺序，有可能后申请锁的线程比先申请的线程优先获取锁。</p>
-<p><strong>优点：</strong> 非公平锁的性能高于公平锁。</p>
-<p><strong>缺点：</strong>
-有可能造成线程饥饿（某个线程很长一段时间获取不到锁）</p>
-<p><strong>Java中的非公平锁：</strong>synchronized是非公平锁，ReentrantLock通过构造函数指定该锁是公平的还是非公平的，默认是非公平的。</p>
-<h1 id="共享锁">共享锁</h1>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232122441.png" alt="image-20240323212253082" style="zoom:67%;" /></p>
-<p><strong>共享锁是一种思想：</strong>
-可以有多个线程获取读锁，以共享的方式持有锁。和乐观锁、读写锁同义。</p>
-<p><strong>Java中用到的共享锁：</strong> ReentrantReadWriteLock。</p>
-<h1 id="独占锁">独占锁</h1>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232123222.png" alt="image-20240323212332680" style="zoom:67%;" /></p>
-<p><strong>独占锁是一种思想：</strong>
-只能有一个线程获取锁，以独占的方式持有锁。和悲观锁、互斥锁同义。</p>
-<p><strong>Java中用到的独占锁：</strong> synchronized，ReentrantLock</p>
-<h1 id="重量级锁">重量级锁</h1>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232124347.png" alt="image-20240323212424987" style="zoom:67%;" /></p>
-<p><strong>重量级锁是一种称谓：</strong>
-synchronized是通过对象内部的一个叫做监视器锁（monitor）来实现的，监视器锁本身依赖底层的操作系统的
-Mutex
-Lock来实现。操作系统实现线程的切换需要从用户态切换到核心态，成本非常高。这种依赖于操作系统
-Mutex
-Lock来实现的锁称为重量级锁。为了优化synchonized，引入了轻量级锁，偏向锁。</p>
-<p><strong>Java中的重量级锁：</strong> synchronized</p>
-<h1 id="轻量级锁">轻量级锁</h1>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232125738.png" alt="image-20240323212543336" style="zoom:67%;" /></p>
-<p><strong>轻量级锁是JDK6时加入的一种锁优化机制：</strong>
-轻量级锁是在无竞争的情况下使用CAS操作去消除同步使用的互斥量。轻量级是相对于使用操作系统互斥量来实现的重量级锁而言的。轻量级锁在没有多线程竞争的前提下，减少传统的重量级锁使用操作系统互斥量产生的性能消耗。如果出现两条以上的线程争用同一个锁的情况，那轻量级锁将不会有效，必须膨胀为重量级锁。</p>
-<p><strong>优点：</strong>
-如果没有竞争，通过CAS操作成功避免了使用互斥量的开销。</p>
-<p><strong>缺点：</strong>
-如果存在竞争，除了互斥量本身的开销外，还额外产生了CAS操作的开销，因此在有竞争的情况下，轻量级锁比传统的重量级锁更慢。</p>
-<h1 id="偏向锁">偏向锁</h1>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232127632.png" alt="image-20240323212744980" style="zoom:67%;" /></p>
-<p><strong>偏向锁是JDK6时加入的一种锁优化机制：</strong>
-在无竞争的情况下把整个同步都消除掉，连CAS操作都不去做了。偏是指偏心，它的意思是这个锁会偏向于第一个获得它的线程，如果在接下来的执行过程中，该锁一直没有被其他的线程获取，则持有偏向锁的线程将永远不需要再进行同步。持有偏向锁的线程以后每次进入这个锁相关的同步块时，虚拟机都可以不再进行任何同步操作（例如加锁、解锁及对Mark
-Word的更新操作等）。</p>
-<p><strong>优点：</strong>
-把整个同步都消除掉，连CAS操作都不去做了，优于轻量级锁。</p>
-<p><strong>缺点：</strong>
-如果程序中大多数的锁都总是被多个不同的线程访问，那偏向锁就是多余的。</p>
-<h1 id="分段锁">分段锁</h1>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232129274.png" alt="image-20240323212928660" style="zoom:67%;" /></p>
-<p><strong>分段锁是一种机制：</strong>
-最好的例子来说明分段锁是ConcurrentHashMap。<strong>ConcurrentHashMap原理：</strong>它内部细分了若干个小的
-HashMap，称之为段(Segment)。默认情况下一个 ConcurrentHashMap
-被进一步细分为 16 个段，既就是锁的并发度。如果需要在 ConcurrentHashMap
-添加一项key-value，并不是将整个 HashMap 加锁，而是首先根据 hashcode
-得到该key-value应该存放在哪个段中，然后对该段加锁，并完成 put
-操作。在多线程环境中，如果多个线程同时进行put操作，只要被加入的key-value不存放在同一个段中，则线程间可以做到真正的并行。</p>
-<p><strong>线程安全：</strong>ConcurrentHashMap 是一个 Segment 数组，
-Segment 通过继承ReentrantLock
-来进行加锁，所以每次需要加锁的操作锁住的是一个 segment，这样只要保证每个
-Segment 是线程安全的，也就实现了全局的线程安全</p>
-<h1 id="锁粗化">锁粗化</h1>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232135180.png" alt="image-20240323213547009" style="zoom:67%;" /></p>
-<p><strong>锁粗化是一种优化技术：</strong>
-如果一系列的连续操作都对同一个对象反复加锁和解锁，甚至加锁操作都是出现在循环体体之中，就算真的没有线程竞争，频繁地进行互斥同步操作将会导致不必要的性能损耗，所以就采取了一种方案：把加锁的范围扩展（粗化）到整个操作序列的外部，这样加锁解锁的频率就会大大降低，从而减少了性能损耗。</p>
-<h2 id="锁消除">锁消除</h2>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232136997.png" alt="image-20240323213626287" style="zoom:67%;" /></p>
-<p><strong>锁消除是一种优化技术：</strong>
-就是把锁干掉。当Java虚拟机运行时发现有些共享数据不会被线程竞争时就可以进行锁消除。</p>
-<p>那如何判断共享数据不会被线程竞争？</p>
-<p>利用逃逸分析技术：分析对象的作用域，如果对象在A方法中定义后，被作为参数传递到B方法中，则称为方法逃逸；如果被其他线程访问，则称为线程逃逸。</p>
-<p>在堆上的某个数据不会逃逸出去被其他线程访问到，就可以把它当作栈上数据对待，认为它是线程私有的，同步加锁就不需要了。</p>
-]]></content>
-      <categories>
-        <category>Java八股</category>
-        <category>并发</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>八股</tag>
-        <tag>并发</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>2023美赛经验分享</title>
     <url>/2023/02/23/2023/2023%E7%BE%8E%E8%B5%9B%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/</url>
     <content><![CDATA[<blockquote>
@@ -694,6 +546,12 @@ alt="Dark skin tone of Quickdraw" /></a></td>
       </tags>
   </entry>
   <entry>
+    <title>第一篇博客</title>
+    <url>/2023/01/29/2023/hello-world/</url>
+    <content><![CDATA[<p>欢迎来到我的博客！</p>
+]]></content>
+  </entry>
+  <entry>
     <title>LATEX公式使用</title>
     <url>/2023/09/15/2023/LATEX%E5%85%AC%E5%BC%8F%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<blockquote>
@@ -837,6 +695,47 @@ R18不允许×</p>
       </tags>
   </entry>
   <entry>
+    <title>二叉树遍历简单做法</title>
+    <url>/2023/02/09/2023/%E4%BA%8C%E5%8F%89%E6%A0%91%E9%81%8D%E5%8E%86%E7%AE%80%E5%8D%95%E5%81%9A%E6%B3%95/</url>
+    <content><![CDATA[<blockquote>
+<p>看王道数据结构考研复习有感</p>
+</blockquote>
+<span id="more"></span>
+<h1 id="问题">问题</h1>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/%E4%BA%8C%E5%8F%89%E6%A0%91.PNG" alt="二叉树" style="zoom:33%;" /></p>
+<p>给出如图所示二叉树，请你分别对其进行前序、中序、后序遍历并给出遍历结果。</p>
+<h1 id="解答">解答</h1>
+<p>这里我们除了可以用编程思想一步一步进行遍历，还有一种更为简单快速的方法，这里我称它画图法。</p>
+<h2 id="步骤一">步骤一</h2>
+<p>我们先在每个结点旁画上小圆点，这里我们以前序遍历为例，在结点左侧画上小圆点。（中序遍历在下侧，后序遍历在右侧）</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/%E5%89%8D%E5%BA%8F.PNG" alt="前序" style="zoom:33%;" /></p>
+<h2 id="步骤二">步骤二</h2>
+<p>以根节点上方为起点，从左侧贴着二叉树画线穿过小圆点，绕一周回到起点。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/%E5%89%8D%E5%BA%8F2.PNG" alt="前序2" style="zoom:33%;" /></p>
+<h2 id="步骤三">步骤三</h2>
+<p>穿过小圆点的先后顺序便是遍历的结果。 这次遍历的结果为：</p>
+<center>
+<font color=Tomato size=6>前序：ABDECFHG</font>
+</center>
+<p>这样我们也能得到中序和后序遍历的结果了：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/%E4%B8%AD%E5%BA%8F.PNG" alt="中序" style="zoom:33%;" /></p>
+<center>
+<font color=Tomato size=6>中序：DBEAFHCG</font>
+</center>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/%E5%90%8E%E5%BA%8F.PNG" alt="后序" style="zoom:33%;" /></p>
+<center>
+<font color=Tomato size=6>后序：DEBHFGCA</font>
+</center>
+]]></content>
+      <categories>
+        <category>学科</category>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>关于2023暑假</title>
     <url>/2023/09/15/2023/%E5%85%B3%E4%BA%8E2023%E6%9A%91%E5%81%87/</url>
     <content><![CDATA[<blockquote>
@@ -884,53 +783,6 @@ R18不允许×</p>
       </tags>
   </entry>
   <entry>
-    <title>第一篇博客</title>
-    <url>/2023/01/29/2023/hello-world/</url>
-    <content><![CDATA[<p>欢迎来到我的博客！</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>二叉树遍历简单做法</title>
-    <url>/2023/02/09/2023/%E4%BA%8C%E5%8F%89%E6%A0%91%E9%81%8D%E5%8E%86%E7%AE%80%E5%8D%95%E5%81%9A%E6%B3%95/</url>
-    <content><![CDATA[<blockquote>
-<p>看王道数据结构考研复习有感</p>
-</blockquote>
-<span id="more"></span>
-<h1 id="问题">问题</h1>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/%E4%BA%8C%E5%8F%89%E6%A0%91.PNG" alt="二叉树" style="zoom:33%;" /></p>
-<p>给出如图所示二叉树，请你分别对其进行前序、中序、后序遍历并给出遍历结果。</p>
-<h1 id="解答">解答</h1>
-<p>这里我们除了可以用编程思想一步一步进行遍历，还有一种更为简单快速的方法，这里我称它画图法。</p>
-<h2 id="步骤一">步骤一</h2>
-<p>我们先在每个结点旁画上小圆点，这里我们以前序遍历为例，在结点左侧画上小圆点。（中序遍历在下侧，后序遍历在右侧）</p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/%E5%89%8D%E5%BA%8F.PNG" alt="前序" style="zoom:33%;" /></p>
-<h2 id="步骤二">步骤二</h2>
-<p>以根节点上方为起点，从左侧贴着二叉树画线穿过小圆点，绕一周回到起点。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/%E5%89%8D%E5%BA%8F2.PNG" alt="前序2" style="zoom:33%;" /></p>
-<h2 id="步骤三">步骤三</h2>
-<p>穿过小圆点的先后顺序便是遍历的结果。 这次遍历的结果为：</p>
-<center>
-<font color=Tomato size=6>前序：ABDECFHG</font>
-</center>
-<p>这样我们也能得到中序和后序遍历的结果了：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/%E4%B8%AD%E5%BA%8F.PNG" alt="中序" style="zoom:33%;" /></p>
-<center>
-<font color=Tomato size=6>中序：DBEAFHCG</font>
-</center>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/%E5%90%8E%E5%BA%8F.PNG" alt="后序" style="zoom:33%;" /></p>
-<center>
-<font color=Tomato size=6>后序：DEBHFGCA</font>
-</center>
-]]></content>
-      <categories>
-        <category>学科</category>
-        <category>数据结构</category>
-      </categories>
-      <tags>
-        <tag>数据结构</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>美赛O奖论文研读有感</title>
     <url>/2023/02/11/2023/%E7%BE%8E%E8%B5%9BO%E5%A5%96%E8%AE%BA%E6%96%87%E7%A0%94%E8%AF%BB%E6%9C%89%E6%84%9F/</url>
     <content><![CDATA[<blockquote>
@@ -958,6 +810,50 @@ R18不允许×</p>
       <tags>
         <tag>美赛</tag>
         <tag>数学建模</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>重拾博客</title>
+    <url>/2023/09/03/2023/%E9%87%8D%E6%8B%BE%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<blockquote>
+<p>经过一个学期重拾个人博客</p>
+</blockquote>
+<span id="more"></span>
+<h1 id="前言">前言</h1>
+<p>在2023年暑假的时候我创建了自己的个人博客，通过github
+pages使用Hexo框架加上butterfly主题，荒废了一个学期，现在决定重新填起这个坑。</p>
+<h1 id="经过">经过</h1>
+<p>在寒假发了几个博客后，发现使用markdown写博客加入图片时不能做到可视化，而且当时还不知道图床这个东西，所以图片什么的都存到了本地，管理和存储起来十分麻烦，还给网站增加流量负载，所以弃坑了。</p>
+<p>再后来我在CSDN上发现了南邮的一个学长的博客，名叫<a
+href="https://wonzwang.blog.csdn.net/?type=blog">Wonz</a>，在他的博客中我学到了很多，也从他的友链中知道了很多学长，看着他们的博客，我也想重拾自己的坑了。</p>
+<p>有时候我也想在有些触动的时候将自己的想法记录下来，但奈何自己太懒，在这个暑假我去了一个单位实习，在实习的过程中我渐渐可以熟练地使用git，也在实习的过程中产生越来越多的想法，现在实习结束了，也想总结一下，慢慢填补这个坑吧。</p>
+<h1 id="准备">准备</h1>
+<p>之前为了网站看起来炫酷一点，我就选择了butterfly这个主题，不过这样的代价是图片太多了，而且不够简洁，过于花里胡哨，这样对网站的加载速度也有影响，也不好将注意力放在写作上。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/IMG_3840.JPG" alt="IMG_3840" style="zoom: 33%;" /></p>
+<p>所以我换了个新的主题——<strong>Next主题</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/image-20230903171120400.png" alt="image-20230903171120400" style="zoom: 33%;" /></p>
+<p>这个主题我是看的<a
+href="https://wonz.wang/">Wonz</a>学长的个人博客在用的，十分简洁，内容清晰明了，我在暑假也看到过一段话：</p>
+<blockquote>
+<p>技术博客不需要弄得太花里胡哨，简单清晰才是王道。</p>
+</blockquote>
+<p>我看见他置顶博客的描述：</p>
+<blockquote>
+<p>阮一峰大神曾经说过: 喜欢写 Blog 的人, 会经历 3 个阶段。</p>
+<p>第一阶段，刚接触 Blog，觉得很新鲜，试着选择一个免费空间来写。
+第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。
+第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。</p>
+</blockquote>
+<p>我对这话深有感触，本来我也在想要不要自己搞个服务器部署博客，发现根本没必要，还不安全，有github就很方便。</p>
+<h1 id="展望">展望</h1>
+<p>希望接下来能静下心来，将自己的所见所想记录下来，多输出些技术博客，提升自己的竞争力吧。</p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
@@ -1077,152 +973,6 @@ href="https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/">Leet
         <tag>刷题</tag>
         <tag>解题技巧</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>重拾博客</title>
-    <url>/2023/09/03/2023/%E9%87%8D%E6%8B%BE%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<blockquote>
-<p>经过一个学期重拾个人博客</p>
-</blockquote>
-<span id="more"></span>
-<h1 id="前言">前言</h1>
-<p>在2023年暑假的时候我创建了自己的个人博客，通过github
-pages使用Hexo框架加上butterfly主题，荒废了一个学期，现在决定重新填起这个坑。</p>
-<h1 id="经过">经过</h1>
-<p>在寒假发了几个博客后，发现使用markdown写博客加入图片时不能做到可视化，而且当时还不知道图床这个东西，所以图片什么的都存到了本地，管理和存储起来十分麻烦，还给网站增加流量负载，所以弃坑了。</p>
-<p>再后来我在CSDN上发现了南邮的一个学长的博客，名叫<a
-href="https://wonzwang.blog.csdn.net/?type=blog">Wonz</a>，在他的博客中我学到了很多，也从他的友链中知道了很多学长，看着他们的博客，我也想重拾自己的坑了。</p>
-<p>有时候我也想在有些触动的时候将自己的想法记录下来，但奈何自己太懒，在这个暑假我去了一个单位实习，在实习的过程中我渐渐可以熟练地使用git，也在实习的过程中产生越来越多的想法，现在实习结束了，也想总结一下，慢慢填补这个坑吧。</p>
-<h1 id="准备">准备</h1>
-<p>之前为了网站看起来炫酷一点，我就选择了butterfly这个主题，不过这样的代价是图片太多了，而且不够简洁，过于花里胡哨，这样对网站的加载速度也有影响，也不好将注意力放在写作上。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/IMG_3840.JPG" alt="IMG_3840" style="zoom: 33%;" /></p>
-<p>所以我换了个新的主题——<strong>Next主题</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/image-20230903171120400.png" alt="image-20230903171120400" style="zoom: 33%;" /></p>
-<p>这个主题我是看的<a
-href="https://wonz.wang/">Wonz</a>学长的个人博客在用的，十分简洁，内容清晰明了，我在暑假也看到过一段话：</p>
-<blockquote>
-<p>技术博客不需要弄得太花里胡哨，简单清晰才是王道。</p>
-</blockquote>
-<p>我看见他置顶博客的描述：</p>
-<blockquote>
-<p>阮一峰大神曾经说过: 喜欢写 Blog 的人, 会经历 3 个阶段。</p>
-<p>第一阶段，刚接触 Blog，觉得很新鲜，试着选择一个免费空间来写。
-第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。
-第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。</p>
-</blockquote>
-<p>我对这话深有感触，本来我也在想要不要自己搞个服务器部署博客，发现根本没必要，还不安全，有github就很方便。</p>
-<h1 id="展望">展望</h1>
-<p>希望接下来能静下心来，将自己的所见所想记录下来，多输出些技术博客，提升自己的竞争力吧。</p>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>博客</tag>
-        <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java创建线程的方式</title>
-    <url>/2024/03/23/Java/%E5%B9%B6%E5%8F%91/Java%E5%88%9B%E5%BB%BA%E7%BA%BF%E7%A8%8B%E7%9A%84%E6%96%B9%E5%BC%8F/</url>
-    <content><![CDATA[<blockquote>
-<p>一些创建线程的方式</p>
-</blockquote>
-<span id="more"></span>
-<h1 id="如何创建线程">如何创建线程</h1>
-<p>一般来说，创建线程有很多种方式，例如继承<code>Thread</code>类、实现<code>Runnable</code>接口、实现<code>Callable</code>接口、使用线程池、使用<code>CompletableFuture</code>类等等。</p>
-<p>不过，这些方式其实并没有真正创建出线程。准确点来说，这些都属于是在
-Java 代码中使用多线程的方法。</p>
-<p>严格来说，Java
-就只有一种方式可以创建线程，那就是通过<code>new Thread().start()</code>创建。不管是哪种方式，最终还是依赖于<code>new Thread().start()</code>。</p>
-<h2 id="继承tread类">继承Tread类</h2>
-<p>这是最普通的方式，继承<code>Thread</code>类，重写<code>run</code>方法，如下：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ExtendsThread</span> <span class="keyword">extends</span> <span class="title class_">Thread</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;1......&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">ExtendsThread</span>().start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="实现runnable接口">实现Runnable接口</h3>
-<p>这也是一种常见的方式，实现<code>Runnable</code>接口并重写<code>run</code>方法，如下：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ImplementsRunnable</span> <span class="keyword">implements</span> <span class="title class_">Runnable</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;2......&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">ImplementsRunnable</span> <span class="variable">runnable</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ImplementsRunnable</span>();</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">Thread</span>(runnable).start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>与继承<code>Thread</code>接口不同的是，Java当中是单继承，当一个类继承了<code>Thread</code>类后就无法再继承其他的类，通过实现<code>Runnable</code>接口并重写<code>run</code>方法，可以再实现继承其他类。</p>
-<h3 id="实现callable接口">实现Callable接口</h3>
-<p>和上一种方式类似，这里需要去重写<code>Callable</code>接口的<code>call</code>方法，并配合<code>FutureTask</code>使用，只不过这种方式可以使用<code>get()</code>方法拿到线程执行完的返回值，如下：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ImplementsCallable</span> <span class="keyword">implements</span> <span class="title class_">Callable</span>&lt;String&gt; &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">call</span><span class="params">()</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;3......&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Justin&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        <span class="type">ImplementsCallable</span> <span class="variable">callable</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ImplementsCallable</span>();</span><br><span class="line">        FutureTask&lt;String&gt; futureTask = <span class="keyword">new</span> <span class="title class_">FutureTask</span>&lt;&gt;(callable);</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">Thread</span>(futureTask).start();</span><br><span class="line">        System.out.println(futureTask.get());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="使用executorservice线程池">使用ExecutorService线程池</h3>
-<p>这种属于进阶方式，可以通过<code>Executors</code>创建线程池，也可以自定义线程池，如下：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">UseExecutorService</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">ExecutorService</span> <span class="variable">poolA</span> <span class="operator">=</span> Executors.newFixedThreadPool(<span class="number">2</span>);</span><br><span class="line">        poolA.execute(()-&gt;&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;4A......&quot;</span>);</span><br><span class="line">        &#125;);</span><br><span class="line">        poolA.shutdown();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 又或者自定义线程池</span></span><br><span class="line">        <span class="type">ThreadPoolExecutor</span> <span class="variable">poolB</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ThreadPoolExecutor</span>(<span class="number">2</span>, <span class="number">3</span>, <span class="number">0</span>,</span><br><span class="line">                TimeUnit.SECONDS, <span class="keyword">new</span> <span class="title class_">LinkedBlockingQueue</span>&lt;Runnable&gt;(<span class="number">3</span>),</span><br><span class="line">                Executors.defaultThreadFactory(), <span class="keyword">new</span> <span class="title class_">ThreadPoolExecutor</span>.AbortPolicy());</span><br><span class="line">        poolB.submit(()-&gt;&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;4B......&quot;</span>);</span><br><span class="line">        &#125;);</span><br><span class="line">        poolB.shutdown();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="注意点">注意点</h2>
-<p>创建线程的方式十分多样，最少都能有上面的四种答案，那这真的对吗？可以说对，但严格意义上来说，又不对。</p>
-<p>抛开后面一些先不谈，咱们就聊最开始的三种：“继承<code>Thread</code>类、实现<code>Runnable</code>接口、实现<code>Callable</code>接口”，这应该是广为人知的答案。</p>
-<p>那么此时来看个例子：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ImplementsRunnable</span> <span class="keyword">implements</span> <span class="title class_">Runnable</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(Thread.currentThread().getName()</span><br><span class="line">                + <span class="string">&quot;：小猫爱吃鱼&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这里定义了一个类，实现了<code>Runnable</code>接口并重写了<code>run</code>方法，按前面的说法，这种方式是不是创建了一条线程？答案是<code>Yes</code>，可问题来了，请你告诉我，该如何启动这条所谓的“线程”呢？</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="type">ImplementsRunnable</span> <span class="variable">runnable</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ImplementsRunnable</span>();</span><br><span class="line">    runnable.run();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>难道像上面这样嘛？来看看运行结果：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">main：小猫爱吃鱼</span><br></pre></td></tr></table></figure>
-<p>结果很显然，打印出的线程名字为：<code>main</code>，代表目前是主线程在运行，和调用普通方法没任何区别，那究竟该如何创建一条线程呀？要这样做：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="type">ImplementsRunnable</span> <span class="variable">runnable</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ImplementsRunnable</span>();</span><br><span class="line">    <span class="keyword">new</span> <span class="title class_">Thread</span>(runnable).start();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>先<code>new</code>出<code>Runnable</code>对象，接着再<code>new</code>一个<code>Thread</code>对象，然后把<code>Runnable</code>丢给<code>Thread</code>，接着调用<code>start()</code>方法，此时才能真正意义上创建一条线程，运行结果如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Thread-0：小猫爱吃鱼</span><br></pre></td></tr></table></figure>
-<p>此时线程名字变成了<code>Thread-0</code>，这意味着输出“小猫爱吃鱼”这句话的代码，并不是<code>main</code>线程在执行了，实现了<code>Runnable</code>接口的<code>ImplementsRunnable</code>类，并不能被称为一条线程，包括所谓的<code>Callable、FutureTask……</code>，都不能创建出真正的线程。</p>
-<p>换到前面所提出的三种方式中，只有继承<code>Thread</code>类，才能真正创建一条线程，如下：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ExtendsThread</span> <span class="keyword">extends</span> <span class="title class_">Thread</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(Thread.currentThread().getName()</span><br><span class="line">                + <span class="string">&quot;：小猫爱吃鱼&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">ExtendsThread</span>().start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 运行结果：</span></span><br><span class="line"><span class="comment">//      Thread-0：竹子爱熊猫</span></span><br></pre></td></tr></table></figure>
-<p>因为当你用一个类，继承<code>Thread</code>类时，它内部所有的方法，都会被继承过来，所以当前类可以直接调用<code>start()</code>方法启动，更具体点来说，<strong>在<code>Java</code>中，创建线程的方式就只有一种：调用<code>Thread.start()</code>方法</strong>！只有这种形式，才能在真正意义上创建一条线程！</p>
-]]></content>
-      <categories>
-        <category>Java八股</category>
-        <category>并发</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>八股</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>volatile关键字</title>
-    <url>/2024/03/23/Java/%E5%B9%B6%E5%8F%91/volatile%E5%85%B3%E9%94%AE%E5%AD%97/</url>
-    <content><![CDATA[<blockquote>
-<p>关于volatile关键字的一些问题</p>
-</blockquote>
-<span id="more"></span>
-<h1 id="java内存模型是什么">Java内存模型是什么</h1>
-<p>如下面两张图所示（这里JavaGuide画的图就很好，直接拿来了，侵删），变量是放在主存中的，每个线程都有自己的工作线程（本地内存），线程运行时将主存中的数据复制到工作内存当中，对数据的任何操作都是基于自己的工作内存进行的，之后再将更新后的数据刷新到主存。</p>
-<p><strong>当前线程不能直接操作主存和其他线程工作内存中的数据。</strong></p>
-<figure>
-<img
-src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232024135.png"
-alt="JMM(Java 内存模型)" />
-<figcaption aria-hidden="true">JMM(Java 内存模型)</figcaption>
-</figure>
-<figure>
-<img
-src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232024275.png"
-alt="JMM(Java 内存模型)强制在主存中进行读取" />
-<figcaption aria-hidden="true">JMM(Java
-内存模型)强制在主存中进行读取</figcaption>
-</figure>
-<h1 id="volatile关键字的作用">volatile关键字的作用</h1>
-<p><strong>volatile关键字保证了变量的立即可见性</strong></p>
-<p><code>线程A</code>与<code>线程B</code>并发运行时可能出现这种情况，如果<code>线程A</code>修改了工作内存中的数据且还未同步到主存，那么<code>线程B</code>读取的主存中的数据就不是最新值。当变量被volatile关键字修饰后，任何线程对它的写操作都会强制将工作内存中的最新值刷新到主存，同时使其他线程工作内存中的变量缓存无效，这样其他线程使用缓存时就会重新到主存中读取最新值。</p>
-<p>即如果我们将变量声明为 <strong><code>volatile</code></strong>
-，这就指示
-JVM，这个变量是共享且不稳定的，每次使用它都到主存中进行读取。</p>
-<p><strong><code>volatile</code>
-关键字能保证数据的可见性，但不能保证数据的原子性。<code>synchronized</code>
-关键字两者都能保证。</strong></p>
-]]></content>
-      <categories>
-        <category>Java八股</category>
-        <category>并发</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>八股</tag>
-        <tag>并发</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>synchronized关键字</title>
-    <url>/2024/03/23/Java/%E5%B9%B6%E5%8F%91/synchronized%E5%85%B3%E9%94%AE%E5%AD%97/</url>
-    <content><![CDATA[
-]]></content>
   </entry>
   <entry>
     <title>Docker创建Ubantu容器</title>
@@ -1582,6 +1332,220 @@ href="https://www.cnblogs.com/luo-c/p/15831441.html">https://www.cnblogs.com/luo
       <tags>
         <tag>Docker</tag>
         <tag>Hadoop</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>凸函数（Convex Function）</title>
+    <url>/2023/09/21/2023/%E6%9C%80%E4%BC%98%E5%8C%96/%E5%87%B8%E5%87%BD%E6%95%B0%EF%BC%88Convex-Function%EF%BC%89/</url>
+    <content><![CDATA[<blockquote>
+<p>第三课：凸函数</p>
+</blockquote>
+<span id="more"></span>
+<h1 id="凸函数的定义">凸函数的定义</h1>
+<h2 id="定义1">定义1</h2>
+<p>对于一个函数<span
+class="math inline">\(f:\mathbb{R}^n\rightarrow\mathbb{R}\)</span>，如果<span
+class="math inline">\(domf\)</span>为凸集，且： <span
+class="math display">\[
+f(\theta x+(1-\theta)y)\le\theta f(x)+(1-\theta)f(y)
+\]</span> 对所有的<span class="math inline">\(x,y\in domf,0\le\theta\le
+1\)</span>成立，则<span
+class="math inline">\(f\)</span>为（下）凸函数</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211258794.png" alt="image-20230921125358565" style="zoom:67%;" /></p>
+<blockquote>
+<p>连接凸函数的图像上任意两点的线段都在函数图像上方</p>
+</blockquote>
+<ul>
+<li><p><span class="math inline">\(f\)</span>是凸函数，则<span
+class="math inline">\(-f\)</span>是凹函数</p></li>
+<li><p>如果<span class="math inline">\(dom f\)</span>是凸集，且 <span
+class="math display">\[
+f(\theta x+(1-\theta)y)&lt;\theta f(x)+(1-\theta)f(y)
+\]</span></p></li>
+</ul>
+<blockquote>
+<p>对所有的<span class="math inline">\(x,y\in domf,x\neq y,0&lt;\theta
+&lt;1\)</span>成立，则<span
+class="math inline">\(f\)</span>是严格凸函数</p>
+</blockquote>
+<h2 id="定义2">定义2</h2>
+<ul>
+<li><p><span
+class="math inline">\(f\)</span>是凸函数的充分必要条件为：<span
+class="math inline">\(\forall x,v\in
+domf,g(t)=f(x+tv)\)</span>是凸函数</p></li>
+<li><p>证明</p></li>
+</ul>
+<h2 id="定义3一阶条件">定义3（一阶条件）</h2>
+<ul>
+<li><p>可微：如果<span class="math inline">\(dom
+f\)</span>为开集，且函数的导数： <span class="math display">\[
+\nabla f(x)=(\frac{\partial f(x)}{\partial x_1},\frac{\partial
+f(x)}{\partial x_2},···,\frac{\partial f(x)}{\partial x_n})
+\]</span> 对所有定义域中的值都存在，则函数<span
+class="math inline">\(f\)</span>可微</p></li>
+<li><p>一阶条件：对于可微函数<span
+class="math inline">\(f\)</span>，如果<span
+class="math inline">\(domf\)</span>为凸集，则<span
+class="math inline">\(f\)</span>为凸函数当且仅当： <span
+class="math display">\[
+f(y)\ge f(x)+\nabla f(x)^T (y-x)\quad \text{for all }x,y\in domf
+\]</span></p></li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211258727.png" alt="image-20230921125426877" style="zoom:67%;" /></p>
+<blockquote>
+<p>意义：凸函数在局部的一阶泰勒展开是对函数值的低估</p>
+</blockquote>
+<h3 id="一阶条件的证明">一阶条件的证明</h3>
+<ul>
+<li><p>=&gt;</p>
+<p>f</p></li>
+<li><p>&lt;=</p></li>
+</ul>
+<h2 id="定义4二阶条件">定义4（二阶条件）</h2>
+<ul>
+<li><p>二阶可微：如果<span
+class="math inline">\(domf\)</span>为开集，且函数的<span
+class="math inline">\(Hessian\)</span>矩阵满足<span
+class="math inline">\(\nabla^2 f(x)\in S^n\)</span> <span
+class="math display">\[
+\nabla^2 f(x)_{ij}=\frac{\partial^2 f(x)}{\partial x_i \partial
+x_j},i,j=1,...,.
+\]</span> 对所有定义域中的值都存在，则函数<span
+class="math inline">\(f\)</span>二阶可微</p></li>
+<li><p>二阶条件：对于二阶可微函数<span
+class="math inline">\(f\)</span>，如果定义域为凸集</p>
+<ul>
+<li><p><span class="math inline">\(f\)</span>为凸函数当且仅当： <span
+class="math display">\[
+\nabla^2 f(x)\succeq 0\quad \text{for all }x\in domf
+\]</span></p></li>
+<li><p>如果对所有定义域内的<span
+class="math inline">\(x\)</span>满足<span class="math inline">\(\nabla^2
+f(x)\succ 0\)</span>，则<span
+class="math inline">\(f\)</span>为严格凸函数</p></li>
+</ul></li>
+</ul>
+<h1 id="常见的凸函数">常见的凸函数</h1>
+<h2 id="一维空间举例">一维空间举例</h2>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211258649.png" alt="image-20230921125640656" style="zoom: 67%;" /></p>
+<h2 id="向量范数">向量范数</h2>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211258592.png" alt="image-20230921125652921" style="zoom: 67%;" /></p>
+<h2 id="多维空间举例">多维空间举例</h2>
+<h3 id="多维向量rn">多维向量<span
+class="math inline">\(R^n\)</span></h3>
+<ul>
+<li>仿射函数：<span class="math inline">\(f(x)=a^Tx+b\)</span></li>
+<li>范数函数：<span
+class="math inline">\(\|x\|_p=(\sum_{i=1}^{n}|x_i|^p)^{\frac{1}{p}}\quad\text{for
+}p\ge1\)</span></li>
+<li>极大值函数：<span
+class="math inline">\(f(x)=\max\{x_1,...,x_n\},x\in R^m\)</span></li>
+<li><span class="math inline">\(L0\)</span>范数：<span
+class="math inline">\(x\)</span>中非零元素的个数</li>
+</ul>
+<h3 id="例二次函数">例：二次函数</h3>
+<ul>
+<li><p>二次函数：<span
+class="math inline">\(f(x)=\frac{1}{2}x^TPx+q^Tx+r,P\in S^n\)</span>
+<span class="math display">\[
+\nabla f(x)=Px+q,\quad\nabla^2f(x)=P
+\]</span> 当P为半正定矩阵<span class="math inline">\((P\succeq
+0)\)</span>时为凸函数</p></li>
+<li><p>最小二乘目标函数：<span
+class="math inline">\(f(x)=\|Ax-b\|^2_2\)</span> <span
+class="math display">\[
+\nabla f(x)=2A^T(Ax-b),\quad\nabla^2 f(x)=2A^TA
+\]</span> 对任意的<span
+class="math inline">\(A\)</span>都为凸函数</p></li>
+<li><p>二次函数比线性函数：<span
+class="math inline">\(f(x,y)=x^2/y\)</span>对所有的<span
+class="math inline">\(y&gt;0\)</span>都为凸函数</p></li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211258784.png" alt="image-20230921125739507" style="zoom:67%;" /></p>
+<h2 id="半正定矩阵的性质">半正定矩阵的性质</h2>
+<p>矩阵<strong>A</strong>为行列式，则存在以下性质：</p>
+<ul>
+<li><strong>A</strong>的特征值均为负的。</li>
+<li>存在n阶实矩阵<strong>C</strong>，使<span
+class="math inline">\(A=C^TC.\)</span></li>
+<li><strong>A</strong>的行列式是负的</li>
+</ul>
+<h1 id="保持凸性的操作">保持凸性的操作</h1>
+<h2
+id="验证个函数是否是凸函数的方法">验证⼀个函数是否是凸函数的方法</h2>
+<ol type="1">
+<li>根据3种定义</li>
+<li>验证函数是由多个相对简单的凸函数通过一些保持凸性的操作来得到</li>
+</ol>
+<h2 id="保持凸性的操作1非负加权和">保持凸性的操作1：非负加权和</h2>
+<ul>
+<li>命题：若<span
+class="math inline">\(f_1,...,f_m\)</span>为凸函数，则<span
+class="math inline">\(f=\sum^m_{i=1}w_if_i\)</span>为凸函数，<span
+class="math inline">\(w_i\ge0\)</span></li>
+<li>证明
+<ol type="1">
+<li>定义域是否为凸集</li>
+</ol></li>
+</ul>
+<h2 id="保持凸性的操作2仿射组合">保持凸性的操作2：仿射组合</h2>
+<ul>
+<li>命题：若<span class="math inline">\(f\)</span>为凸函数，则<span
+class="math inline">\(𝑓(𝐴𝑥+𝑏)\)</span>为凸函数</li>
+<li>证明</li>
+</ul>
+<h2 id="保持凸性的操作3最大化极大化">保持凸性的操作3：最大化/极大化</h2>
+<h3 id="最大化与极大化">最大化与极大化</h3>
+<ul>
+<li><p><span class="math inline">\(\max\)</span>：最大值</p></li>
+<li><p><span class="math inline">\(\sup\)</span>：上确界</p></li>
+<li><p>命题：若<span
+class="math inline">\(f_1,...,f_m\)</span>为凸函数，则<span
+class="math inline">\(f(x)=\max\{f_1(x),...,f_m(x)\}\)</span>为凸函数</p>
+<ul>
+<li>证明：</li>
+</ul></li>
+<li><p>命题：若<span class="math inline">\(f(x,y)\)</span>对所有<span
+class="math inline">\(y\in A\)</span>为关于<span
+class="math inline">\(x\)</span>的凸函数，则<span
+class="math inline">\(f(x)=\sup_{y\in A}f(x,y)\)</span>为凸函数</p></li>
+</ul>
+<h2
+id="保持凸性的操作4标量函数的组合">保持凸性的操作4：标量函数的组合</h2>
+<p>对于函数<span class="math inline">\(g:R^n\to R^k\)</span>与函数<span
+class="math inline">\(h:R^k\to R\)</span>，函数组合为<span
+class="math inline">\(f(x)=h(g(x))\)</span></p>
+<p>考虑<span class="math inline">\(n=k=1\)</span>的情况</p>
+<p><span class="math inline">\(f\)</span>为凸函数如果：<span
+class="math inline">\(\begin{cases}g是凸函数，h是凹函数，h递增\\g是凹函数，h是凸函数，h递减\end{cases}\)</span>
+<span class="math display">\[
+f&#39;&#39;(x)=h&#39;&#39;(g(x)g&#39;(x))^2+h&#39;(g(x))g&#39;&#39;(x).
+\]</span></p>
+<blockquote>
+<p>例：</p>
+<p><span class="math inline">\(\exp
+g(x)当g是凸函数时为凸函数\)</span></p>
+<p><span
+class="math inline">\(1/g(x)当g是凹函数且为正时为凸函数\)</span></p>
+</blockquote>
+<h1 id="共轭函数conjugate-function">共轭函数（conjugate function）</h1>
+<h2 id="函数f的共轭定义">函数<span
+class="math inline">\(f\)</span>的共轭定义</h2>
+<p><span class="math display">\[
+f^*(y)=\sup_{x\in domf}(y^Tx-f(x))
+\]</span></p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211700984.png" alt="image-20230921170043534" style="zoom:80%;" /></p>
+<blockquote>
+<p>性质：<span class="math inline">\(f^*(y)\)</span>一定为凸函数</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>最优化方法</category>
+      </categories>
+      <tags>
+        <tag>学科</tag>
+        <tag>最优化方法</tag>
       </tags>
   </entry>
   <entry>
@@ -2153,6 +2117,207 @@ class="math inline">\(\{x^k\}\)</span>如果迭代在有限步内终止，那么
       </tags>
   </entry>
   <entry>
+    <title>Java当中的各种锁</title>
+    <url>/2024/03/23/Java/%E5%B9%B6%E5%8F%91/Java%E5%BD%93%E4%B8%AD%E7%9A%84%E5%90%84%E7%A7%8D%E9%94%81/</url>
+    <content><![CDATA[<blockquote>
+<p>15种锁！</p>
+</blockquote>
+<span id="more"></span>
+<h1 id="乐观锁">乐观锁</h1>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232110652.png" alt="image-20240323210351234" style="zoom: 67%;" /></p>
+<p><strong>乐观锁是一种乐观思想</strong>，假定当前环境是读多写少，遇到并发写的概率比较低，读数据时认为别的线程不会正在进行修改（所以没有上锁）。写数据时，判断当前与期望值是否相同，如果相同则进行更新（更新期间加锁，保证是原子性的）。</p>
+<p>即假设数据修改不会造成冲突，在数据提交更新时才进行冲突检测。</p>
+<p><strong>Java中的乐观锁：</strong>
+CAS，比较并替换，比较当前值（主内存中的值），与预期值（当前线程中的值，主内存中值的一份拷贝）是否一样，一样则更新，否则继续进行CAS操作。</p>
+<p>如上图所示，可以同时进行读操作，读的时候其他线程不能进行写操作。</p>
+<h1 id="悲观锁">悲观锁</h1>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232110830.png" alt="image-20240323210903997" style="zoom: 67%;" /></p>
+<p><strong>悲观锁是一种悲观思想</strong>，即认为写多读少，遇到并发写的可能性高，每次去拿数据的时候都认为其他线程会修改，所以每次读写数据都会认为其他线程会修改，所以每次读写数据时都会上锁。其他线程想要读写这个数据时，会被这个线程block，直到这个线程释放锁然后其他线程获取到锁。</p>
+<p>即数据修改前，假设一定会发生冲突，先尝试为它加锁。</p>
+<p><strong>Java中的悲观锁：</strong>
+synchronized修饰的方法和方法块、ReentrantLock。</p>
+<p>如上图所示，只能有一个线程进行读操作或者写操作，其他线程的读写操作均不能进行。</p>
+<h1 id="自旋锁">自旋锁</h1>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232110895.png" alt="image-20240323211029664" style="zoom: 67%;" /></p>
+<p><strong>自旋锁是一种技术：</strong>
+为了让线程等待，我们只须让线程执行一个忙循环（自旋）。</p>
+<p>现在绝大多数的个人电脑和服务器都是多路（核）处理器系统，如果物理机器有一个以上的处理器或者处理器核心，能让两个或以上的线程同时并行执行，就可以让后面请求锁的那个线程“稍等一会”，但不放弃处理器的执行时间，看看持有锁的线程是否很快就会释放锁。</p>
+<p><strong>自旋锁的优点：</strong>
+避免了线程切换的开销。挂起线程和恢复线程的操作都需要转入内核态中完成，这些操作给Java虚拟机的并发性能带来了很大的压力。</p>
+<p><strong>自旋锁的缺点：</strong>
+占用处理器的时间，如果占用的时间很长，会白白消耗处理器资源，而不会做任何有价值的工作，带来性能的浪费。因此自旋等待的时间必须有一定的限度，如果自旋超过了限定的次数仍然没有成功获得锁，就应当使用传统的方式去挂起线程。</p>
+<p>自旋次数默认值：10次，可以使用参数<code>-XX:PreBlockSpin</code>来自行更改。</p>
+<p><strong>自适应自旋：</strong>
+自适应意味着自旋的时间不再是固定的，而是由前一次在同一个锁上的自旋时间及锁的拥有者的状态来决定的。有了自适应自旋，随着程序运行时间的增长及性能监控信息的不断完善，虚拟机对程序锁的状态预测就会越来越精准。</p>
+<p><strong>Java中的自旋锁：</strong>
+CAS操作中的比较操作失败后的自旋等待。</p>
+<h1 id="可重入锁">可重入锁</h1>
+<p><strong>可重入锁是一种技术：</strong>
+任意线程在获取到锁之后能够再次获取该锁而不会被锁所阻塞。</p>
+<p><strong>可重入锁的原理：</strong> 为每个锁关联一个计数器。</p>
+<ul>
+<li>首次获取锁：计数器置为1.</li>
+<li>再次获取锁：计数器加1</li>
+<li>释放锁：释放锁时，进行计数自减。计数器为0则代表锁被当前线程释放。</li>
+</ul>
+<p><strong>Java中的可重入锁：</strong>
+ReentrantLock、synchronized修饰的方法或代码段。</p>
+<p><strong>可重入锁的作用：</strong> 避免死锁。</p>
+<p><strong>面试题1：</strong>
+可重入锁如果加了两把，但是只释放了一把会出现什么问题？</p>
+<p>答：程序卡死，线程不能出来，也就是说我们申请了几把锁，就需要释放几把锁。</p>
+<p><strong>面试题2：</strong>
+如果只加了一把锁，释放两次会出现什么问题？</p>
+<p>答：会报错，java.lang.IllegalMonitorStateException。</p>
+<h1 id="读写锁">读写锁</h1>
+<p><strong>读写锁是一种技术：</strong>
+通过ReentrantReadWriteLock类来实现。为了提高性能， Java
+提供了读写锁，在读的地方使用读锁，在写的地方使用写锁，灵活控制，如果没有写锁的情况下，读是无阻塞的，在一定程度上提高了程序的执行效率。读写锁分为读锁和写锁，多个读锁不互斥，读锁与写锁互斥，这是由
+jvm 自己控制的。</p>
+<p><strong>读锁：</strong>
+允许多个线程获取读锁，同时访问同一个资源。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232116006.png" alt="image-20240323211616975" style="zoom:67%;" /></p>
+<p><strong>写锁：</strong>
+只允许一个线程获取写锁，不允许同时访问同一个资源。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232116455.png" alt="image-20240323211655063" style="zoom:67%;" /></p>
+<p><strong>Java中的读写锁：</strong>ReentrantReadWriteLock</p>
+<h1 id="公平锁">公平锁</h1>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232120587.png" alt="image-20240323211822932" style="zoom:67%;" /></p>
+<p><strong>公平锁是一种思想：</strong>
+多个线程竞争锁时直接进入队列排队，按照申请锁的顺序来获取锁，先到先得。在并发环境中，每个线程会先查看此锁维护的等待队列，如果当前等待队列为空，则占有锁，如果等待队列不为空，则加入到等待队列的末尾，按照FIFO的原则从队列中拿到线程，然后占有锁。</p>
+<h1 id="非公平锁">非公平锁</h1>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232121397.png" alt="image-20240323212125844" style="zoom:67%;" /></p>
+<p><strong>非公平锁是一种思想：</strong>
+多个线程竞争锁时，线程先尝试获取锁，如果获取不到，则再采用公平锁的方式，进入等待队列。多个线程获取锁的顺序，不是按照先到先得的顺序，有可能后申请锁的线程比先申请的线程优先获取锁。</p>
+<p><strong>优点：</strong> 非公平锁的性能高于公平锁。</p>
+<p><strong>缺点：</strong>
+有可能造成线程饥饿（某个线程很长一段时间获取不到锁）</p>
+<p><strong>Java中的非公平锁：</strong>synchronized是非公平锁，ReentrantLock通过构造函数指定该锁是公平的还是非公平的，默认是非公平的。</p>
+<h1 id="共享锁">共享锁</h1>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232122441.png" alt="image-20240323212253082" style="zoom:67%;" /></p>
+<p><strong>共享锁是一种思想：</strong>
+可以有多个线程获取读锁，以共享的方式持有锁。和乐观锁、读写锁同义。</p>
+<p><strong>Java中用到的共享锁：</strong> ReentrantReadWriteLock。</p>
+<h1 id="独占锁">独占锁</h1>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232123222.png" alt="image-20240323212332680" style="zoom:67%;" /></p>
+<p><strong>独占锁是一种思想：</strong>
+只能有一个线程获取锁，以独占的方式持有锁。和悲观锁、互斥锁同义。</p>
+<p><strong>Java中用到的独占锁：</strong> synchronized，ReentrantLock</p>
+<h1 id="重量级锁">重量级锁</h1>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232124347.png" alt="image-20240323212424987" style="zoom:67%;" /></p>
+<p><strong>重量级锁是一种称谓：</strong>
+synchronized是通过对象内部的一个叫做监视器锁（monitor）来实现的，监视器锁本身依赖底层的操作系统的
+Mutex
+Lock来实现。操作系统实现线程的切换需要从用户态切换到核心态，成本非常高。这种依赖于操作系统
+Mutex
+Lock来实现的锁称为重量级锁。为了优化synchonized，引入了轻量级锁，偏向锁。</p>
+<p><strong>Java中的重量级锁：</strong> synchronized</p>
+<h1 id="轻量级锁">轻量级锁</h1>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232125738.png" alt="image-20240323212543336" style="zoom:67%;" /></p>
+<p><strong>轻量级锁是JDK6时加入的一种锁优化机制：</strong>
+轻量级锁是在无竞争的情况下使用CAS操作去消除同步使用的互斥量。轻量级是相对于使用操作系统互斥量来实现的重量级锁而言的。轻量级锁在没有多线程竞争的前提下，减少传统的重量级锁使用操作系统互斥量产生的性能消耗。如果出现两条以上的线程争用同一个锁的情况，那轻量级锁将不会有效，必须膨胀为重量级锁。</p>
+<p><strong>优点：</strong>
+如果没有竞争，通过CAS操作成功避免了使用互斥量的开销。</p>
+<p><strong>缺点：</strong>
+如果存在竞争，除了互斥量本身的开销外，还额外产生了CAS操作的开销，因此在有竞争的情况下，轻量级锁比传统的重量级锁更慢。</p>
+<h1 id="偏向锁">偏向锁</h1>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232127632.png" alt="image-20240323212744980" style="zoom:67%;" /></p>
+<p><strong>偏向锁是JDK6时加入的一种锁优化机制：</strong>
+在无竞争的情况下把整个同步都消除掉，连CAS操作都不去做了。偏是指偏心，它的意思是这个锁会偏向于第一个获得它的线程，如果在接下来的执行过程中，该锁一直没有被其他的线程获取，则持有偏向锁的线程将永远不需要再进行同步。持有偏向锁的线程以后每次进入这个锁相关的同步块时，虚拟机都可以不再进行任何同步操作（例如加锁、解锁及对Mark
+Word的更新操作等）。</p>
+<p><strong>优点：</strong>
+把整个同步都消除掉，连CAS操作都不去做了，优于轻量级锁。</p>
+<p><strong>缺点：</strong>
+如果程序中大多数的锁都总是被多个不同的线程访问，那偏向锁就是多余的。</p>
+<h1 id="分段锁">分段锁</h1>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232129274.png" alt="image-20240323212928660" style="zoom:67%;" /></p>
+<p><strong>分段锁是一种机制：</strong>
+最好的例子来说明分段锁是ConcurrentHashMap。<strong>ConcurrentHashMap原理：</strong>它内部细分了若干个小的
+HashMap，称之为段(Segment)。默认情况下一个 ConcurrentHashMap
+被进一步细分为 16 个段，既就是锁的并发度。如果需要在 ConcurrentHashMap
+添加一项key-value，并不是将整个 HashMap 加锁，而是首先根据 hashcode
+得到该key-value应该存放在哪个段中，然后对该段加锁，并完成 put
+操作。在多线程环境中，如果多个线程同时进行put操作，只要被加入的key-value不存放在同一个段中，则线程间可以做到真正的并行。</p>
+<p><strong>线程安全：</strong>ConcurrentHashMap 是一个 Segment 数组，
+Segment 通过继承ReentrantLock
+来进行加锁，所以每次需要加锁的操作锁住的是一个 segment，这样只要保证每个
+Segment 是线程安全的，也就实现了全局的线程安全</p>
+<h1 id="锁粗化">锁粗化</h1>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232135180.png" alt="image-20240323213547009" style="zoom:67%;" /></p>
+<p><strong>锁粗化是一种优化技术：</strong>
+如果一系列的连续操作都对同一个对象反复加锁和解锁，甚至加锁操作都是出现在循环体体之中，就算真的没有线程竞争，频繁地进行互斥同步操作将会导致不必要的性能损耗，所以就采取了一种方案：把加锁的范围扩展（粗化）到整个操作序列的外部，这样加锁解锁的频率就会大大降低，从而减少了性能损耗。</p>
+<h2 id="锁消除">锁消除</h2>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232136997.png" alt="image-20240323213626287" style="zoom:67%;" /></p>
+<p><strong>锁消除是一种优化技术：</strong>
+就是把锁干掉。当Java虚拟机运行时发现有些共享数据不会被线程竞争时就可以进行锁消除。</p>
+<p>那如何判断共享数据不会被线程竞争？</p>
+<p>利用逃逸分析技术：分析对象的作用域，如果对象在A方法中定义后，被作为参数传递到B方法中，则称为方法逃逸；如果被其他线程访问，则称为线程逃逸。</p>
+<p>在堆上的某个数据不会逃逸出去被其他线程访问到，就可以把它当作栈上数据对待，认为它是线程私有的，同步加锁就不需要了。</p>
+]]></content>
+      <categories>
+        <category>Java八股</category>
+        <category>并发</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>八股</tag>
+        <tag>并发</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java创建线程的方式</title>
+    <url>/2024/03/23/Java/%E5%B9%B6%E5%8F%91/Java%E5%88%9B%E5%BB%BA%E7%BA%BF%E7%A8%8B%E7%9A%84%E6%96%B9%E5%BC%8F/</url>
+    <content><![CDATA[<blockquote>
+<p>一些创建线程的方式</p>
+</blockquote>
+<span id="more"></span>
+<h1 id="如何创建线程">如何创建线程</h1>
+<p>一般来说，创建线程有很多种方式，例如继承<code>Thread</code>类、实现<code>Runnable</code>接口、实现<code>Callable</code>接口、使用线程池、使用<code>CompletableFuture</code>类等等。</p>
+<p>不过，这些方式其实并没有真正创建出线程。准确点来说，这些都属于是在
+Java 代码中使用多线程的方法。</p>
+<p>严格来说，Java
+就只有一种方式可以创建线程，那就是通过<code>new Thread().start()</code>创建。不管是哪种方式，最终还是依赖于<code>new Thread().start()</code>。</p>
+<h2 id="继承tread类">继承Tread类</h2>
+<p>这是最普通的方式，继承<code>Thread</code>类，重写<code>run</code>方法，如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ExtendsThread</span> <span class="keyword">extends</span> <span class="title class_">Thread</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;1......&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">ExtendsThread</span>().start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="实现runnable接口">实现Runnable接口</h3>
+<p>这也是一种常见的方式，实现<code>Runnable</code>接口并重写<code>run</code>方法，如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ImplementsRunnable</span> <span class="keyword">implements</span> <span class="title class_">Runnable</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;2......&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">ImplementsRunnable</span> <span class="variable">runnable</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ImplementsRunnable</span>();</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">Thread</span>(runnable).start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>与继承<code>Thread</code>接口不同的是，Java当中是单继承，当一个类继承了<code>Thread</code>类后就无法再继承其他的类，通过实现<code>Runnable</code>接口并重写<code>run</code>方法，可以再实现继承其他类。</p>
+<h3 id="实现callable接口">实现Callable接口</h3>
+<p>和上一种方式类似，这里需要去重写<code>Callable</code>接口的<code>call</code>方法，并配合<code>FutureTask</code>使用，只不过这种方式可以使用<code>get()</code>方法拿到线程执行完的返回值，如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ImplementsCallable</span> <span class="keyword">implements</span> <span class="title class_">Callable</span>&lt;String&gt; &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">call</span><span class="params">()</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;3......&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Justin&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        <span class="type">ImplementsCallable</span> <span class="variable">callable</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ImplementsCallable</span>();</span><br><span class="line">        FutureTask&lt;String&gt; futureTask = <span class="keyword">new</span> <span class="title class_">FutureTask</span>&lt;&gt;(callable);</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">Thread</span>(futureTask).start();</span><br><span class="line">        System.out.println(futureTask.get());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="使用executorservice线程池">使用ExecutorService线程池</h3>
+<p>这种属于进阶方式，可以通过<code>Executors</code>创建线程池，也可以自定义线程池，如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">UseExecutorService</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">ExecutorService</span> <span class="variable">poolA</span> <span class="operator">=</span> Executors.newFixedThreadPool(<span class="number">2</span>);</span><br><span class="line">        poolA.execute(()-&gt;&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;4A......&quot;</span>);</span><br><span class="line">        &#125;);</span><br><span class="line">        poolA.shutdown();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 又或者自定义线程池</span></span><br><span class="line">        <span class="type">ThreadPoolExecutor</span> <span class="variable">poolB</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ThreadPoolExecutor</span>(<span class="number">2</span>, <span class="number">3</span>, <span class="number">0</span>,</span><br><span class="line">                TimeUnit.SECONDS, <span class="keyword">new</span> <span class="title class_">LinkedBlockingQueue</span>&lt;Runnable&gt;(<span class="number">3</span>),</span><br><span class="line">                Executors.defaultThreadFactory(), <span class="keyword">new</span> <span class="title class_">ThreadPoolExecutor</span>.AbortPolicy());</span><br><span class="line">        poolB.submit(()-&gt;&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;4B......&quot;</span>);</span><br><span class="line">        &#125;);</span><br><span class="line">        poolB.shutdown();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="注意点">注意点</h2>
+<p>创建线程的方式十分多样，最少都能有上面的四种答案，那这真的对吗？可以说对，但严格意义上来说，又不对。</p>
+<p>抛开后面一些先不谈，咱们就聊最开始的三种：“继承<code>Thread</code>类、实现<code>Runnable</code>接口、实现<code>Callable</code>接口”，这应该是广为人知的答案。</p>
+<p>那么此时来看个例子：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ImplementsRunnable</span> <span class="keyword">implements</span> <span class="title class_">Runnable</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(Thread.currentThread().getName()</span><br><span class="line">                + <span class="string">&quot;：小猫爱吃鱼&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里定义了一个类，实现了<code>Runnable</code>接口并重写了<code>run</code>方法，按前面的说法，这种方式是不是创建了一条线程？答案是<code>Yes</code>，可问题来了，请你告诉我，该如何启动这条所谓的“线程”呢？</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="type">ImplementsRunnable</span> <span class="variable">runnable</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ImplementsRunnable</span>();</span><br><span class="line">    runnable.run();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>难道像上面这样嘛？来看看运行结果：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">main：小猫爱吃鱼</span><br></pre></td></tr></table></figure>
+<p>结果很显然，打印出的线程名字为：<code>main</code>，代表目前是主线程在运行，和调用普通方法没任何区别，那究竟该如何创建一条线程呀？要这样做：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="type">ImplementsRunnable</span> <span class="variable">runnable</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ImplementsRunnable</span>();</span><br><span class="line">    <span class="keyword">new</span> <span class="title class_">Thread</span>(runnable).start();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>先<code>new</code>出<code>Runnable</code>对象，接着再<code>new</code>一个<code>Thread</code>对象，然后把<code>Runnable</code>丢给<code>Thread</code>，接着调用<code>start()</code>方法，此时才能真正意义上创建一条线程，运行结果如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Thread-0：小猫爱吃鱼</span><br></pre></td></tr></table></figure>
+<p>此时线程名字变成了<code>Thread-0</code>，这意味着输出“小猫爱吃鱼”这句话的代码，并不是<code>main</code>线程在执行了，实现了<code>Runnable</code>接口的<code>ImplementsRunnable</code>类，并不能被称为一条线程，包括所谓的<code>Callable、FutureTask……</code>，都不能创建出真正的线程。</p>
+<p>换到前面所提出的三种方式中，只有继承<code>Thread</code>类，才能真正创建一条线程，如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ExtendsThread</span> <span class="keyword">extends</span> <span class="title class_">Thread</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(Thread.currentThread().getName()</span><br><span class="line">                + <span class="string">&quot;：小猫爱吃鱼&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">ExtendsThread</span>().start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 运行结果：</span></span><br><span class="line"><span class="comment">//      Thread-0：竹子爱熊猫</span></span><br></pre></td></tr></table></figure>
+<p>因为当你用一个类，继承<code>Thread</code>类时，它内部所有的方法，都会被继承过来，所以当前类可以直接调用<code>start()</code>方法启动，更具体点来说，<strong>在<code>Java</code>中，创建线程的方式就只有一种：调用<code>Thread.start()</code>方法</strong>！只有这种形式，才能在真正意义上创建一条线程！</p>
+]]></content>
+      <categories>
+        <category>Java八股</category>
+        <category>并发</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>八股</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>凸集（Convex Set）</title>
     <url>/2023/09/19/2023/%E6%9C%80%E4%BC%98%E5%8C%96/%E5%87%B8%E9%9B%86%EF%BC%88Convex-Set%EF%BC%89/</url>
     <content><![CDATA[<blockquote>
@@ -2380,217 +2545,52 @@ alt="image-20230919141413149" />
       </tags>
   </entry>
   <entry>
-    <title>凸函数（Convex Function）</title>
-    <url>/2023/09/21/2023/%E6%9C%80%E4%BC%98%E5%8C%96/%E5%87%B8%E5%87%BD%E6%95%B0%EF%BC%88Convex-Function%EF%BC%89/</url>
+    <title>volatile关键字</title>
+    <url>/2024/03/23/Java/%E5%B9%B6%E5%8F%91/volatile%E5%85%B3%E9%94%AE%E5%AD%97/</url>
     <content><![CDATA[<blockquote>
-<p>第三课：凸函数</p>
+<p>关于volatile关键字的一些问题</p>
 </blockquote>
 <span id="more"></span>
-<h1 id="凸函数的定义">凸函数的定义</h1>
-<h2 id="定义1">定义1</h2>
-<p>对于一个函数<span
-class="math inline">\(f:\mathbb{R}^n\rightarrow\mathbb{R}\)</span>，如果<span
-class="math inline">\(domf\)</span>为凸集，且： <span
-class="math display">\[
-f(\theta x+(1-\theta)y)\le\theta f(x)+(1-\theta)f(y)
-\]</span> 对所有的<span class="math inline">\(x,y\in domf,0\le\theta\le
-1\)</span>成立，则<span
-class="math inline">\(f\)</span>为（下）凸函数</p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211258794.png" alt="image-20230921125358565" style="zoom:67%;" /></p>
-<blockquote>
-<p>连接凸函数的图像上任意两点的线段都在函数图像上方</p>
-</blockquote>
-<ul>
-<li><p><span class="math inline">\(f\)</span>是凸函数，则<span
-class="math inline">\(-f\)</span>是凹函数</p></li>
-<li><p>如果<span class="math inline">\(dom f\)</span>是凸集，且 <span
-class="math display">\[
-f(\theta x+(1-\theta)y)&lt;\theta f(x)+(1-\theta)f(y)
-\]</span></p></li>
-</ul>
-<blockquote>
-<p>对所有的<span class="math inline">\(x,y\in domf,x\neq y,0&lt;\theta
-&lt;1\)</span>成立，则<span
-class="math inline">\(f\)</span>是严格凸函数</p>
-</blockquote>
-<h2 id="定义2">定义2</h2>
-<ul>
-<li><p><span
-class="math inline">\(f\)</span>是凸函数的充分必要条件为：<span
-class="math inline">\(\forall x,v\in
-domf,g(t)=f(x+tv)\)</span>是凸函数</p></li>
-<li><p>证明</p></li>
-</ul>
-<h2 id="定义3一阶条件">定义3（一阶条件）</h2>
-<ul>
-<li><p>可微：如果<span class="math inline">\(dom
-f\)</span>为开集，且函数的导数： <span class="math display">\[
-\nabla f(x)=(\frac{\partial f(x)}{\partial x_1},\frac{\partial
-f(x)}{\partial x_2},···,\frac{\partial f(x)}{\partial x_n})
-\]</span> 对所有定义域中的值都存在，则函数<span
-class="math inline">\(f\)</span>可微</p></li>
-<li><p>一阶条件：对于可微函数<span
-class="math inline">\(f\)</span>，如果<span
-class="math inline">\(domf\)</span>为凸集，则<span
-class="math inline">\(f\)</span>为凸函数当且仅当： <span
-class="math display">\[
-f(y)\ge f(x)+\nabla f(x)^T (y-x)\quad \text{for all }x,y\in domf
-\]</span></p></li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211258727.png" alt="image-20230921125426877" style="zoom:67%;" /></p>
-<blockquote>
-<p>意义：凸函数在局部的一阶泰勒展开是对函数值的低估</p>
-</blockquote>
-<h3 id="一阶条件的证明">一阶条件的证明</h3>
-<ul>
-<li><p>=&gt;</p>
-<p>f</p></li>
-<li><p>&lt;=</p></li>
-</ul>
-<h2 id="定义4二阶条件">定义4（二阶条件）</h2>
-<ul>
-<li><p>二阶可微：如果<span
-class="math inline">\(domf\)</span>为开集，且函数的<span
-class="math inline">\(Hessian\)</span>矩阵满足<span
-class="math inline">\(\nabla^2 f(x)\in S^n\)</span> <span
-class="math display">\[
-\nabla^2 f(x)_{ij}=\frac{\partial^2 f(x)}{\partial x_i \partial
-x_j},i,j=1,...,.
-\]</span> 对所有定义域中的值都存在，则函数<span
-class="math inline">\(f\)</span>二阶可微</p></li>
-<li><p>二阶条件：对于二阶可微函数<span
-class="math inline">\(f\)</span>，如果定义域为凸集</p>
-<ul>
-<li><p><span class="math inline">\(f\)</span>为凸函数当且仅当： <span
-class="math display">\[
-\nabla^2 f(x)\succeq 0\quad \text{for all }x\in domf
-\]</span></p></li>
-<li><p>如果对所有定义域内的<span
-class="math inline">\(x\)</span>满足<span class="math inline">\(\nabla^2
-f(x)\succ 0\)</span>，则<span
-class="math inline">\(f\)</span>为严格凸函数</p></li>
-</ul></li>
-</ul>
-<h1 id="常见的凸函数">常见的凸函数</h1>
-<h2 id="一维空间举例">一维空间举例</h2>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211258649.png" alt="image-20230921125640656" style="zoom: 67%;" /></p>
-<h2 id="向量范数">向量范数</h2>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211258592.png" alt="image-20230921125652921" style="zoom: 67%;" /></p>
-<h2 id="多维空间举例">多维空间举例</h2>
-<h3 id="多维向量rn">多维向量<span
-class="math inline">\(R^n\)</span></h3>
-<ul>
-<li>仿射函数：<span class="math inline">\(f(x)=a^Tx+b\)</span></li>
-<li>范数函数：<span
-class="math inline">\(\|x\|_p=(\sum_{i=1}^{n}|x_i|^p)^{\frac{1}{p}}\quad\text{for
-}p\ge1\)</span></li>
-<li>极大值函数：<span
-class="math inline">\(f(x)=\max\{x_1,...,x_n\},x\in R^m\)</span></li>
-<li><span class="math inline">\(L0\)</span>范数：<span
-class="math inline">\(x\)</span>中非零元素的个数</li>
-</ul>
-<h3 id="例二次函数">例：二次函数</h3>
-<ul>
-<li><p>二次函数：<span
-class="math inline">\(f(x)=\frac{1}{2}x^TPx+q^Tx+r,P\in S^n\)</span>
-<span class="math display">\[
-\nabla f(x)=Px+q,\quad\nabla^2f(x)=P
-\]</span> 当P为半正定矩阵<span class="math inline">\((P\succeq
-0)\)</span>时为凸函数</p></li>
-<li><p>最小二乘目标函数：<span
-class="math inline">\(f(x)=\|Ax-b\|^2_2\)</span> <span
-class="math display">\[
-\nabla f(x)=2A^T(Ax-b),\quad\nabla^2 f(x)=2A^TA
-\]</span> 对任意的<span
-class="math inline">\(A\)</span>都为凸函数</p></li>
-<li><p>二次函数比线性函数：<span
-class="math inline">\(f(x,y)=x^2/y\)</span>对所有的<span
-class="math inline">\(y&gt;0\)</span>都为凸函数</p></li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211258784.png" alt="image-20230921125739507" style="zoom:67%;" /></p>
-<h2 id="半正定矩阵的性质">半正定矩阵的性质</h2>
-<p>矩阵<strong>A</strong>为行列式，则存在以下性质：</p>
-<ul>
-<li><strong>A</strong>的特征值均为负的。</li>
-<li>存在n阶实矩阵<strong>C</strong>，使<span
-class="math inline">\(A=C^TC.\)</span></li>
-<li><strong>A</strong>的行列式是负的</li>
-</ul>
-<h1 id="保持凸性的操作">保持凸性的操作</h1>
-<h2
-id="验证个函数是否是凸函数的方法">验证⼀个函数是否是凸函数的方法</h2>
-<ol type="1">
-<li>根据3种定义</li>
-<li>验证函数是由多个相对简单的凸函数通过一些保持凸性的操作来得到</li>
-</ol>
-<h2 id="保持凸性的操作1非负加权和">保持凸性的操作1：非负加权和</h2>
-<ul>
-<li>命题：若<span
-class="math inline">\(f_1,...,f_m\)</span>为凸函数，则<span
-class="math inline">\(f=\sum^m_{i=1}w_if_i\)</span>为凸函数，<span
-class="math inline">\(w_i\ge0\)</span></li>
-<li>证明
-<ol type="1">
-<li>定义域是否为凸集</li>
-</ol></li>
-</ul>
-<h2 id="保持凸性的操作2仿射组合">保持凸性的操作2：仿射组合</h2>
-<ul>
-<li>命题：若<span class="math inline">\(f\)</span>为凸函数，则<span
-class="math inline">\(𝑓(𝐴𝑥+𝑏)\)</span>为凸函数</li>
-<li>证明</li>
-</ul>
-<h2 id="保持凸性的操作3最大化极大化">保持凸性的操作3：最大化/极大化</h2>
-<h3 id="最大化与极大化">最大化与极大化</h3>
-<ul>
-<li><p><span class="math inline">\(\max\)</span>：最大值</p></li>
-<li><p><span class="math inline">\(\sup\)</span>：上确界</p></li>
-<li><p>命题：若<span
-class="math inline">\(f_1,...,f_m\)</span>为凸函数，则<span
-class="math inline">\(f(x)=\max\{f_1(x),...,f_m(x)\}\)</span>为凸函数</p>
-<ul>
-<li>证明：</li>
-</ul></li>
-<li><p>命题：若<span class="math inline">\(f(x,y)\)</span>对所有<span
-class="math inline">\(y\in A\)</span>为关于<span
-class="math inline">\(x\)</span>的凸函数，则<span
-class="math inline">\(f(x)=\sup_{y\in A}f(x,y)\)</span>为凸函数</p></li>
-</ul>
-<h2
-id="保持凸性的操作4标量函数的组合">保持凸性的操作4：标量函数的组合</h2>
-<p>对于函数<span class="math inline">\(g:R^n\to R^k\)</span>与函数<span
-class="math inline">\(h:R^k\to R\)</span>，函数组合为<span
-class="math inline">\(f(x)=h(g(x))\)</span></p>
-<p>考虑<span class="math inline">\(n=k=1\)</span>的情况</p>
-<p><span class="math inline">\(f\)</span>为凸函数如果：<span
-class="math inline">\(\begin{cases}g是凸函数，h是凹函数，h递增\\g是凹函数，h是凸函数，h递减\end{cases}\)</span>
-<span class="math display">\[
-f&#39;&#39;(x)=h&#39;&#39;(g(x)g&#39;(x))^2+h&#39;(g(x))g&#39;&#39;(x).
-\]</span></p>
-<blockquote>
-<p>例：</p>
-<p><span class="math inline">\(\exp
-g(x)当g是凸函数时为凸函数\)</span></p>
-<p><span
-class="math inline">\(1/g(x)当g是凹函数且为正时为凸函数\)</span></p>
-</blockquote>
-<h1 id="共轭函数conjugate-function">共轭函数（conjugate function）</h1>
-<h2 id="函数f的共轭定义">函数<span
-class="math inline">\(f\)</span>的共轭定义</h2>
-<p><span class="math display">\[
-f^*(y)=\sup_{x\in domf}(y^Tx-f(x))
-\]</span></p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211700984.png" alt="image-20230921170043534" style="zoom:80%;" /></p>
-<blockquote>
-<p>性质：<span class="math inline">\(f^*(y)\)</span>一定为凸函数</p>
-</blockquote>
+<h1 id="java内存模型是什么">Java内存模型是什么</h1>
+<p>如下面两张图所示（这里JavaGuide画的图就很好，直接拿来了，侵删），变量是放在主存中的，每个线程都有自己的工作线程（本地内存），线程运行时将主存中的数据复制到工作内存当中，对数据的任何操作都是基于自己的工作内存进行的，之后再将更新后的数据刷新到主存。</p>
+<p><strong>当前线程不能直接操作主存和其他线程工作内存中的数据。</strong></p>
+<figure>
+<img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232024135.png"
+alt="JMM(Java 内存模型)" />
+<figcaption aria-hidden="true">JMM(Java 内存模型)</figcaption>
+</figure>
+<figure>
+<img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232024275.png"
+alt="JMM(Java 内存模型)强制在主存中进行读取" />
+<figcaption aria-hidden="true">JMM(Java
+内存模型)强制在主存中进行读取</figcaption>
+</figure>
+<h1 id="volatile关键字的作用">volatile关键字的作用</h1>
+<p><strong>volatile关键字保证了变量的立即可见性</strong></p>
+<p><code>线程A</code>与<code>线程B</code>并发运行时可能出现这种情况，如果<code>线程A</code>修改了工作内存中的数据且还未同步到主存，那么<code>线程B</code>读取的主存中的数据就不是最新值。当变量被volatile关键字修饰后，任何线程对它的写操作都会强制将工作内存中的最新值刷新到主存，同时使其他线程工作内存中的变量缓存无效，这样其他线程使用缓存时就会重新到主存中读取最新值。</p>
+<p>即如果我们将变量声明为 <strong><code>volatile</code></strong>
+，这就指示
+JVM，这个变量是共享且不稳定的，每次使用它都到主存中进行读取。</p>
+<p><strong><code>volatile</code>
+关键字能保证数据的可见性，但不能保证数据的原子性。<code>synchronized</code>
+关键字两者都能保证。</strong></p>
 ]]></content>
       <categories>
-        <category>最优化方法</category>
+        <category>Java八股</category>
+        <category>并发</category>
       </categories>
       <tags>
-        <tag>学科</tag>
-        <tag>最优化方法</tag>
+        <tag>Java</tag>
+        <tag>八股</tag>
+        <tag>并发</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>synchronized关键字</title>
+    <url>/2024/03/23/Java/%E5%B9%B6%E5%8F%91/synchronized%E5%85%B3%E9%94%AE%E5%AD%97/</url>
+    <content><![CDATA[
+]]></content>
   </entry>
 </search>
