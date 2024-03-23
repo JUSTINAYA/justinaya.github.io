@@ -19,12 +19,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.justinchoi.top","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.18.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="13种锁！">
+    <meta name="description" content="15种锁！">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java当中的各种锁">
 <meta property="og:url" content="http://www.justinchoi.top/2024/03/23/Java%E5%BD%93%E4%B8%AD%E7%9A%84%E5%90%84%E7%A7%8D%E9%94%81/index.html">
 <meta property="og:site_name" content="文文的短发">
-<meta property="og:description" content="13种锁！">
+<meta property="og:description" content="15种锁！">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232110652.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232110830.png">
@@ -39,8 +39,10 @@
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232125738.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232127632.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232129274.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232135180.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232136997.png">
 <meta property="article:published_time" content="2024-03-23T13:02:46.000Z">
-<meta property="article:modified_time" content="2024-03-23T13:30:45.019Z">
+<meta property="article:modified_time" content="2024-03-23T13:36:53.492Z">
 <meta property="article:author" content="文文的短发">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="八股">
@@ -159,7 +161,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B9%90%E8%A7%82%E9%94%81"><span class="nav-text">乐观锁</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%82%B2%E8%A7%82%E9%94%81"><span class="nav-text">悲观锁</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%87%AA%E6%97%8B%E9%94%81"><span class="nav-text">自旋锁</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%AF%E9%87%8D%E5%85%A5%E9%94%81"><span class="nav-text">可重入锁</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%BB%E5%86%99%E9%94%81"><span class="nav-text">读写锁</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AC%E5%B9%B3%E9%94%81"><span class="nav-text">公平锁</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9D%9E%E5%85%AC%E5%B9%B3%E9%94%81"><span class="nav-text">非公平锁</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B1%E4%BA%AB%E9%94%81"><span class="nav-text">共享锁</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%8B%AC%E5%8D%A0%E9%94%81"><span class="nav-text">独占锁</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%87%8D%E9%87%8F%E7%BA%A7%E9%94%81"><span class="nav-text">重量级锁</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BD%BB%E9%87%8F%E7%BA%A7%E9%94%81"><span class="nav-text">轻量级锁</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%81%8F%E5%90%91%E9%94%81"><span class="nav-text">偏向锁</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%86%E6%AE%B5%E9%94%81"><span class="nav-text">分段锁</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B9%90%E8%A7%82%E9%94%81"><span class="nav-text">乐观锁</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%82%B2%E8%A7%82%E9%94%81"><span class="nav-text">悲观锁</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%87%AA%E6%97%8B%E9%94%81"><span class="nav-text">自旋锁</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%AF%E9%87%8D%E5%85%A5%E9%94%81"><span class="nav-text">可重入锁</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%BB%E5%86%99%E9%94%81"><span class="nav-text">读写锁</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AC%E5%B9%B3%E9%94%81"><span class="nav-text">公平锁</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9D%9E%E5%85%AC%E5%B9%B3%E9%94%81"><span class="nav-text">非公平锁</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B1%E4%BA%AB%E9%94%81"><span class="nav-text">共享锁</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%8B%AC%E5%8D%A0%E9%94%81"><span class="nav-text">独占锁</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%87%8D%E9%87%8F%E7%BA%A7%E9%94%81"><span class="nav-text">重量级锁</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BD%BB%E9%87%8F%E7%BA%A7%E9%94%81"><span class="nav-text">轻量级锁</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%81%8F%E5%90%91%E9%94%81"><span class="nav-text">偏向锁</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%86%E6%AE%B5%E9%94%81"><span class="nav-text">分段锁</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%94%81%E7%B2%97%E5%8C%96"><span class="nav-text">锁粗化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%94%81%E6%B6%88%E9%99%A4"><span class="nav-text">锁消除</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -268,7 +270,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2024-03-23 21:02:46 / 修改时间：21:30:45" itemprop="dateCreated datePublished" datetime="2024-03-23T21:02:46+08:00">2024-03-23</time>
+      <time title="创建时间：2024-03-23 21:02:46 / 修改时间：21:36:53" itemprop="dateCreated datePublished" datetime="2024-03-23T21:02:46+08:00">2024-03-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -294,7 +296,7 @@
     
     
     <div class="post-body" itemprop="articleBody"><blockquote>
-<p>13种锁！</p>
+<p>15种锁！</p>
 </blockquote>
 <span id="more"></span>
 <h1 id="乐观锁">乐观锁</h1>
@@ -416,6 +418,17 @@ HashMap，称之为段(Segment)。默认情况下一个 ConcurrentHashMap
 Segment 通过继承ReentrantLock
 来进行加锁，所以每次需要加锁的操作锁住的是一个 segment，这样只要保证每个
 Segment 是线程安全的，也就实现了全局的线程安全</p>
+<h1 id="锁粗化">锁粗化</h1>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232135180.png" alt="image-20240323213547009" style="zoom:67%;" /></p>
+<p><strong>锁粗化是一种优化技术：</strong>
+如果一系列的连续操作都对同一个对象反复加锁和解锁，甚至加锁操作都是出现在循环体体之中，就算真的没有线程竞争，频繁地进行互斥同步操作将会导致不必要的性能损耗，所以就采取了一种方案：把加锁的范围扩展（粗化）到整个操作序列的外部，这样加锁解锁的频率就会大大降低，从而减少了性能损耗。</p>
+<h2 id="锁消除">锁消除</h2>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232136997.png" alt="image-20240323213626287" style="zoom:67%;" /></p>
+<p><strong>锁消除是一种优化技术：</strong>
+就是把锁干掉。当Java虚拟机运行时发现有些共享数据不会被线程竞争时就可以进行锁消除。</p>
+<p>那如何判断共享数据不会被线程竞争？</p>
+<p>利用逃逸分析技术：分析对象的作用域，如果对象在A方法中定义后，被作为参数传递到B方法中，则称为方法逃逸；如果被其他线程访问，则称为线程逃逸。</p>
+<p>在堆上的某个数据不会逃逸出去被其他线程访问到，就可以把它当作栈上数据对待，认为它是线程私有的，同步加锁就不需要了。</p>
 
     </div>
 
