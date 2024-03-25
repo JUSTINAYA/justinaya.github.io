@@ -19,15 +19,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.justinchoi.top","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.18.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="关于volatile关键字的一些问题">
+    <meta name="description" content="关于synchronized锁的一些问题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="volatile关键字">
-<meta property="og:url" content="http://www.justinchoi.top/2024/03/23/Java/%E5%B9%B6%E5%8F%91/volatile%E5%85%B3%E9%94%AE%E5%AD%97/index.html">
+<meta property="og:title" content="synchronized锁">
+<meta property="og:url" content="http://www.justinchoi.top/2024/03/25/Java/%E5%B9%B6%E5%8F%91/synchronized%E9%94%81/index.html">
 <meta property="og:site_name" content="文文的短发">
-<meta property="og:description" content="关于volatile关键字的一些问题">
+<meta property="og:description" content="关于synchronized锁的一些问题">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-03-23T12:15:24.000Z">
-<meta property="article:modified_time" content="2024-03-23T12:42:47.815Z">
+<meta property="article:published_time" content="2024-03-25T11:52:18.000Z">
+<meta property="article:modified_time" content="2024-03-25T12:05:16.485Z">
 <meta property="article:author" content="文文的短发">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="八股">
@@ -35,14 +35,14 @@
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://www.justinchoi.top/2024/03/23/Java/%E5%B9%B6%E5%8F%91/volatile%E5%85%B3%E9%94%AE%E5%AD%97/">
+<link rel="canonical" href="http://www.justinchoi.top/2024/03/25/Java/%E5%B9%B6%E5%8F%91/synchronized%E9%94%81/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://www.justinchoi.top/2024/03/23/Java/%E5%B9%B6%E5%8F%91/volatile%E5%85%B3%E9%94%AE%E5%AD%97/","path":"2024/03/23/Java/并发/volatile关键字/","title":"volatile关键字"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://www.justinchoi.top/2024/03/25/Java/%E5%B9%B6%E5%8F%91/synchronized%E9%94%81/","path":"2024/03/25/Java/并发/synchronized锁/","title":"synchronized锁"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>volatile关键字 | 文文的短发</title>
+<title>synchronized锁 | 文文的短发</title>
   
 
 
@@ -145,7 +145,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#java%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-text">Java内存模型是什么</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#volatile%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-text">volatile关键字的作用</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFsynchronized%E9%94%81"><span class="nav-text">什么是synchronized锁</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86"><span class="nav-text">底层原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%94%81%E5%8D%87%E7%BA%A7%E8%BF%87%E7%A8%8B"><span class="nav-text">锁升级过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A0%E9%94%81"><span class="nav-text">无锁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%81%8F%E5%90%91%E9%94%81"><span class="nav-text">偏向锁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%BB%E9%87%8F%E7%BA%A7%E9%94%81"><span class="nav-text">轻量级锁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%8D%E9%87%8F%E7%BA%A7%E9%94%81"><span class="nav-text">重量级锁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%94%81%E5%8D%87%E7%BA%A7%E5%9B%BE"><span class="nav-text">锁升级图</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -224,7 +224,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.justinchoi.top/2024/03/23/Java/%E5%B9%B6%E5%8F%91/volatile%E5%85%B3%E9%94%AE%E5%AD%97/">
+    <link itemprop="mainEntityOfPage" href="http://www.justinchoi.top/2024/03/25/Java/%E5%B9%B6%E5%8F%91/synchronized%E9%94%81/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/img/headimg.JPG">
@@ -237,12 +237,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="volatile关键字 | 文文的短发">
+      <meta itemprop="name" content="synchronized锁 | 文文的短发">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          volatile关键字
+          synchronized锁
         </h1>
 
         <div class="post-meta-container">
@@ -254,7 +254,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2024-03-23 20:15:24 / 修改时间：20:42:47" itemprop="dateCreated datePublished" datetime="2024-03-23T20:15:24+08:00">2024-03-23</time>
+      <time title="创建时间：2024-03-25 19:52:18 / 修改时间：20:05:16" itemprop="dateCreated datePublished" datetime="2024-03-25T19:52:18+08:00">2024-03-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -280,34 +280,172 @@
     
     
     <div class="post-body" itemprop="articleBody"><blockquote>
-<p>关于volatile关键字的一些问题</p>
+<p>关于synchronized锁的一些问题</p>
 </blockquote>
 <span id="more"></span>
-<h1 id="java内存模型是什么">Java内存模型是什么</h1>
-<p>如下面两张图所示（这里JavaGuide画的图就很好，直接拿来了，侵删），变量是放在主存中的，每个线程都有自己的工作线程（本地内存），线程运行时将主存中的数据复制到工作内存当中，对数据的任何操作都是基于自己的工作内存进行的，之后再将更新后的数据刷新到主存。</p>
-<p><strong>当前线程不能直接操作主存和其他线程工作内存中的数据。</strong></p>
+<h1 id="什么是synchronized锁">什么是synchronized锁</h1>
+<blockquote>
+<p>官方：同步方法支持一种简单的策略来防止线程受到干扰和内存一致性错误；如果一个对象对多个线程可见，则对该对象变量的所有读取或写入都是通过同步方法完成</p>
+</blockquote>
+<p>通俗点来说就是程序中用于保护线程安全的一种机制。</p>
+<h1 id="底层原理">底层原理</h1>
+<p>在<code>HotSpot</code>虚拟机中，对象内存布局主要分为对象头（<strong>Header</strong>）、示例数据（<strong>Instance
+Data</strong>）和对齐填充（<strong>Padding</strong>）。</p>
+<p><strong>对象头 = Mark Word + 类型指针（</strong>Klass
+pointer<strong>）。</strong></p>
+<p><strong>类型指针（</strong>Klass pointer<strong>）</strong> ：
+用于标识JVM通过这个指针来确定这个对象是哪个类的实例。</p>
+<p><strong>Mark Word</strong> ：
+用于储存对象自身的运行时数据，例如对象的hashCode、GC分代年龄、锁状态标志、线程持有的锁、偏向线程的ID、偏向时间戳等。<strong>在运行期间，Mark
+Word里存储的数据会随着内部锁标志位的变化而变化。</strong></p>
 <figure>
 <img
-src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232024135.png"
-alt="JMM(Java 内存模型)" />
-<figcaption aria-hidden="true">JMM(Java 内存模型)</figcaption>
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403251959954.png"
+alt="img" />
+<figcaption aria-hidden="true">img</figcaption>
+</figure>
+<p><strong>无锁状态(01)</strong></p>
+<p>对象头开辟 25bit 的空间用来存储对象的 hashcode ，4bit
+用于存放分代年龄，1bit 用来存放是否偏向锁的标识位，2bit
+用来存放锁标识位为01。</p>
+<p><strong>偏向锁状态(01)</strong></p>
+<p>还是开辟25bit 的空间，其中23bit 用来存放线程ID，2bit 用来存放
+epoch，4bit 存放分代年龄，1bit 存放是否偏向锁标识，
+0表示无锁，1表示偏向锁，锁的标识位还是01。</p>
+<p><strong>轻量级锁状态(00)</strong></p>
+<p>开辟 30bit 的空间存放指向<strong>栈中锁记录</strong>的指针，2bit
+存放锁的标志位，其标志位为00。</p>
+<p><strong>重量级锁状态(10)</strong></p>
+<p>30bit 的空间用来存放指向<strong>重量级锁</strong>的指针，2bit
+存放锁的标识位，为10。</p>
+<p><strong>GC标记(11)</strong></p>
+<p>开辟30bit 的内存空间却没有占用，2bit 空间存放锁标志位为11。</p>
+<p>之所以这些标志位会变化，是JVM对重量级锁的一种优化，在jdk1.6
+之前，用synchronized 都是重量级锁 ，都需要底层操作系统的Mutex
+Lock（互斥锁）来实现，这个是涉及到系统调用的，会导致内核空间与用户空间的上下文切换，很低效。</p>
+<p>于是jdk1.6之后为了增加性能减少操作Mutex
+Lock，引入了<code>偏向锁</code>和<code>轻量级锁</code>：锁一共有4种状态，级别从低到高依次是：无锁状态、偏向锁状态、轻量级锁状态和重量级锁状态。锁可以升级但不能降级。</p>
+<h3 id="锁升级过程">锁升级过程</h3>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Object</span> <span class="variable">lock</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Object</span>();</span><br><span class="line"><span class="comment">// 临界区之前</span></span><br><span class="line"><span class="keyword">synchronized</span>(lock)&#123;</span><br><span class="line">  <span class="comment">// 临界区</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 临界区之后</span></span><br></pre></td></tr></table></figure>
+<h3 id="无锁">无锁</h3>
+<p>当有线程进入临界区之前(synchronized块之前)，lock里的对象头的 Mark
+Word 结构为下面所示：</p>
+<figure>
+<img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403252000225.webp"
+alt="img" />
+<figcaption aria-hidden="true">img</figcaption>
+</figure>
+<p>锁标志位01，无偏向。这是JVM给的初始值。</p>
+<h3 id="偏向锁">偏向锁</h3>
+<p>有<strong>线程A</strong>刚进入临界区时(synchronized)，发现标志位是01
+，而且无偏向。立马把当前线程ID记录到了这个Mark
+Word当中，修改为偏向（1）。也就是下面这样：</p>
+<figure>
+<img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403252000323.webp"
+alt="img" />
+<figcaption aria-hidden="true">img</figcaption>
 </figure>
 <figure>
 <img
-src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232024275.png"
-alt="JMM(Java 内存模型)强制在主存中进行读取" />
-<figcaption aria-hidden="true">JMM(Java
-内存模型)强制在主存中进行读取</figcaption>
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403252001168.webp"
+alt="img" />
+<figcaption aria-hidden="true">img</figcaption>
 </figure>
-<h1 id="volatile关键字的作用">volatile关键字的作用</h1>
-<p><strong>volatile关键字保证了变量的立即可见性</strong></p>
-<p><code>线程A</code>与<code>线程B</code>并发运行时可能出现这种情况，如果<code>线程A</code>修改了工作内存中的数据且还未同步到主存，那么<code>线程B</code>读取的主存中的数据就不是最新值。当变量被volatile关键字修饰后，任何线程对它的写操作都会强制将工作内存中的最新值刷新到主存，同时使其他线程工作内存中的变量缓存无效，这样其他线程使用缓存时就会重新到主存中读取最新值。</p>
-<p>即如果我们将变量声明为 <strong><code>volatile</code></strong>
-，这就指示
-JVM，这个变量是共享且不稳定的，每次使用它都到主存中进行读取。</p>
-<p><strong><code>volatile</code>
-关键字能保证数据的可见性，但不能保证数据的原子性。<code>synchronized</code>
-关键字两者都能保证。</strong></p>
+<p>如果线程A，再次进入临界区时 ， 判断线程id
+是当前自己，就直接执行。也就是说，如果一直没有其它线程过来，线程A就跟没加synchronized一样执行，效率极高。这就是<strong>偏向锁</strong>。</p>
+<h3 id="轻量级锁">轻量级锁</h3>
+<p>当有其它<strong>线程B</strong>
+也进入临界区了(线程A还没出临界区)，就CAS自旋等待很短的时间，如果线程A此时恰好退出临界区了，CAS退出就升级为轻量级锁，否则就是重量级锁。
+轻量级锁会构造一个Lock Record锁记录，如下图：</p>
+<figure>
+<img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403252001772.webp"
+alt="img" />
+<figcaption aria-hidden="true">img</figcaption>
+</figure>
+<figure>
+<img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403252001283.webp"
+alt="img" />
+<figcaption aria-hidden="true">img</figcaption>
+</figure>
+<p><strong>Lock Record 锁记录</strong></p>
+<p>Lock Record是线程私有的数据结构，每一个线程都有一个可用Lock
+Record列表，同时还有一个全局的可用列表。每一个被锁住的对象Mark
+Word都会和一个Lock Record关联（对象头的MarkWord中的Lock Word指向Lock
+Record的起始地址），同时Lock
+Record中有一个Owner字段存放拥有该锁的线程的唯一标识（或者<code>object mark word</code>），表示该锁被这个线程占用。如下图所示为Lock
+Record的内部结构：</p>
+<table>
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 84%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Lock Record</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Owner</td>
+<td>初始时为NULL表示当前没有任何线程拥有该monitor
+record，当线程成功拥有该锁后保存线程唯一标识，当锁被释放时又设置为NULL；</td>
+</tr>
+<tr class="even">
+<td>EntryQ</td>
+<td>关联一个系统互斥锁（semaphore），阻塞所有试图锁住monitor
+record失败的线程；</td>
+</tr>
+<tr class="odd">
+<td>RcThis</td>
+<td>表示blocked或waiting在该monitor record上的所有线程的个数；</td>
+</tr>
+<tr class="even">
+<td>Nest</td>
+<td>用来实现 重入锁的计数；</td>
+</tr>
+<tr class="odd">
+<td>HashCode</td>
+<td>保存从对象头拷贝过来的HashCode值（可能还包含GC age）。</td>
+</tr>
+<tr class="even">
+<td>Candidate</td>
+<td>用来避免不必要的阻塞或等待线程唤醒ngjio，因为每一次只有一个线程能够成功拥有锁，如果每次前一个释放锁的线程唤醒所有正在阻塞或等待的线程，会引起不必要的上下文切换（从阻塞到就绪然后因为竞争锁失败又被阻塞）从而导致性能严重下降。Candidate只有两种可能的值0表示没有需要唤醒的线程1表示要唤醒一个继任线程来竞争锁。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>轻量级锁所适应的场景是线程交替执行同步块的情况，如果存在同一时间访问同一锁的情况，必然就会导致轻量级锁膨胀为重量级锁</strong>。</p>
+<h3 id="重量级锁">重量级锁</h3>
+<p>Synchronized是通过对象内部的一个叫做
+<strong>监视器锁（Monitor）来实现的</strong>。<strong>但是监视器锁本质又是依赖于底层的操作系统的Mutex
+Lock来实现的。而操作系统实现线程之间的切换这就需要从用户态转换到核心态，这个成本非常高，状态之间的转换需要相对比较长的时间</strong>，这就是为什么Synchronized效率低的原因。因此，这种依赖于操作系统Mutex
+Lock所实现的锁我们称之为 <strong>“重量级锁”</strong>。</p>
+<p>重量级锁的Mark Word结构图：</p>
+<figure>
+<img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403252001075.webp"
+alt="img" />
+<figcaption aria-hidden="true">img</figcaption>
+</figure>
+<p>这个重量级锁的指针指向的就是 <strong>ObjectMonitor</strong> 。</p>
+<h3 id="锁升级图">锁升级图</h3>
+<figure>
+<img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403252004741.JPG"
+alt="IMG_6726" />
+<figcaption aria-hidden="true">IMG_6726</figcaption>
+</figure>
+<figure>
+<img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403252004026.JPG"
+alt="IMG_6727" />
+<figcaption aria-hidden="true">IMG_6727</figcaption>
+</figure>
+<p>图源：收割Offer：互联网大厂面经——布兜</p>
 
     </div>
 
@@ -326,14 +464,11 @@ JVM，这个变量是共享且不稳定的，每次使用它都到主存中进�
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2024/03/23/Java/%E5%B9%B6%E5%8F%91/Java%E5%88%9B%E5%BB%BA%E7%BA%BF%E7%A8%8B%E7%9A%84%E6%96%B9%E5%BC%8F/" rel="prev" title="Java创建线程的方式">
-                  <i class="fa fa-angle-left"></i> Java创建线程的方式
+                <a href="/2024/03/24/Java/%E5%B9%B6%E5%8F%91/ReentrantLock%E9%94%81/" rel="prev" title="ReentrantLock锁">
+                  <i class="fa fa-angle-left"></i> ReentrantLock锁
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2024/03/23/Java/%E5%B9%B6%E5%8F%91/synchronized%E5%85%B3%E9%94%AE%E5%AD%97/" rel="next" title="synchronized关键字">
-                  synchronized关键字 <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
