@@ -179,6 +179,12 @@ href="https://www.cnblogs.com/1024th/p/11623258.html">LaTeX公式手册(全网�
       </tags>
   </entry>
   <entry>
+    <title>第一篇博客</title>
+    <url>/2023/01/29/2023/hello-world/</url>
+    <content><![CDATA[<p>欢迎来到我的博客！</p>
+]]></content>
+  </entry>
+  <entry>
     <title>GitHub成就徽章全攻略（GitHub Achievements）</title>
     <url>/2023/09/08/2023/GitHub%E6%88%90%E5%B0%B1%E5%BE%BD%E7%AB%A0%E5%85%A8%E6%94%BB%E7%95%A5%EF%BC%88GitHub-Achievements%EF%BC%89/</url>
     <content><![CDATA[<blockquote>
@@ -689,53 +695,6 @@ R18不允许×</p>
       </tags>
   </entry>
   <entry>
-    <title>第一篇博客</title>
-    <url>/2023/01/29/2023/hello-world/</url>
-    <content><![CDATA[<p>欢迎来到我的博客！</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>二叉树遍历简单做法</title>
-    <url>/2023/02/09/2023/%E4%BA%8C%E5%8F%89%E6%A0%91%E9%81%8D%E5%8E%86%E7%AE%80%E5%8D%95%E5%81%9A%E6%B3%95/</url>
-    <content><![CDATA[<blockquote>
-<p>看王道数据结构考研复习有感</p>
-</blockquote>
-<span id="more"></span>
-<h1 id="问题">问题</h1>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/%E4%BA%8C%E5%8F%89%E6%A0%91.PNG" alt="二叉树" style="zoom:33%;" /></p>
-<p>给出如图所示二叉树，请你分别对其进行前序、中序、后序遍历并给出遍历结果。</p>
-<h1 id="解答">解答</h1>
-<p>这里我们除了可以用编程思想一步一步进行遍历，还有一种更为简单快速的方法，这里我称它画图法。</p>
-<h2 id="步骤一">步骤一</h2>
-<p>我们先在每个结点旁画上小圆点，这里我们以前序遍历为例，在结点左侧画上小圆点。（中序遍历在下侧，后序遍历在右侧）</p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/%E5%89%8D%E5%BA%8F.PNG" alt="前序" style="zoom:33%;" /></p>
-<h2 id="步骤二">步骤二</h2>
-<p>以根节点上方为起点，从左侧贴着二叉树画线穿过小圆点，绕一周回到起点。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/%E5%89%8D%E5%BA%8F2.PNG" alt="前序2" style="zoom:33%;" /></p>
-<h2 id="步骤三">步骤三</h2>
-<p>穿过小圆点的先后顺序便是遍历的结果。 这次遍历的结果为：</p>
-<center>
-<font color=Tomato size=6>前序：ABDECFHG</font>
-</center>
-<p>这样我们也能得到中序和后序遍历的结果了：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/%E4%B8%AD%E5%BA%8F.PNG" alt="中序" style="zoom:33%;" /></p>
-<center>
-<font color=Tomato size=6>中序：DBEAFHCG</font>
-</center>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/%E5%90%8E%E5%BA%8F.PNG" alt="后序" style="zoom:33%;" /></p>
-<center>
-<font color=Tomato size=6>后序：DEBHFGCA</font>
-</center>
-]]></content>
-      <categories>
-        <category>学科</category>
-        <category>数据结构</category>
-      </categories>
-      <tags>
-        <tag>数据结构</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>关于2023暑假</title>
     <url>/2023/09/15/2023/%E5%85%B3%E4%BA%8E2023%E6%9A%91%E5%81%87/</url>
     <content><![CDATA[<blockquote>
@@ -783,6 +742,47 @@ R18不允许×</p>
       </tags>
   </entry>
   <entry>
+    <title>二叉树遍历简单做法</title>
+    <url>/2023/02/09/2023/%E4%BA%8C%E5%8F%89%E6%A0%91%E9%81%8D%E5%8E%86%E7%AE%80%E5%8D%95%E5%81%9A%E6%B3%95/</url>
+    <content><![CDATA[<blockquote>
+<p>看王道数据结构考研复习有感</p>
+</blockquote>
+<span id="more"></span>
+<h1 id="问题">问题</h1>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/%E4%BA%8C%E5%8F%89%E6%A0%91.PNG" alt="二叉树" style="zoom:33%;" /></p>
+<p>给出如图所示二叉树，请你分别对其进行前序、中序、后序遍历并给出遍历结果。</p>
+<h1 id="解答">解答</h1>
+<p>这里我们除了可以用编程思想一步一步进行遍历，还有一种更为简单快速的方法，这里我称它画图法。</p>
+<h2 id="步骤一">步骤一</h2>
+<p>我们先在每个结点旁画上小圆点，这里我们以前序遍历为例，在结点左侧画上小圆点。（中序遍历在下侧，后序遍历在右侧）</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/%E5%89%8D%E5%BA%8F.PNG" alt="前序" style="zoom:33%;" /></p>
+<h2 id="步骤二">步骤二</h2>
+<p>以根节点上方为起点，从左侧贴着二叉树画线穿过小圆点，绕一周回到起点。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/%E5%89%8D%E5%BA%8F2.PNG" alt="前序2" style="zoom:33%;" /></p>
+<h2 id="步骤三">步骤三</h2>
+<p>穿过小圆点的先后顺序便是遍历的结果。 这次遍历的结果为：</p>
+<center>
+<font color=Tomato size=6>前序：ABDECFHG</font>
+</center>
+<p>这样我们也能得到中序和后序遍历的结果了：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/%E4%B8%AD%E5%BA%8F.PNG" alt="中序" style="zoom:33%;" /></p>
+<center>
+<font color=Tomato size=6>中序：DBEAFHCG</font>
+</center>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/%E5%90%8E%E5%BA%8F.PNG" alt="后序" style="zoom:33%;" /></p>
+<center>
+<font color=Tomato size=6>后序：DEBHFGCA</font>
+</center>
+]]></content>
+      <categories>
+        <category>学科</category>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>美赛O奖论文研读有感</title>
     <url>/2023/02/11/2023/%E7%BE%8E%E8%B5%9BO%E5%A5%96%E8%AE%BA%E6%96%87%E7%A0%94%E8%AF%BB%E6%9C%89%E6%84%9F/</url>
     <content><![CDATA[<blockquote>
@@ -810,6 +810,50 @@ R18不允许×</p>
       <tags>
         <tag>美赛</tag>
         <tag>数学建模</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>重拾博客</title>
+    <url>/2023/09/03/2023/%E9%87%8D%E6%8B%BE%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<blockquote>
+<p>经过一个学期重拾个人博客</p>
+</blockquote>
+<span id="more"></span>
+<h1 id="前言">前言</h1>
+<p>在2023年暑假的时候我创建了自己的个人博客，通过github
+pages使用Hexo框架加上butterfly主题，荒废了一个学期，现在决定重新填起这个坑。</p>
+<h1 id="经过">经过</h1>
+<p>在寒假发了几个博客后，发现使用markdown写博客加入图片时不能做到可视化，而且当时还不知道图床这个东西，所以图片什么的都存到了本地，管理和存储起来十分麻烦，还给网站增加流量负载，所以弃坑了。</p>
+<p>再后来我在CSDN上发现了南邮的一个学长的博客，名叫<a
+href="https://wonzwang.blog.csdn.net/?type=blog">Wonz</a>，在他的博客中我学到了很多，也从他的友链中知道了很多学长，看着他们的博客，我也想重拾自己的坑了。</p>
+<p>有时候我也想在有些触动的时候将自己的想法记录下来，但奈何自己太懒，在这个暑假我去了一个单位实习，在实习的过程中我渐渐可以熟练地使用git，也在实习的过程中产生越来越多的想法，现在实习结束了，也想总结一下，慢慢填补这个坑吧。</p>
+<h1 id="准备">准备</h1>
+<p>之前为了网站看起来炫酷一点，我就选择了butterfly这个主题，不过这样的代价是图片太多了，而且不够简洁，过于花里胡哨，这样对网站的加载速度也有影响，也不好将注意力放在写作上。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/IMG_3840.JPG" alt="IMG_3840" style="zoom: 33%;" /></p>
+<p>所以我换了个新的主题——<strong>Next主题</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/image-20230903171120400.png" alt="image-20230903171120400" style="zoom: 33%;" /></p>
+<p>这个主题我是看的<a
+href="https://wonz.wang/">Wonz</a>学长的个人博客在用的，十分简洁，内容清晰明了，我在暑假也看到过一段话：</p>
+<blockquote>
+<p>技术博客不需要弄得太花里胡哨，简单清晰才是王道。</p>
+</blockquote>
+<p>我看见他置顶博客的描述：</p>
+<blockquote>
+<p>阮一峰大神曾经说过: 喜欢写 Blog 的人, 会经历 3 个阶段。</p>
+<p>第一阶段，刚接触 Blog，觉得很新鲜，试着选择一个免费空间来写。
+第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。
+第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。</p>
+</blockquote>
+<p>我对这话深有感触，本来我也在想要不要自己搞个服务器部署博客，发现根本没必要，还不安全，有github就很方便。</p>
+<h1 id="展望">展望</h1>
+<p>希望接下来能静下心来，将自己的所见所想记录下来，多输出些技术博客，提升自己的竞争力吧。</p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
@@ -931,97 +975,1164 @@ href="https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/">Leet
       </tags>
   </entry>
   <entry>
-    <title>重拾博客</title>
-    <url>/2023/09/03/2023/%E9%87%8D%E6%8B%BE%E5%8D%9A%E5%AE%A2/</url>
+    <title>JVM垃圾回收机制</title>
+    <url>/2024/03/25/Java/JVM/JVM%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6/</url>
     <content><![CDATA[<blockquote>
-<p>经过一个学期重拾个人博客</p>
+<p>关于JVM的垃圾回收机制的一些问题</p>
 </blockquote>
 <span id="more"></span>
-<h1 id="前言">前言</h1>
-<p>在2023年暑假的时候我创建了自己的个人博客，通过github
-pages使用Hexo框架加上butterfly主题，荒废了一个学期，现在决定重新填起这个坑。</p>
-<h1 id="经过">经过</h1>
-<p>在寒假发了几个博客后，发现使用markdown写博客加入图片时不能做到可视化，而且当时还不知道图床这个东西，所以图片什么的都存到了本地，管理和存储起来十分麻烦，还给网站增加流量负载，所以弃坑了。</p>
-<p>再后来我在CSDN上发现了南邮的一个学长的博客，名叫<a
-href="https://wonzwang.blog.csdn.net/?type=blog">Wonz</a>，在他的博客中我学到了很多，也从他的友链中知道了很多学长，看着他们的博客，我也想重拾自己的坑了。</p>
-<p>有时候我也想在有些触动的时候将自己的想法记录下来，但奈何自己太懒，在这个暑假我去了一个单位实习，在实习的过程中我渐渐可以熟练地使用git，也在实习的过程中产生越来越多的想法，现在实习结束了，也想总结一下，慢慢填补这个坑吧。</p>
-<h1 id="准备">准备</h1>
-<p>之前为了网站看起来炫酷一点，我就选择了butterfly这个主题，不过这样的代价是图片太多了，而且不够简洁，过于花里胡哨，这样对网站的加载速度也有影响，也不好将注意力放在写作上。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/IMG_3840.JPG" alt="IMG_3840" style="zoom: 33%;" /></p>
-<p>所以我换了个新的主题——<strong>Next主题</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/image-20230903171120400.png" alt="image-20230903171120400" style="zoom: 33%;" /></p>
-<p>这个主题我是看的<a
-href="https://wonz.wang/">Wonz</a>学长的个人博客在用的，十分简洁，内容清晰明了，我在暑假也看到过一段话：</p>
-<blockquote>
-<p>技术博客不需要弄得太花里胡哨，简单清晰才是王道。</p>
-</blockquote>
-<p>我看见他置顶博客的描述：</p>
-<blockquote>
-<p>阮一峰大神曾经说过: 喜欢写 Blog 的人, 会经历 3 个阶段。</p>
-<p>第一阶段，刚接触 Blog，觉得很新鲜，试着选择一个免费空间来写。
-第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。
-第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。</p>
-</blockquote>
-<p>我对这话深有感触，本来我也在想要不要自己搞个服务器部署博客，发现根本没必要，还不安全，有github就很方便。</p>
-<h1 id="展望">展望</h1>
-<p>希望接下来能静下心来，将自己的所见所想记录下来，多输出些技术博客，提升自己的竞争力吧。</p>
+<h1 id="什么样的对象是垃圾">什么样的对象是垃圾？</h1>
+<p>如果一个对象不会再被引用了，那么这个对象就是垃圾。</p>
+<h1 id="如何判断垃圾垃圾判断算法">如何判断垃圾（垃圾判断算法）</h1>
+<h2 id="引用计数法">引用计数法</h2>
+<p>引用计数法为每个对象引入计数器，当对象被引用时计数器加1，当引用失效时计数器减1，计数器为0的话则表示这个对象不可达，即为垃圾。</p>
+<p><strong>这个方法实现简单，效率高，但是目前主流的虚拟机中并没有选择这个算法来管理内存，其最主要的原因是它很难解决对象之间循环引用的问题。</strong></p>
+<figure>
+<img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403252244399.png"
+alt="对象之间循环引用" />
+<figcaption aria-hidden="true">对象之间循环引用</figcaption>
+</figure>
+<p>这样其他对象都不会引用这两个对象，但因为这两个对象互相引用，所以计数器永远不会为0，垃圾无法被回收，所以我们一般不使用这个回收算法。</p>
+<h2 id="可达性分析算法">可达性分析算法</h2>
+<p>这个算法的基本思想就是通过一系列的称为 <strong>“GC Roots”</strong>
+的对象作为起点，从这些节点开始向下搜索，节点所走过的路径称为引用链，当一个对象到
+GC Roots
+没有任何引用链相连的话，则证明此对象是不可用的，需要被回收。</p>
+<figure>
+<img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403252253483.png"
+alt="可达性分析算法" />
+<figcaption aria-hidden="true">可达性分析算法</figcaption>
+</figure>
+<p>如上图土黄色的对象就是<code>GC Roots</code>可达的，绿色标记的对象间虽然有引用关系，但它们，<code>GC Roots</code>不可达，所以需要被回收。</p>
+<h3 id="可作为gc-roots的对象">可作为GC Roots的对象</h3>
+<ul>
+<li>虚拟机栈引用的对象</li>
+<li>本地方法栈引用的对象</li>
+<li>静态成员引用的对象</li>
+<li>常量引用的对象</li>
+</ul>
+<p>引用类型总结请看<a href="https://javaguide.cn/">JavaGuide</a>的总结<a
+href="https://javaguide.cn/java/jvm/jvm-garbage-collection.html#%E5%8F%AF%E8%BE%BE%E6%80%A7%E5%88%86%E6%9E%90%E7%AE%97%E6%B3%95">引用类型总结</a></p>
+<h1 id="stop-the-world">Stop The World</h1>
+<p>"Stop The World"是 Java 垃圾收集中的一个重要概念，通常简写为
+<strong>STW</strong>。在垃圾收集过程中，JVM
+会暂停所有的用户线程，这种暂停被称为"Stop The World"事件。</p>
+<p>这么做的主要原因是为了防止在垃圾收集过程中，用户线程修改了堆中的对象，导致垃圾收集器无法准确地收集垃圾。</p>
+<p>值得注意的是，"Stop The World"事件会对 Java
+应用的性能产生影响。如果停顿时间过长，就会导致应用的响应时间变长，对于对实时性要求较高的应用，如交易系统、游戏服务器等，这种情况是不能接受的。</p>
+<p>因此，在选择和调优垃圾收集器时，需要考虑其停顿时间。Java
+中的一些垃圾收集器，如 G1 和 ZGC，都会尽可能地减少了"Stop The
+World"的时间，通过并发的垃圾收集，提高应用的响应性能。</p>
+<p>总的来说，"Stop The World"是 Java
+垃圾收集中必须面对的一个挑战，其目标是在保证内存的有效利用和应用的响应性能之间找到一个平衡。</p>
+<h1
+id="如何标记需要回收的垃圾三色标记算法">如何标记需要回收的垃圾（三色标记算法）</h1>
+<h2 id="三色标记的四个步骤">三色标记的四个步骤</h2>
+<ul>
+<li>初始标记阶段：</li>
+</ul>
+<h1 id="如何回收垃圾垃圾收集算法">如何回收垃圾（垃圾收集算法）</h1>
+<h2 id="标记-清除算法">标记-清除算法</h2>
+<p>标记-清除（Mark-and-Sweep）算法分为“标记（Mark）”和“清除（Sweep）”阶段：首先标记出所有需要回收的对象（用可达性算法），在标记完成后统一回收掉这些对象。</p>
+<figure>
+<img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403261010174.png"
+alt="算法演示" />
+<figcaption aria-hidden="true">算法演示</figcaption>
+</figure>
+<p>它是最基础的收集算法，后续的算法都是对其不足进行改进得到。这种垃圾收集算法会带来两个明显的问题：</p>
+<ol type="1">
+<li><strong>效率问题</strong>：标记和清除两个过程效率都不高。</li>
+<li><strong>空间问题</strong>：标记清除后会产生大量不连续的内存碎片。</li>
+</ol>
+<h2 id="复制算法">复制算法</h2>
+<p>复制算法（Copying）是在标记清除算法上演化而来的，用于解决标记清除算法的内存碎片问题。它将可用内存按容量划分为大小相等的两块，每次只使用其中的一块。</p>
+<p>当这一块的内存用完了，就将还存活着的对象复制到另外一块上面，然后再把已使用过的内存空间一次清理掉。这样就保证了内存的连续性，逻辑清晰，运行高效。</p>
+<figure>
+<img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403261011679.png"
+alt="算法演示" />
+<figcaption aria-hidden="true">算法演示</figcaption>
+</figure>
+<p>虽然改进了标记-清除算法，但依然存在下面这些问题：</p>
+<ul>
+<li><strong>可用内存变小</strong>：可用内存缩小为原来的一半。</li>
+<li><strong>不适合老年代</strong>：如果存活对象数量比较大，复制性能会变得很差。</li>
+</ul>
+<h2 id="标记-整理算法">标记-整理算法</h2>
+<p>标记整理算法（Mark-Compact），标记过程仍然与标记清除算法一样，但后续步骤不是直接对可回收对象进行清理，而是让所有存活的对象都向一端移动，再清理掉端边界以外的内存区域。</p>
+<figure>
+<img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403261227494.png"
+alt="算法演示" />
+<figcaption aria-hidden="true">算法演示</figcaption>
+</figure>
+<p>标记整理算法一方面在标记-清除算法上做了升级，解决了内存碎片的问题，也规避了复制算法只能利用一半内存区域的弊端。看起来很美好，但内存变动更频繁，需要整理所有存活对象的引用地址，在效率上比复制算法差很多。</p>
+<h2 id="分代收集算法">分代收集算法</h2>
+<p>当前虚拟机的垃圾收集都采用分代收集算法，分代收集算法（Generational
+Collection）严格来说并不是一种思想或理论，而是融合上述 3
+种基础的算法思想，而产生的针对不同情况所采用不同算法的一套组合拳。</p>
+<p>根据对象存活周期的不同会将内存划分为几块，一般是把 Java
+堆分为新生代和老年代，这样就可以根据各个年代的特点采用最适当的收集算法。</p>
+<figure>
+<img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403261230609.png"
+alt="新生代和老年代" />
+<figcaption aria-hidden="true">新生代和老年代</figcaption>
+</figure>
+<p>在新生代中，每次垃圾收集时都发现有大批对象死去，只有少量存活，那就选用复制算法，只需要付出少量存活对象的复制成本就可以完成收集。</p>
+<p>老年代中因为对象存活率高、没有额外空间对它进行分配担保，就必须使用标记清理或者标记整理算法来进行回收。</p>
+<h1 id="新生代和老年代">新生代和老年代</h1>
+<p>堆（Heap）是 JVM
+中最大的一块内存区域，也是垃圾收集器管理的主要区域。</p>
+<figure>
+<img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403261235085.png"
+alt="新生代和老年代" />
+<figcaption aria-hidden="true">新生代和老年代</figcaption>
+</figure>
+<p>堆主要分为 2 个区域，年轻代与老年代，其中年轻代又分 Eden 区和
+Survivor 区，其中 Survivor 区又分 From 和 To 两个区。</p>
+<h2 id="eden区">Eden区</h2>
+<p>据 IBM 公司之前的研究表明，有将近 98%
+的对象是朝生夕死，所以针对这一现状，大多数情况下，对象会在新生代 Eden
+区中进行分配，当 Eden 区没有足够空间进行分配时，JVM 会发起一次 Minor
+GC，Minor GC 相比 Major GC 更频繁，回收速度也更快。</p>
+<p>通过 Minor GC 之后，Eden
+区中绝大部分对象会被回收，而那些无需回收的存活对象，将会进到 Survivor 的
+From 区，如果 From 区不够，则直接进入 To 区。、</p>
+<p><code>Eden</code>区一般占8份，<code>SurvivorFrom</code>和<code>SurvivorTo</code>一般分别占一份</p>
+<h2 id="survivor区">Survivor区</h2>
+<p>Survivor 区相当于是 Eden 区和 Old
+区的一个缓冲，类似于我们交通灯中的黄灯。</p>
+<h3 id="为什么需要survivor区">1、为什么需要Survivor区</h3>
+<p>不就是新生代到老年代吗，直接 Eden 到 Old
+不好了吗，为啥要这么复杂。</p>
+<p>如果没有 Survivor 区，Eden 区每进行一次 Minor
+GC，存活的对象就会被送到老年代，老年代很快就会被填满。而有很多对象虽然一次
+Minor GC
+没有消灭，但其实也并不会蹦跶多久，或许第二次，第三次就需要被清除。</p>
+<p>这时候移入老年区，很明显不是一个明智的决定。</p>
+<p>所以，Survivor 的存在意义就是减少被送到老年代的对象，进而减少 Major
+GC 的发生。Survivor 的预筛选保证，只有经历 16 次 Minor GC
+还能在新生代中存活的对象，才会被送到老年代。</p>
+<h3 id="survivor-区为啥划分为两块">2、Survivor 区为啥划分为两块？</h3>
+<p>设置两个 Survivor
+区最大的好处就是解决内存碎片化，我们先假设一下，Survivor
+只有一个区域会怎样。</p>
+<p>Minor GC 执行后，Eden 区被清空，存活的对象放到了 Survivor 区，而之前
+Survivor
+区中的对象，可能也有一些是需要被清除的。那么问题来了，这时候我们怎么清除它们？</p>
+<p>在这种场景下，我们只能标记清除，而我们知道标记清除最大的问题就是内存碎片，在新生代这种经常会消亡的区域，采用标记清除必然会让内存产生严重的碎片化。</p>
+<p>但因为 Survivor 有 2 个区域，所以每次 Minor GC，会将之前 Eden 区和
+From 区中的存活对象复制到 To 区域。第二次 Minor GC 时，From 与 To
+职责兑换，这时候会将 Eden 区和 To 区中的存活对象再复制到 From
+区域，以此反复。</p>
+<p>这种机制最大的好处就是，整个过程中，永远有一个 Survivor space
+是空的，另一个非空的 Survivor space 是无碎片的。</p>
+<p>那么，Survivor 为什么不分更多块呢？比方说分成三个、四个、五个？</p>
+<p>显然，如果 Survivor 区再细分下去，每一块的空间就会比较小，容易导致
+Survivor 区满，两块 Survivor 区可能是经过权衡之后的最佳方案。</p>
+<h2 id="old区">Old区</h2>
+<p>老年代占据着 2/3 的堆内存空间，只有在 Major GC
+的时候才会进行清理，每次 GC 都会触发“Stop-The-World”。内存越大，STW
+的时间也越长，所以内存也不仅仅是越大就越好。</p>
+<p>由于复制算法在对象存活率较高的老年代会进行很多次的复制操作，效率很低，所以老年代这里采用的是标记整理算法。</p>
+<p>除了上述所说，在内存担保机制下，无法安置的对象会直接进到老年代，以下几种情况也会进入老年代。</p>
+<h3 id="大对象">1、大对象</h3>
+<p>大对象指需要大量连续内存空间的对象，这部分对象不管是不是“朝生夕死”，都会直接进到老年代。这样做主要是为了避免在
+Eden 区及 2 个 Survivor
+区之间发生大量的内存复制。当你的系统有非常多“朝生夕死”的大对象时，得注意了。</p>
+<h3 id="长期存活对象">2、长期存活对象</h3>
+<p>虚拟机给每个对象定义了一个对象年龄（Age）计数器。正常情况下对象会不断的在
+<code>Survivor</code> 的 <code>From</code> 区与 <code>To</code>
+区之间移动，对象在 <code>Survivor</code> 区中每经历一次
+<code>Minor GC</code>，年龄就增加 1 岁。当年龄增加到 15
+岁时，这时候就会被转移到老年代。当然，这里的 15，JVM 也支持进行特殊设置
+<code>-XX:MaxTenuringThreshold=10</code>。</p>
+<p>可通过
+<code>java -XX:+PrintFlagsFinal -version | grep MaxTenuringThreshold</code>
+查看默认的阈值。</p>
+<p><img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403261332145.png" /></p>
+<h3 id="动态对象年龄">3、动态对象年龄</h3>
+<p>JVM 并不强制要求对象年龄必须到 15 岁才会放入老年区，如果 Survivor
+空间中某个年龄段的对象总大小超过了 Survivor
+空间的一半，那么该年龄段及以上年龄段的所有对象都会在下一次垃圾回收时被晋升到老年代，无需等你“成年”。</p>
+<p>有点类似于负载均衡，轮询是负载均衡的一种，保证每台机器都分得同样的请求。看似很均衡，但每台机器的硬件不同，健康状况不同，所以我们可以基于每台机器接收的请求数、响应时间等，来调整负载均衡算法。</p>
+<p>这种动态调整机制有助于优化内存使用和减少垃圾收集的频率，特别是在处理大量短生命周期对象的应用程序时。</p>
+<h1 id="垃圾收集器">垃圾收集器</h1>
+<p><strong>如果说收集算法是内存回收的方法论，那么垃圾收集器就是内存回收的具体实现。</strong></p>
+<p>虽然我们对各个收集器进行比较，但并非要挑选出一个最好的收集器。因为直到现在为止还没有最好的垃圾收集器出现，更加没有万能的垃圾收集器，<strong>我们能做的就是根据具体应用场景选择适合自己的垃圾收集器</strong>。试想一下：如果有一种四海之内、任何场景下都适用的完美收集器存在，那么我们的
+HotSpot 虚拟机就不会实现那么多不同的垃圾收集器了。</p>
+<p>JDK 默认垃圾收集器（使用
+<code>java -XX:+PrintCommandLineFlags -version</code> 命令查看）：</p>
+<ul>
+<li>JDK 8：Parallel Scavenge（新生代）+ Parallel Old（老年代）</li>
+<li>JDK 9 ~ JDK20: G1</li>
+</ul>
+<p>关于一些老的收集器直接去看JavaGuide中的介绍：<a
+href="https://javaguide.cn/java/jvm/jvm-garbage-collection.html#parallel-scavenge-%E6%94%B6%E9%9B%86%E5%99%A8">收集器</a></p>
+<h2 id="分代收集器">分代收集器</h2>
+<h3 id="cms">CMS</h3>
+<p>以获取最短回收停顿时间为目标，采用“标记-清除”算法，分 4
+大步进行垃圾收集，其中初始标记和重新标记会 STW，JDK 1.5 时引入，JDK9
+被标记弃用，JDK14 被移除，详情可见 <a
+href="https://openjdk.java.net/jeps/363">JEP 363open in new
+window</a>。</p>
+<p><strong>CMS（Concurrent Mark Sweep）垃圾收集器是第一个关注 GC
+停顿时间（STW
+的时间）的垃圾收集器</strong>。之前的垃圾收集器，要么是串行的垃圾回收方式，要么只关注系统吞吐量。</p>
+<p>CMS 垃圾收集器之所以能够实现对 GC
+停顿时间的控制，其本质来源于对「可达性分析算法」的改进，即三色标记算法。在
+CMS 出现之前，无论是 Serious 垃圾收集器，还是 ParNew 垃圾收集器，以及
+Parallel Scavenge 垃圾收集器，它们在进行垃圾回收的时候都需要 Stop the
+World，无法实现垃圾回收线程与用户线程的并发执行。</p>
+<p>CMS
+垃圾收集器通过三色标记算法，实现了垃圾回收线程与用户线程的并发执行，从而极大地降低了系统响应时间，提高了强交互应用程序的体验。它的运行过程分为
+4 个步骤，包括：</p>
+<ul>
+<li>初始标记</li>
+<li>并发标记</li>
+<li>重新标记</li>
+<li>并发清除</li>
+</ul>
+<p><strong>初始标记</strong>，指的是寻找所有被 GCRoots
+引用的对象，该阶段需要「Stop the World」。这个步骤仅仅只是标记一下 GC
+Roots 能直接关联到的对象，并不需要做整个引用的扫描，因此速度很快。</p>
+<p><strong>并发标记</strong>，指的是对「初始标记阶段」标记的对象进行整个引用链的扫描，该阶段不需要「Stop
+the World」。
+对整个引用链做扫描需要花费非常多的时间，因此通过垃圾回收线程与用户线程并发执行，可以降低垃圾回收的时间。</p>
+<p>这也是 CMS 能极大降低 GC
+停顿时间的核心原因，但这也带来了一些问题，即：并发标记的时候，引用可能发生变化，因此可能发生漏标（本应该回收的垃圾没有被回收）和多标（本不应该回收的垃圾被回收）了。</p>
+<p><strong>重新标记</strong>，指的是对「并发标记」阶段出现的问题进行校正，该阶段需要「Stop
+the
+World」。正如并发标记阶段说到的，由于垃圾回收算法和用户线程并发执行，虽然能降低响应时间，但是会发生漏标和多标的问题。所以对于
+CMS 来说，它需要在这个阶段做一些校验，解决并发标记阶段发生的问题。</p>
+<p><strong>并发清除</strong>，指的是将标记为垃圾的对象进行清除，该阶段不需要「Stop
+the World」。
+在这个阶段，垃圾回收线程与用户线程可以并发执行，因此并不影响用户的响应时间。</p>
+<p><img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403261345866.png" /></p>
+<p>CMS 的优点是：并发收集、低停顿。但缺点也很明显：</p>
+<p>①、对 CPU 资源非常敏感，因此在 CPU 资源紧张的情况下，CMS
+的性能会大打折扣。</p>
+<p>默认情况下，CMS
+启用的垃圾回收线程数是<code>（CPU数量 + 3)/4</code>，当 CPU
+数量很大时，启用的垃圾回收线程数占比就越小。但如果 CPU
+数量很小，例如只有 2 个 CPU，垃圾回收线程占用就达到了
+50%，这极大地降低系统的吞吐量，无法接受。</p>
+<p>②、CMS
+采用的是「标记-清除」算法，会产生大量的内存碎片，导致空间不连续，当出现大对象无法找到连续的内存空间时，就会触发一次
+Full GC，这会导致系统的停顿时间变长。</p>
+<p>③、CMS 无法处理浮动垃圾，当 CMS
+在进行垃圾回收的时候，应用程序还在不断地产生垃圾，这些垃圾会在 CMS
+垃圾回收结束之后产生，这些垃圾就是浮动垃圾，CMS
+无法处理这些浮动垃圾，只能在下一次 GC 时清理掉。</p>
+<h2 id="分区收集器">分区收集器</h2>
+<h3 id="g1">G1</h3>
+<p>G1（Garbage-First Garbage Collector）在 JDK 1.7 时引入，在 JDK 9
+时取代 CMS 成为了默认的垃圾收集器。G1
+有五个属性：分代、增量、并行、标记整理、STW。</p>
+<p>①、分代：上一讲中的年轻代和老年代，G1
+也是基于这个思想进行设计的。它将堆内存分为多个大小相等的区域（Region），每个区域都可以是
+Eden 区、Survivor 区或者 Old 区。</p>
+<p><img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403261354107.png" /></p>
+<p>可以通过 <code>-XX:G1HeapRegionSize=n</code> 来设置 Region
+的大小，可以设定为 1M、2M、4M、8M、16M、32M（不能超过）。</p>
+<p>G1 有专门分配大对象的 Region 叫 Humongous
+区，而不是让大对象直接进入老年代的 Region 中。在 G1
+中，大对象的判定规则就是一个大对象超过了一个 Region 大小的 50%，比如每个
+Region 是 2M，只要一个对象超过了 1M，就会被放入 Humongous
+中，而且一个大对象如果太大，可能会横跨多个 Region 来存放。</p>
+<p>G1
+会根据各个区域的垃圾回收情况来决定下一次垃圾回收的区域，这样就避免了对整个堆内存进行垃圾回收，从而降低了垃圾回收的时间。</p>
+<p>②、增量：G1
+可以以增量方式执行垃圾回收，这意味着它不需要一次性回收整个堆空间，而是可以逐步、增量地清理。有助于控制停顿时间，尤其是在处理大型堆时。</p>
+<p>③、并行：G1 垃圾回收器可以并行回收垃圾，这意味着它可以利用多个 CPU
+来加速垃圾回收的速度，这一特性在年轻代的垃圾回收（Minor
+GC）中特别明显，因为年轻代的回收通常涉及较多的对象和较高的回收速率。</p>
+<p>④、标记整理：在进行老年代的垃圾回收时，G1
+使用标记-整理算法。这个过程分为两个阶段：标记存活的对象和整理（压缩）堆空间。通过整理，G1
+能够避免内存碎片化，提高内存利用率。</p>
+<p>年轻代的垃圾回收（Minor
+GC）使用复制算法，因为年轻代的对象通常是朝生夕死的。</p>
+<p><img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403261355917.png" /></p>
+<p>⑤、STW：G1
+也是基于「标记-清除」算法，因此在进行垃圾回收的时候，仍然需要「Stop the
+World」。不过，G1
+在停顿时间上添加了预测机制，用户可以指定期望停顿时间。</p>
+<p><img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403261355182.png" /></p>
+<p>G1 中存在三种 GC 模式，分别是 Young GC、Mixed GC 和 Full GC。</p>
+<p><img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403261355479.png" /></p>
+<p>当 Eden 区的内存空间无法支持新对象的内存分配时，G1 会触发 Young
+GC。</p>
+<p>当需要分配对象到 Humongous 区域或者堆内存的空间占比超过
+<code>-XX:G1HeapWastePercent</code> 设置的
+InitiatingHeapOccupancyPercent 值时，G1 会触发一次 concurrent
+marking，它的作用就是计算老年代中有多少空间需要被回收，当发现垃圾的占比达到
+<code>-XX:G1HeapWastePercent</code> 中所设置的 G1HeapWastePercent
+比例时，在下次 Young GC 后会触发一次 Mixed GC。</p>
+<p>Mixed GC 是指回收年轻代的 Region 以及一部分老年代中的 Region。Mixed
+GC 和 Young GC 一样，采用的也是复制算法。</p>
+<p>在 Mixed GC 过程中，如果发现老年代空间还是不足，此时如果
+G1HeapWastePercent 设定过低，可能引发 Full
+GC。<code>-XX:G1HeapWastePercent</code> 默认是 5，意味着只有 5%
+的堆是“浪费”的。如果浪费的堆的百分比大于 G1HeapWastePercent，则运行 Full
+GC。</p>
+<p>在以 Region 为最小管理单元以及所采用的 GC 模式的基础上，G1
+建立了停顿预测模型，即 Pause Prediction Model 。这也是 G1
+非常被人所称道的特性。</p>
+<p>我们可以借助 <code>-XX:MaxGCPauseMillis</code>
+来设置期望的停顿时间（默认 200ms），G1 会根据这个值来计算出一个合理的
+Young GC 的回收时间，然后根据这个时间来制定 Young GC 的回收计划。</p>
+<p>G1 收集器的运作大致分为以下几个步骤：</p>
+<ul>
+<li><strong>初始标记</strong></li>
+<li><strong>并发标记</strong></li>
+<li><strong>最终标记</strong></li>
+<li><strong>筛选回收</strong></li>
+</ul>
+<h3 id="zgc">ZGC</h3>
+<p>ZGC（The Z Garbage Collector）是 JDK11
+推出的一款低延迟垃圾收集器，适用于大内存低延迟服务的内存管理和回收，SPEC
+jbb 2015 基准测试，在 128G 的大堆下，最大停顿时间才 1.68
+ms，停顿时间远胜于 G1 和 CMS。</p>
+<p>ZGC 的设计目标是：</p>
+<ul>
+<li>停顿时间不超过 10ms；</li>
+<li>停顿时间不会随着堆的大小，或者活跃对象的大小而增加；</li>
+<li>支持 8MB~4TB 级别的堆，未来支持 16TB。</li>
+</ul>
+<p>与 G1 和 CMS 类似，ZGC 也采用了复制算法，只不过做了重大优化，ZGC
+在标记、转移和重定位阶段几乎都是并发的，这是 ZGC 实现停顿时间小于 10ms
+的关键所在。</p>
+<p><img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403271557685.png" /></p>
+<p>ZGC 是怎么做到的呢？</p>
+<ul>
+<li>指针染色（Colored Pointer）：一种用于标记对象状态的技术。</li>
+<li>读屏障（Load
+Barrier）：一种在程序运行时插入到对象访问操作中的特殊检查，用于确保对象访问的正确性。</li>
+</ul>
+<p>这两种技术可以让所有线程在并发的条件下就指针的颜色 (状态)
+达成一致，而不是对象地址。因此，ZGC 可以并发的复制对象，这大大的降低了
+GC 的停顿时间。</p>
+<h4 id="指针染色">指针染色</h4>
+<p>在一个指针中，除了存储对象的实际地址外，还有额外的位被用来存储关于该对象的元数据信息。这些信息可能包括：</p>
+<ul>
+<li>对象是否被移动了（即它是否在回收过程中被移动到了新的位置）。</li>
+<li>对象的存活状态。</li>
+<li>对象是否被锁定或有其他特殊状态。</li>
+</ul>
+<p>通过在指针中嵌入这些信息，ZGC
+在标记和转移阶段会更快，因为通过指针上的颜色就能区分出对象状态，不用额外做内存访问。</p>
+<p>ZGC仅支持64位系统，它把64位虚拟地址空间划分为多个子空间，如下图所示：</p>
+<p><img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403271557105.png" /></p>
+<p>其中，0-4TB 对应 Java 堆，4TB-8TB 被称为 M0 地址空间，8TB-12TB 被称为
+M1 地址空间，12TB-16TB 预留未使用，16TB-20TB 被称为 Remapped 空间。</p>
+<p>当创建对象时，首先在堆空间申请一个虚拟地址，该虚拟地址并不会映射到真正的物理地址。同时，ZGC
+会在 M0、M1、Remapped
+空间中为该对象分别申请一个虚拟地址，且三个虚拟地址都映射到同一个物理地址。</p>
+<p>下图是虚拟地址的空间划分：</p>
+<p><img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403271557827.png" /></p>
+<p>不过，三个空间在同一时间只有一个空间有效。ZGC
+之所以设置这三个虚拟地址，是因为 ZGC 采用的是“空间换时间”的思想，去降低
+GC 的停顿时间。</p>
+<p>与上述地址空间划分相对应，ZGC实际仅使用64位地址空间的第0-41位，而第42-45位存储元数据，第47-63位固定为0。</p>
+<p><img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403271557352.png" /></p>
+<p>由于仅用了第 0~43 位存储对象地址，244 = 16TB，所以 ZGC 最大支持 16TB
+的堆。</p>
+<p>至于对象的存活信息，则存储在42-45位中，这与传统的垃圾回收并将对象存活信息放在对象头中完全不同。</p>
+<h4 id="读屏障">读屏障</h4>
+<p>当程序尝试读取一个对象时，读屏障会触发以下操作：</p>
+<ul>
+<li>检查指针染色：读屏障首先检查指向对象的指针的颜色信息。</li>
+<li>处理移动的对象：如果指针表示对象已经被移动（例如，在垃圾回收过程中），读屏障将确保返回对象的新位置。</li>
+<li>确保一致性：通过这种方式，ZGC
+能够在并发移动对象时保持内存访问的一致性，从而减少对应用程序停顿的需要。</li>
+</ul>
+<p>ZGC读屏障如何实现呢？</p>
+<p>来看下面这段伪代码，涉及 JVM 的底层 C++ 代码：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 伪代码示例，展示读屏障的概念性实现</span></span><br><span class="line"><span class="function">Object* <span class="title">read_barrier</span><span class="params">(Object* ref)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">is_forwarded</span>(ref)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">get_forwarded_address</span>(ref); <span class="comment">// 获取对象的新地址</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ref; <span class="comment">// 对象未移动，返回原始引用</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>read_barrier 代表读屏障。</li>
+<li>如果对象已被移动（is_forwarded(ref)），方法返回对象的新地址（get_forwarded_address(ref)）。</li>
+<li>如果对象未被移动，方法返回原始的对象引用。</li>
+</ul>
+<p>读屏障可能被GC线程和业务线程触发，并且只会在访问堆内对象时触发，访问的对象位于GC
+Roots时不会触发，这也是扫描GC Roots时需要STW的原因。</p>
+<p>下面是一个简化的示例代码，展示了读屏障的触发时机。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">Object o = obj.FieldA   <span class="comment">// 从堆中读取引用，需要加入屏障</span></span><br><span class="line">&lt;Load barrier&gt;</span><br><span class="line">Object p = o  <span class="comment">// 无需加入屏障，因为不是从堆中读取引用</span></span><br><span class="line">o.<span class="built_in">dosomething</span>() <span class="comment">// 无需加入屏障，因为不是从堆中读取引用</span></span><br><span class="line"><span class="type">int</span> i =  obj.FieldB  <span class="comment">//无需加入屏障，因为不是对象引用</span></span><br></pre></td></tr></table></figure>
+<h4 id="zgc-的工作过程">ZGC 的工作过程</h4>
+<p>ZGC 周期由三个 STW 暂停和四个并发阶段组成：标记/重新映射( M/R
+)、并发引用处理( RP )、并发转移准备( EC ) 和并发转移( RE )。</p>
+<p><img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403271600752.png" /></p>
+<h5 id="stop-the-world-暂停阶段">Stop-The-World 暂停阶段</h5>
+<ol type="1">
+<li><strong>标记开始（Mark Start）STW 暂停</strong>：这是 ZGC
+的开始，进行 GC Roots 的初始标记。在这个短暂的停顿期间，ZGC 标记所有从
+GC Root 直接可达的对象。</li>
+<li><strong>重新映射开始（Relocation Start）STW
+暂停</strong>：在并发阶段之后，这个 STW
+暂停是为了准备对象的重定位。在这个阶段，ZGC
+选择将要清理的内存区域，并建立必要的数据结构以进行对象移动。</li>
+<li><strong>暂停结束（Pause End）STW 暂停</strong>：ZGC
+结束。在这个短暂的停顿中，完成所有与该 GC 周期相关的最终清理工作。</li>
+</ol>
+<h5 id="并发阶段">并发阶段</h5>
+<ol type="1">
+<li><strong>并发标记/重新映射 (M/R)</strong>
+：这个阶段包括并发标记和并发重新映射。在并发标记中，ZGC
+遍历对象图，标记所有可达的对象。然后，在并发重新映射中，ZGC
+更新指向移动对象的所有引用。</li>
+<li><strong>并发引用处理 (RP)</strong> ：在这个阶段，ZGC
+处理各种引用类型（如软引用、弱引用、虚引用和幽灵引用）。这些引用的处理通常需要特殊的考虑，因为它们与对象的可达性和生命周期密切相关。</li>
+<li><strong>并发转移准备 (EC)</strong> ：这是为对象转移做准备的阶段。ZGC
+确定哪些内存区域将被清理，并准备相关的数据结构。</li>
+<li><strong>并发转移 (RE)</strong> ：在这个阶段，ZGC
+将存活的对象从旧位置移动到新位置。由于这一过程是并发执行的，因此应用程序可以在大多数垃圾回收工作进行时继续运行。</li>
+</ol>
+<p><img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403271600601.png" /></p>
+<p>ZGC
+的两个关键技术：指针染色和读屏障，不仅应用在并发转移阶段，还应用在并发标记阶段：将对象设置为已标记，传统的垃圾回收器需要进行一次内存访问，并将对象存活信息放在对象头中；而在ZGC中，只需要设置指针地址的第42-45位即可，并且因为是寄存器访问，所以速度比访问内存更快。</p>
+<p><img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403271600269.png" /></p>
 ]]></content>
       <categories>
-        <category>随笔</category>
+        <category>Java八股</category>
+        <category>JVM</category>
       </categories>
       <tags>
-        <tag>博客</tag>
-        <tag>随笔</tag>
+        <tag>Java</tag>
+        <tag>八股</tag>
+        <tag>JVM</tag>
       </tags>
   </entry>
   <entry>
-    <title>Docker创建Ubantu容器</title>
-    <url>/2023/09/04/2023/Docker/Docker%E5%88%9B%E5%BB%BAUbantu%E5%AE%B9%E5%99%A8/</url>
+    <title>Java创建线程的方式</title>
+    <url>/2024/03/23/Java/%E5%B9%B6%E5%8F%91/Java%E5%88%9B%E5%BB%BA%E7%BA%BF%E7%A8%8B%E7%9A%84%E6%96%B9%E5%BC%8F/</url>
     <content><![CDATA[<blockquote>
-<p>为Docker创建一个Ubantu容器</p>
+<p>一些创建线程的方式</p>
 </blockquote>
 <span id="more"></span>
-<h1 id="前言">前言</h1>
-<p>今天上了<code>大数据挖掘</code>和<code>Linux程序设计</code>的第一课，发现老师都要求在电脑上搞个虚拟机方便以后的操作，所以我准备使用安装Ubantu的Docker容器来作为虚拟机使用。</p>
-<h1 id="操作">操作</h1>
-<h2 id="基础命令">基础命令</h2>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run [option] 镜像名 [像容器中传入的命令]</span><br></pre></td></tr></table></figure>
-<h3 id="常用可选说明">常用可选说明</h3>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">-</span>i 表示以“交互模式”运行容器</span><br><span class="line"> <span class="operator">-</span>t 表示容器启动后会进入其命令行。加入这两个参数后，容器创建就能登录进去。即 分配一个伪终端。</span><br><span class="line"> <span class="comment">--name 为创建的容器命名</span></span><br><span class="line"> <span class="operator">-</span>v 表示目录映射关系(前者是宿主机目录，后者是映射到宿主机上的目录，即 宿主机目录:容器中目录)，可以使 用多个<span class="operator">-</span>v 做多个目录或文件映射。注意:最好做目录映射，在宿主机上做修改，然后 共享到容器上。</span><br><span class="line"> <span class="operator">-</span>d 在run后面加上<span class="operator">-</span>d参数,则会创建一个守护式容器在后台运行(这样创建容器后不 会自动登录容器，如果只加<span class="operator">-</span>i <span class="operator">-</span>t 两个参数，        创建后就会自动进去容器)。</span><br><span class="line"> <span class="operator">-</span>p 表示端口映射，前者是宿主机端口，后者是容器内的映射端口。可以使用多个<span class="operator">-</span>p 做多个端口映射</span><br><span class="line"> <span class="operator">-</span>e 为容器设置环境变量</span><br><span class="line"> <span class="comment">--network=host 表示将主机的网络环境映射到容器中，容器的网络与主机相同</span></span><br></pre></td></tr></table></figure>
-<h3 id="交互式容器">交互式容器</h3>
-<p>例如，创建一个交互式容器，并命名为myubuntu</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run -it --name=myubuntu ubuntu /bin/bash</span><br></pre></td></tr></table></figure>
-<p>在容器中可以随意执行linux命令，就是一个ubuntu的环境，当执行exit命令退出时，该容器也随之停止</p>
-<h3 id="守护式容器">守护式容器</h3>
-<p>创建一个守护式容器:如果对于一个需要长期运行的容器来说，我们可以创建一个守护式容器。在容器内部exit退出时，容器也不会停止。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run -dit --name=myubuntu2 ubuntu</span><br></pre></td></tr></table></figure>
-<h3 id="进入已运行的容器">进入已运行的容器</h3>
-<p>docker exec -it 容器名或容器id 进入后执行的第一个命令</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker exec -it myubuntu2 /bin/bash</span><br></pre></td></tr></table></figure>
-<h3 id="查看容器">查看容器</h3>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 列出本机正在运行的容器</span><br><span class="line">docker container ls</span><br><span class="line"></span><br><span class="line"># 列出本机所有容器，包括已经终止运行的</span><br><span class="line">docker container ls --all</span><br></pre></td></tr></table></figure>
-<h3 id="停止与启动容器">停止与启动容器</h3>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 停止一个已经在运行的容器</span><br><span class="line">docker container stop 容器名或容器id</span><br><span class="line"></span><br><span class="line"># 启动一个已经停止的容器</span><br><span class="line">docker container start 容器名或容器id</span><br><span class="line"></span><br><span class="line"># kill掉一个已经在运行的容器</span><br><span class="line">docker container kill 容器名或容器id</span><br></pre></td></tr></table></figure>
-<h3 id="删除容器">删除容器</h3>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker container rm 容器名或容器id</span><br></pre></td></tr></table></figure>
-<h3 id="将容器保存为镜像">将容器保存为镜像</h3>
-<p>我们可以通过如下命令将容器保存为镜像</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker commit 容器名 镜像名</span><br></pre></td></tr></table></figure>
-<h3 id="镜像备份与迁移">镜像备份与迁移</h3>
-<p>我们可以通过save命令将镜像打包成文件，拷贝给别人使用</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker save -o 保存的文件名 镜像名</span><br></pre></td></tr></table></figure>
-<p>如:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker save -o ./ubuntu.tar ubuntu</span><br></pre></td></tr></table></figure>
-<p>在拿到镜像文件后，可以通过load方法，将镜像加载到本地</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker load -i ./ubuntu.tar</span><br></pre></td></tr></table></figure>
+<h1 id="如何创建线程">如何创建线程</h1>
+<p>一般来说，创建线程有很多种方式，例如继承<code>Thread</code>类、实现<code>Runnable</code>接口、实现<code>Callable</code>接口、使用线程池、使用<code>CompletableFuture</code>类等等。</p>
+<p>不过，这些方式其实并没有真正创建出线程。准确点来说，这些都属于是在
+Java 代码中使用多线程的方法。</p>
+<p>严格来说，Java
+就只有一种方式可以创建线程，那就是通过<code>new Thread().start()</code>创建。不管是哪种方式，最终还是依赖于<code>new Thread().start()</code>。</p>
+<h2 id="继承tread类">继承Tread类</h2>
+<p>这是最普通的方式，继承<code>Thread</code>类，重写<code>run</code>方法，如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ExtendsThread</span> <span class="keyword">extends</span> <span class="title class_">Thread</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;1......&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">ExtendsThread</span>().start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="实现runnable接口">实现Runnable接口</h3>
+<p>这也是一种常见的方式，实现<code>Runnable</code>接口并重写<code>run</code>方法，如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ImplementsRunnable</span> <span class="keyword">implements</span> <span class="title class_">Runnable</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;2......&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">ImplementsRunnable</span> <span class="variable">runnable</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ImplementsRunnable</span>();</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">Thread</span>(runnable).start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>与继承<code>Thread</code>接口不同的是，Java当中是单继承，当一个类继承了<code>Thread</code>类后就无法再继承其他的类，通过实现<code>Runnable</code>接口并重写<code>run</code>方法，可以再实现继承其他类。</p>
+<h3 id="实现callable接口">实现Callable接口</h3>
+<p>和上一种方式类似，这里需要去重写<code>Callable</code>接口的<code>call</code>方法，并配合<code>FutureTask</code>使用，只不过这种方式可以使用<code>get()</code>方法拿到线程执行完的返回值，如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ImplementsCallable</span> <span class="keyword">implements</span> <span class="title class_">Callable</span>&lt;String&gt; &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">call</span><span class="params">()</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;3......&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Justin&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        <span class="type">ImplementsCallable</span> <span class="variable">callable</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ImplementsCallable</span>();</span><br><span class="line">        FutureTask&lt;String&gt; futureTask = <span class="keyword">new</span> <span class="title class_">FutureTask</span>&lt;&gt;(callable);</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">Thread</span>(futureTask).start();</span><br><span class="line">        System.out.println(futureTask.get());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="使用executorservice线程池">使用ExecutorService线程池</h3>
+<p>这种属于进阶方式，可以通过<code>Executors</code>创建线程池，也可以自定义线程池，如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">UseExecutorService</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">ExecutorService</span> <span class="variable">poolA</span> <span class="operator">=</span> Executors.newFixedThreadPool(<span class="number">2</span>);</span><br><span class="line">        poolA.execute(()-&gt;&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;4A......&quot;</span>);</span><br><span class="line">        &#125;);</span><br><span class="line">        poolA.shutdown();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 又或者自定义线程池</span></span><br><span class="line">        <span class="type">ThreadPoolExecutor</span> <span class="variable">poolB</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ThreadPoolExecutor</span>(<span class="number">2</span>, <span class="number">3</span>, <span class="number">0</span>,</span><br><span class="line">                TimeUnit.SECONDS, <span class="keyword">new</span> <span class="title class_">LinkedBlockingQueue</span>&lt;Runnable&gt;(<span class="number">3</span>),</span><br><span class="line">                Executors.defaultThreadFactory(), <span class="keyword">new</span> <span class="title class_">ThreadPoolExecutor</span>.AbortPolicy());</span><br><span class="line">        poolB.submit(()-&gt;&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;4B......&quot;</span>);</span><br><span class="line">        &#125;);</span><br><span class="line">        poolB.shutdown();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="注意点">注意点</h2>
+<p>创建线程的方式十分多样，最少都能有上面的四种答案，那这真的对吗？可以说对，但严格意义上来说，又不对。</p>
+<p>抛开后面一些先不谈，咱们就聊最开始的三种：“继承<code>Thread</code>类、实现<code>Runnable</code>接口、实现<code>Callable</code>接口”，这应该是广为人知的答案。</p>
+<p>那么此时来看个例子：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ImplementsRunnable</span> <span class="keyword">implements</span> <span class="title class_">Runnable</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(Thread.currentThread().getName()</span><br><span class="line">                + <span class="string">&quot;：小猫爱吃鱼&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里定义了一个类，实现了<code>Runnable</code>接口并重写了<code>run</code>方法，按前面的说法，这种方式是不是创建了一条线程？答案是<code>Yes</code>，可问题来了，请你告诉我，该如何启动这条所谓的“线程”呢？</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="type">ImplementsRunnable</span> <span class="variable">runnable</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ImplementsRunnable</span>();</span><br><span class="line">    runnable.run();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>难道像上面这样嘛？来看看运行结果：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">main：小猫爱吃鱼</span><br></pre></td></tr></table></figure>
+<p>结果很显然，打印出的线程名字为：<code>main</code>，代表目前是主线程在运行，和调用普通方法没任何区别，那究竟该如何创建一条线程呀？要这样做：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="type">ImplementsRunnable</span> <span class="variable">runnable</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ImplementsRunnable</span>();</span><br><span class="line">    <span class="keyword">new</span> <span class="title class_">Thread</span>(runnable).start();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>先<code>new</code>出<code>Runnable</code>对象，接着再<code>new</code>一个<code>Thread</code>对象，然后把<code>Runnable</code>丢给<code>Thread</code>，接着调用<code>start()</code>方法，此时才能真正意义上创建一条线程，运行结果如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Thread-0：小猫爱吃鱼</span><br></pre></td></tr></table></figure>
+<p>此时线程名字变成了<code>Thread-0</code>，这意味着输出“小猫爱吃鱼”这句话的代码，并不是<code>main</code>线程在执行了，实现了<code>Runnable</code>接口的<code>ImplementsRunnable</code>类，并不能被称为一条线程，包括所谓的<code>Callable、FutureTask……</code>，都不能创建出真正的线程。</p>
+<p>换到前面所提出的三种方式中，只有继承<code>Thread</code>类，才能真正创建一条线程，如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ExtendsThread</span> <span class="keyword">extends</span> <span class="title class_">Thread</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(Thread.currentThread().getName()</span><br><span class="line">                + <span class="string">&quot;：小猫爱吃鱼&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">ExtendsThread</span>().start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 运行结果：</span></span><br><span class="line"><span class="comment">//      Thread-0：竹子爱熊猫</span></span><br></pre></td></tr></table></figure>
+<p>因为当你用一个类，继承<code>Thread</code>类时，它内部所有的方法，都会被继承过来，所以当前类可以直接调用<code>start()</code>方法启动，更具体点来说，<strong>在<code>Java</code>中，创建线程的方式就只有一种：调用<code>Thread.start()</code>方法</strong>！只有这种形式，才能在真正意义上创建一条线程！</p>
 ]]></content>
       <categories>
-        <category>Docker</category>
-        <category>Ubuntu</category>
+        <category>Java八股</category>
+        <category>并发</category>
       </categories>
       <tags>
-        <tag>Docker</tag>
-        <tag>Ubuntu</tag>
+        <tag>Java</tag>
+        <tag>八股</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java当中的各种锁</title>
+    <url>/2024/03/23/Java/%E5%B9%B6%E5%8F%91/Java%E5%BD%93%E4%B8%AD%E7%9A%84%E5%90%84%E7%A7%8D%E9%94%81/</url>
+    <content><![CDATA[<blockquote>
+<p>15种锁！</p>
+</blockquote>
+<span id="more"></span>
+<h1 id="乐观锁">乐观锁</h1>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232110652.png" alt="image-20240323210351234" style="zoom: 67%;" /></p>
+<p><strong>乐观锁是一种乐观思想</strong>，假定当前环境是读多写少，遇到并发写的概率比较低，读数据时认为别的线程不会正在进行修改（所以没有上锁）。写数据时，判断当前与期望值是否相同，如果相同则进行更新（更新期间加锁，保证是原子性的）。</p>
+<p>即假设数据修改不会造成冲突，在数据提交更新时才进行冲突检测。</p>
+<p><strong>Java中的乐观锁：</strong>
+CAS，比较并替换，比较当前值（主内存中的值），与预期值（当前线程中的值，主内存中值的一份拷贝）是否一样，一样则更新，否则继续进行CAS操作。</p>
+<p>如上图所示，可以同时进行读操作，读的时候其他线程不能进行写操作。</p>
+<h1 id="悲观锁">悲观锁</h1>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232110830.png" alt="image-20240323210903997" style="zoom: 67%;" /></p>
+<p><strong>悲观锁是一种悲观思想</strong>，即认为写多读少，遇到并发写的可能性高，每次去拿数据的时候都认为其他线程会修改，所以每次读写数据都会认为其他线程会修改，所以每次读写数据时都会上锁。其他线程想要读写这个数据时，会被这个线程block，直到这个线程释放锁然后其他线程获取到锁。</p>
+<p>即数据修改前，假设一定会发生冲突，先尝试为它加锁。</p>
+<p><strong>Java中的悲观锁：</strong>
+synchronized修饰的方法和方法块、ReentrantLock。</p>
+<p>如上图所示，只能有一个线程进行读操作或者写操作，其他线程的读写操作均不能进行。</p>
+<h1 id="自旋锁">自旋锁</h1>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232110895.png" alt="image-20240323211029664" style="zoom: 67%;" /></p>
+<p><strong>自旋锁是一种技术：</strong>
+为了让线程等待，我们只须让线程执行一个忙循环（自旋）。</p>
+<p>现在绝大多数的个人电脑和服务器都是多路（核）处理器系统，如果物理机器有一个以上的处理器或者处理器核心，能让两个或以上的线程同时并行执行，就可以让后面请求锁的那个线程“稍等一会”，但不放弃处理器的执行时间，看看持有锁的线程是否很快就会释放锁。</p>
+<p><strong>自旋锁的优点：</strong>
+避免了线程切换的开销。挂起线程和恢复线程的操作都需要转入内核态中完成，这些操作给Java虚拟机的并发性能带来了很大的压力。</p>
+<p><strong>自旋锁的缺点：</strong>
+占用处理器的时间，如果占用的时间很长，会白白消耗处理器资源，而不会做任何有价值的工作，带来性能的浪费。因此自旋等待的时间必须有一定的限度，如果自旋超过了限定的次数仍然没有成功获得锁，就应当使用传统的方式去挂起线程。</p>
+<p>自旋次数默认值：10次，可以使用参数<code>-XX:PreBlockSpin</code>来自行更改。</p>
+<p><strong>自适应自旋：</strong>
+自适应意味着自旋的时间不再是固定的，而是由前一次在同一个锁上的自旋时间及锁的拥有者的状态来决定的。有了自适应自旋，随着程序运行时间的增长及性能监控信息的不断完善，虚拟机对程序锁的状态预测就会越来越精准。</p>
+<p><strong>Java中的自旋锁：</strong>
+CAS操作中的比较操作失败后的自旋等待。</p>
+<h1 id="可重入锁">可重入锁</h1>
+<p><strong>可重入锁是一种技术：</strong>
+任意线程在获取到锁之后能够再次获取该锁而不会被锁所阻塞。</p>
+<p><strong>可重入锁的原理：</strong> 为每个锁关联一个计数器。</p>
+<ul>
+<li>首次获取锁：计数器置为1.</li>
+<li>再次获取锁：计数器加1</li>
+<li>释放锁：释放锁时，进行计数自减。计数器为0则代表锁被当前线程释放。</li>
+</ul>
+<p><strong>Java中的可重入锁：</strong>
+ReentrantLock、synchronized修饰的方法或代码段。</p>
+<p><strong>可重入锁的作用：</strong> 避免死锁。</p>
+<p><strong>面试题1：</strong>
+可重入锁如果加了两把，但是只释放了一把会出现什么问题？</p>
+<p>答：程序卡死，线程不能出来，也就是说我们申请了几把锁，就需要释放几把锁。</p>
+<p><strong>面试题2：</strong>
+如果只加了一把锁，释放两次会出现什么问题？</p>
+<p>答：会报错，java.lang.IllegalMonitorStateException。</p>
+<h1 id="读写锁">读写锁</h1>
+<p><strong>读写锁是一种技术：</strong>
+通过ReentrantReadWriteLock类来实现。为了提高性能， Java
+提供了读写锁，在读的地方使用读锁，在写的地方使用写锁，灵活控制，如果没有写锁的情况下，读是无阻塞的，在一定程度上提高了程序的执行效率。读写锁分为读锁和写锁，多个读锁不互斥，读锁与写锁互斥，这是由
+jvm 自己控制的。</p>
+<p><strong>读锁：</strong>
+允许多个线程获取读锁，同时访问同一个资源。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232116006.png" alt="image-20240323211616975" style="zoom:67%;" /></p>
+<p><strong>写锁：</strong>
+只允许一个线程获取写锁，不允许同时访问同一个资源。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232116455.png" alt="image-20240323211655063" style="zoom:67%;" /></p>
+<p><strong>Java中的读写锁：</strong>ReentrantReadWriteLock</p>
+<h1 id="公平锁">公平锁</h1>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232120587.png" alt="image-20240323211822932" style="zoom:67%;" /></p>
+<p><strong>公平锁是一种思想：</strong>
+多个线程竞争锁时直接进入队列排队，按照申请锁的顺序来获取锁，先到先得。在并发环境中，每个线程会先查看此锁维护的等待队列，如果当前等待队列为空，则占有锁，如果等待队列不为空，则加入到等待队列的末尾，按照FIFO的原则从队列中拿到线程，然后占有锁。</p>
+<h1 id="非公平锁">非公平锁</h1>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232121397.png" alt="image-20240323212125844" style="zoom:67%;" /></p>
+<p><strong>非公平锁是一种思想：</strong>
+多个线程竞争锁时，线程先尝试获取锁，如果获取不到，则再采用公平锁的方式，进入等待队列。多个线程获取锁的顺序，不是按照先到先得的顺序，有可能后申请锁的线程比先申请的线程优先获取锁。</p>
+<p><strong>优点：</strong> 非公平锁的性能高于公平锁。</p>
+<p><strong>缺点：</strong>
+有可能造成线程饥饿（某个线程很长一段时间获取不到锁）</p>
+<p><strong>Java中的非公平锁：</strong>synchronized是非公平锁，ReentrantLock通过构造函数指定该锁是公平的还是非公平的，默认是非公平的。</p>
+<h1 id="共享锁">共享锁</h1>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232122441.png" alt="image-20240323212253082" style="zoom:67%;" /></p>
+<p><strong>共享锁是一种思想：</strong>
+可以有多个线程获取读锁，以共享的方式持有锁。和乐观锁、读写锁同义。</p>
+<p><strong>Java中用到的共享锁：</strong> ReentrantReadWriteLock。</p>
+<h1 id="独占锁">独占锁</h1>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232123222.png" alt="image-20240323212332680" style="zoom:67%;" /></p>
+<p><strong>独占锁是一种思想：</strong>
+只能有一个线程获取锁，以独占的方式持有锁。和悲观锁、互斥锁同义。</p>
+<p><strong>Java中用到的独占锁：</strong> synchronized，ReentrantLock</p>
+<h1 id="重量级锁">重量级锁</h1>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232124347.png" alt="image-20240323212424987" style="zoom:67%;" /></p>
+<p><strong>重量级锁是一种称谓：</strong>
+synchronized是通过对象内部的一个叫做监视器锁（monitor）来实现的，监视器锁本身依赖底层的操作系统的
+Mutex
+Lock来实现。操作系统实现线程的切换需要从用户态切换到核心态，成本非常高。这种依赖于操作系统
+Mutex
+Lock来实现的锁称为重量级锁。为了优化synchonized，引入了轻量级锁，偏向锁。</p>
+<p><strong>Java中的重量级锁：</strong> synchronized</p>
+<h1 id="轻量级锁">轻量级锁</h1>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232125738.png" alt="image-20240323212543336" style="zoom:67%;" /></p>
+<p><strong>轻量级锁是JDK6时加入的一种锁优化机制：</strong>
+轻量级锁是在无竞争的情况下使用CAS操作去消除同步使用的互斥量。轻量级是相对于使用操作系统互斥量来实现的重量级锁而言的。轻量级锁在没有多线程竞争的前提下，减少传统的重量级锁使用操作系统互斥量产生的性能消耗。如果出现两条以上的线程争用同一个锁的情况，那轻量级锁将不会有效，必须膨胀为重量级锁。</p>
+<p><strong>优点：</strong>
+如果没有竞争，通过CAS操作成功避免了使用互斥量的开销。</p>
+<p><strong>缺点：</strong>
+如果存在竞争，除了互斥量本身的开销外，还额外产生了CAS操作的开销，因此在有竞争的情况下，轻量级锁比传统的重量级锁更慢。</p>
+<h1 id="偏向锁">偏向锁</h1>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232127632.png" alt="image-20240323212744980" style="zoom:67%;" /></p>
+<p><strong>偏向锁是JDK6时加入的一种锁优化机制：</strong>
+在无竞争的情况下把整个同步都消除掉，连CAS操作都不去做了。偏是指偏心，它的意思是这个锁会偏向于第一个获得它的线程，如果在接下来的执行过程中，该锁一直没有被其他的线程获取，则持有偏向锁的线程将永远不需要再进行同步。持有偏向锁的线程以后每次进入这个锁相关的同步块时，虚拟机都可以不再进行任何同步操作（例如加锁、解锁及对Mark
+Word的更新操作等）。</p>
+<p><strong>优点：</strong>
+把整个同步都消除掉，连CAS操作都不去做了，优于轻量级锁。</p>
+<p><strong>缺点：</strong>
+如果程序中大多数的锁都总是被多个不同的线程访问，那偏向锁就是多余的。</p>
+<h1 id="分段锁">分段锁</h1>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232129274.png" alt="image-20240323212928660" style="zoom:67%;" /></p>
+<p><strong>分段锁是一种机制：</strong>
+最好的例子来说明分段锁是ConcurrentHashMap。<strong>ConcurrentHashMap原理：</strong>它内部细分了若干个小的
+HashMap，称之为段(Segment)。默认情况下一个 ConcurrentHashMap
+被进一步细分为 16 个段，既就是锁的并发度。如果需要在 ConcurrentHashMap
+添加一项key-value，并不是将整个 HashMap 加锁，而是首先根据 hashcode
+得到该key-value应该存放在哪个段中，然后对该段加锁，并完成 put
+操作。在多线程环境中，如果多个线程同时进行put操作，只要被加入的key-value不存放在同一个段中，则线程间可以做到真正的并行。</p>
+<p><strong>线程安全：</strong>ConcurrentHashMap 是一个 Segment 数组，
+Segment 通过继承ReentrantLock
+来进行加锁，所以每次需要加锁的操作锁住的是一个 segment，这样只要保证每个
+Segment 是线程安全的，也就实现了全局的线程安全</p>
+<h1 id="锁粗化">锁粗化</h1>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232135180.png" alt="image-20240323213547009" style="zoom:67%;" /></p>
+<p><strong>锁粗化是一种优化技术：</strong>
+如果一系列的连续操作都对同一个对象反复加锁和解锁，甚至加锁操作都是出现在循环体体之中，就算真的没有线程竞争，频繁地进行互斥同步操作将会导致不必要的性能损耗，所以就采取了一种方案：把加锁的范围扩展（粗化）到整个操作序列的外部，这样加锁解锁的频率就会大大降低，从而减少了性能损耗。</p>
+<h2 id="锁消除">锁消除</h2>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232136997.png" alt="image-20240323213626287" style="zoom:67%;" /></p>
+<p><strong>锁消除是一种优化技术：</strong>
+就是把锁干掉。当Java虚拟机运行时发现有些共享数据不会被线程竞争时就可以进行锁消除。</p>
+<p>那如何判断共享数据不会被线程竞争？</p>
+<p>利用逃逸分析技术：分析对象的作用域，如果对象在A方法中定义后，被作为参数传递到B方法中，则称为方法逃逸；如果被其他线程访问，则称为线程逃逸。</p>
+<p>在堆上的某个数据不会逃逸出去被其他线程访问到，就可以把它当作栈上数据对待，认为它是线程私有的，同步加锁就不需要了。</p>
+]]></content>
+      <categories>
+        <category>Java八股</category>
+        <category>并发</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>八股</tag>
+        <tag>并发</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>volatile关键字</title>
+    <url>/2024/03/23/Java/%E5%B9%B6%E5%8F%91/volatile%E5%85%B3%E9%94%AE%E5%AD%97/</url>
+    <content><![CDATA[<blockquote>
+<p>关于volatile关键字的一些问题</p>
+</blockquote>
+<span id="more"></span>
+<h1 id="java内存模型是什么">Java内存模型是什么</h1>
+<p>如下面两张图所示（这里JavaGuide画的图就很好，直接拿来了，侵删），变量是放在主存中的，每个线程都有自己的工作线程（本地内存），线程运行时将主存中的数据复制到工作内存当中，对数据的任何操作都是基于自己的工作内存进行的，之后再将更新后的数据刷新到主存。</p>
+<p><strong>当前线程不能直接操作主存和其他线程工作内存中的数据。</strong></p>
+<figure>
+<img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232024135.png"
+alt="JMM(Java 内存模型)" />
+<figcaption aria-hidden="true">JMM(Java 内存模型)</figcaption>
+</figure>
+<figure>
+<img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232024275.png"
+alt="JMM(Java 内存模型)强制在主存中进行读取" />
+<figcaption aria-hidden="true">JMM(Java
+内存模型)强制在主存中进行读取</figcaption>
+</figure>
+<h1 id="volatile关键字的作用">volatile关键字的作用</h1>
+<p><strong>volatile关键字保证了变量的立即可见性</strong></p>
+<p><code>线程A</code>与<code>线程B</code>并发运行时可能出现这种情况，如果<code>线程A</code>修改了工作内存中的数据且还未同步到主存，那么<code>线程B</code>读取的主存中的数据就不是最新值。当变量被volatile关键字修饰后，任何线程对它的写操作都会强制将工作内存中的最新值刷新到主存，同时使其他线程工作内存中的变量缓存无效，这样其他线程使用缓存时就会重新到主存中读取最新值。</p>
+<p>即如果我们将变量声明为 <strong><code>volatile</code></strong>
+，这就指示
+JVM，这个变量是共享且不稳定的，每次使用它都到主存中进行读取。</p>
+<p><strong><code>volatile</code>
+关键字能保证数据的可见性，但不能保证数据的原子性。<code>synchronized</code>
+关键字两者都能保证。</strong></p>
+]]></content>
+      <categories>
+        <category>Java八股</category>
+        <category>并发</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>八股</tag>
+        <tag>并发</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>synchronized锁</title>
+    <url>/2024/03/25/Java/%E5%B9%B6%E5%8F%91/synchronized%E9%94%81/</url>
+    <content><![CDATA[<blockquote>
+<p>关于synchronized锁的一些问题</p>
+</blockquote>
+<span id="more"></span>
+<h1 id="什么是synchronized锁">什么是synchronized锁</h1>
+<blockquote>
+<p>官方：同步方法支持一种简单的策略来防止线程受到干扰和内存一致性错误；如果一个对象对多个线程可见，则对该对象变量的所有读取或写入都是通过同步方法完成</p>
+</blockquote>
+<p>通俗点来说就是程序中用于保护线程安全的一种机制。</p>
+<h1 id="底层原理">底层原理</h1>
+<p>在<code>HotSpot</code>虚拟机中，对象内存布局主要分为对象头（<strong>Header</strong>）、示例数据（<strong>Instance
+Data</strong>）和对齐填充（<strong>Padding</strong>）。</p>
+<p><strong>对象头 = Mark Word + 类型指针（</strong>Klass
+pointer<strong>）。</strong></p>
+<p><strong>类型指针（</strong>Klass pointer<strong>）</strong> ：
+用于标识JVM通过这个指针来确定这个对象是哪个类的实例。</p>
+<p><strong>Mark Word</strong> ：
+用于储存对象自身的运行时数据，例如对象的hashCode、GC分代年龄、锁状态标志、线程持有的锁、偏向线程的ID、偏向时间戳等。<strong>在运行期间，Mark
+Word里存储的数据会随着内部锁标志位的变化而变化。</strong></p>
+<p><img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403251959954.png" /></p>
+<p><strong>无锁状态(01)</strong></p>
+<p>对象头开辟 25bit 的空间用来存储对象的 hashcode ，4bit
+用于存放分代年龄，1bit 用来存放是否偏向锁的标识位，2bit
+用来存放锁标识位为01。</p>
+<p><strong>偏向锁状态(01)</strong></p>
+<p>还是开辟25bit 的空间，其中23bit 用来存放线程ID，2bit 用来存放
+epoch，4bit 存放分代年龄，1bit 存放是否偏向锁标识，
+0表示无锁，1表示偏向锁，锁的标识位还是01。</p>
+<p><strong>轻量级锁状态(00)</strong></p>
+<p>开辟 30bit 的空间存放指向<strong>栈中锁记录</strong>的指针，2bit
+存放锁的标志位，其标志位为00。</p>
+<p><strong>重量级锁状态(10)</strong></p>
+<p>30bit 的空间用来存放指向<strong>重量级锁</strong>的指针，2bit
+存放锁的标识位，为10。</p>
+<p><strong>GC标记(11)</strong></p>
+<p>开辟30bit 的内存空间却没有占用，2bit 空间存放锁标志位为11。</p>
+<p>之所以这些标志位会变化，是JVM对重量级锁的一种优化，在jdk1.6
+之前，用synchronized 都是重量级锁 ，都需要底层操作系统的Mutex
+Lock（互斥锁）来实现，这个是涉及到系统调用的，会导致内核空间与用户空间的上下文切换，很低效。</p>
+<p>于是jdk1.6之后为了增加性能减少操作Mutex
+Lock，引入了<code>偏向锁</code>和<code>轻量级锁</code>：锁一共有4种状态，级别从低到高依次是：无锁状态、偏向锁状态、轻量级锁状态和重量级锁状态。锁可以升级但不能降级。</p>
+<h3 id="锁升级过程">锁升级过程</h3>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">Object</span> <span class="variable">lock</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Object</span>();</span><br><span class="line"><span class="comment">// 临界区之前</span></span><br><span class="line"><span class="keyword">synchronized</span>(lock)&#123;</span><br><span class="line">  <span class="comment">// 临界区</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 临界区之后</span></span><br></pre></td></tr></table></figure>
+<h3 id="无锁">无锁</h3>
+<p>当有线程进入临界区之前(synchronized块之前)，lock里的对象头的 Mark
+Word 结构为下面所示：</p>
+<p><img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403252000225.webp" /></p>
+<p>锁标志位01，无偏向。这是JVM给的初始值。</p>
+<h3 id="偏向锁">偏向锁</h3>
+<p>有<strong>线程A</strong>刚进入临界区时(synchronized)，发现标志位是01
+，而且无偏向。立马把当前线程ID记录到了这个Mark
+Word当中，修改为偏向（1）。也就是下面这样：</p>
+<p><img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403252000323.webp" /></p>
+<p><img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403252001168.webp" /></p>
+<p>如果线程A，再次进入临界区时 ， 判断线程id
+是当前自己，就直接执行。也就是说，如果一直没有其它线程过来，线程A就跟没加synchronized一样执行，效率极高。这就是<strong>偏向锁</strong>。</p>
+<h3 id="轻量级锁">轻量级锁</h3>
+<p>当有其它<strong>线程B</strong>
+也进入临界区了(线程A还没出临界区)，就CAS自旋等待很短的时间，如果线程A此时恰好退出临界区了，CAS退出就升级为轻量级锁，否则就是重量级锁。
+轻量级锁会构造一个Lock Record锁记录，如下图：</p>
+<p><img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403252001772.webp" /></p>
+<p><img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403252001283.webp" /></p>
+<p><strong>Lock Record 锁记录</strong></p>
+<p>Lock Record是线程私有的数据结构，每一个线程都有一个可用Lock
+Record列表，同时还有一个全局的可用列表。每一个被锁住的对象Mark
+Word都会和一个Lock Record关联（对象头的MarkWord中的Lock Word指向Lock
+Record的起始地址），同时Lock
+Record中有一个Owner字段存放拥有该锁的线程的唯一标识（或者<code>object mark word</code>），表示该锁被这个线程占用。如下图所示为Lock
+Record的内部结构：</p>
+<table>
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 84%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Lock Record</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Owner</td>
+<td>初始时为NULL表示当前没有任何线程拥有该monitor
+record，当线程成功拥有该锁后保存线程唯一标识，当锁被释放时又设置为NULL；</td>
+</tr>
+<tr class="even">
+<td>EntryQ</td>
+<td>关联一个系统互斥锁（semaphore），阻塞所有试图锁住monitor
+record失败的线程；</td>
+</tr>
+<tr class="odd">
+<td>RcThis</td>
+<td>表示blocked或waiting在该monitor record上的所有线程的个数；</td>
+</tr>
+<tr class="even">
+<td>Nest</td>
+<td>用来实现 重入锁的计数；</td>
+</tr>
+<tr class="odd">
+<td>HashCode</td>
+<td>保存从对象头拷贝过来的HashCode值（可能还包含GC age）。</td>
+</tr>
+<tr class="even">
+<td>Candidate</td>
+<td>用来避免不必要的阻塞或等待线程唤醒ngjio，因为每一次只有一个线程能够成功拥有锁，如果每次前一个释放锁的线程唤醒所有正在阻塞或等待的线程，会引起不必要的上下文切换（从阻塞到就绪然后因为竞争锁失败又被阻塞）从而导致性能严重下降。Candidate只有两种可能的值0表示没有需要唤醒的线程1表示要唤醒一个继任线程来竞争锁。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>轻量级锁所适应的场景是线程交替执行同步块的情况，如果存在同一时间访问同一锁的情况，必然就会导致轻量级锁膨胀为重量级锁</strong>。</p>
+<h3 id="重量级锁">重量级锁</h3>
+<p>Synchronized是通过对象内部的一个叫做
+<strong>监视器锁（Monitor）来实现的</strong>。<strong>但是监视器锁本质又是依赖于底层的操作系统的Mutex
+Lock来实现的。而操作系统实现线程之间的切换这就需要从用户态转换到核心态，这个成本非常高，状态之间的转换需要相对比较长的时间</strong>，这就是为什么Synchronized效率低的原因。因此，这种依赖于操作系统Mutex
+Lock所实现的锁我们称之为 <strong>“重量级锁”</strong>。</p>
+<p>重量级锁的Mark Word结构图：</p>
+<p><img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403252001075.webp" /></p>
+<p>这个重量级锁的指针指向的就是 <strong>ObjectMonitor</strong> 。</p>
+<h3 id="锁升级图">锁升级图</h3>
+<p><img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403252004741.JPG" /></p>
+<p><img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403252004026.JPG" /></p>
+<p>图源：收割Offer：互联网大厂面经——布兜</p>
+]]></content>
+      <categories>
+        <category>Java八股</category>
+        <category>并发</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>八股</tag>
+        <tag>并发</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ReentrantLock锁</title>
+    <url>/2024/03/24/Java/%E5%B9%B6%E5%8F%91/ReentrantLock%E9%94%81/</url>
+    <content><![CDATA[<blockquote>
+<p>关于reentrantLock锁的一些问题</p>
+</blockquote>
+<span id="more"></span>
+<h1 id="reentrantlock是什么">ReentrantLock是什么</h1>
+<p><code>ReentrantLock</code> 实现了 <code>Lock</code>
+接口，是一个可重入且独占式的锁，和 <code>synchronized</code>
+关键字类似。不过，<code>ReentrantLock</code>
+更灵活、更强大，增加了轮询、超时、中断、公平锁和非公平锁等高级功能。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ReentrantLock</span> <span class="keyword">implements</span> <span class="title class_">Lock</span>, java.io.Serializable &#123;&#125;</span><br></pre></td></tr></table></figure>
+<p><code>ReentrantLock</code> 里面有一个内部类
+<code>Sync</code>，<code>Sync</code> 继承
+AQS（<code>AbstractQueuedSynchronizer</code>），添加锁和释放锁的大部分操作实际上都是在
+<code>Sync</code> 中实现的。<code>Sync</code> 有公平锁
+<code>FairSync</code> 和非公平锁 <code>NonfairSync</code> 两个子类。</p>
+<p><img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403251906294.png" /></p>
+<p><code>ReentrantLock</code>
+的特点是<strong>可重入</strong>，支持公平锁和非公平锁两种方式，从其构造方法就能看出，在传入参数为<code>true</code>时，<code>ReentrantLock</code>为公平锁，默认为非公平锁。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="title function_">ReentrantLock</span><span class="params">()</span> &#123;</span><br><span class="line">    sync = <span class="keyword">new</span> <span class="title class_">NonfairSync</span>();</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//基于参数,创建FairSync还是NonFairSync</span></span><br><span class="line"><span class="keyword">public</span> <span class="title function_">ReentrantLock</span><span class="params">(<span class="type">boolean</span> fair)</span> &#123;</span><br><span class="line">    sync = fair ? <span class="keyword">new</span> <span class="title class_">FairSync</span>() : <span class="keyword">new</span> <span class="title class_">NonfairSync</span>();</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>阅读<code>ReentrantLock</code>代码可知，它主要利用<code>CAS</code>+<code>AQS</code>
+队列来实现。以非公平锁为例，当线程竞争锁时首先使用<code>CAS</code>抢占锁，成功则返回，失败则进入<code>AQS</code>队列并且挂起线程；当锁被释放时，唤醒<code>AQS</code>中的某个线程，从被挂起处再次尝试获取锁（当<code>AQS</code>队列头节点的下一个节点不为空时，直接唤醒该节点；否则从队尾向前遍历，找到最后一个不为空的节点并唤醒），获取锁失败则再次进入队尾。</p>
+<h1 id="cas">CAS</h1>
+<h2 id="学习cas首先了解什么是原子类">学习CAS首先了解什么是原子类</h2>
+<p>即为java.util.concurrent.atomic包下的所有相关类和API</p>
+<ul>
+<li><p>没有CAS之前</p>
+<p>多线程环境不使用原子类保证线程安全i++（基本数据类型）
+常用synchronized锁，但是它比较重
+，牵扯到了用户态和内核态的切换,效率不高。</p></li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">T3</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">volatile</span> <span class="type">int</span> <span class="variable">number</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="comment">//读取</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">getNumber</span><span class="params">()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> number;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//写入加锁保证原子性</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title function_">setNumber</span><span class="params">()</span></span><br><span class="line">    &#123;</span><br><span class="line">        number++;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>使用CAS之后</p>
+<p>多线程情况下使用原子类保证线程安全（基本数据类型）</p></li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">T3</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">volatile</span> <span class="type">int</span> <span class="variable">number</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="comment">//读取</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">getNumber</span><span class="params">()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> number;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//写入加锁保证原子性</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title function_">setNumber</span><span class="params">()</span></span><br><span class="line">    &#123;</span><br><span class="line">        number++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//=================================</span></span><br><span class="line">    <span class="comment">//下面是新版本</span></span><br><span class="line">    <span class="comment">//=================================</span></span><br><span class="line">    <span class="type">AtomicInteger</span> <span class="variable">atomicInteger</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">AtomicInteger</span>();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">getAtomicInteger</span><span class="params">()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> atomicInteger.get();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setAtomicInteger</span><span class="params">()</span></span><br><span class="line">    &#123;</span><br><span class="line">        atomicInteger.getAndIncrement();<span class="comment">//先读再加</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="cas是什么">CAS是什么</h2>
+<h3 id="cas是什么-1">CAS是什么</h3>
+<p>CAS 的全称是 <strong>Compare And Swap（比较与交换）</strong>
+，用于实现乐观锁，被广泛应用于各大框架中。CAS
+的思想很简单，就是用一个预期值和要更新的变量值进行比较，两值相等才会进行更新。</p>
+<p>执行CAS操作的时候，将内存位置的值与预期原值比较：
+如果相匹配，那么处理器会自动将该位置值更新为新值，
+如果不匹配，处理器不做任何操作，多个线程同时执行CAS操作只有一个会成功。</p>
+<blockquote>
+<p><strong>原子操作</strong>
+即最小不可拆分的操作，也就是说操作一旦开始，就不能被打断，直到操作完成。</p>
+</blockquote>
+<p>CAS 涉及到三个操作数：</p>
+<ul>
+<li><strong>V</strong>：要更新的变量值(Var)</li>
+<li><strong>E</strong>：预期值(Expected)</li>
+<li><strong>N</strong>：拟写入的新值(New)</li>
+</ul>
+<p>当且仅当 V 的值等于 E 时，CAS 通过原子方式用新值 N 来更新 V
+的值。如果不等，说明已经有其它线程更新了 V，则当前线程放弃更新。</p>
+<h2 id="cas的缺点">CAS的缺点</h2>
+<h3 id="aba问题">ABA问题</h3>
+<p>CAS算法实现一个重要前提需要取出内存中某时刻的数据并在当下时刻比较并替换，那么在这个时间差类会导致数据的变化。</p>
+<p>比如说一个线程one从内存位置V中取出A，这时候另一个线程two也从内存中取出A，并且线程two进行了一些操作将值变成了B，然后线程two又将V位置的数据变成A，这时候线程one进行CAS操作发现内存中仍然是A，然后线程one操作成功。</p>
+<p>尽管线程one的CAS操作成功，但是不代表这个过程就是没有问题的，因为在这段时间它的值可能被改为其他值，然后又改回
+A，那 CAS 操作就会误认为它从来没有被修改过。这个问题被称为 CAS 操作的
+<strong>"ABA"问题。</strong>ABA
+问题的解决思路是在变量前面追加上<strong>版本号或者时间戳</strong>。JDK
+1.5 以后的 <code>AtomicStampedReference</code> 类就是用来解决 ABA
+问题的，其中的 <code>compareAndSet()</code>
+方法就是首先检查当前引用是否等于预期引用，并且当前标志是否等于预期标志，如果全部相等，则以原子方式将该引用和该标志的值设置为给定的更新值。</p>
+<h3 id="循环时间长开销很大">循环时间长开销很大</h3>
+<p>CAS
+经常会用到自旋操作来进行重试，也就是不成功就一直循环执行直到成功。如果长时间不成功，会给
+CPU 带来非常大的执行开销。</p>
+<p><img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403251935720.png" /></p>
+<h3
+id="只能保证一个共享变量的原子操作">只能保证一个共享变量的原子操作</h3>
+<p>CAS 只对单个共享变量有效，当操作涉及跨多个共享变量时 CAS 无效。但是从
+JDK 1.5
+开始，提供了<code>AtomicReference</code>类来保证引用对象之间的原子性，你可以把多个变量放在一个对象里来进行
+CAS
+操作.所以我们可以使用锁或者利用<code>AtomicReference</code>类把多个共享变量合并成一个共享变量来操作。</p>
+<h1 id="aqs">AQS</h1>
+<h2 id="aqs是什么">AQS是什么？</h2>
+<p>AQS 的全称为 <code>AbstractQueuedSynchronizer</code>
+，翻译过来的意思就是抽象队列同步器。这个类在
+<code>java.util.concurrent.locks</code> 包下面。</p>
+<p><img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403251938892.png" /></p>
+<p>AQS 就是一个抽象类，主要用来构建锁和同步器。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">class</span> <span class="title class_">AbstractQueuedSynchronizer</span> <span class="keyword">extends</span> <span class="title class_">AbstractOwnableSynchronizer</span> <span class="keyword">implements</span> <span class="title class_">java</span>.io.Serializable &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>AQS 为构建锁和同步器提供了一些通用功能的实现，因此，使用 AQS
+能简单且高效地构造出应用广泛的大量的同步器，比如我们提到的
+<code>ReentrantLock</code>，<code>Semaphore</code>，其他的诸如
+<code>ReentrantReadWriteLock</code>，<code>SynchronousQueue</code>等等皆是基于
+AQS 的。</p>
+<h2 id="aqs的底层原理">AQS的底层原理</h2>
+<p>AQS
+核心思想是，如果被请求的共享资源空闲，则将当前请求资源的线程设置为有效的工作线程，并且将共享资源设置为锁定状态。如果被请求的共享资源被占用，那么就需要一套线程阻塞等待以及被唤醒时锁分配的机制，这个机制
+AQS 是用 <strong>CLH 队列锁</strong>
+实现的，即将暂时获取不到锁的线程加入到队列中。</p>
+<p>CLH(Craig,Landin,and Hagersten)
+队列是一个虚拟的双向队列（虚拟的双向队列即不存在队列实例，仅存在结点之间的关联关系）。AQS
+是将每条请求共享资源的线程封装成一个 CLH
+锁队列的一个结点（Node）来实现锁的分配。在 CLH
+同步队列中，一个节点表示一个线程，它保存着线程的引用（thread）、
+当前节点在队列中的状态（waitStatus）、前驱节点（prev）、后继节点（next）。</p>
+<p>CLH 队列结构如下图所示：</p>
+<p><img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403251944422.png" /></p>
+<p>AQS(<code>AbstractQueuedSynchronizer</code>)的核心原理图（图源<a
+href="https://www.cnblogs.com/waterystone/p/4920797.html">Java 并发之
+AQS 详解open in new window</a>）如下：</p>
+<p><img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403251944878.png" /></p>
+<ul>
+<li>AQS使用一个int成员变量来表示同步状态</li>
+<li>使用Node实现FIFO队列，可以用于构建锁或者其他同步装置</li>
+<li>AQS资源共享方式：独占Exclusive（排它锁模式）和共享Share（共享锁模式）</li>
+</ul>
+<hr />
+<p>待续。。。</p>
+]]></content>
+      <categories>
+        <category>Java八股</category>
+        <category>并发</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>八股</tag>
+        <tag>并发</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>synchronized关键字</title>
+    <url>/2024/03/23/Java/%E5%B9%B6%E5%8F%91/synchronized%E5%85%B3%E9%94%AE%E5%AD%97/</url>
+    <content><![CDATA[<blockquote>
+<p>关于synchronized关键字的一些问题</p>
+</blockquote>
+<span id="more"></span>
+<h1 id="synchronized是什么有什么用">synchronized是什么？有什么用？</h1>
+<p><code>synchronized</code> 是 Java
+中的一个关键字，翻译成中文是同步的意思，主要解决的是多个线程之间访问资源的同步性，可以保证被它修饰的方法或者代码块在任意时刻只能有一个线程执行。</p>
+<p>在 Java 早期版本中，<code>synchronized</code> 属于
+<strong>重量级锁</strong>，效率低下。这是因为监视器锁（monitor）是依赖于底层的操作系统的
+<code>Mutex Lock</code> 来实现的，Java
+的线程是映射到操作系统的原生线程之上的。如果要挂起或者唤醒一个线程，都需要操作系统帮忙完成，而操作系统实现线程之间的切换时需要从用户态转换到内核态，这个状态之间的转换需要相对比较长的时间，时间成本相对较高。</p>
+<p>不过，在 Java 6 之后， <code>synchronized</code>
+引入了大量的优化如自旋锁、适应性自旋锁、锁消除、锁粗化、偏向锁、轻量级锁等技术来减少锁操作的开销，这些优化让
+<code>synchronized</code> 锁的效率提升了很多。因此，
+<code>synchronized</code> 还是可以在实际项目中使用的，像 JDK
+源码、很多开源框架都大量使用了 <code>synchronized</code> 。</p>
+<p>关于偏向锁多补充一点：由于偏向锁增加了 JVM
+的复杂性，同时也并没有为所有应用都带来性能提升。因此，在 JDK15
+中，偏向锁被默认关闭（仍然可以使用 <code>-XX:+UseBiasedLocking</code>
+启用偏向锁），在 JDK18
+中，偏向锁已经被彻底废弃（无法通过命令行打开）。</p>
+<h1 id="如何使用synchronized">如何使用synchronized？</h1>
+<p><code>synchronized</code> 关键字的使用方式主要有下面 3 种：</p>
+<ol type="1">
+<li>修饰实例方法</li>
+<li>修饰静态方法</li>
+<li>修饰代码块</li>
+</ol>
+<p><strong>1、修饰实例方法</strong> （锁当前对象实例）</p>
+<p>给当前对象实例加锁，进入同步代码前要获得
+<strong>当前对象实例的锁</strong> 。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title function_">method</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="comment">//业务代码</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>2、修饰静态方法</strong> （锁当前类）</p>
+<p>给当前类加锁，会作用于类的所有对象实例 ，进入同步代码前要获得
+<strong>当前 class 的锁</strong>。</p>
+<p>这是因为静态成员不属于任何一个实例对象，归整个类所有，不依赖于类的特定实例，被类的所有实例共享。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">synchronized</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">method</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="comment">//业务代码</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>静态 <code>synchronized</code> 方法和非静态 <code>synchronized</code>
+方法之间的调用互斥么？不互斥！如果一个线程 A 调用一个实例对象的非静态
+<code>synchronized</code> 方法，而线程 B
+需要调用这个实例对象所属类的静态 <code>synchronized</code>
+方法，是允许的，不会发生互斥现象，因为访问静态 <code>synchronized</code>
+方法占用的锁是当前类的锁，而访问非静态 <code>synchronized</code>
+方法占用的锁是当前实例对象锁。</p>
+<p><strong>3、修饰代码块</strong> （锁指定对象/类）</p>
+<p>对括号里指定的对象/类加锁：</p>
+<ul>
+<li><code>synchronized(object)</code> 表示进入同步代码库前要获得
+<strong>给定对象的锁</strong>。</li>
+<li><code>synchronized(类.class)</code> 表示进入同步代码前要获得
+<strong>给定 Class 的锁</strong></li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">synchronized</span>(<span class="built_in">this</span>) &#123;</span><br><span class="line">    <span class="comment">//业务代码</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>总结：</strong></p>
+<ul>
+<li><code>synchronized</code> 关键字加到 <code>static</code> 静态方法和
+<code>synchronized(class)</code> 代码块上都是是给 Class 类上锁；</li>
+<li><code>synchronized</code>
+关键字加到实例方法上是给对象实例上锁；</li>
+<li>尽量不要使用 <code>synchronized(String a)</code> 因为 JVM
+中，字符串常量池具有缓存功能。</li>
+</ul>
+<h1
+id="构造方法可以用synchronized修饰吗">构造方法可以用synchronized修饰吗？</h1>
+<p>先说结论：<strong>构造方法不能使用 synchronized
+关键字修饰。</strong></p>
+<p>构造方法本身就属于线程安全的，不存在同步的构造方法一说。</p>
+<h1 id="synchronized底层原理">synchronized底层原理</h1>
+<h2 id="synchronized同步语句块的情况">synchronized同步语句块的情况</h2>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SynchronizedDemo</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">method</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">synchronized</span> (<span class="built_in">this</span>) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;synchronized 代码块&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>通过 JDK 自带的 <code>javap</code> 命令查看
+<code>SynchronizedDemo</code>
+类的相关字节码信息：首先切换到类的对应目录执行
+<code>javac SynchronizedDemo.java</code> 命令生成编译后的 .class
+文件，然后执行<code>javap -c -s -v -l SynchronizedDemo.class</code>。</p>
+<figure>
+<img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403241719285.png"
+alt="synchronized关键字原理" />
+<figcaption aria-hidden="true">synchronized关键字原理</figcaption>
+</figure>
+<p>从上面我们可以看出：<strong><code>synchronized</code>
+同步语句块的实现使用的是 <code>monitorenter</code> 和
+<code>monitorexit</code> 指令，其中 <code>monitorenter</code>
+指令指向同步代码块的开始位置，<code>monitorexit</code>
+指令则指明同步代码块的结束位置。</strong></p>
+<p>上面的字节码中包含一个 <code>monitorenter</code> 指令以及两个
+<code>monitorexit</code>
+指令，这是为了保证锁在同步代码块代码正常执行以及出现异常的这两种情况下都能被正确释放。它在底层使用了隐式的try
+- finally，以防正常代码在执行过程中抛了异常。</p>
+<p>当执行 <code>monitorenter</code> 指令时，线程试图获取锁也就是获取
+<strong>对象监视器 <code>monitor</code></strong> 的持有权。</p>
+<p><code>Monitor</code>被翻译为监视器，是由<code>jvm</code>提供，<code>C++</code>语言实现。</p>
+<figure>
+<img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403241632387.png"
+alt="image-20240324163226315" />
+<figcaption aria-hidden="true">image-20240324163226315</figcaption>
+</figure>
+<p>在执行<code>monitorenter</code>时，会尝试获取对象的锁，如果锁的计数器为
+0 则表示锁可以被获取，获取后将锁计数器设为 1 也就是加 1。</p>
+<figure>
+<img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403241633580.png"
+alt="执行 monitorenter 获取锁" />
+<figcaption aria-hidden="true">执行 monitorenter 获取锁</figcaption>
+</figure>
+<p>对象锁的的拥有者线程才可以执行 <code>monitorexit</code>
+指令来释放锁。在执行 <code>monitorexit</code> 指令后，将锁计数器设为
+0，表明锁被释放，其他线程可以尝试获取锁。</p>
+<figure>
+<img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403241634558.png"
+alt="执行 monitorexit 释放锁" />
+<figcaption aria-hidden="true">执行 monitorexit 释放锁</figcaption>
+</figure>
+<p>如果获取对象锁失败，那当前线程就要阻塞等待，直到锁被另外一个线程释放为止。</p>
+<h2 id="synchronized修饰方法的情况">synchronized修饰方法的情况</h2>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SynchronizedDemo2</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title function_">method</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;synchronized 方法&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure>
+<img
+src="https://oss.javaguide.cn/github/javaguide/synchronized%E5%85%B3%E9%94%AE%E5%AD%97%E5%8E%9F%E7%90%862.png"
+alt="synchronized关键字原理" />
+<figcaption aria-hidden="true">synchronized关键字原理</figcaption>
+</figure>
+<p><code>synchronized</code> 修饰的方法并没有 <code>monitorenter</code>
+指令和 <code>monitorexit</code> 指令，取得代之的确实是
+<code>ACC_SYNCHRONIZED</code>
+标识，该标识指明了该方法是一个同步方法。JVM 通过该
+<code>ACC_SYNCHRONIZED</code>
+访问标志来辨别一个方法是否声明为同步方法，从而执行相应的同步调用。</p>
+<p>如果是实例方法，JVM 会尝试获取实例对象的锁。如果是静态方法，JVM
+会尝试获取当前 class 的锁。</p>
+<h2 id="总结">总结</h2>
+<p><code>synchronized</code> 同步语句块的实现使用的是
+<code>monitorenter</code> 和 <code>monitorexit</code> 指令，其中
+<code>monitorenter</code>
+指令指向同步代码块的开始位置，<code>monitorexit</code>
+指令则指明同步代码块的结束位置。</p>
+<p><code>synchronized</code> 修饰的方法并没有 <code>monitorenter</code>
+指令和 <code>monitorexit</code> 指令，取得代之的确实是
+<code>ACC_SYNCHRONIZED</code>
+标识，该标识指明了该方法是一个同步方法。</p>
+<p><strong>不过两者的本质都是对对象监视器 monitor 的获取。</strong></p>
+<figure>
+<img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403241643733.png"
+alt="image-20240324164351101" />
+<figcaption aria-hidden="true">image-20240324164351101</figcaption>
+</figure>
+<h1
+id="jdk1.6后的synchronized底层做了哪些优化锁升级原理">JDK1.6后的synchronized底层做了哪些优化？锁升级原理？</h1>
+<p>在 Java 6 之后， <code>synchronized</code>
+引入了大量的优化如自旋锁、适应性自旋锁、锁消除、锁粗化、偏向锁、轻量级锁等技术来减少锁操作的开销，这些优化让
+<code>synchronized</code> 锁的效率提升了很多（JDK18
+中，偏向锁已经被彻底废弃，前面已经提到过了）。</p>
+<p>锁主要存在四种状态，依次是：无锁状态、偏向锁状态、轻量级锁状态、重量级锁状态，他们会随着竞争的激烈而逐渐升级。注意锁可以升级不可降级，这种策略是为了提高获得锁和释放锁的效率。</p>
+<p><code>synchronized</code>
+锁升级是一个比较复杂的过程，面试也很少问到，如果你想要详细了解的话，可以看看这篇文章：<a
+href="https://www.cnblogs.com/star95/p/17542850.html">浅析 synchronized
+锁升级的原理与实现</a></p>
+<h1
+id="synchronized和volatile有什么区别">synchronized和volatile有什么区别</h1>
+<p><code>synchronized</code> 关键字和 <code>volatile</code>
+关键字是两个互补的存在，而不是对立的存在！</p>
+<ul>
+<li><code>volatile</code> 关键字是线程同步的轻量级实现，所以
+<code>volatile</code>性能肯定比<code>synchronized</code>关键字要好
+。但是 <code>volatile</code> 关键字只能用于变量而
+<code>synchronized</code> 关键字可以修饰方法以及代码块 。</li>
+<li><code>volatile</code>
+关键字能保证数据的可见性，但不能保证数据的原子性。<code>synchronized</code>
+关键字两者都能保证。</li>
+<li><code>volatile</code>关键字主要用于解决变量在多个线程之间的可见性，而
+<code>synchronized</code>
+关键字解决的是多个线程之间访问资源的同步性。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java八股</category>
+        <category>并发</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>八股</tag>
+        <tag>并发</tag>
       </tags>
   </entry>
   <entry>
@@ -1228,281 +2339,53 @@ href="http://localhost:9870/">http://localhost:9870</a>，成功打开</p>
       </tags>
   </entry>
   <entry>
-    <title>优化问题笔记</title>
-    <url>/2023/09/17/2023/%E6%9C%80%E4%BC%98%E5%8C%96/%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98%E7%AC%94%E8%AE%B0/</url>
+    <title>Docker创建Ubantu容器</title>
+    <url>/2023/09/04/2023/Docker/Docker%E5%88%9B%E5%BB%BAUbantu%E5%AE%B9%E5%99%A8/</url>
     <content><![CDATA[<blockquote>
-<p>南京邮电大学课程：最优化方法——张伯雷</p>
+<p>为Docker创建一个Ubantu容器</p>
 </blockquote>
 <span id="more"></span>
 <h1 id="前言">前言</h1>
-<blockquote>
-<p>本系列笔记的图片部分来自张伯雷老师的课堂ppt和网上，笔记仅供本人和需要的人学习使用。</p>
-</blockquote>
-<h1 id="优化问题介绍">优化问题介绍</h1>
-<h2 id="优化问题1">优化问题1</h2>
-<h3 id="题目">题目</h3>
-<blockquote>
-<ul>
-<li>还有⼀个星期就要到期末考试，小明⼀共要考4门课，但只能复习70个小时，假设<span
-class="math inline">\(x=(x_1,x_2,...,x_4)\)</span>代表小明分别花在4门课上的时间</li>
-<li><span class="math inline">\(f_i(x)\)</span>, 𝑖 = 1, 2, 3, 4
-为小明在第𝑖门课中的成绩</li>
-</ul>
-</blockquote>
-<h3 id="问题建模">问题建模</h3>
-<ul>
-<li><p>最大化最终的总分数：<span
-class="math inline">\(\sum_if_i(x)\)</span></p></li>
-<li><p>每门课都需要及格，同时花的时间不能超过70：</p></li>
-<li><p><span class="math inline">\(\sum_ix_i ≤ 70\)</span>, <span
-class="math inline">\(x_i ≥ 0\)</span>, <span
-class="math inline">\(f_i(x_i) ≥ 60\)</span></p></li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/image-20230917224239707.png" alt="image-20230917224239707" style="zoom:67%;" /></p>
-<h3 id="如何合理分配资源">如何合理分配资源？</h3>
-<h2 id="优化问题2">优化问题2</h2>
-<h3 id="题目-1">题目</h3>
-<blockquote>
-<ul>
-<li>小李是⼀个程序员，需要实现⼀个数据中⼼服务，当有用户请求服务时，需要尽快地服务用户请求，来降低整体延迟</li>
-<li><span class="math inline">\(d_i(x_i)=1,2,...,n\)</span></li>
-<li><span
-class="math inline">\(x_i\)</span>为向用户𝑖分配的资源（如CPU的配额），
-<span class="math inline">\(d_i\)</span>为第𝑖个用户的延迟</li>
-</ul>
-</blockquote>
-<h3 id="问题建模-1">问题建模</h3>
-<ul>
-<li><p>最小化整体的延迟：<span
-class="math inline">\(\sum_id_i(x_i)\)</span></p></li>
-<li><p>同时不能超过服务器的总资源：<span
-class="math inline">\(\sum_ix_i\le C\)</span>, <span
-class="math inline">\(x_i\ge0\)</span></p></li>
-</ul>
-<h3 id="如何合理分配资源-1">如何合理分配资源？</h3>
-<h2 id="优化问题3">优化问题3</h2>
-<h3 id="题目-2">题目</h3>
-<blockquote>
-<ul>
-<li>现在有⼀百万张图片，⼀共分成了1000个类别𝑝，我们设计了⼀个复杂的神经⽹络，可以输入图片矩阵输出类别概率𝑞。为了训练这个神经⽹络，需要优化该网络，最小化预测误差。</li>
-</ul>
-</blockquote>
-<h3 id="问题建模-2">问题建模</h3>
-<p><span class="math display">\[
-min-\sum_{x\in X} p(x)\log q(x)
-\]</span></p>
-<h3
-id="神经网络可能包括上亿的参数如何快速优化">神经网络可能包括上亿的参数，如何快速优化？</h3>
-<h2 id="优化数学规划">优化/数学规划</h2>
-<h3 id="优化问题">优化问题</h3>
-<p><span class="math display">\[
-\min f_0(x).\\
-\text{s.t.}\ \ f_i(x)\le0,\quad i=1,...,m
-\]</span></p>
-<blockquote>
-<p>其中</p>
-<ul>
-<li><span
-class="math inline">\(x=(x_1,x_2,...,x_n)\)</span>：优化变量(variable)</li>
-<li><span class="math inline">\(f_0:
-\mathbb{R}^n\rightarrow\mathbb{R}\)</span>：目标函数(Objective
-function)</li>
-<li><span class="math inline">\(f_i:
-\mathbb{R}^n\rightarrow\mathbb{R},i=1,...m\)</span>：约束函数(Constraints)</li>
-<li>最优解<span
-class="math inline">\(x^*\)</span>：所有在定义域且满⾜约束条件的解中使得目标函数<span
-class="math inline">\(f_0\)</span>最小的<span
-class="math inline">\(x\)</span></li>
-<li>最优值<span class="math inline">\(p*:f_0(x^*)\)</span></li>
-</ul>
-</blockquote>
-<h1 id="优化问题分类">优化问题分类</h1>
-<h2 id="线性非线性规划">线性/非线性规划</h2>
-<h3 id="线性规划">线性规划：</h3>
-<ul>
-<li>如果目标函数与约束函数都是线性的，则为线性规划（Linear
-programming）</li>
-<li><span class="math inline">\(f_i(\alpha x+\beta y)=\alpha
-f_i(x)+\beta f_i(y),i=0,1,...,m\)</span></li>
-<li>单纯形法(simplex method)</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191453912.png" alt="image-20230918210805588" style="zoom:80%;" /></p>
-<h3 id="非线性规划">非线性规划：</h3>
-<ul>
-<li>如果目标函数与约束函数有⼀个不是线性的，则为非线性规划（Non-Linear
-programming）</li>
-</ul>
-<h2 id="凸非凸规划">凸/非凸规划</h2>
-<h3 id="凸规划">凸规划：</h3>
-<ul>
-<li>可行解集是凸集，目标函数是凸函数</li>
-<li><span class="math inline">\(f_i(\alpha x+\beta y)\le\alpha
-f_i(x)+\beta f_i(y),i=0,1,...,m\)</span></li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191453003.png" alt="image-20230918211043295" style="zoom:80%;" /></p>
-<h3 id="非凸规划">非凸规划：</h3>
-<ul>
-<li>可行解集不是凸集或目标函数不是凸函数</li>
-</ul>
-<h2 id="光滑非光滑规划">光滑/非光滑规划</h2>
-<h3 id="光滑规划">光滑规划：</h3>
-<ul>
-<li>如果目标函数<span class="math inline">\(f_0(x)\)</span>是光滑的</li>
-<li>光滑：在函数的每⼀点都可微</li>
-</ul>
-<h3 id="非光滑规划">非光滑规划</h3>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191453017.png" alt="image-20230918211232374" style="zoom: 67%;" /></p>
-<h2 id="连续离散规划">连续/离散规划</h2>
-<h3 id="连续规划">连续规划：</h3>
-<ul>
-<li>可行解集是⼀个连续的域</li>
-</ul>
-<h3 id="离散规划">离散规划：</h3>
-<ul>
-<li>可行解集是离散的</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191453034.png" alt="image-20230918211413357" style="zoom:80%;" /></p>
-<h2 id="单目标多目标规划">单目标/多目标规划</h2>
-<h3 id="多目标规划">多目标规划：</h3>
-<ul>
-<li>同时有多个需要优化的目标</li>
-<li><span class="math inline">\(\min f_1(x),f_2(x)\)</span></li>
-<li>可以通过加权转化为单目标优化问题</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191453357.png" alt="image-20230918211623764" style="zoom:80%;" /></p>
-<h2 id="博弈优化">博弈优化</h2>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191453313.png" alt="image-20230918211659661" style="zoom:80%;" /></p>
-<h2 id="确定随机优化">确定/随机优化</h2>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191453128.png" alt="image-20230918211728804" style="zoom:80%;" /></p>
-<h1 id="典型优化问题">典型优化问题</h1>
-<h2 id="最小二乘">最小二乘</h2>
-<h3 id="数据拟合问题">数据拟合问题：</h3>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191453688.png" alt="image-20230918211820833" style="zoom:80%;" /></p>
-<ul>
-<li>目标函数</li>
-</ul>
-<p><span class="math display">\[
-\min\sum^N_{i=1}\left(y_i-f(x_i)\right)^2
-\]</span></p>
-<h2 id="稀疏优化">稀疏优化</h2>
-<h3 id="考虑线性方程组求解问题">考虑线性方程组求解问题</h3>
-<p><span class="math display">\[
-Ax=b
-\]</span></p>
-<blockquote>
-<p>其中<span class="math inline">\(x\in R^n,b\in R^m,A\in R^{m\times
-n}\)</span></p>
-<p>向量<span class="math inline">\(b\)</span>的维度远小于向量<span
-class="math inline">\(x\)</span>的维度，即<span
-class="math inline">\(m\ll n\)</span></p>
-</blockquote>
-<ul>
-<li>在信号传输过程中，希望通过接收到长度为<span
-class="math inline">\(m\)</span>的数字信号<span
-class="math inline">\(b\)</span>精确地重构原始信号<span
-class="math inline">\(x\)</span></li>
-<li>方程组是欠定的，因此存在无穷多个解，重构出原始信号看似很难</li>
-</ul>
-<h3
-id="稀疏先验精确解u只有10的元素非零即u是如下l_0范数问题的最优解">稀疏先验：精确解<span
-class="math inline">\(u\)</span>只有<span
-class="math inline">\(10\%\)</span>的元素非零，即<span
-class="math inline">\(u\)</span>是如下<span
-class="math inline">\(l_0\)</span>范数问题的最优解:</h3>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191454632.png" alt="image-20230918212735058" style="zoom:80%;" /></p>
-<ul>
-<li><span class="math inline">\(l_0\)</span>范数优化问题是 NP
-难问题</li>
-<li>但<span
-class="math inline">\(l_1\)</span>范数优化问题的解可以非常容易地通过现有优化算法得到</li>
-<li>若<span class="math inline">\(A,b\)</span>满足一定的条件，向量<span
-class="math inline">\(u\)</span>也是<span
-class="math inline">\(l_1\)</span>范数优化问题的唯⼀最优解</li>
-</ul>
-<h2 id="低秩矩阵恢复">低秩矩阵恢复</h2>
-<ul>
-<li>某视频网站提供了约 48 万用户对 1 万 7
-千多部电影的上亿条评级数据，希望对用户的电影评级进行预测，从而改进用户电影推荐系统，为每个用户更有针对性地推荐影片</li>
-<li>用矩阵𝑀代表用户评分，每一行表示不同用户，每⼀列表示不同电影</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191454615.png" alt="image-20230918213023261" style="zoom: 80%;" /></p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191454947.png" alt="image-20230918213048048" style="zoom:80%;" /></p>
-<h2 id="深度学习">深度学习</h2>
-<h3 id="深度学习分类问题">深度学习分类问题</h3>
-<figure>
-<img
-src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191454706.png"
-alt="image-20230918213132779" />
-<figcaption aria-hidden="true">image-20230918213132779</figcaption>
-</figure>
-<h1 id="求解优化问题">求解优化问题</h1>
-<p>对有限资源进⾏有效分配和控制，并达到某种意义上的最优。</p>
-<p>通常需要 • 对需求进行定性和定量分析 • 建立恰当的数学模型来描述该问题
-• 探索研究模型和算法的理论性质，考察算法的计算性能等 •
-设计合适的计算方法来寻找问题的最优解</p>
-<h3 id="一般的最优化问题">一般的最优化问题</h3>
-<ul>
-<li>非常难以求解</li>
-<li>可能需要非常长的计算时间，甚⾄找不到最优解</li>
-</ul>
-<h3 id="类相对简单的问题">⼀类相对简单的问题</h3>
-<ul>
-<li>最小二乘问题</li>
-<li>线性规划问题</li>
-<li>凸优化问题</li>
-</ul>
-<h3 id="更复杂的问题">更复杂的问题</h3>
-<ul>
-<li>离散、博弈、随机优化</li>
-</ul>
-<h3 id="定义域">定义域</h3>
-<ul>
-<li>凸集</li>
-</ul>
-<h3 id="目标函数">目标函数</h3>
-<ul>
-<li>凸函数</li>
-</ul>
-<h3
-id="非凸优化问题与凸优化问题的转化">非凸优化问题与凸优化问题的转化</h3>
-<ul>
-<li>等价转化</li>
-<li>对偶理论</li>
-</ul>
-<h2 id="优化算法">优化算法</h2>
-<h3 id="闭式解closed-form-solution">闭式解（closed form solution）</h3>
-<ul>
-<li>如果我们能用代数表达式给出其最优解，那么这个解称为闭式解，对应的问题往往比较简单</li>
-<li>例如：⼆次函数在有界区间上</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191454836.png" alt="image-20230918213626044" style="zoom: 67%;" /></p>
-<h3
-id="实际大多数问题是没有闭式解的需要通过迭代算法求解">实际大多数问题是没有闭式解的，需要通过迭代算法求解</h3>
-<ul>
-<li>迭代算法的基本思想是:从⼀个初始点<span
-class="math inline">\(x_0\)</span>出发，按照某种给定的规则进行迭代，得到⼀个序列<span
-class="math inline">\(\{x^k\}\)</span>如果迭代在有限步内终止，那么希望最后一个点就是优化问题的解</li>
-<li>例如：梯度类算法、线搜索法、罚函数法</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191454918.png" alt="image-20230918213839201" style="zoom:80%;" /></p>
-<h2 id="常用优化技巧">常用优化技巧</h2>
-<h3 id="泰勒展开">泰勒展开</h3>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191454151.png" alt="image-20230918213955711" style="zoom:80%;" /></p>
-<h3 id="对偶">对偶</h3>
-<ul>
-<li>每个优化问题都有对应的对偶问题，特别是凸的情形，当原始问题比较难解的时候，其对偶问题可能很容易求解</li>
-</ul>
-<h3 id="拆分">拆分</h3>
-<ul>
-<li>通过引入变量等方法，讲⼀个复杂的优化问题拆分成多个相对简单的问题</li>
-</ul>
+<p>今天上了<code>大数据挖掘</code>和<code>Linux程序设计</code>的第一课，发现老师都要求在电脑上搞个虚拟机方便以后的操作，所以我准备使用安装Ubantu的Docker容器来作为虚拟机使用。</p>
+<h1 id="操作">操作</h1>
+<h2 id="基础命令">基础命令</h2>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run [option] 镜像名 [像容器中传入的命令]</span><br></pre></td></tr></table></figure>
+<h3 id="常用可选说明">常用可选说明</h3>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">-</span>i 表示以“交互模式”运行容器</span><br><span class="line"> <span class="operator">-</span>t 表示容器启动后会进入其命令行。加入这两个参数后，容器创建就能登录进去。即 分配一个伪终端。</span><br><span class="line"> <span class="comment">--name 为创建的容器命名</span></span><br><span class="line"> <span class="operator">-</span>v 表示目录映射关系(前者是宿主机目录，后者是映射到宿主机上的目录，即 宿主机目录:容器中目录)，可以使 用多个<span class="operator">-</span>v 做多个目录或文件映射。注意:最好做目录映射，在宿主机上做修改，然后 共享到容器上。</span><br><span class="line"> <span class="operator">-</span>d 在run后面加上<span class="operator">-</span>d参数,则会创建一个守护式容器在后台运行(这样创建容器后不 会自动登录容器，如果只加<span class="operator">-</span>i <span class="operator">-</span>t 两个参数，        创建后就会自动进去容器)。</span><br><span class="line"> <span class="operator">-</span>p 表示端口映射，前者是宿主机端口，后者是容器内的映射端口。可以使用多个<span class="operator">-</span>p 做多个端口映射</span><br><span class="line"> <span class="operator">-</span>e 为容器设置环境变量</span><br><span class="line"> <span class="comment">--network=host 表示将主机的网络环境映射到容器中，容器的网络与主机相同</span></span><br></pre></td></tr></table></figure>
+<h3 id="交互式容器">交互式容器</h3>
+<p>例如，创建一个交互式容器，并命名为myubuntu</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run -it --name=myubuntu ubuntu /bin/bash</span><br></pre></td></tr></table></figure>
+<p>在容器中可以随意执行linux命令，就是一个ubuntu的环境，当执行exit命令退出时，该容器也随之停止</p>
+<h3 id="守护式容器">守护式容器</h3>
+<p>创建一个守护式容器:如果对于一个需要长期运行的容器来说，我们可以创建一个守护式容器。在容器内部exit退出时，容器也不会停止。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run -dit --name=myubuntu2 ubuntu</span><br></pre></td></tr></table></figure>
+<h3 id="进入已运行的容器">进入已运行的容器</h3>
+<p>docker exec -it 容器名或容器id 进入后执行的第一个命令</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker exec -it myubuntu2 /bin/bash</span><br></pre></td></tr></table></figure>
+<h3 id="查看容器">查看容器</h3>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 列出本机正在运行的容器</span><br><span class="line">docker container ls</span><br><span class="line"></span><br><span class="line"># 列出本机所有容器，包括已经终止运行的</span><br><span class="line">docker container ls --all</span><br></pre></td></tr></table></figure>
+<h3 id="停止与启动容器">停止与启动容器</h3>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 停止一个已经在运行的容器</span><br><span class="line">docker container stop 容器名或容器id</span><br><span class="line"></span><br><span class="line"># 启动一个已经停止的容器</span><br><span class="line">docker container start 容器名或容器id</span><br><span class="line"></span><br><span class="line"># kill掉一个已经在运行的容器</span><br><span class="line">docker container kill 容器名或容器id</span><br></pre></td></tr></table></figure>
+<h3 id="删除容器">删除容器</h3>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker container rm 容器名或容器id</span><br></pre></td></tr></table></figure>
+<h3 id="将容器保存为镜像">将容器保存为镜像</h3>
+<p>我们可以通过如下命令将容器保存为镜像</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker commit 容器名 镜像名</span><br></pre></td></tr></table></figure>
+<h3 id="镜像备份与迁移">镜像备份与迁移</h3>
+<p>我们可以通过save命令将镜像打包成文件，拷贝给别人使用</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker save -o 保存的文件名 镜像名</span><br></pre></td></tr></table></figure>
+<p>如:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker save -o ./ubuntu.tar ubuntu</span><br></pre></td></tr></table></figure>
+<p>在拿到镜像文件后，可以通过load方法，将镜像加载到本地</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker load -i ./ubuntu.tar</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>最优化方法</category>
+        <category>Docker</category>
+        <category>Ubuntu</category>
       </categories>
       <tags>
-        <tag>学科</tag>
-        <tag>最优化方法</tag>
+        <tag>Docker</tag>
+        <tag>Ubuntu</tag>
       </tags>
   </entry>
   <entry>
@@ -1610,6 +2493,220 @@ href="https://www.cnblogs.com/luo-c/p/15831441.html">https://www.cnblogs.com/luo
       <tags>
         <tag>Docker</tag>
         <tag>Hadoop</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>凸函数（Convex Function）</title>
+    <url>/2023/09/21/2023/%E6%9C%80%E4%BC%98%E5%8C%96/%E5%87%B8%E5%87%BD%E6%95%B0%EF%BC%88Convex-Function%EF%BC%89/</url>
+    <content><![CDATA[<blockquote>
+<p>第三课：凸函数</p>
+</blockquote>
+<span id="more"></span>
+<h1 id="凸函数的定义">凸函数的定义</h1>
+<h2 id="定义1">定义1</h2>
+<p>对于一个函数<span
+class="math inline">\(f:\mathbb{R}^n\rightarrow\mathbb{R}\)</span>，如果<span
+class="math inline">\(domf\)</span>为凸集，且： <span
+class="math display">\[
+f(\theta x+(1-\theta)y)\le\theta f(x)+(1-\theta)f(y)
+\]</span> 对所有的<span class="math inline">\(x,y\in domf,0\le\theta\le
+1\)</span>成立，则<span
+class="math inline">\(f\)</span>为（下）凸函数</p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211258794.png" alt="image-20230921125358565" style="zoom:67%;" /></p>
+<blockquote>
+<p>连接凸函数的图像上任意两点的线段都在函数图像上方</p>
+</blockquote>
+<ul>
+<li><p><span class="math inline">\(f\)</span>是凸函数，则<span
+class="math inline">\(-f\)</span>是凹函数</p></li>
+<li><p>如果<span class="math inline">\(dom f\)</span>是凸集，且 <span
+class="math display">\[
+f(\theta x+(1-\theta)y)&lt;\theta f(x)+(1-\theta)f(y)
+\]</span></p></li>
+</ul>
+<blockquote>
+<p>对所有的<span class="math inline">\(x,y\in domf,x\neq y,0&lt;\theta
+&lt;1\)</span>成立，则<span
+class="math inline">\(f\)</span>是严格凸函数</p>
+</blockquote>
+<h2 id="定义2">定义2</h2>
+<ul>
+<li><p><span
+class="math inline">\(f\)</span>是凸函数的充分必要条件为：<span
+class="math inline">\(\forall x,v\in
+domf,g(t)=f(x+tv)\)</span>是凸函数</p></li>
+<li><p>证明</p></li>
+</ul>
+<h2 id="定义3一阶条件">定义3（一阶条件）</h2>
+<ul>
+<li><p>可微：如果<span class="math inline">\(dom
+f\)</span>为开集，且函数的导数： <span class="math display">\[
+\nabla f(x)=(\frac{\partial f(x)}{\partial x_1},\frac{\partial
+f(x)}{\partial x_2},···,\frac{\partial f(x)}{\partial x_n})
+\]</span> 对所有定义域中的值都存在，则函数<span
+class="math inline">\(f\)</span>可微</p></li>
+<li><p>一阶条件：对于可微函数<span
+class="math inline">\(f\)</span>，如果<span
+class="math inline">\(domf\)</span>为凸集，则<span
+class="math inline">\(f\)</span>为凸函数当且仅当： <span
+class="math display">\[
+f(y)\ge f(x)+\nabla f(x)^T (y-x)\quad \text{for all }x,y\in domf
+\]</span></p></li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211258727.png" alt="image-20230921125426877" style="zoom:67%;" /></p>
+<blockquote>
+<p>意义：凸函数在局部的一阶泰勒展开是对函数值的低估</p>
+</blockquote>
+<h3 id="一阶条件的证明">一阶条件的证明</h3>
+<ul>
+<li><p>=&gt;</p>
+<p>f</p></li>
+<li><p>&lt;=</p></li>
+</ul>
+<h2 id="定义4二阶条件">定义4（二阶条件）</h2>
+<ul>
+<li><p>二阶可微：如果<span
+class="math inline">\(domf\)</span>为开集，且函数的<span
+class="math inline">\(Hessian\)</span>矩阵满足<span
+class="math inline">\(\nabla^2 f(x)\in S^n\)</span> <span
+class="math display">\[
+\nabla^2 f(x)_{ij}=\frac{\partial^2 f(x)}{\partial x_i \partial
+x_j},i,j=1,...,.
+\]</span> 对所有定义域中的值都存在，则函数<span
+class="math inline">\(f\)</span>二阶可微</p></li>
+<li><p>二阶条件：对于二阶可微函数<span
+class="math inline">\(f\)</span>，如果定义域为凸集</p>
+<ul>
+<li><p><span class="math inline">\(f\)</span>为凸函数当且仅当： <span
+class="math display">\[
+\nabla^2 f(x)\succeq 0\quad \text{for all }x\in domf
+\]</span></p></li>
+<li><p>如果对所有定义域内的<span
+class="math inline">\(x\)</span>满足<span class="math inline">\(\nabla^2
+f(x)\succ 0\)</span>，则<span
+class="math inline">\(f\)</span>为严格凸函数</p></li>
+</ul></li>
+</ul>
+<h1 id="常见的凸函数">常见的凸函数</h1>
+<h2 id="一维空间举例">一维空间举例</h2>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211258649.png" alt="image-20230921125640656" style="zoom: 67%;" /></p>
+<h2 id="向量范数">向量范数</h2>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211258592.png" alt="image-20230921125652921" style="zoom: 67%;" /></p>
+<h2 id="多维空间举例">多维空间举例</h2>
+<h3 id="多维向量rn">多维向量<span
+class="math inline">\(R^n\)</span></h3>
+<ul>
+<li>仿射函数：<span class="math inline">\(f(x)=a^Tx+b\)</span></li>
+<li>范数函数：<span
+class="math inline">\(\|x\|_p=(\sum_{i=1}^{n}|x_i|^p)^{\frac{1}{p}}\quad\text{for
+}p\ge1\)</span></li>
+<li>极大值函数：<span
+class="math inline">\(f(x)=\max\{x_1,...,x_n\},x\in R^m\)</span></li>
+<li><span class="math inline">\(L0\)</span>范数：<span
+class="math inline">\(x\)</span>中非零元素的个数</li>
+</ul>
+<h3 id="例二次函数">例：二次函数</h3>
+<ul>
+<li><p>二次函数：<span
+class="math inline">\(f(x)=\frac{1}{2}x^TPx+q^Tx+r,P\in S^n\)</span>
+<span class="math display">\[
+\nabla f(x)=Px+q,\quad\nabla^2f(x)=P
+\]</span> 当P为半正定矩阵<span class="math inline">\((P\succeq
+0)\)</span>时为凸函数</p></li>
+<li><p>最小二乘目标函数：<span
+class="math inline">\(f(x)=\|Ax-b\|^2_2\)</span> <span
+class="math display">\[
+\nabla f(x)=2A^T(Ax-b),\quad\nabla^2 f(x)=2A^TA
+\]</span> 对任意的<span
+class="math inline">\(A\)</span>都为凸函数</p></li>
+<li><p>二次函数比线性函数：<span
+class="math inline">\(f(x,y)=x^2/y\)</span>对所有的<span
+class="math inline">\(y&gt;0\)</span>都为凸函数</p></li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211258784.png" alt="image-20230921125739507" style="zoom:67%;" /></p>
+<h2 id="半正定矩阵的性质">半正定矩阵的性质</h2>
+<p>矩阵<strong>A</strong>为行列式，则存在以下性质：</p>
+<ul>
+<li><strong>A</strong>的特征值均为负的。</li>
+<li>存在n阶实矩阵<strong>C</strong>，使<span
+class="math inline">\(A=C^TC.\)</span></li>
+<li><strong>A</strong>的行列式是负的</li>
+</ul>
+<h1 id="保持凸性的操作">保持凸性的操作</h1>
+<h2
+id="验证个函数是否是凸函数的方法">验证⼀个函数是否是凸函数的方法</h2>
+<ol type="1">
+<li>根据3种定义</li>
+<li>验证函数是由多个相对简单的凸函数通过一些保持凸性的操作来得到</li>
+</ol>
+<h2 id="保持凸性的操作1非负加权和">保持凸性的操作1：非负加权和</h2>
+<ul>
+<li>命题：若<span
+class="math inline">\(f_1,...,f_m\)</span>为凸函数，则<span
+class="math inline">\(f=\sum^m_{i=1}w_if_i\)</span>为凸函数，<span
+class="math inline">\(w_i\ge0\)</span></li>
+<li>证明
+<ol type="1">
+<li>定义域是否为凸集</li>
+</ol></li>
+</ul>
+<h2 id="保持凸性的操作2仿射组合">保持凸性的操作2：仿射组合</h2>
+<ul>
+<li>命题：若<span class="math inline">\(f\)</span>为凸函数，则<span
+class="math inline">\(𝑓(𝐴𝑥+𝑏)\)</span>为凸函数</li>
+<li>证明</li>
+</ul>
+<h2 id="保持凸性的操作3最大化极大化">保持凸性的操作3：最大化/极大化</h2>
+<h3 id="最大化与极大化">最大化与极大化</h3>
+<ul>
+<li><p><span class="math inline">\(\max\)</span>：最大值</p></li>
+<li><p><span class="math inline">\(\sup\)</span>：上确界</p></li>
+<li><p>命题：若<span
+class="math inline">\(f_1,...,f_m\)</span>为凸函数，则<span
+class="math inline">\(f(x)=\max\{f_1(x),...,f_m(x)\}\)</span>为凸函数</p>
+<ul>
+<li>证明：</li>
+</ul></li>
+<li><p>命题：若<span class="math inline">\(f(x,y)\)</span>对所有<span
+class="math inline">\(y\in A\)</span>为关于<span
+class="math inline">\(x\)</span>的凸函数，则<span
+class="math inline">\(f(x)=\sup_{y\in A}f(x,y)\)</span>为凸函数</p></li>
+</ul>
+<h2
+id="保持凸性的操作4标量函数的组合">保持凸性的操作4：标量函数的组合</h2>
+<p>对于函数<span class="math inline">\(g:R^n\to R^k\)</span>与函数<span
+class="math inline">\(h:R^k\to R\)</span>，函数组合为<span
+class="math inline">\(f(x)=h(g(x))\)</span></p>
+<p>考虑<span class="math inline">\(n=k=1\)</span>的情况</p>
+<p><span class="math inline">\(f\)</span>为凸函数如果：<span
+class="math inline">\(\begin{cases}g是凸函数，h是凹函数，h递增\\g是凹函数，h是凸函数，h递减\end{cases}\)</span>
+<span class="math display">\[
+f&#39;&#39;(x)=h&#39;&#39;(g(x)g&#39;(x))^2+h&#39;(g(x))g&#39;&#39;(x).
+\]</span></p>
+<blockquote>
+<p>例：</p>
+<p><span class="math inline">\(\exp
+g(x)当g是凸函数时为凸函数\)</span></p>
+<p><span
+class="math inline">\(1/g(x)当g是凹函数且为正时为凸函数\)</span></p>
+</blockquote>
+<h1 id="共轭函数conjugate-function">共轭函数（conjugate function）</h1>
+<h2 id="函数f的共轭定义">函数<span
+class="math inline">\(f\)</span>的共轭定义</h2>
+<p><span class="math display">\[
+f^*(y)=\sup_{x\in domf}(y^Tx-f(x))
+\]</span></p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211700984.png" alt="image-20230921170043534" style="zoom:80%;" /></p>
+<blockquote>
+<p>性质：<span class="math inline">\(f^*(y)\)</span>一定为凸函数</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>最优化方法</category>
+      </categories>
+      <tags>
+        <tag>学科</tag>
+        <tag>最优化方法</tag>
       </tags>
   </entry>
   <entry>
@@ -1903,238 +3000,6 @@ alt="image-20230927133202477" />
       </tags>
   </entry>
   <entry>
-    <title>凸函数（Convex Function）</title>
-    <url>/2023/09/21/2023/%E6%9C%80%E4%BC%98%E5%8C%96/%E5%87%B8%E5%87%BD%E6%95%B0%EF%BC%88Convex-Function%EF%BC%89/</url>
-    <content><![CDATA[<blockquote>
-<p>第三课：凸函数</p>
-</blockquote>
-<span id="more"></span>
-<h1 id="凸函数的定义">凸函数的定义</h1>
-<h2 id="定义1">定义1</h2>
-<p>对于一个函数<span
-class="math inline">\(f:\mathbb{R}^n\rightarrow\mathbb{R}\)</span>，如果<span
-class="math inline">\(domf\)</span>为凸集，且： <span
-class="math display">\[
-f(\theta x+(1-\theta)y)\le\theta f(x)+(1-\theta)f(y)
-\]</span> 对所有的<span class="math inline">\(x,y\in domf,0\le\theta\le
-1\)</span>成立，则<span
-class="math inline">\(f\)</span>为（下）凸函数</p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211258794.png" alt="image-20230921125358565" style="zoom:67%;" /></p>
-<blockquote>
-<p>连接凸函数的图像上任意两点的线段都在函数图像上方</p>
-</blockquote>
-<ul>
-<li><p><span class="math inline">\(f\)</span>是凸函数，则<span
-class="math inline">\(-f\)</span>是凹函数</p></li>
-<li><p>如果<span class="math inline">\(dom f\)</span>是凸集，且 <span
-class="math display">\[
-f(\theta x+(1-\theta)y)&lt;\theta f(x)+(1-\theta)f(y)
-\]</span></p></li>
-</ul>
-<blockquote>
-<p>对所有的<span class="math inline">\(x,y\in domf,x\neq y,0&lt;\theta
-&lt;1\)</span>成立，则<span
-class="math inline">\(f\)</span>是严格凸函数</p>
-</blockquote>
-<h2 id="定义2">定义2</h2>
-<ul>
-<li><p><span
-class="math inline">\(f\)</span>是凸函数的充分必要条件为：<span
-class="math inline">\(\forall x,v\in
-domf,g(t)=f(x+tv)\)</span>是凸函数</p></li>
-<li><p>证明</p></li>
-</ul>
-<h2 id="定义3一阶条件">定义3（一阶条件）</h2>
-<ul>
-<li><p>可微：如果<span class="math inline">\(dom
-f\)</span>为开集，且函数的导数： <span class="math display">\[
-\nabla f(x)=(\frac{\partial f(x)}{\partial x_1},\frac{\partial
-f(x)}{\partial x_2},···,\frac{\partial f(x)}{\partial x_n})
-\]</span> 对所有定义域中的值都存在，则函数<span
-class="math inline">\(f\)</span>可微</p></li>
-<li><p>一阶条件：对于可微函数<span
-class="math inline">\(f\)</span>，如果<span
-class="math inline">\(domf\)</span>为凸集，则<span
-class="math inline">\(f\)</span>为凸函数当且仅当： <span
-class="math display">\[
-f(y)\ge f(x)+\nabla f(x)^T (y-x)\quad \text{for all }x,y\in domf
-\]</span></p></li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211258727.png" alt="image-20230921125426877" style="zoom:67%;" /></p>
-<blockquote>
-<p>意义：凸函数在局部的一阶泰勒展开是对函数值的低估</p>
-</blockquote>
-<h3 id="一阶条件的证明">一阶条件的证明</h3>
-<ul>
-<li><p>=&gt;</p>
-<p>f</p></li>
-<li><p>&lt;=</p></li>
-</ul>
-<h2 id="定义4二阶条件">定义4（二阶条件）</h2>
-<ul>
-<li><p>二阶可微：如果<span
-class="math inline">\(domf\)</span>为开集，且函数的<span
-class="math inline">\(Hessian\)</span>矩阵满足<span
-class="math inline">\(\nabla^2 f(x)\in S^n\)</span> <span
-class="math display">\[
-\nabla^2 f(x)_{ij}=\frac{\partial^2 f(x)}{\partial x_i \partial
-x_j},i,j=1,...,.
-\]</span> 对所有定义域中的值都存在，则函数<span
-class="math inline">\(f\)</span>二阶可微</p></li>
-<li><p>二阶条件：对于二阶可微函数<span
-class="math inline">\(f\)</span>，如果定义域为凸集</p>
-<ul>
-<li><p><span class="math inline">\(f\)</span>为凸函数当且仅当： <span
-class="math display">\[
-\nabla^2 f(x)\succeq 0\quad \text{for all }x\in domf
-\]</span></p></li>
-<li><p>如果对所有定义域内的<span
-class="math inline">\(x\)</span>满足<span class="math inline">\(\nabla^2
-f(x)\succ 0\)</span>，则<span
-class="math inline">\(f\)</span>为严格凸函数</p></li>
-</ul></li>
-</ul>
-<h1 id="常见的凸函数">常见的凸函数</h1>
-<h2 id="一维空间举例">一维空间举例</h2>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211258649.png" alt="image-20230921125640656" style="zoom: 67%;" /></p>
-<h2 id="向量范数">向量范数</h2>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211258592.png" alt="image-20230921125652921" style="zoom: 67%;" /></p>
-<h2 id="多维空间举例">多维空间举例</h2>
-<h3 id="多维向量rn">多维向量<span
-class="math inline">\(R^n\)</span></h3>
-<ul>
-<li>仿射函数：<span class="math inline">\(f(x)=a^Tx+b\)</span></li>
-<li>范数函数：<span
-class="math inline">\(\|x\|_p=(\sum_{i=1}^{n}|x_i|^p)^{\frac{1}{p}}\quad\text{for
-}p\ge1\)</span></li>
-<li>极大值函数：<span
-class="math inline">\(f(x)=\max\{x_1,...,x_n\},x\in R^m\)</span></li>
-<li><span class="math inline">\(L0\)</span>范数：<span
-class="math inline">\(x\)</span>中非零元素的个数</li>
-</ul>
-<h3 id="例二次函数">例：二次函数</h3>
-<ul>
-<li><p>二次函数：<span
-class="math inline">\(f(x)=\frac{1}{2}x^TPx+q^Tx+r,P\in S^n\)</span>
-<span class="math display">\[
-\nabla f(x)=Px+q,\quad\nabla^2f(x)=P
-\]</span> 当P为半正定矩阵<span class="math inline">\((P\succeq
-0)\)</span>时为凸函数</p></li>
-<li><p>最小二乘目标函数：<span
-class="math inline">\(f(x)=\|Ax-b\|^2_2\)</span> <span
-class="math display">\[
-\nabla f(x)=2A^T(Ax-b),\quad\nabla^2 f(x)=2A^TA
-\]</span> 对任意的<span
-class="math inline">\(A\)</span>都为凸函数</p></li>
-<li><p>二次函数比线性函数：<span
-class="math inline">\(f(x,y)=x^2/y\)</span>对所有的<span
-class="math inline">\(y&gt;0\)</span>都为凸函数</p></li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211258784.png" alt="image-20230921125739507" style="zoom:67%;" /></p>
-<h2 id="半正定矩阵的性质">半正定矩阵的性质</h2>
-<p>矩阵<strong>A</strong>为行列式，则存在以下性质：</p>
-<ul>
-<li><strong>A</strong>的特征值均为负的。</li>
-<li>存在n阶实矩阵<strong>C</strong>，使<span
-class="math inline">\(A=C^TC.\)</span></li>
-<li><strong>A</strong>的行列式是负的</li>
-</ul>
-<h1 id="保持凸性的操作">保持凸性的操作</h1>
-<h2
-id="验证个函数是否是凸函数的方法">验证⼀个函数是否是凸函数的方法</h2>
-<ol type="1">
-<li>根据3种定义</li>
-<li>验证函数是由多个相对简单的凸函数通过一些保持凸性的操作来得到</li>
-</ol>
-<h2 id="保持凸性的操作1非负加权和">保持凸性的操作1：非负加权和</h2>
-<ul>
-<li>命题：若<span
-class="math inline">\(f_1,...,f_m\)</span>为凸函数，则<span
-class="math inline">\(f=\sum^m_{i=1}w_if_i\)</span>为凸函数，<span
-class="math inline">\(w_i\ge0\)</span></li>
-<li>证明
-<ol type="1">
-<li>定义域是否为凸集</li>
-</ol></li>
-</ul>
-<h2 id="保持凸性的操作2仿射组合">保持凸性的操作2：仿射组合</h2>
-<ul>
-<li>命题：若<span class="math inline">\(f\)</span>为凸函数，则<span
-class="math inline">\(𝑓(𝐴𝑥+𝑏)\)</span>为凸函数</li>
-<li>证明</li>
-</ul>
-<h2 id="保持凸性的操作3最大化极大化">保持凸性的操作3：最大化/极大化</h2>
-<h3 id="最大化与极大化">最大化与极大化</h3>
-<ul>
-<li><p><span class="math inline">\(\max\)</span>：最大值</p></li>
-<li><p><span class="math inline">\(\sup\)</span>：上确界</p></li>
-<li><p>命题：若<span
-class="math inline">\(f_1,...,f_m\)</span>为凸函数，则<span
-class="math inline">\(f(x)=\max\{f_1(x),...,f_m(x)\}\)</span>为凸函数</p>
-<ul>
-<li>证明：</li>
-</ul></li>
-<li><p>命题：若<span class="math inline">\(f(x,y)\)</span>对所有<span
-class="math inline">\(y\in A\)</span>为关于<span
-class="math inline">\(x\)</span>的凸函数，则<span
-class="math inline">\(f(x)=\sup_{y\in A}f(x,y)\)</span>为凸函数</p></li>
-</ul>
-<h2
-id="保持凸性的操作4标量函数的组合">保持凸性的操作4：标量函数的组合</h2>
-<p>对于函数<span class="math inline">\(g:R^n\to R^k\)</span>与函数<span
-class="math inline">\(h:R^k\to R\)</span>，函数组合为<span
-class="math inline">\(f(x)=h(g(x))\)</span></p>
-<p>考虑<span class="math inline">\(n=k=1\)</span>的情况</p>
-<p><span class="math inline">\(f\)</span>为凸函数如果：<span
-class="math inline">\(\begin{cases}g是凸函数，h是凹函数，h递增\\g是凹函数，h是凸函数，h递减\end{cases}\)</span>
-<span class="math display">\[
-f&#39;&#39;(x)=h&#39;&#39;(g(x)g&#39;(x))^2+h&#39;(g(x))g&#39;&#39;(x).
-\]</span></p>
-<blockquote>
-<p>例：</p>
-<p><span class="math inline">\(\exp
-g(x)当g是凸函数时为凸函数\)</span></p>
-<p><span
-class="math inline">\(1/g(x)当g是凹函数且为正时为凸函数\)</span></p>
-</blockquote>
-<h1 id="共轭函数conjugate-function">共轭函数（conjugate function）</h1>
-<h2 id="函数f的共轭定义">函数<span
-class="math inline">\(f\)</span>的共轭定义</h2>
-<p><span class="math display">\[
-f^*(y)=\sup_{x\in domf}(y^Tx-f(x))
-\]</span></p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309211700984.png" alt="image-20230921170043534" style="zoom:80%;" /></p>
-<blockquote>
-<p>性质：<span class="math inline">\(f^*(y)\)</span>一定为凸函数</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>最优化方法</category>
-      </categories>
-      <tags>
-        <tag>学科</tag>
-        <tag>最优化方法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JVM垃圾回收机制</title>
-    <url>/2024/03/25/Java/JVM/JVM%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6/</url>
-    <content><![CDATA[<blockquote>
-<p>关于JVM的垃圾回收机制的一些问题</p>
-</blockquote>
-<span id="more"></span>
-]]></content>
-      <categories>
-        <category>Java八股</category>
-        <category>JVM</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>八股</tag>
-        <tag>JVM</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>凸集（Convex Set）</title>
     <url>/2023/09/19/2023/%E6%9C%80%E4%BC%98%E5%8C%96/%E5%87%B8%E9%9B%86%EF%BC%88Convex-Set%EF%BC%89/</url>
     <content><![CDATA[<blockquote>
@@ -2362,718 +3227,281 @@ alt="image-20230919141413149" />
       </tags>
   </entry>
   <entry>
-    <title>synchronized关键字</title>
-    <url>/2024/03/23/Java/%E5%B9%B6%E5%8F%91/synchronized%E5%85%B3%E9%94%AE%E5%AD%97/</url>
+    <title>优化问题笔记</title>
+    <url>/2023/09/17/2023/%E6%9C%80%E4%BC%98%E5%8C%96/%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<blockquote>
-<p>关于synchronized关键字的一些问题</p>
+<p>南京邮电大学课程：最优化方法——张伯雷</p>
 </blockquote>
 <span id="more"></span>
-<h1 id="synchronized是什么有什么用">synchronized是什么？有什么用？</h1>
-<p><code>synchronized</code> 是 Java
-中的一个关键字，翻译成中文是同步的意思，主要解决的是多个线程之间访问资源的同步性，可以保证被它修饰的方法或者代码块在任意时刻只能有一个线程执行。</p>
-<p>在 Java 早期版本中，<code>synchronized</code> 属于
-<strong>重量级锁</strong>，效率低下。这是因为监视器锁（monitor）是依赖于底层的操作系统的
-<code>Mutex Lock</code> 来实现的，Java
-的线程是映射到操作系统的原生线程之上的。如果要挂起或者唤醒一个线程，都需要操作系统帮忙完成，而操作系统实现线程之间的切换时需要从用户态转换到内核态，这个状态之间的转换需要相对比较长的时间，时间成本相对较高。</p>
-<p>不过，在 Java 6 之后， <code>synchronized</code>
-引入了大量的优化如自旋锁、适应性自旋锁、锁消除、锁粗化、偏向锁、轻量级锁等技术来减少锁操作的开销，这些优化让
-<code>synchronized</code> 锁的效率提升了很多。因此，
-<code>synchronized</code> 还是可以在实际项目中使用的，像 JDK
-源码、很多开源框架都大量使用了 <code>synchronized</code> 。</p>
-<p>关于偏向锁多补充一点：由于偏向锁增加了 JVM
-的复杂性，同时也并没有为所有应用都带来性能提升。因此，在 JDK15
-中，偏向锁被默认关闭（仍然可以使用 <code>-XX:+UseBiasedLocking</code>
-启用偏向锁），在 JDK18
-中，偏向锁已经被彻底废弃（无法通过命令行打开）。</p>
-<h1 id="如何使用synchronized">如何使用synchronized？</h1>
-<p><code>synchronized</code> 关键字的使用方式主要有下面 3 种：</p>
-<ol type="1">
-<li>修饰实例方法</li>
-<li>修饰静态方法</li>
-<li>修饰代码块</li>
-</ol>
-<p><strong>1、修饰实例方法</strong> （锁当前对象实例）</p>
-<p>给当前对象实例加锁，进入同步代码前要获得
-<strong>当前对象实例的锁</strong> 。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title function_">method</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="comment">//业务代码</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>2、修饰静态方法</strong> （锁当前类）</p>
-<p>给当前类加锁，会作用于类的所有对象实例 ，进入同步代码前要获得
-<strong>当前 class 的锁</strong>。</p>
-<p>这是因为静态成员不属于任何一个实例对象，归整个类所有，不依赖于类的特定实例，被类的所有实例共享。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">synchronized</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">method</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="comment">//业务代码</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>静态 <code>synchronized</code> 方法和非静态 <code>synchronized</code>
-方法之间的调用互斥么？不互斥！如果一个线程 A 调用一个实例对象的非静态
-<code>synchronized</code> 方法，而线程 B
-需要调用这个实例对象所属类的静态 <code>synchronized</code>
-方法，是允许的，不会发生互斥现象，因为访问静态 <code>synchronized</code>
-方法占用的锁是当前类的锁，而访问非静态 <code>synchronized</code>
-方法占用的锁是当前实例对象锁。</p>
-<p><strong>3、修饰代码块</strong> （锁指定对象/类）</p>
-<p>对括号里指定的对象/类加锁：</p>
-<ul>
-<li><code>synchronized(object)</code> 表示进入同步代码库前要获得
-<strong>给定对象的锁</strong>。</li>
-<li><code>synchronized(类.class)</code> 表示进入同步代码前要获得
-<strong>给定 Class 的锁</strong></li>
-</ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">synchronized</span>(<span class="built_in">this</span>) &#123;</span><br><span class="line">    <span class="comment">//业务代码</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>总结：</strong></p>
-<ul>
-<li><code>synchronized</code> 关键字加到 <code>static</code> 静态方法和
-<code>synchronized(class)</code> 代码块上都是是给 Class 类上锁；</li>
-<li><code>synchronized</code>
-关键字加到实例方法上是给对象实例上锁；</li>
-<li>尽量不要使用 <code>synchronized(String a)</code> 因为 JVM
-中，字符串常量池具有缓存功能。</li>
-</ul>
-<h1
-id="构造方法可以用synchronized修饰吗">构造方法可以用synchronized修饰吗？</h1>
-<p>先说结论：<strong>构造方法不能使用 synchronized
-关键字修饰。</strong></p>
-<p>构造方法本身就属于线程安全的，不存在同步的构造方法一说。</p>
-<h1 id="synchronized底层原理">synchronized底层原理</h1>
-<h2 id="synchronized同步语句块的情况">synchronized同步语句块的情况</h2>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SynchronizedDemo</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">method</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">synchronized</span> (<span class="built_in">this</span>) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;synchronized 代码块&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>通过 JDK 自带的 <code>javap</code> 命令查看
-<code>SynchronizedDemo</code>
-类的相关字节码信息：首先切换到类的对应目录执行
-<code>javac SynchronizedDemo.java</code> 命令生成编译后的 .class
-文件，然后执行<code>javap -c -s -v -l SynchronizedDemo.class</code>。</p>
-<figure>
-<img
-src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403241719285.png"
-alt="synchronized关键字原理" />
-<figcaption aria-hidden="true">synchronized关键字原理</figcaption>
-</figure>
-<p>从上面我们可以看出：<strong><code>synchronized</code>
-同步语句块的实现使用的是 <code>monitorenter</code> 和
-<code>monitorexit</code> 指令，其中 <code>monitorenter</code>
-指令指向同步代码块的开始位置，<code>monitorexit</code>
-指令则指明同步代码块的结束位置。</strong></p>
-<p>上面的字节码中包含一个 <code>monitorenter</code> 指令以及两个
-<code>monitorexit</code>
-指令，这是为了保证锁在同步代码块代码正常执行以及出现异常的这两种情况下都能被正确释放。它在底层使用了隐式的try
-- finally，以防正常代码在执行过程中抛了异常。</p>
-<p>当执行 <code>monitorenter</code> 指令时，线程试图获取锁也就是获取
-<strong>对象监视器 <code>monitor</code></strong> 的持有权。</p>
-<p><code>Monitor</code>被翻译为监视器，是由<code>jvm</code>提供，<code>C++</code>语言实现。</p>
-<figure>
-<img
-src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403241632387.png"
-alt="image-20240324163226315" />
-<figcaption aria-hidden="true">image-20240324163226315</figcaption>
-</figure>
-<p>在执行<code>monitorenter</code>时，会尝试获取对象的锁，如果锁的计数器为
-0 则表示锁可以被获取，获取后将锁计数器设为 1 也就是加 1。</p>
-<figure>
-<img
-src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403241633580.png"
-alt="执行 monitorenter 获取锁" />
-<figcaption aria-hidden="true">执行 monitorenter 获取锁</figcaption>
-</figure>
-<p>对象锁的的拥有者线程才可以执行 <code>monitorexit</code>
-指令来释放锁。在执行 <code>monitorexit</code> 指令后，将锁计数器设为
-0，表明锁被释放，其他线程可以尝试获取锁。</p>
-<figure>
-<img
-src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403241634558.png"
-alt="执行 monitorexit 释放锁" />
-<figcaption aria-hidden="true">执行 monitorexit 释放锁</figcaption>
-</figure>
-<p>如果获取对象锁失败，那当前线程就要阻塞等待，直到锁被另外一个线程释放为止。</p>
-<h2 id="synchronized修饰方法的情况">synchronized修饰方法的情况</h2>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SynchronizedDemo2</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title function_">method</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;synchronized 方法&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure>
-<img
-src="https://oss.javaguide.cn/github/javaguide/synchronized%E5%85%B3%E9%94%AE%E5%AD%97%E5%8E%9F%E7%90%862.png"
-alt="synchronized关键字原理" />
-<figcaption aria-hidden="true">synchronized关键字原理</figcaption>
-</figure>
-<p><code>synchronized</code> 修饰的方法并没有 <code>monitorenter</code>
-指令和 <code>monitorexit</code> 指令，取得代之的确实是
-<code>ACC_SYNCHRONIZED</code>
-标识，该标识指明了该方法是一个同步方法。JVM 通过该
-<code>ACC_SYNCHRONIZED</code>
-访问标志来辨别一个方法是否声明为同步方法，从而执行相应的同步调用。</p>
-<p>如果是实例方法，JVM 会尝试获取实例对象的锁。如果是静态方法，JVM
-会尝试获取当前 class 的锁。</p>
-<h2 id="总结">总结</h2>
-<p><code>synchronized</code> 同步语句块的实现使用的是
-<code>monitorenter</code> 和 <code>monitorexit</code> 指令，其中
-<code>monitorenter</code>
-指令指向同步代码块的开始位置，<code>monitorexit</code>
-指令则指明同步代码块的结束位置。</p>
-<p><code>synchronized</code> 修饰的方法并没有 <code>monitorenter</code>
-指令和 <code>monitorexit</code> 指令，取得代之的确实是
-<code>ACC_SYNCHRONIZED</code>
-标识，该标识指明了该方法是一个同步方法。</p>
-<p><strong>不过两者的本质都是对对象监视器 monitor 的获取。</strong></p>
-<figure>
-<img
-src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403241643733.png"
-alt="image-20240324164351101" />
-<figcaption aria-hidden="true">image-20240324164351101</figcaption>
-</figure>
-<h1
-id="jdk1.6后的synchronized底层做了哪些优化锁升级原理">JDK1.6后的synchronized底层做了哪些优化？锁升级原理？</h1>
-<p>在 Java 6 之后， <code>synchronized</code>
-引入了大量的优化如自旋锁、适应性自旋锁、锁消除、锁粗化、偏向锁、轻量级锁等技术来减少锁操作的开销，这些优化让
-<code>synchronized</code> 锁的效率提升了很多（JDK18
-中，偏向锁已经被彻底废弃，前面已经提到过了）。</p>
-<p>锁主要存在四种状态，依次是：无锁状态、偏向锁状态、轻量级锁状态、重量级锁状态，他们会随着竞争的激烈而逐渐升级。注意锁可以升级不可降级，这种策略是为了提高获得锁和释放锁的效率。</p>
-<p><code>synchronized</code>
-锁升级是一个比较复杂的过程，面试也很少问到，如果你想要详细了解的话，可以看看这篇文章：<a
-href="https://www.cnblogs.com/star95/p/17542850.html">浅析 synchronized
-锁升级的原理与实现</a></p>
-<h1
-id="synchronized和volatile有什么区别">synchronized和volatile有什么区别</h1>
-<p><code>synchronized</code> 关键字和 <code>volatile</code>
-关键字是两个互补的存在，而不是对立的存在！</p>
-<ul>
-<li><code>volatile</code> 关键字是线程同步的轻量级实现，所以
-<code>volatile</code>性能肯定比<code>synchronized</code>关键字要好
-。但是 <code>volatile</code> 关键字只能用于变量而
-<code>synchronized</code> 关键字可以修饰方法以及代码块 。</li>
-<li><code>volatile</code>
-关键字能保证数据的可见性，但不能保证数据的原子性。<code>synchronized</code>
-关键字两者都能保证。</li>
-<li><code>volatile</code>关键字主要用于解决变量在多个线程之间的可见性，而
-<code>synchronized</code>
-关键字解决的是多个线程之间访问资源的同步性。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Java八股</category>
-        <category>并发</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>八股</tag>
-        <tag>并发</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java当中的各种锁</title>
-    <url>/2024/03/23/Java/%E5%B9%B6%E5%8F%91/Java%E5%BD%93%E4%B8%AD%E7%9A%84%E5%90%84%E7%A7%8D%E9%94%81/</url>
-    <content><![CDATA[<blockquote>
-<p>15种锁！</p>
-</blockquote>
-<span id="more"></span>
-<h1 id="乐观锁">乐观锁</h1>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232110652.png" alt="image-20240323210351234" style="zoom: 67%;" /></p>
-<p><strong>乐观锁是一种乐观思想</strong>，假定当前环境是读多写少，遇到并发写的概率比较低，读数据时认为别的线程不会正在进行修改（所以没有上锁）。写数据时，判断当前与期望值是否相同，如果相同则进行更新（更新期间加锁，保证是原子性的）。</p>
-<p>即假设数据修改不会造成冲突，在数据提交更新时才进行冲突检测。</p>
-<p><strong>Java中的乐观锁：</strong>
-CAS，比较并替换，比较当前值（主内存中的值），与预期值（当前线程中的值，主内存中值的一份拷贝）是否一样，一样则更新，否则继续进行CAS操作。</p>
-<p>如上图所示，可以同时进行读操作，读的时候其他线程不能进行写操作。</p>
-<h1 id="悲观锁">悲观锁</h1>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232110830.png" alt="image-20240323210903997" style="zoom: 67%;" /></p>
-<p><strong>悲观锁是一种悲观思想</strong>，即认为写多读少，遇到并发写的可能性高，每次去拿数据的时候都认为其他线程会修改，所以每次读写数据都会认为其他线程会修改，所以每次读写数据时都会上锁。其他线程想要读写这个数据时，会被这个线程block，直到这个线程释放锁然后其他线程获取到锁。</p>
-<p>即数据修改前，假设一定会发生冲突，先尝试为它加锁。</p>
-<p><strong>Java中的悲观锁：</strong>
-synchronized修饰的方法和方法块、ReentrantLock。</p>
-<p>如上图所示，只能有一个线程进行读操作或者写操作，其他线程的读写操作均不能进行。</p>
-<h1 id="自旋锁">自旋锁</h1>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232110895.png" alt="image-20240323211029664" style="zoom: 67%;" /></p>
-<p><strong>自旋锁是一种技术：</strong>
-为了让线程等待，我们只须让线程执行一个忙循环（自旋）。</p>
-<p>现在绝大多数的个人电脑和服务器都是多路（核）处理器系统，如果物理机器有一个以上的处理器或者处理器核心，能让两个或以上的线程同时并行执行，就可以让后面请求锁的那个线程“稍等一会”，但不放弃处理器的执行时间，看看持有锁的线程是否很快就会释放锁。</p>
-<p><strong>自旋锁的优点：</strong>
-避免了线程切换的开销。挂起线程和恢复线程的操作都需要转入内核态中完成，这些操作给Java虚拟机的并发性能带来了很大的压力。</p>
-<p><strong>自旋锁的缺点：</strong>
-占用处理器的时间，如果占用的时间很长，会白白消耗处理器资源，而不会做任何有价值的工作，带来性能的浪费。因此自旋等待的时间必须有一定的限度，如果自旋超过了限定的次数仍然没有成功获得锁，就应当使用传统的方式去挂起线程。</p>
-<p>自旋次数默认值：10次，可以使用参数<code>-XX:PreBlockSpin</code>来自行更改。</p>
-<p><strong>自适应自旋：</strong>
-自适应意味着自旋的时间不再是固定的，而是由前一次在同一个锁上的自旋时间及锁的拥有者的状态来决定的。有了自适应自旋，随着程序运行时间的增长及性能监控信息的不断完善，虚拟机对程序锁的状态预测就会越来越精准。</p>
-<p><strong>Java中的自旋锁：</strong>
-CAS操作中的比较操作失败后的自旋等待。</p>
-<h1 id="可重入锁">可重入锁</h1>
-<p><strong>可重入锁是一种技术：</strong>
-任意线程在获取到锁之后能够再次获取该锁而不会被锁所阻塞。</p>
-<p><strong>可重入锁的原理：</strong> 为每个锁关联一个计数器。</p>
-<ul>
-<li>首次获取锁：计数器置为1.</li>
-<li>再次获取锁：计数器加1</li>
-<li>释放锁：释放锁时，进行计数自减。计数器为0则代表锁被当前线程释放。</li>
-</ul>
-<p><strong>Java中的可重入锁：</strong>
-ReentrantLock、synchronized修饰的方法或代码段。</p>
-<p><strong>可重入锁的作用：</strong> 避免死锁。</p>
-<p><strong>面试题1：</strong>
-可重入锁如果加了两把，但是只释放了一把会出现什么问题？</p>
-<p>答：程序卡死，线程不能出来，也就是说我们申请了几把锁，就需要释放几把锁。</p>
-<p><strong>面试题2：</strong>
-如果只加了一把锁，释放两次会出现什么问题？</p>
-<p>答：会报错，java.lang.IllegalMonitorStateException。</p>
-<h1 id="读写锁">读写锁</h1>
-<p><strong>读写锁是一种技术：</strong>
-通过ReentrantReadWriteLock类来实现。为了提高性能， Java
-提供了读写锁，在读的地方使用读锁，在写的地方使用写锁，灵活控制，如果没有写锁的情况下，读是无阻塞的，在一定程度上提高了程序的执行效率。读写锁分为读锁和写锁，多个读锁不互斥，读锁与写锁互斥，这是由
-jvm 自己控制的。</p>
-<p><strong>读锁：</strong>
-允许多个线程获取读锁，同时访问同一个资源。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232116006.png" alt="image-20240323211616975" style="zoom:67%;" /></p>
-<p><strong>写锁：</strong>
-只允许一个线程获取写锁，不允许同时访问同一个资源。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232116455.png" alt="image-20240323211655063" style="zoom:67%;" /></p>
-<p><strong>Java中的读写锁：</strong>ReentrantReadWriteLock</p>
-<h1 id="公平锁">公平锁</h1>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232120587.png" alt="image-20240323211822932" style="zoom:67%;" /></p>
-<p><strong>公平锁是一种思想：</strong>
-多个线程竞争锁时直接进入队列排队，按照申请锁的顺序来获取锁，先到先得。在并发环境中，每个线程会先查看此锁维护的等待队列，如果当前等待队列为空，则占有锁，如果等待队列不为空，则加入到等待队列的末尾，按照FIFO的原则从队列中拿到线程，然后占有锁。</p>
-<h1 id="非公平锁">非公平锁</h1>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232121397.png" alt="image-20240323212125844" style="zoom:67%;" /></p>
-<p><strong>非公平锁是一种思想：</strong>
-多个线程竞争锁时，线程先尝试获取锁，如果获取不到，则再采用公平锁的方式，进入等待队列。多个线程获取锁的顺序，不是按照先到先得的顺序，有可能后申请锁的线程比先申请的线程优先获取锁。</p>
-<p><strong>优点：</strong> 非公平锁的性能高于公平锁。</p>
-<p><strong>缺点：</strong>
-有可能造成线程饥饿（某个线程很长一段时间获取不到锁）</p>
-<p><strong>Java中的非公平锁：</strong>synchronized是非公平锁，ReentrantLock通过构造函数指定该锁是公平的还是非公平的，默认是非公平的。</p>
-<h1 id="共享锁">共享锁</h1>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232122441.png" alt="image-20240323212253082" style="zoom:67%;" /></p>
-<p><strong>共享锁是一种思想：</strong>
-可以有多个线程获取读锁，以共享的方式持有锁。和乐观锁、读写锁同义。</p>
-<p><strong>Java中用到的共享锁：</strong> ReentrantReadWriteLock。</p>
-<h1 id="独占锁">独占锁</h1>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232123222.png" alt="image-20240323212332680" style="zoom:67%;" /></p>
-<p><strong>独占锁是一种思想：</strong>
-只能有一个线程获取锁，以独占的方式持有锁。和悲观锁、互斥锁同义。</p>
-<p><strong>Java中用到的独占锁：</strong> synchronized，ReentrantLock</p>
-<h1 id="重量级锁">重量级锁</h1>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232124347.png" alt="image-20240323212424987" style="zoom:67%;" /></p>
-<p><strong>重量级锁是一种称谓：</strong>
-synchronized是通过对象内部的一个叫做监视器锁（monitor）来实现的，监视器锁本身依赖底层的操作系统的
-Mutex
-Lock来实现。操作系统实现线程的切换需要从用户态切换到核心态，成本非常高。这种依赖于操作系统
-Mutex
-Lock来实现的锁称为重量级锁。为了优化synchonized，引入了轻量级锁，偏向锁。</p>
-<p><strong>Java中的重量级锁：</strong> synchronized</p>
-<h1 id="轻量级锁">轻量级锁</h1>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232125738.png" alt="image-20240323212543336" style="zoom:67%;" /></p>
-<p><strong>轻量级锁是JDK6时加入的一种锁优化机制：</strong>
-轻量级锁是在无竞争的情况下使用CAS操作去消除同步使用的互斥量。轻量级是相对于使用操作系统互斥量来实现的重量级锁而言的。轻量级锁在没有多线程竞争的前提下，减少传统的重量级锁使用操作系统互斥量产生的性能消耗。如果出现两条以上的线程争用同一个锁的情况，那轻量级锁将不会有效，必须膨胀为重量级锁。</p>
-<p><strong>优点：</strong>
-如果没有竞争，通过CAS操作成功避免了使用互斥量的开销。</p>
-<p><strong>缺点：</strong>
-如果存在竞争，除了互斥量本身的开销外，还额外产生了CAS操作的开销，因此在有竞争的情况下，轻量级锁比传统的重量级锁更慢。</p>
-<h1 id="偏向锁">偏向锁</h1>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232127632.png" alt="image-20240323212744980" style="zoom:67%;" /></p>
-<p><strong>偏向锁是JDK6时加入的一种锁优化机制：</strong>
-在无竞争的情况下把整个同步都消除掉，连CAS操作都不去做了。偏是指偏心，它的意思是这个锁会偏向于第一个获得它的线程，如果在接下来的执行过程中，该锁一直没有被其他的线程获取，则持有偏向锁的线程将永远不需要再进行同步。持有偏向锁的线程以后每次进入这个锁相关的同步块时，虚拟机都可以不再进行任何同步操作（例如加锁、解锁及对Mark
-Word的更新操作等）。</p>
-<p><strong>优点：</strong>
-把整个同步都消除掉，连CAS操作都不去做了，优于轻量级锁。</p>
-<p><strong>缺点：</strong>
-如果程序中大多数的锁都总是被多个不同的线程访问，那偏向锁就是多余的。</p>
-<h1 id="分段锁">分段锁</h1>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232129274.png" alt="image-20240323212928660" style="zoom:67%;" /></p>
-<p><strong>分段锁是一种机制：</strong>
-最好的例子来说明分段锁是ConcurrentHashMap。<strong>ConcurrentHashMap原理：</strong>它内部细分了若干个小的
-HashMap，称之为段(Segment)。默认情况下一个 ConcurrentHashMap
-被进一步细分为 16 个段，既就是锁的并发度。如果需要在 ConcurrentHashMap
-添加一项key-value，并不是将整个 HashMap 加锁，而是首先根据 hashcode
-得到该key-value应该存放在哪个段中，然后对该段加锁，并完成 put
-操作。在多线程环境中，如果多个线程同时进行put操作，只要被加入的key-value不存放在同一个段中，则线程间可以做到真正的并行。</p>
-<p><strong>线程安全：</strong>ConcurrentHashMap 是一个 Segment 数组，
-Segment 通过继承ReentrantLock
-来进行加锁，所以每次需要加锁的操作锁住的是一个 segment，这样只要保证每个
-Segment 是线程安全的，也就实现了全局的线程安全</p>
-<h1 id="锁粗化">锁粗化</h1>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232135180.png" alt="image-20240323213547009" style="zoom:67%;" /></p>
-<p><strong>锁粗化是一种优化技术：</strong>
-如果一系列的连续操作都对同一个对象反复加锁和解锁，甚至加锁操作都是出现在循环体体之中，就算真的没有线程竞争，频繁地进行互斥同步操作将会导致不必要的性能损耗，所以就采取了一种方案：把加锁的范围扩展（粗化）到整个操作序列的外部，这样加锁解锁的频率就会大大降低，从而减少了性能损耗。</p>
-<h2 id="锁消除">锁消除</h2>
-<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232136997.png" alt="image-20240323213626287" style="zoom:67%;" /></p>
-<p><strong>锁消除是一种优化技术：</strong>
-就是把锁干掉。当Java虚拟机运行时发现有些共享数据不会被线程竞争时就可以进行锁消除。</p>
-<p>那如何判断共享数据不会被线程竞争？</p>
-<p>利用逃逸分析技术：分析对象的作用域，如果对象在A方法中定义后，被作为参数传递到B方法中，则称为方法逃逸；如果被其他线程访问，则称为线程逃逸。</p>
-<p>在堆上的某个数据不会逃逸出去被其他线程访问到，就可以把它当作栈上数据对待，认为它是线程私有的，同步加锁就不需要了。</p>
-]]></content>
-      <categories>
-        <category>Java八股</category>
-        <category>并发</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>八股</tag>
-        <tag>并发</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java创建线程的方式</title>
-    <url>/2024/03/23/Java/%E5%B9%B6%E5%8F%91/Java%E5%88%9B%E5%BB%BA%E7%BA%BF%E7%A8%8B%E7%9A%84%E6%96%B9%E5%BC%8F/</url>
-    <content><![CDATA[<blockquote>
-<p>一些创建线程的方式</p>
-</blockquote>
-<span id="more"></span>
-<h1 id="如何创建线程">如何创建线程</h1>
-<p>一般来说，创建线程有很多种方式，例如继承<code>Thread</code>类、实现<code>Runnable</code>接口、实现<code>Callable</code>接口、使用线程池、使用<code>CompletableFuture</code>类等等。</p>
-<p>不过，这些方式其实并没有真正创建出线程。准确点来说，这些都属于是在
-Java 代码中使用多线程的方法。</p>
-<p>严格来说，Java
-就只有一种方式可以创建线程，那就是通过<code>new Thread().start()</code>创建。不管是哪种方式，最终还是依赖于<code>new Thread().start()</code>。</p>
-<h2 id="继承tread类">继承Tread类</h2>
-<p>这是最普通的方式，继承<code>Thread</code>类，重写<code>run</code>方法，如下：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ExtendsThread</span> <span class="keyword">extends</span> <span class="title class_">Thread</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;1......&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">ExtendsThread</span>().start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="实现runnable接口">实现Runnable接口</h3>
-<p>这也是一种常见的方式，实现<code>Runnable</code>接口并重写<code>run</code>方法，如下：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ImplementsRunnable</span> <span class="keyword">implements</span> <span class="title class_">Runnable</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;2......&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">ImplementsRunnable</span> <span class="variable">runnable</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ImplementsRunnable</span>();</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">Thread</span>(runnable).start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>与继承<code>Thread</code>接口不同的是，Java当中是单继承，当一个类继承了<code>Thread</code>类后就无法再继承其他的类，通过实现<code>Runnable</code>接口并重写<code>run</code>方法，可以再实现继承其他类。</p>
-<h3 id="实现callable接口">实现Callable接口</h3>
-<p>和上一种方式类似，这里需要去重写<code>Callable</code>接口的<code>call</code>方法，并配合<code>FutureTask</code>使用，只不过这种方式可以使用<code>get()</code>方法拿到线程执行完的返回值，如下：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ImplementsCallable</span> <span class="keyword">implements</span> <span class="title class_">Callable</span>&lt;String&gt; &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">call</span><span class="params">()</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;3......&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Justin&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        <span class="type">ImplementsCallable</span> <span class="variable">callable</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ImplementsCallable</span>();</span><br><span class="line">        FutureTask&lt;String&gt; futureTask = <span class="keyword">new</span> <span class="title class_">FutureTask</span>&lt;&gt;(callable);</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">Thread</span>(futureTask).start();</span><br><span class="line">        System.out.println(futureTask.get());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="使用executorservice线程池">使用ExecutorService线程池</h3>
-<p>这种属于进阶方式，可以通过<code>Executors</code>创建线程池，也可以自定义线程池，如下：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">UseExecutorService</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">ExecutorService</span> <span class="variable">poolA</span> <span class="operator">=</span> Executors.newFixedThreadPool(<span class="number">2</span>);</span><br><span class="line">        poolA.execute(()-&gt;&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;4A......&quot;</span>);</span><br><span class="line">        &#125;);</span><br><span class="line">        poolA.shutdown();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 又或者自定义线程池</span></span><br><span class="line">        <span class="type">ThreadPoolExecutor</span> <span class="variable">poolB</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ThreadPoolExecutor</span>(<span class="number">2</span>, <span class="number">3</span>, <span class="number">0</span>,</span><br><span class="line">                TimeUnit.SECONDS, <span class="keyword">new</span> <span class="title class_">LinkedBlockingQueue</span>&lt;Runnable&gt;(<span class="number">3</span>),</span><br><span class="line">                Executors.defaultThreadFactory(), <span class="keyword">new</span> <span class="title class_">ThreadPoolExecutor</span>.AbortPolicy());</span><br><span class="line">        poolB.submit(()-&gt;&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;4B......&quot;</span>);</span><br><span class="line">        &#125;);</span><br><span class="line">        poolB.shutdown();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="注意点">注意点</h2>
-<p>创建线程的方式十分多样，最少都能有上面的四种答案，那这真的对吗？可以说对，但严格意义上来说，又不对。</p>
-<p>抛开后面一些先不谈，咱们就聊最开始的三种：“继承<code>Thread</code>类、实现<code>Runnable</code>接口、实现<code>Callable</code>接口”，这应该是广为人知的答案。</p>
-<p>那么此时来看个例子：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ImplementsRunnable</span> <span class="keyword">implements</span> <span class="title class_">Runnable</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(Thread.currentThread().getName()</span><br><span class="line">                + <span class="string">&quot;：小猫爱吃鱼&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这里定义了一个类，实现了<code>Runnable</code>接口并重写了<code>run</code>方法，按前面的说法，这种方式是不是创建了一条线程？答案是<code>Yes</code>，可问题来了，请你告诉我，该如何启动这条所谓的“线程”呢？</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="type">ImplementsRunnable</span> <span class="variable">runnable</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ImplementsRunnable</span>();</span><br><span class="line">    runnable.run();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>难道像上面这样嘛？来看看运行结果：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">main：小猫爱吃鱼</span><br></pre></td></tr></table></figure>
-<p>结果很显然，打印出的线程名字为：<code>main</code>，代表目前是主线程在运行，和调用普通方法没任何区别，那究竟该如何创建一条线程呀？要这样做：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="type">ImplementsRunnable</span> <span class="variable">runnable</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ImplementsRunnable</span>();</span><br><span class="line">    <span class="keyword">new</span> <span class="title class_">Thread</span>(runnable).start();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>先<code>new</code>出<code>Runnable</code>对象，接着再<code>new</code>一个<code>Thread</code>对象，然后把<code>Runnable</code>丢给<code>Thread</code>，接着调用<code>start()</code>方法，此时才能真正意义上创建一条线程，运行结果如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Thread-0：小猫爱吃鱼</span><br></pre></td></tr></table></figure>
-<p>此时线程名字变成了<code>Thread-0</code>，这意味着输出“小猫爱吃鱼”这句话的代码，并不是<code>main</code>线程在执行了，实现了<code>Runnable</code>接口的<code>ImplementsRunnable</code>类，并不能被称为一条线程，包括所谓的<code>Callable、FutureTask……</code>，都不能创建出真正的线程。</p>
-<p>换到前面所提出的三种方式中，只有继承<code>Thread</code>类，才能真正创建一条线程，如下：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ExtendsThread</span> <span class="keyword">extends</span> <span class="title class_">Thread</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(Thread.currentThread().getName()</span><br><span class="line">                + <span class="string">&quot;：小猫爱吃鱼&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">ExtendsThread</span>().start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 运行结果：</span></span><br><span class="line"><span class="comment">//      Thread-0：竹子爱熊猫</span></span><br></pre></td></tr></table></figure>
-<p>因为当你用一个类，继承<code>Thread</code>类时，它内部所有的方法，都会被继承过来，所以当前类可以直接调用<code>start()</code>方法启动，更具体点来说，<strong>在<code>Java</code>中，创建线程的方式就只有一种：调用<code>Thread.start()</code>方法</strong>！只有这种形式，才能在真正意义上创建一条线程！</p>
-]]></content>
-      <categories>
-        <category>Java八股</category>
-        <category>并发</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>八股</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ReentrantLock锁</title>
-    <url>/2024/03/24/Java/%E5%B9%B6%E5%8F%91/ReentrantLock%E9%94%81/</url>
-    <content><![CDATA[<blockquote>
-<p>关于reentrantLock锁的一些问题</p>
-</blockquote>
-<span id="more"></span>
-<h1 id="reentrantlock是什么">ReentrantLock是什么</h1>
-<p><code>ReentrantLock</code> 实现了 <code>Lock</code>
-接口，是一个可重入且独占式的锁，和 <code>synchronized</code>
-关键字类似。不过，<code>ReentrantLock</code>
-更灵活、更强大，增加了轮询、超时、中断、公平锁和非公平锁等高级功能。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ReentrantLock</span> <span class="keyword">implements</span> <span class="title class_">Lock</span>, java.io.Serializable &#123;&#125;</span><br></pre></td></tr></table></figure>
-<p><code>ReentrantLock</code> 里面有一个内部类
-<code>Sync</code>，<code>Sync</code> 继承
-AQS（<code>AbstractQueuedSynchronizer</code>），添加锁和释放锁的大部分操作实际上都是在
-<code>Sync</code> 中实现的。<code>Sync</code> 有公平锁
-<code>FairSync</code> 和非公平锁 <code>NonfairSync</code> 两个子类。</p>
-<p><img
-src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403251906294.png" /></p>
-<p><code>ReentrantLock</code>
-的特点是<strong>可重入</strong>，支持公平锁和非公平锁两种方式，从其构造方法就能看出，在传入参数为<code>true</code>时，<code>ReentrantLock</code>为公平锁，默认为非公平锁。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="title function_">ReentrantLock</span><span class="params">()</span> &#123;</span><br><span class="line">    sync = <span class="keyword">new</span> <span class="title class_">NonfairSync</span>();</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//基于参数,创建FairSync还是NonFairSync</span></span><br><span class="line"><span class="keyword">public</span> <span class="title function_">ReentrantLock</span><span class="params">(<span class="type">boolean</span> fair)</span> &#123;</span><br><span class="line">    sync = fair ? <span class="keyword">new</span> <span class="title class_">FairSync</span>() : <span class="keyword">new</span> <span class="title class_">NonfairSync</span>();</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>阅读<code>ReentrantLock</code>代码可知，它主要利用<code>CAS</code>+<code>AQS</code>
-队列来实现。以非公平锁为例，当线程竞争锁时首先使用<code>CAS</code>抢占锁，成功则返回，失败则进入<code>AQS</code>队列并且挂起线程；当锁被释放时，唤醒<code>AQS</code>中的某个线程，从被挂起处再次尝试获取锁（当<code>AQS</code>队列头节点的下一个节点不为空时，直接唤醒该节点；否则从队尾向前遍历，找到最后一个不为空的节点并唤醒），获取锁失败则再次进入队尾。</p>
-<h1 id="cas">CAS</h1>
-<h2 id="学习cas首先了解什么是原子类">学习CAS首先了解什么是原子类</h2>
-<p>即为java.util.concurrent.atomic包下的所有相关类和API</p>
-<ul>
-<li><p>没有CAS之前</p>
-<p>多线程环境不使用原子类保证线程安全i++（基本数据类型）
-常用synchronized锁，但是它比较重
-，牵扯到了用户态和内核态的切换,效率不高。</p></li>
-</ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">T3</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">volatile</span> <span class="type">int</span> <span class="variable">number</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="comment">//读取</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">getNumber</span><span class="params">()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> number;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//写入加锁保证原子性</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title function_">setNumber</span><span class="params">()</span></span><br><span class="line">    &#123;</span><br><span class="line">        number++;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>使用CAS之后</p>
-<p>多线程情况下使用原子类保证线程安全（基本数据类型）</p></li>
-</ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">T3</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">volatile</span> <span class="type">int</span> <span class="variable">number</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="comment">//读取</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">getNumber</span><span class="params">()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> number;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//写入加锁保证原子性</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title function_">setNumber</span><span class="params">()</span></span><br><span class="line">    &#123;</span><br><span class="line">        number++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//=================================</span></span><br><span class="line">    <span class="comment">//下面是新版本</span></span><br><span class="line">    <span class="comment">//=================================</span></span><br><span class="line">    <span class="type">AtomicInteger</span> <span class="variable">atomicInteger</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">AtomicInteger</span>();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">getAtomicInteger</span><span class="params">()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> atomicInteger.get();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setAtomicInteger</span><span class="params">()</span></span><br><span class="line">    &#123;</span><br><span class="line">        atomicInteger.getAndIncrement();<span class="comment">//先读再加</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="cas是什么">CAS是什么</h2>
-<h3 id="cas是什么-1">CAS是什么</h3>
-<p>CAS 的全称是 <strong>Compare And Swap（比较与交换）</strong>
-，用于实现乐观锁，被广泛应用于各大框架中。CAS
-的思想很简单，就是用一个预期值和要更新的变量值进行比较，两值相等才会进行更新。</p>
-<p>执行CAS操作的时候，将内存位置的值与预期原值比较：
-如果相匹配，那么处理器会自动将该位置值更新为新值，
-如果不匹配，处理器不做任何操作，多个线程同时执行CAS操作只有一个会成功。</p>
+<h1 id="前言">前言</h1>
 <blockquote>
-<p><strong>原子操作</strong>
-即最小不可拆分的操作，也就是说操作一旦开始，就不能被打断，直到操作完成。</p>
+<p>本系列笔记的图片部分来自张伯雷老师的课堂ppt和网上，笔记仅供本人和需要的人学习使用。</p>
 </blockquote>
-<p>CAS 涉及到三个操作数：</p>
+<h1 id="优化问题介绍">优化问题介绍</h1>
+<h2 id="优化问题1">优化问题1</h2>
+<h3 id="题目">题目</h3>
+<blockquote>
 <ul>
-<li><strong>V</strong>：要更新的变量值(Var)</li>
-<li><strong>E</strong>：预期值(Expected)</li>
-<li><strong>N</strong>：拟写入的新值(New)</li>
+<li>还有⼀个星期就要到期末考试，小明⼀共要考4门课，但只能复习70个小时，假设<span
+class="math inline">\(x=(x_1,x_2,...,x_4)\)</span>代表小明分别花在4门课上的时间</li>
+<li><span class="math inline">\(f_i(x)\)</span>, 𝑖 = 1, 2, 3, 4
+为小明在第𝑖门课中的成绩</li>
 </ul>
-<p>当且仅当 V 的值等于 E 时，CAS 通过原子方式用新值 N 来更新 V
-的值。如果不等，说明已经有其它线程更新了 V，则当前线程放弃更新。</p>
-<h2 id="cas的缺点">CAS的缺点</h2>
-<h3 id="aba问题">ABA问题</h3>
-<p>CAS算法实现一个重要前提需要取出内存中某时刻的数据并在当下时刻比较并替换，那么在这个时间差类会导致数据的变化。</p>
-<p>比如说一个线程one从内存位置V中取出A，这时候另一个线程two也从内存中取出A，并且线程two进行了一些操作将值变成了B，然后线程two又将V位置的数据变成A，这时候线程one进行CAS操作发现内存中仍然是A，然后线程one操作成功。</p>
-<p>尽管线程one的CAS操作成功，但是不代表这个过程就是没有问题的，因为在这段时间它的值可能被改为其他值，然后又改回
-A，那 CAS 操作就会误认为它从来没有被修改过。这个问题被称为 CAS 操作的
-<strong>"ABA"问题。</strong>ABA
-问题的解决思路是在变量前面追加上<strong>版本号或者时间戳</strong>。JDK
-1.5 以后的 <code>AtomicStampedReference</code> 类就是用来解决 ABA
-问题的，其中的 <code>compareAndSet()</code>
-方法就是首先检查当前引用是否等于预期引用，并且当前标志是否等于预期标志，如果全部相等，则以原子方式将该引用和该标志的值设置为给定的更新值。</p>
-<h3 id="循环时间长开销很大">循环时间长开销很大</h3>
-<p>CAS
-经常会用到自旋操作来进行重试，也就是不成功就一直循环执行直到成功。如果长时间不成功，会给
-CPU 带来非常大的执行开销。</p>
-<p><img
-src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403251935720.png" /></p>
+</blockquote>
+<h3 id="问题建模">问题建模</h3>
+<ul>
+<li><p>最大化最终的总分数：<span
+class="math inline">\(\sum_if_i(x)\)</span></p></li>
+<li><p>每门课都需要及格，同时花的时间不能超过70：</p></li>
+<li><p><span class="math inline">\(\sum_ix_i ≤ 70\)</span>, <span
+class="math inline">\(x_i ≥ 0\)</span>, <span
+class="math inline">\(f_i(x_i) ≥ 60\)</span></p></li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/image-20230917224239707.png" alt="image-20230917224239707" style="zoom:67%;" /></p>
+<h3 id="如何合理分配资源">如何合理分配资源？</h3>
+<h2 id="优化问题2">优化问题2</h2>
+<h3 id="题目-1">题目</h3>
+<blockquote>
+<ul>
+<li>小李是⼀个程序员，需要实现⼀个数据中⼼服务，当有用户请求服务时，需要尽快地服务用户请求，来降低整体延迟</li>
+<li><span class="math inline">\(d_i(x_i)=1,2,...,n\)</span></li>
+<li><span
+class="math inline">\(x_i\)</span>为向用户𝑖分配的资源（如CPU的配额），
+<span class="math inline">\(d_i\)</span>为第𝑖个用户的延迟</li>
+</ul>
+</blockquote>
+<h3 id="问题建模-1">问题建模</h3>
+<ul>
+<li><p>最小化整体的延迟：<span
+class="math inline">\(\sum_id_i(x_i)\)</span></p></li>
+<li><p>同时不能超过服务器的总资源：<span
+class="math inline">\(\sum_ix_i\le C\)</span>, <span
+class="math inline">\(x_i\ge0\)</span></p></li>
+</ul>
+<h3 id="如何合理分配资源-1">如何合理分配资源？</h3>
+<h2 id="优化问题3">优化问题3</h2>
+<h3 id="题目-2">题目</h3>
+<blockquote>
+<ul>
+<li>现在有⼀百万张图片，⼀共分成了1000个类别𝑝，我们设计了⼀个复杂的神经⽹络，可以输入图片矩阵输出类别概率𝑞。为了训练这个神经⽹络，需要优化该网络，最小化预测误差。</li>
+</ul>
+</blockquote>
+<h3 id="问题建模-2">问题建模</h3>
+<p><span class="math display">\[
+min-\sum_{x\in X} p(x)\log q(x)
+\]</span></p>
 <h3
-id="只能保证一个共享变量的原子操作">只能保证一个共享变量的原子操作</h3>
-<p>CAS 只对单个共享变量有效，当操作涉及跨多个共享变量时 CAS 无效。但是从
-JDK 1.5
-开始，提供了<code>AtomicReference</code>类来保证引用对象之间的原子性，你可以把多个变量放在一个对象里来进行
-CAS
-操作.所以我们可以使用锁或者利用<code>AtomicReference</code>类把多个共享变量合并成一个共享变量来操作。</p>
-<h1 id="aqs">AQS</h1>
-<h2 id="aqs是什么">AQS是什么？</h2>
-<p>AQS 的全称为 <code>AbstractQueuedSynchronizer</code>
-，翻译过来的意思就是抽象队列同步器。这个类在
-<code>java.util.concurrent.locks</code> 包下面。</p>
-<p><img
-src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403251938892.png" /></p>
-<p>AQS 就是一个抽象类，主要用来构建锁和同步器。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">class</span> <span class="title class_">AbstractQueuedSynchronizer</span> <span class="keyword">extends</span> <span class="title class_">AbstractOwnableSynchronizer</span> <span class="keyword">implements</span> <span class="title class_">java</span>.io.Serializable &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>AQS 为构建锁和同步器提供了一些通用功能的实现，因此，使用 AQS
-能简单且高效地构造出应用广泛的大量的同步器，比如我们提到的
-<code>ReentrantLock</code>，<code>Semaphore</code>，其他的诸如
-<code>ReentrantReadWriteLock</code>，<code>SynchronousQueue</code>等等皆是基于
-AQS 的。</p>
-<h2 id="aqs的底层原理">AQS的底层原理</h2>
-<p>AQS
-核心思想是，如果被请求的共享资源空闲，则将当前请求资源的线程设置为有效的工作线程，并且将共享资源设置为锁定状态。如果被请求的共享资源被占用，那么就需要一套线程阻塞等待以及被唤醒时锁分配的机制，这个机制
-AQS 是用 <strong>CLH 队列锁</strong>
-实现的，即将暂时获取不到锁的线程加入到队列中。</p>
-<p>CLH(Craig,Landin,and Hagersten)
-队列是一个虚拟的双向队列（虚拟的双向队列即不存在队列实例，仅存在结点之间的关联关系）。AQS
-是将每条请求共享资源的线程封装成一个 CLH
-锁队列的一个结点（Node）来实现锁的分配。在 CLH
-同步队列中，一个节点表示一个线程，它保存着线程的引用（thread）、
-当前节点在队列中的状态（waitStatus）、前驱节点（prev）、后继节点（next）。</p>
-<p>CLH 队列结构如下图所示：</p>
-<p><img
-src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403251944422.png" /></p>
-<p>AQS(<code>AbstractQueuedSynchronizer</code>)的核心原理图（图源<a
-href="https://www.cnblogs.com/waterystone/p/4920797.html">Java 并发之
-AQS 详解open in new window</a>）如下：</p>
-<p><img
-src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403251944878.png" /></p>
-<ul>
-<li>AQS使用一个int成员变量来表示同步状态</li>
-<li>使用Node实现FIFO队列，可以用于构建锁或者其他同步装置</li>
-<li>AQS资源共享方式：独占Exclusive（排它锁模式）和共享Share（共享锁模式）</li>
-</ul>
-<hr />
-<p>待续。。。</p>
-]]></content>
-      <categories>
-        <category>Java八股</category>
-        <category>并发</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>八股</tag>
-        <tag>并发</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>synchronized锁</title>
-    <url>/2024/03/25/Java/%E5%B9%B6%E5%8F%91/synchronized%E9%94%81/</url>
-    <content><![CDATA[<blockquote>
-<p>关于synchronized锁的一些问题</p>
-</blockquote>
-<span id="more"></span>
-<h1 id="什么是synchronized锁">什么是synchronized锁</h1>
+id="神经网络可能包括上亿的参数如何快速优化">神经网络可能包括上亿的参数，如何快速优化？</h3>
+<h2 id="优化数学规划">优化/数学规划</h2>
+<h3 id="优化问题">优化问题</h3>
+<p><span class="math display">\[
+\min f_0(x).\\
+\text{s.t.}\ \ f_i(x)\le0,\quad i=1,...,m
+\]</span></p>
 <blockquote>
-<p>官方：同步方法支持一种简单的策略来防止线程受到干扰和内存一致性错误；如果一个对象对多个线程可见，则对该对象变量的所有读取或写入都是通过同步方法完成</p>
+<p>其中</p>
+<ul>
+<li><span
+class="math inline">\(x=(x_1,x_2,...,x_n)\)</span>：优化变量(variable)</li>
+<li><span class="math inline">\(f_0:
+\mathbb{R}^n\rightarrow\mathbb{R}\)</span>：目标函数(Objective
+function)</li>
+<li><span class="math inline">\(f_i:
+\mathbb{R}^n\rightarrow\mathbb{R},i=1,...m\)</span>：约束函数(Constraints)</li>
+<li>最优解<span
+class="math inline">\(x^*\)</span>：所有在定义域且满⾜约束条件的解中使得目标函数<span
+class="math inline">\(f_0\)</span>最小的<span
+class="math inline">\(x\)</span></li>
+<li>最优值<span class="math inline">\(p*:f_0(x^*)\)</span></li>
+</ul>
 </blockquote>
-<p>通俗点来说就是程序中用于保护线程安全的一种机制。</p>
-<h1 id="底层原理">底层原理</h1>
-<p>在<code>HotSpot</code>虚拟机中，对象内存布局主要分为对象头（<strong>Header</strong>）、示例数据（<strong>Instance
-Data</strong>）和对齐填充（<strong>Padding</strong>）。</p>
-<p><strong>对象头 = Mark Word + 类型指针（</strong>Klass
-pointer<strong>）。</strong></p>
-<p><strong>类型指针（</strong>Klass pointer<strong>）</strong> ：
-用于标识JVM通过这个指针来确定这个对象是哪个类的实例。</p>
-<p><strong>Mark Word</strong> ：
-用于储存对象自身的运行时数据，例如对象的hashCode、GC分代年龄、锁状态标志、线程持有的锁、偏向线程的ID、偏向时间戳等。<strong>在运行期间，Mark
-Word里存储的数据会随着内部锁标志位的变化而变化。</strong></p>
-<p><img
-src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403251959954.png" /></p>
-<p><strong>无锁状态(01)</strong></p>
-<p>对象头开辟 25bit 的空间用来存储对象的 hashcode ，4bit
-用于存放分代年龄，1bit 用来存放是否偏向锁的标识位，2bit
-用来存放锁标识位为01。</p>
-<p><strong>偏向锁状态(01)</strong></p>
-<p>还是开辟25bit 的空间，其中23bit 用来存放线程ID，2bit 用来存放
-epoch，4bit 存放分代年龄，1bit 存放是否偏向锁标识，
-0表示无锁，1表示偏向锁，锁的标识位还是01。</p>
-<p><strong>轻量级锁状态(00)</strong></p>
-<p>开辟 30bit 的空间存放指向<strong>栈中锁记录</strong>的指针，2bit
-存放锁的标志位，其标志位为00。</p>
-<p><strong>重量级锁状态(10)</strong></p>
-<p>30bit 的空间用来存放指向<strong>重量级锁</strong>的指针，2bit
-存放锁的标识位，为10。</p>
-<p><strong>GC标记(11)</strong></p>
-<p>开辟30bit 的内存空间却没有占用，2bit 空间存放锁标志位为11。</p>
-<p>之所以这些标志位会变化，是JVM对重量级锁的一种优化，在jdk1.6
-之前，用synchronized 都是重量级锁 ，都需要底层操作系统的Mutex
-Lock（互斥锁）来实现，这个是涉及到系统调用的，会导致内核空间与用户空间的上下文切换，很低效。</p>
-<p>于是jdk1.6之后为了增加性能减少操作Mutex
-Lock，引入了<code>偏向锁</code>和<code>轻量级锁</code>：锁一共有4种状态，级别从低到高依次是：无锁状态、偏向锁状态、轻量级锁状态和重量级锁状态。锁可以升级但不能降级。</p>
-<h3 id="锁升级过程">锁升级过程</h3>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">Object</span> <span class="variable">lock</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Object</span>();</span><br><span class="line"><span class="comment">// 临界区之前</span></span><br><span class="line"><span class="keyword">synchronized</span>(lock)&#123;</span><br><span class="line">  <span class="comment">// 临界区</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 临界区之后</span></span><br></pre></td></tr></table></figure>
-<h3 id="无锁">无锁</h3>
-<p>当有线程进入临界区之前(synchronized块之前)，lock里的对象头的 Mark
-Word 结构为下面所示：</p>
-<p><img
-src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403252000225.webp" /></p>
-<p>锁标志位01，无偏向。这是JVM给的初始值。</p>
-<h3 id="偏向锁">偏向锁</h3>
-<p>有<strong>线程A</strong>刚进入临界区时(synchronized)，发现标志位是01
-，而且无偏向。立马把当前线程ID记录到了这个Mark
-Word当中，修改为偏向（1）。也就是下面这样：</p>
-<p><img
-src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403252000323.webp" /></p>
-<p><img
-src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403252001168.webp" /></p>
-<p>如果线程A，再次进入临界区时 ， 判断线程id
-是当前自己，就直接执行。也就是说，如果一直没有其它线程过来，线程A就跟没加synchronized一样执行，效率极高。这就是<strong>偏向锁</strong>。</p>
-<h3 id="轻量级锁">轻量级锁</h3>
-<p>当有其它<strong>线程B</strong>
-也进入临界区了(线程A还没出临界区)，就CAS自旋等待很短的时间，如果线程A此时恰好退出临界区了，CAS退出就升级为轻量级锁，否则就是重量级锁。
-轻量级锁会构造一个Lock Record锁记录，如下图：</p>
-<p><img
-src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403252001772.webp" /></p>
-<p><img
-src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403252001283.webp" /></p>
-<p><strong>Lock Record 锁记录</strong></p>
-<p>Lock Record是线程私有的数据结构，每一个线程都有一个可用Lock
-Record列表，同时还有一个全局的可用列表。每一个被锁住的对象Mark
-Word都会和一个Lock Record关联（对象头的MarkWord中的Lock Word指向Lock
-Record的起始地址），同时Lock
-Record中有一个Owner字段存放拥有该锁的线程的唯一标识（或者<code>object mark word</code>），表示该锁被这个线程占用。如下图所示为Lock
-Record的内部结构：</p>
-<table>
-<colgroup>
-<col style="width: 15%" />
-<col style="width: 84%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Lock Record</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Owner</td>
-<td>初始时为NULL表示当前没有任何线程拥有该monitor
-record，当线程成功拥有该锁后保存线程唯一标识，当锁被释放时又设置为NULL；</td>
-</tr>
-<tr class="even">
-<td>EntryQ</td>
-<td>关联一个系统互斥锁（semaphore），阻塞所有试图锁住monitor
-record失败的线程；</td>
-</tr>
-<tr class="odd">
-<td>RcThis</td>
-<td>表示blocked或waiting在该monitor record上的所有线程的个数；</td>
-</tr>
-<tr class="even">
-<td>Nest</td>
-<td>用来实现 重入锁的计数；</td>
-</tr>
-<tr class="odd">
-<td>HashCode</td>
-<td>保存从对象头拷贝过来的HashCode值（可能还包含GC age）。</td>
-</tr>
-<tr class="even">
-<td>Candidate</td>
-<td>用来避免不必要的阻塞或等待线程唤醒ngjio，因为每一次只有一个线程能够成功拥有锁，如果每次前一个释放锁的线程唤醒所有正在阻塞或等待的线程，会引起不必要的上下文切换（从阻塞到就绪然后因为竞争锁失败又被阻塞）从而导致性能严重下降。Candidate只有两种可能的值0表示没有需要唤醒的线程1表示要唤醒一个继任线程来竞争锁。</td>
-</tr>
-</tbody>
-</table>
-<p><strong>轻量级锁所适应的场景是线程交替执行同步块的情况，如果存在同一时间访问同一锁的情况，必然就会导致轻量级锁膨胀为重量级锁</strong>。</p>
-<h3 id="重量级锁">重量级锁</h3>
-<p>Synchronized是通过对象内部的一个叫做
-<strong>监视器锁（Monitor）来实现的</strong>。<strong>但是监视器锁本质又是依赖于底层的操作系统的Mutex
-Lock来实现的。而操作系统实现线程之间的切换这就需要从用户态转换到核心态，这个成本非常高，状态之间的转换需要相对比较长的时间</strong>，这就是为什么Synchronized效率低的原因。因此，这种依赖于操作系统Mutex
-Lock所实现的锁我们称之为 <strong>“重量级锁”</strong>。</p>
-<p>重量级锁的Mark Word结构图：</p>
-<p><img
-src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403252001075.webp" /></p>
-<p>这个重量级锁的指针指向的就是 <strong>ObjectMonitor</strong> 。</p>
-<h3 id="锁升级图">锁升级图</h3>
-<p><img
-src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403252004741.JPG" /></p>
-<p><img
-src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403252004026.JPG" /></p>
-<p>图源：收割Offer：互联网大厂面经——布兜</p>
-]]></content>
-      <categories>
-        <category>Java八股</category>
-        <category>并发</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>八股</tag>
-        <tag>并发</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>volatile关键字</title>
-    <url>/2024/03/23/Java/%E5%B9%B6%E5%8F%91/volatile%E5%85%B3%E9%94%AE%E5%AD%97/</url>
-    <content><![CDATA[<blockquote>
-<p>关于volatile关键字的一些问题</p>
+<h1 id="优化问题分类">优化问题分类</h1>
+<h2 id="线性非线性规划">线性/非线性规划</h2>
+<h3 id="线性规划">线性规划：</h3>
+<ul>
+<li>如果目标函数与约束函数都是线性的，则为线性规划（Linear
+programming）</li>
+<li><span class="math inline">\(f_i(\alpha x+\beta y)=\alpha
+f_i(x)+\beta f_i(y),i=0,1,...,m\)</span></li>
+<li>单纯形法(simplex method)</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191453912.png" alt="image-20230918210805588" style="zoom:80%;" /></p>
+<h3 id="非线性规划">非线性规划：</h3>
+<ul>
+<li>如果目标函数与约束函数有⼀个不是线性的，则为非线性规划（Non-Linear
+programming）</li>
+</ul>
+<h2 id="凸非凸规划">凸/非凸规划</h2>
+<h3 id="凸规划">凸规划：</h3>
+<ul>
+<li>可行解集是凸集，目标函数是凸函数</li>
+<li><span class="math inline">\(f_i(\alpha x+\beta y)\le\alpha
+f_i(x)+\beta f_i(y),i=0,1,...,m\)</span></li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191453003.png" alt="image-20230918211043295" style="zoom:80%;" /></p>
+<h3 id="非凸规划">非凸规划：</h3>
+<ul>
+<li>可行解集不是凸集或目标函数不是凸函数</li>
+</ul>
+<h2 id="光滑非光滑规划">光滑/非光滑规划</h2>
+<h3 id="光滑规划">光滑规划：</h3>
+<ul>
+<li>如果目标函数<span class="math inline">\(f_0(x)\)</span>是光滑的</li>
+<li>光滑：在函数的每⼀点都可微</li>
+</ul>
+<h3 id="非光滑规划">非光滑规划</h3>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191453017.png" alt="image-20230918211232374" style="zoom: 67%;" /></p>
+<h2 id="连续离散规划">连续/离散规划</h2>
+<h3 id="连续规划">连续规划：</h3>
+<ul>
+<li>可行解集是⼀个连续的域</li>
+</ul>
+<h3 id="离散规划">离散规划：</h3>
+<ul>
+<li>可行解集是离散的</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191453034.png" alt="image-20230918211413357" style="zoom:80%;" /></p>
+<h2 id="单目标多目标规划">单目标/多目标规划</h2>
+<h3 id="多目标规划">多目标规划：</h3>
+<ul>
+<li>同时有多个需要优化的目标</li>
+<li><span class="math inline">\(\min f_1(x),f_2(x)\)</span></li>
+<li>可以通过加权转化为单目标优化问题</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191453357.png" alt="image-20230918211623764" style="zoom:80%;" /></p>
+<h2 id="博弈优化">博弈优化</h2>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191453313.png" alt="image-20230918211659661" style="zoom:80%;" /></p>
+<h2 id="确定随机优化">确定/随机优化</h2>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191453128.png" alt="image-20230918211728804" style="zoom:80%;" /></p>
+<h1 id="典型优化问题">典型优化问题</h1>
+<h2 id="最小二乘">最小二乘</h2>
+<h3 id="数据拟合问题">数据拟合问题：</h3>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191453688.png" alt="image-20230918211820833" style="zoom:80%;" /></p>
+<ul>
+<li>目标函数</li>
+</ul>
+<p><span class="math display">\[
+\min\sum^N_{i=1}\left(y_i-f(x_i)\right)^2
+\]</span></p>
+<h2 id="稀疏优化">稀疏优化</h2>
+<h3 id="考虑线性方程组求解问题">考虑线性方程组求解问题</h3>
+<p><span class="math display">\[
+Ax=b
+\]</span></p>
+<blockquote>
+<p>其中<span class="math inline">\(x\in R^n,b\in R^m,A\in R^{m\times
+n}\)</span></p>
+<p>向量<span class="math inline">\(b\)</span>的维度远小于向量<span
+class="math inline">\(x\)</span>的维度，即<span
+class="math inline">\(m\ll n\)</span></p>
 </blockquote>
-<span id="more"></span>
-<h1 id="java内存模型是什么">Java内存模型是什么</h1>
-<p>如下面两张图所示（这里JavaGuide画的图就很好，直接拿来了，侵删），变量是放在主存中的，每个线程都有自己的工作线程（本地内存），线程运行时将主存中的数据复制到工作内存当中，对数据的任何操作都是基于自己的工作内存进行的，之后再将更新后的数据刷新到主存。</p>
-<p><strong>当前线程不能直接操作主存和其他线程工作内存中的数据。</strong></p>
+<ul>
+<li>在信号传输过程中，希望通过接收到长度为<span
+class="math inline">\(m\)</span>的数字信号<span
+class="math inline">\(b\)</span>精确地重构原始信号<span
+class="math inline">\(x\)</span></li>
+<li>方程组是欠定的，因此存在无穷多个解，重构出原始信号看似很难</li>
+</ul>
+<h3
+id="稀疏先验精确解u只有10的元素非零即u是如下l_0范数问题的最优解">稀疏先验：精确解<span
+class="math inline">\(u\)</span>只有<span
+class="math inline">\(10\%\)</span>的元素非零，即<span
+class="math inline">\(u\)</span>是如下<span
+class="math inline">\(l_0\)</span>范数问题的最优解:</h3>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191454632.png" alt="image-20230918212735058" style="zoom:80%;" /></p>
+<ul>
+<li><span class="math inline">\(l_0\)</span>范数优化问题是 NP
+难问题</li>
+<li>但<span
+class="math inline">\(l_1\)</span>范数优化问题的解可以非常容易地通过现有优化算法得到</li>
+<li>若<span class="math inline">\(A,b\)</span>满足一定的条件，向量<span
+class="math inline">\(u\)</span>也是<span
+class="math inline">\(l_1\)</span>范数优化问题的唯⼀最优解</li>
+</ul>
+<h2 id="低秩矩阵恢复">低秩矩阵恢复</h2>
+<ul>
+<li>某视频网站提供了约 48 万用户对 1 万 7
+千多部电影的上亿条评级数据，希望对用户的电影评级进行预测，从而改进用户电影推荐系统，为每个用户更有针对性地推荐影片</li>
+<li>用矩阵𝑀代表用户评分，每一行表示不同用户，每⼀列表示不同电影</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191454615.png" alt="image-20230918213023261" style="zoom: 80%;" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191454947.png" alt="image-20230918213048048" style="zoom:80%;" /></p>
+<h2 id="深度学习">深度学习</h2>
+<h3 id="深度学习分类问题">深度学习分类问题</h3>
 <figure>
 <img
-src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232024135.png"
-alt="JMM(Java 内存模型)" />
-<figcaption aria-hidden="true">JMM(Java 内存模型)</figcaption>
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191454706.png"
+alt="image-20230918213132779" />
+<figcaption aria-hidden="true">image-20230918213132779</figcaption>
 </figure>
-<figure>
-<img
-src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403232024275.png"
-alt="JMM(Java 内存模型)强制在主存中进行读取" />
-<figcaption aria-hidden="true">JMM(Java
-内存模型)强制在主存中进行读取</figcaption>
-</figure>
-<h1 id="volatile关键字的作用">volatile关键字的作用</h1>
-<p><strong>volatile关键字保证了变量的立即可见性</strong></p>
-<p><code>线程A</code>与<code>线程B</code>并发运行时可能出现这种情况，如果<code>线程A</code>修改了工作内存中的数据且还未同步到主存，那么<code>线程B</code>读取的主存中的数据就不是最新值。当变量被volatile关键字修饰后，任何线程对它的写操作都会强制将工作内存中的最新值刷新到主存，同时使其他线程工作内存中的变量缓存无效，这样其他线程使用缓存时就会重新到主存中读取最新值。</p>
-<p>即如果我们将变量声明为 <strong><code>volatile</code></strong>
-，这就指示
-JVM，这个变量是共享且不稳定的，每次使用它都到主存中进行读取。</p>
-<p><strong><code>volatile</code>
-关键字能保证数据的可见性，但不能保证数据的原子性。<code>synchronized</code>
-关键字两者都能保证。</strong></p>
+<h1 id="求解优化问题">求解优化问题</h1>
+<p>对有限资源进⾏有效分配和控制，并达到某种意义上的最优。</p>
+<p>通常需要 • 对需求进行定性和定量分析 • 建立恰当的数学模型来描述该问题
+• 探索研究模型和算法的理论性质，考察算法的计算性能等 •
+设计合适的计算方法来寻找问题的最优解</p>
+<h3 id="一般的最优化问题">一般的最优化问题</h3>
+<ul>
+<li>非常难以求解</li>
+<li>可能需要非常长的计算时间，甚⾄找不到最优解</li>
+</ul>
+<h3 id="类相对简单的问题">⼀类相对简单的问题</h3>
+<ul>
+<li>最小二乘问题</li>
+<li>线性规划问题</li>
+<li>凸优化问题</li>
+</ul>
+<h3 id="更复杂的问题">更复杂的问题</h3>
+<ul>
+<li>离散、博弈、随机优化</li>
+</ul>
+<h3 id="定义域">定义域</h3>
+<ul>
+<li>凸集</li>
+</ul>
+<h3 id="目标函数">目标函数</h3>
+<ul>
+<li>凸函数</li>
+</ul>
+<h3
+id="非凸优化问题与凸优化问题的转化">非凸优化问题与凸优化问题的转化</h3>
+<ul>
+<li>等价转化</li>
+<li>对偶理论</li>
+</ul>
+<h2 id="优化算法">优化算法</h2>
+<h3 id="闭式解closed-form-solution">闭式解（closed form solution）</h3>
+<ul>
+<li>如果我们能用代数表达式给出其最优解，那么这个解称为闭式解，对应的问题往往比较简单</li>
+<li>例如：⼆次函数在有界区间上</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191454836.png" alt="image-20230918213626044" style="zoom: 67%;" /></p>
+<h3
+id="实际大多数问题是没有闭式解的需要通过迭代算法求解">实际大多数问题是没有闭式解的，需要通过迭代算法求解</h3>
+<ul>
+<li>迭代算法的基本思想是:从⼀个初始点<span
+class="math inline">\(x_0\)</span>出发，按照某种给定的规则进行迭代，得到⼀个序列<span
+class="math inline">\(\{x^k\}\)</span>如果迭代在有限步内终止，那么希望最后一个点就是优化问题的解</li>
+<li>例如：梯度类算法、线搜索法、罚函数法</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191454918.png" alt="image-20230918213839201" style="zoom:80%;" /></p>
+<h2 id="常用优化技巧">常用优化技巧</h2>
+<h3 id="泰勒展开">泰勒展开</h3>
+<p><img src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202309191454151.png" alt="image-20230918213955711" style="zoom:80%;" /></p>
+<h3 id="对偶">对偶</h3>
+<ul>
+<li>每个优化问题都有对应的对偶问题，特别是凸的情形，当原始问题比较难解的时候，其对偶问题可能很容易求解</li>
+</ul>
+<h3 id="拆分">拆分</h3>
+<ul>
+<li>通过引入变量等方法，讲⼀个复杂的优化问题拆分成多个相对简单的问题</li>
+</ul>
 ]]></content>
       <categories>
-        <category>Java八股</category>
-        <category>并发</category>
+        <category>最优化方法</category>
       </categories>
       <tags>
-        <tag>Java</tag>
-        <tag>八股</tag>
-        <tag>并发</tag>
+        <tag>学科</tag>
+        <tag>最优化方法</tag>
       </tags>
   </entry>
 </search>
