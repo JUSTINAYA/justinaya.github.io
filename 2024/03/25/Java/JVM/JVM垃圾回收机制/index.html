@@ -27,7 +27,7 @@
 <meta property="og:description" content="关于JVM的垃圾回收机制的一些问题">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-03-25T12:11:43.000Z">
-<meta property="article:modified_time" content="2024-03-27T08:01:01.611Z">
+<meta property="article:modified_time" content="2024-03-27T12:46:19.357Z">
 <meta property="article:author" content="文文的短发">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="八股">
@@ -145,7 +145,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%9E%83%E5%9C%BE"><span class="nav-text">什么样的对象是垃圾？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E5%9E%83%E5%9C%BE%E5%9E%83%E5%9C%BE%E5%88%A4%E6%96%AD%E7%AE%97%E6%B3%95"><span class="nav-text">如何判断垃圾（垃圾判断算法）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E7%94%A8%E8%AE%A1%E6%95%B0%E6%B3%95"><span class="nav-text">引用计数法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%AF%E8%BE%BE%E6%80%A7%E5%88%86%E6%9E%90%E7%AE%97%E6%B3%95"><span class="nav-text">可达性分析算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AF%E4%BD%9C%E4%B8%BAgc-roots%E7%9A%84%E5%AF%B9%E8%B1%A1"><span class="nav-text">可作为GC Roots的对象</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#stop-the-world"><span class="nav-text">Stop The World</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E6%A0%87%E8%AE%B0%E9%9C%80%E8%A6%81%E5%9B%9E%E6%94%B6%E7%9A%84%E5%9E%83%E5%9C%BE%E4%B8%89%E8%89%B2%E6%A0%87%E8%AE%B0%E7%AE%97%E6%B3%95"><span class="nav-text">如何标记需要回收的垃圾（三色标记算法）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E8%89%B2%E6%A0%87%E8%AE%B0%E7%9A%84%E5%9B%9B%E4%B8%AA%E6%AD%A5%E9%AA%A4"><span class="nav-text">三色标记的四个步骤</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%9B%9E%E6%94%B6%E5%9E%83%E5%9C%BE%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E7%AE%97%E6%B3%95"><span class="nav-text">如何回收垃圾（垃圾收集算法）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%87%E8%AE%B0-%E6%B8%85%E9%99%A4%E7%AE%97%E6%B3%95"><span class="nav-text">标记-清除算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%8D%E5%88%B6%E7%AE%97%E6%B3%95"><span class="nav-text">复制算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%87%E8%AE%B0-%E6%95%B4%E7%90%86%E7%AE%97%E6%B3%95"><span class="nav-text">标记-整理算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E4%BB%A3%E6%94%B6%E9%9B%86%E7%AE%97%E6%B3%95"><span class="nav-text">分代收集算法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%B0%E7%94%9F%E4%BB%A3%E5%92%8C%E8%80%81%E5%B9%B4%E4%BB%A3"><span class="nav-text">新生代和老年代</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#eden%E5%8C%BA"><span class="nav-text">Eden区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#survivor%E5%8C%BA"><span class="nav-text">Survivor区</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81survivor%E5%8C%BA"><span class="nav-text">1、为什么需要Survivor区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#survivor-%E5%8C%BA%E4%B8%BA%E5%95%A5%E5%88%92%E5%88%86%E4%B8%BA%E4%B8%A4%E5%9D%97"><span class="nav-text">2、Survivor 区为啥划分为两块？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#old%E5%8C%BA"><span class="nav-text">Old区</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%A7%E5%AF%B9%E8%B1%A1"><span class="nav-text">1、大对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%95%BF%E6%9C%9F%E5%AD%98%E6%B4%BB%E5%AF%B9%E8%B1%A1"><span class="nav-text">2、长期存活对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E5%AF%B9%E8%B1%A1%E5%B9%B4%E9%BE%84"><span class="nav-text">3、动态对象年龄</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E5%99%A8"><span class="nav-text">垃圾收集器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E4%BB%A3%E6%94%B6%E9%9B%86%E5%99%A8"><span class="nav-text">分代收集器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#cms"><span class="nav-text">CMS</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E5%8C%BA%E6%94%B6%E9%9B%86%E5%99%A8"><span class="nav-text">分区收集器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#g1"><span class="nav-text">G1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#zgc"><span class="nav-text">ZGC</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8C%87%E9%92%88%E6%9F%93%E8%89%B2"><span class="nav-text">指针染色</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%BB%E5%B1%8F%E9%9A%9C"><span class="nav-text">读屏障</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#zgc-%E7%9A%84%E5%B7%A5%E4%BD%9C%E8%BF%87%E7%A8%8B"><span class="nav-text">ZGC 的工作过程</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#stop-the-world-%E6%9A%82%E5%81%9C%E9%98%B6%E6%AE%B5"><span class="nav-text">Stop-The-World 暂停阶段</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%B9%B6%E5%8F%91%E9%98%B6%E6%AE%B5"><span class="nav-text">并发阶段</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%9E%83%E5%9C%BE"><span class="nav-text">什么样的对象是垃圾？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E5%9E%83%E5%9C%BE%E5%9E%83%E5%9C%BE%E5%88%A4%E6%96%AD%E7%AE%97%E6%B3%95"><span class="nav-text">如何判断垃圾（垃圾判断算法）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E7%94%A8%E8%AE%A1%E6%95%B0%E6%B3%95"><span class="nav-text">引用计数法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%AF%E8%BE%BE%E6%80%A7%E5%88%86%E6%9E%90%E7%AE%97%E6%B3%95"><span class="nav-text">可达性分析算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AF%E4%BD%9C%E4%B8%BAgc-roots%E7%9A%84%E5%AF%B9%E8%B1%A1"><span class="nav-text">可作为GC Roots的对象</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#stop-the-world"><span class="nav-text">Stop The World</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E6%A0%87%E8%AE%B0%E9%9C%80%E8%A6%81%E5%9B%9E%E6%94%B6%E7%9A%84%E5%9E%83%E5%9C%BE%E4%B8%89%E8%89%B2%E6%A0%87%E8%AE%B0%E7%AE%97%E6%B3%95"><span class="nav-text">如何标记需要回收的垃圾（三色标记算法）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E8%89%B2%E6%A0%87%E8%AE%B0%E7%AE%97%E6%B3%95%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-text">三色标记算法是什么</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E4%B8%89%E8%89%B2"><span class="nav-text">什么是三色</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E8%89%B2%E6%A0%87%E8%AE%B0%E7%9A%84%E6%AD%A5%E9%AA%A4"><span class="nav-text">三色标记的步骤</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%9B%9E%E6%94%B6%E5%9E%83%E5%9C%BE%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E7%AE%97%E6%B3%95"><span class="nav-text">如何回收垃圾（垃圾收集算法）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%87%E8%AE%B0-%E6%B8%85%E9%99%A4%E7%AE%97%E6%B3%95"><span class="nav-text">标记-清除算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%8D%E5%88%B6%E7%AE%97%E6%B3%95"><span class="nav-text">复制算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%87%E8%AE%B0-%E6%95%B4%E7%90%86%E7%AE%97%E6%B3%95"><span class="nav-text">标记-整理算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E4%BB%A3%E6%94%B6%E9%9B%86%E7%AE%97%E6%B3%95"><span class="nav-text">分代收集算法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%B0%E7%94%9F%E4%BB%A3%E5%92%8C%E8%80%81%E5%B9%B4%E4%BB%A3"><span class="nav-text">新生代和老年代</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#eden%E5%8C%BA"><span class="nav-text">Eden区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#survivor%E5%8C%BA"><span class="nav-text">Survivor区</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81survivor%E5%8C%BA"><span class="nav-text">1、为什么需要Survivor区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#survivor-%E5%8C%BA%E4%B8%BA%E5%95%A5%E5%88%92%E5%88%86%E4%B8%BA%E4%B8%A4%E5%9D%97"><span class="nav-text">2、Survivor 区为啥划分为两块？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#old%E5%8C%BA"><span class="nav-text">Old区</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%A7%E5%AF%B9%E8%B1%A1"><span class="nav-text">1、大对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%95%BF%E6%9C%9F%E5%AD%98%E6%B4%BB%E5%AF%B9%E8%B1%A1"><span class="nav-text">2、长期存活对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E5%AF%B9%E8%B1%A1%E5%B9%B4%E9%BE%84"><span class="nav-text">3、动态对象年龄</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E5%99%A8"><span class="nav-text">垃圾收集器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E4%BB%A3%E6%94%B6%E9%9B%86%E5%99%A8"><span class="nav-text">分代收集器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#cms"><span class="nav-text">CMS</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E5%8C%BA%E6%94%B6%E9%9B%86%E5%99%A8"><span class="nav-text">分区收集器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#g1"><span class="nav-text">G1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#zgc"><span class="nav-text">ZGC</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8C%87%E9%92%88%E6%9F%93%E8%89%B2"><span class="nav-text">指针染色</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%BB%E5%B1%8F%E9%9A%9C"><span class="nav-text">读屏障</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#zgc-%E7%9A%84%E5%B7%A5%E4%BD%9C%E8%BF%87%E7%A8%8B"><span class="nav-text">ZGC 的工作过程</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#stop-the-world-%E6%9A%82%E5%81%9C%E9%98%B6%E6%AE%B5"><span class="nav-text">Stop-The-World 暂停阶段</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%B9%B6%E5%8F%91%E9%98%B6%E6%AE%B5"><span class="nav-text">并发阶段</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -260,7 +260,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-03-27 16:01:01" itemprop="dateModified" datetime="2024-03-27T16:01:01+08:00">2024-03-27</time>
+      <time title="修改时间：2024-03-27 20:46:19" itemprop="dateModified" datetime="2024-03-27T20:46:19+08:00">2024-03-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -337,10 +337,20 @@ World"的时间，通过并发的垃圾收集，提高应用的响应性能。</
 垃圾收集中必须面对的一个挑战，其目标是在保证内存的有效利用和应用的响应性能之间找到一个平衡。</p>
 <h1
 id="如何标记需要回收的垃圾三色标记算法">如何标记需要回收的垃圾（三色标记算法）</h1>
-<h2 id="三色标记的四个步骤">三色标记的四个步骤</h2>
+<h2 id="三色标记算法是什么">三色标记算法是什么</h2>
+<p>三色标记算法是一种常见的垃圾收集的标记算法，属于根可达算法的一个分支，垃圾收集器CMS，G1在标记垃圾过程中就使用该算法。</p>
+<h3 id="什么是三色">什么是三色</h3>
+<p>三色指的是白色，灰色，黑色（white，gray，black）。抽象的理解，可以认为垃圾收集器在标记阶段将对象染成不同的颜色，根据不同的颜色做不同处理。那么三种染色的对象分别指什么呢？</p>
 <ul>
-<li>初始标记阶段：</li>
+<li>白色：未被扫描到的对象，可达性分析后最终为白色的对象就是垃圾对象（在标记开始时堆内存中的对象都白色的）</li>
+<li>灰色：对象本身被扫描（根可达对象），但该对象的子对象未完成扫描；灰色是一个<code>过渡色</code>，最终都会被标记为<code>黑色</code>。</li>
+<li>黑色：根对象或者该对象与它的子对象均被扫描（存活的对象，不会被清理）</li>
 </ul>
+<h2 id="三色标记的步骤">三色标记的步骤</h2>
+<p><img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403272045933.JPG" /></p>
+<p><img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403272046857.JPG" /></p>
 <h1 id="如何回收垃圾垃圾收集算法">如何回收垃圾（垃圾收集算法）</h1>
 <h2 id="标记-清除算法">标记-清除算法</h2>
 <p>标记-清除（Mark-and-Sweep）算法分为“标记（Mark）”和“清除（Sweep）”阶段：首先标记出所有需要回收的对象（用可达性算法），在标记完成后统一回收掉这些对象。</p>
@@ -525,20 +535,22 @@ the World」。
 <p><img
 src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403261345866.png" /></p>
 <p>CMS 的优点是：并发收集、低停顿。但缺点也很明显：</p>
-<p>①、对 CPU 资源非常敏感，因此在 CPU 资源紧张的情况下，CMS
+<p>1、对 CPU 资源非常敏感，因此在 CPU 资源紧张的情况下，CMS
 的性能会大打折扣。</p>
 <p>默认情况下，CMS
 启用的垃圾回收线程数是<code>（CPU数量 + 3)/4</code>，当 CPU
 数量很大时，启用的垃圾回收线程数占比就越小。但如果 CPU
 数量很小，例如只有 2 个 CPU，垃圾回收线程占用就达到了
 50%，这极大地降低系统的吞吐量，无法接受。</p>
-<p>②、CMS
+<p>2、CMS
 采用的是「标记-清除」算法，会产生大量的内存碎片，导致空间不连续，当出现大对象无法找到连续的内存空间时，就会触发一次
 Full GC，这会导致系统的停顿时间变长。</p>
-<p>③、CMS 无法处理浮动垃圾，当 CMS
+<p>3、CMS 无法处理浮动垃圾，当 CMS
 在进行垃圾回收的时候，应用程序还在不断地产生垃圾，这些垃圾会在 CMS
 垃圾回收结束之后产生，这些垃圾就是浮动垃圾，CMS
 无法处理这些浮动垃圾，只能在下一次 GC 时清理掉。</p>
+<p>4、可能出现并发模式失败。CMS的目标就是在回收老年代对象时与用户线程并发运行，如果垃圾回收时应用线程向老年代请求分配的空间超过预留空间，就会抛出"<code>concurrent mode failure</code>"（并发模式失败），此时CMS会暂停用户线程的执行，启用
+<code>Serial Old</code> 收集器来重新进行老年代的垃圾收集。</p>
 <h2 id="分区收集器">分区收集器</h2>
 <h3 id="g1">G1</h3>
 <p>G1（Garbage-First Garbage Collector）在 JDK 1.7 时引入，在 JDK 9
