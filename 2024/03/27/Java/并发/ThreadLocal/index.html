@@ -19,30 +19,29 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.justinchoi.top","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.18.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="aya   图片来源于《东方铃奈庵》  个人简介  昵称：文文的短发、Justin Choi 性别：男 爱好：足球、音乐、摇滚、东方project、射命丸文 说明：本人是个东方厨，主厨射命丸文，还是个在校大学生，有个厨魔理沙的可爱女友(❁´◡&#96;❁)  联系方式  邮箱：2813970520@qq.com 博客：https:&#x2F;&#x2F;www.justinchoi.t">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于我">
-<meta property="og:url" content="http://www.justinchoi.top/about/index.html">
+    <meta name="description" content="ThreadLocal有什么用 ThreadLocal为每个使用该变量的线程提供一个副本，每个线程都可以独立修改自己的副本，而不会与其他线程的副本产生冲突。 通常情况下，我们创建的变量是可以被任何一个线程访问并修改的。如果想实现每一个线程都有自己的专属本地变量该如何解决呢？ JDK 中自带的ThreadLocal类正是为了解决这样的问题。 ThreadLocal类主要解决的就是让每个线程绑">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ThreadLocal">
+<meta property="og:url" content="http://www.justinchoi.top/2024/03/27/Java/%E5%B9%B6%E5%8F%91/ThreadLocal/index.html">
 <meta property="og:site_name" content="文文的短发">
-<meta property="og:description" content="aya   图片来源于《东方铃奈庵》  个人简介  昵称：文文的短发、Justin Choi 性别：男 爱好：足球、音乐、摇滚、东方project、射命丸文 说明：本人是个东方厨，主厨射命丸文，还是个在校大学生，有个厨魔理沙的可爱女友(❁´◡&#96;❁)  联系方式  邮箱：2813970520@qq.com 博客：https:&#x2F;&#x2F;www.justinchoi.t">
+<meta property="og:description" content="ThreadLocal有什么用 ThreadLocal为每个使用该变量的线程提供一个副本，每个线程都可以独立修改自己的副本，而不会与其他线程的副本产生冲突。 通常情况下，我们创建的变量是可以被任何一个线程访问并修改的。如果想实现每一个线程都有自己的专属本地变量该如何解决呢？ JDK 中自带的ThreadLocal类正是为了解决这样的问题。 ThreadLocal类主要解决的就是让每个线程绑">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://www.justinchoi.top/img/headimg.JPG">
-<meta property="article:published_time" content="2023-01-31T16:53:08.000Z">
-<meta property="article:modified_time" content="2023-09-22T09:55:24.066Z">
+<meta property="article:published_time" content="2024-03-27T13:34:40.000Z">
+<meta property="article:modified_time" content="2024-03-27T14:25:58.852Z">
 <meta property="article:author" content="文文的短发">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="八股">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://www.justinchoi.top/img/headimg.JPG">
 
 
-<link rel="canonical" href="http://www.justinchoi.top/about/">
+<link rel="canonical" href="http://www.justinchoi.top/2024/03/27/Java/%E5%B9%B6%E5%8F%91/ThreadLocal/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":true,"permalink":"http://www.justinchoi.top/about/index.html","path":"about/index.html","title":"关于我"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://www.justinchoi.top/2024/03/27/Java/%E5%B9%B6%E5%8F%91/ThreadLocal/","path":"2024/03/27/Java/并发/ThreadLocal/","title":"ThreadLocal"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>关于我 | 文文的短发
-</title>
+<title>ThreadLocal | 文文的短发</title>
   
 
 
@@ -145,7 +144,8 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%AA%E4%BA%BA%E7%AE%80%E4%BB%8B"><span class="nav-text">个人简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F"><span class="nav-text">联系方式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2"><span class="nav-text">关于博客</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8A%80%E6%9C%AF%E6%A0%88"><span class="nav-text">技术栈</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%83%B3%E8%AF%B4%E7%9A%84%E8%AF%9D"><span class="nav-text">想说的话</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#threadlocal%E6%9C%89%E4%BB%80%E4%B9%88%E7%94%A8"><span class="nav-text">ThreadLocal有什么用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#threadlocal-%E5%86%85%E5%AD%98%E6%B3%84%E9%9C%B2%E6%98%AF%E6%80%8E%E4%B9%88%E5%9B%9E%E4%BA%8B"><span class="nav-text">ThreadLocal
+内存泄露是怎么回事</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -213,75 +213,138 @@
 
     </div>
 
-    <div class="main-inner page posts-expand">
+    <div class="main-inner post posts-expand">
 
 
-    
-    
-    
-    <div class="post-block" lang="zh-CN"><header class="post-header">
+  
 
-<h1 class="post-title" itemprop="name headline">关于我
-</h1>
 
-<div class="post-meta-container">
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.justinchoi.top/2024/03/27/Java/%E5%B9%B6%E5%8F%91/ThreadLocal/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/headimg.JPG">
+      <meta itemprop="name" content="文文的短发">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="文文的短发">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="ThreadLocal | 文文的短发">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          ThreadLocal
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-03-27 21:34:40 / 修改时间：22:25:58" itemprop="dateCreated datePublished" datetime="2024-03-27T21:34:40+08:00">2024-03-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Java%E5%85%AB%E8%82%A1/" itemprop="url" rel="index"><span itemprop="name">Java八股</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Java%E5%85%AB%E8%82%A1/%E5%B9%B6%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">并发</span></a>
+        </span>
+    </span>
+
+  
 </div>
 
-</header>
+        </div>
+      </header>
 
-      
-      
-      <div class="post-body">
-          <figure>
-<img src="../img/headimg.JPG" alt="aya" />
-<figcaption aria-hidden="true">aya</figcaption>
-</figure>
-<center>
-图片来源于《东方铃奈庵》
-</center>
-<h1 id="个人简介">个人简介</h1>
-<ul>
-<li><p>昵称：<strong>文文的短发</strong>、<strong>Justin
-Choi</strong></p></li>
-<li><p>性别：男</p></li>
-<li><p>爱好：足球、音乐、摇滚、东方project、射命丸文</p></li>
-<li><p>说明：本人是个东方厨，主厨射命丸文，还是个在校大学生，有个厨魔理沙的可爱女友(❁´◡`❁)</p></li>
-</ul>
-<h1 id="联系方式">联系方式</h1>
-<ul>
-<li><p>邮箱：2813970520@qq.com</p></li>
-<li><p>博客：<a
-href="https://www.justinchoi.top">https://www.justinchoi.top</a></p></li>
-<li><p>B站：<a
-target="_blank" rel="noopener" href="https://space.bilibili.com/21725457?spm_id_from=333.1007.0.0">https://space.bilibili.com/21725457?spm_id_from=333.1007.0.0</a></p></li>
-</ul>
-<h1 id="关于博客">关于博客</h1>
-<ul>
-<li>框架：Hexo 框架</li>
-<li>主题：Next 主题</li>
-<li>博客中部分图片源于网络，侵删！</li>
-<li>转载也请标明出处哦！</li>
-</ul>
-<h1 id="技术栈">技术栈</h1>
-<ul>
-<li>C/C++</li>
-<li>Python</li>
-<li>HTML</li>
-<li>CSS</li>
-<li>JavaScript</li>
-<li>markdown</li>
-</ul>
-<h1 id="想说的话">想说的话</h1>
-<p>Code for Tai</p>
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="threadlocal有什么用">ThreadLocal有什么用</h1>
+<p><code>ThreadLocal</code>为每个使用该变量的线程提供一个副本，每个线程都可以独立修改自己的副本，而不会与其他线程的副本产生冲突。</p>
+<p>通常情况下，我们创建的变量是可以被任何一个线程访问并修改的。<strong>如果想实现每一个线程都有自己的专属本地变量该如何解决呢？</strong></p>
+<p>JDK 中自带的<code>ThreadLocal</code>类正是为了解决这样的问题。
+<strong><code>ThreadLocal</code>类主要解决的就是让每个线程绑定自己的值，可以将<code>ThreadLocal</code>类形象的比喻成存放数据的盒子，盒子中可以存储每个线程的私有数据。</strong></p>
+<p>如果你创建了一个<code>ThreadLocal</code>变量，那么访问这个变量的每个线程都会有这个变量的本地副本，这也是<code>ThreadLocal</code>变量名的由来。他们可以使用
+<code>get()</code> 和 <code>set()</code>
+方法来获取默认值或将其值更改为当前线程所存的副本的值，从而避免了线程安全问题。</p>
+<p>再举个简单的例子：两个人去宝屋收集宝物，这两个共用一个袋子的话肯定会产生争执，但是给他们两个人每个人分配一个袋子的话就不会出现这样的问题。如果把这两个人比作线程的话，那么
+ThreadLocal 就是用来避免这两个线程竞争的。</p>
+<h1 id="threadlocal-内存泄露是怎么回事">ThreadLocal
+内存泄露是怎么回事</h1>
+<p><code>ThreadLocalMap</code> 中使用的 key 为 <code>ThreadLocal</code>
+的弱引用，而 value 是强引用。所以，如果 <code>ThreadLocal</code>
+没有被外部强引用的情况下，在垃圾回收的时候，key 会被清理掉，而 value
+不会被清理掉。</p>
+<p>这样一来，<code>ThreadLocalMap</code> 中就会出现 key 为 null 的
+Entry。假如我们不做任何措施的话，value 永远无法被 GC
+回收，这个时候就可能会产生内存泄露。<code>ThreadLocalMap</code>
+实现中已经考虑了这种情况，在调用
+<code>set()</code>、<code>get()</code>、<code>remove()</code>
+方法的时候，会清理掉 key 为 null 的记录。使用完
+<code>ThreadLocal</code>方法后最好手动调用<code>remove()</code>方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> <span class="keyword">class</span> <span class="title class_">Entry</span> <span class="keyword">extends</span> <span class="title class_">WeakReference</span>&lt;ThreadLocal&lt;?&gt;&gt; &#123;</span><br><span class="line">    <span class="comment">/** The value associated with this ThreadLocal. */</span></span><br><span class="line">    Object value;</span><br><span class="line"></span><br><span class="line">    Entry(ThreadLocal&lt;?&gt; k, Object v) &#123;</span><br><span class="line">        <span class="built_in">super</span>(k);</span><br><span class="line">        value = v;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>弱引用介绍：</strong></p>
+<blockquote>
+<p>如果一个对象只具有弱引用，那就类似于<strong>可有可无的生活用品</strong>。弱引用与软引用的区别在于：只具有弱引用的对象拥有更短暂的生命周期。在垃圾回收器线程扫描它
+所管辖的内存区域的过程中，一旦发现了只具有弱引用的对象，不管当前内存空间足够与否，都会回收它的内存。不过，由于垃圾回收器是一个优先级很低的线程，
+因此不一定会很快发现那些只具有弱引用的对象。</p>
+<p>弱引用可以和一个引用队列（ReferenceQueue）联合使用，如果弱引用所引用的对象被垃圾回收，Java
+虚拟机就会把这个弱引用加入到与之关联的引用队列中。</p>
+</blockquote>
 
-      </div>
-      
-      
-      
     </div>
 
     
     
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Java/" rel="tag"># Java</a>
+              <a href="/tags/%E5%85%AB%E8%82%A1/" rel="tag"># 八股</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/03/25/Java/JVM/JVM%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6/" rel="prev" title="JVM垃圾回收机制">
+                  <i class="fa fa-angle-left"></i> JVM垃圾回收机制
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2024/03/27/Java/%E5%B9%B6%E5%8F%91/%E7%BA%BF%E7%A8%8B%E6%B1%A0/" rel="next" title="线程池">
+                  线程池 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
 
 
 </div>
