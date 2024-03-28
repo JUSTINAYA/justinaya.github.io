@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/aya.JPG">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/aya.JPG">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/aya.JPG">
+  <link rel="mask-icon" href="/images/aya.JPG" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.justinchoi.top","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.18.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="关于类加载过程的一些问题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="类加载过程">
+<meta property="og:url" content="http://www.justinchoi.top/2024/03/28/Java/JVM/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E8%BF%87%E7%A8%8B/index.html">
+<meta property="og:site_name" content="文文的短发">
+<meta property="og:description" content="关于类加载过程的一些问题">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-03-28T03:46:12.000Z">
+<meta property="article:modified_time" content="2024-03-28T03:51:31.954Z">
+<meta property="article:author" content="文文的短发">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="八股">
+<meta property="article:tag" content="JVM">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://www.justinchoi.top/2024/03/28/Java/JVM/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E8%BF%87%E7%A8%8B/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://www.justinchoi.top/2024/03/28/Java/JVM/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E8%BF%87%E7%A8%8B/","path":"2024/03/28/Java/JVM/类加载过程/","title":"类加载过程"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>类加载过程 | 文文的短发</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">文文的短发</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%B1%BB%E7%9A%84%E5%A3%B0%E6%98%8E%E5%91%A8%E6%9C%9F"><span class="nav-text">类的声明周期</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%B1%BB%E5%8A%A0%E8%BD%BD%E8%BF%87%E7%A8%8B"><span class="nav-text">类加载过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A0%E8%BD%BD"><span class="nav-text">加载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%AA%8C%E8%AF%81"><span class="nav-text">验证</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%86%E5%A4%87"><span class="nav-text">准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90"><span class="nav-text">解析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-text">初始化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB%E5%8D%B8%E8%BD%BD"><span class="nav-text">类卸载</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="文文的短发"
+      src="/img/headimg.JPG">
+  <p class="site-author-name" itemprop="name">文文的短发</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">29</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/JUSTINAYA" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;JUSTINAYA" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:justinchoi929@gmail.com" title="E-Mail → mailto:justinchoi929@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://github.com/bingxueailin" title="https:&#x2F;&#x2F;github.com&#x2F;bingxueailin" rel="noopener" target="_blank">软软萌萌的[冰雪艾琳]</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="http://wonz.wang/" title="http:&#x2F;&#x2F;wonz.wang&#x2F;" rel="noopener" target="_blank">厉害的[Wonz]学长的Blog</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://www.cnblogs.com/Asaka-QianXiang/" title="https:&#x2F;&#x2F;www.cnblogs.com&#x2F;Asaka-QianXiang&#x2F;" rel="noopener" target="_blank">绩点高的[药佬]的Blog</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.justinchoi.top/2024/03/28/Java/JVM/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E8%BF%87%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/headimg.JPG">
+      <meta itemprop="name" content="文文的短发">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="文文的短发">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="类加载过程 | 文文的短发">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          类加载过程
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-03-28 11:46:12 / 修改时间：11:51:31" itemprop="dateCreated datePublished" datetime="2024-03-28T11:46:12+08:00">2024-03-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Java%E5%85%AB%E8%82%A1/" itemprop="url" rel="index"><span itemprop="name">Java八股</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Java%E5%85%AB%E8%82%A1/JVM/" itemprop="url" rel="index"><span itemprop="name">JVM</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><blockquote>
+<p>关于类加载过程的一些问题</p>
+</blockquote>
+<span id="more"></span>
+<h1 id="类的声明周期">类的声明周期</h1>
+<p>类从被加载到虚拟机内存中开始到卸载出内存为止，它的整个生命周期可以简单概括为
+7
+个阶段：：加载（Loading）、验证（Verification）、准备（Preparation）、解析（Resolution）、初始化（Initialization）、使用（Using）和卸载（Unloading）。其中，验证、准备和解析这三个阶段可以统称为连接（Linking）。</p>
+<p>这 7 个阶段的顺序如下图所示：</p>
+<figure>
+<img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403281147618.png"
+alt="一个类的完整生命周期 图源：JavaGuide" />
+<figcaption aria-hidden="true">一个类的完整生命周期
+图源：JavaGuide</figcaption>
+</figure>
+<h1 id="类加载过程">类加载过程</h1>
+<p><strong>Class
+文件需要加载到虚拟机中之后才能运行和使用，那么虚拟机是如何加载这些 Class
+文件呢？</strong></p>
+<p>系统加载 Class
+类型的文件主要三步：<strong>加载-&gt;连接-&gt;初始化</strong>。连接过程又可分为三步：<strong>验证-&gt;准备-&gt;解析</strong>。</p>
+<figure>
+<img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403281148566.png"
+alt="类加载过程 图源：JavaGuide" />
+<figcaption aria-hidden="true">类加载过程 图源：JavaGuide</figcaption>
+</figure>
+<h2 id="加载">加载</h2>
+<p>类加载过程的第一步，主要完成下面 3 件事情：</p>
+<ol type="1">
+<li>通过全类名获取定义此类的二进制字节流。</li>
+<li>将字节流所代表的静态存储结构转换为方法区的运行时数据结构。</li>
+<li>在内存中生成一个代表该类的 <code>Class</code>
+对象，作为方法区这些数据的访问入口。</li>
+</ol>
+<p>虚拟机规范上面这 3
+点并不具体，因此是非常灵活的。比如："通过全类名获取定义此类的二进制字节流"
+并没有指明具体从哪里获取（ <code>ZIP</code>、
+<code>JAR</code>、<code>EAR</code>、<code>WAR</code>、网络、动态代理技术运行时动态生成、其他文件生成比如
+<code>JSP</code>...）、怎样获取。</p>
+<p>加载这一步主要是通过我们后面要讲到的 <strong>类加载器</strong>
+完成的。类加载器有很多种，当我们想要加载一个类的时候，具体是哪个类加载器加载由
+<strong>双亲委派模型</strong>
+决定（不过，我们也能打破由双亲委派模型）。</p>
+<blockquote>
+<p>类加载器、双亲委派模型也是非常重要的知识点，这部分内容在<a
+target="_blank" rel="noopener" href="https://javaguide.cn/java/jvm/classloader.html">类加载器详解open
+in new
+window</a>这篇文章中有详细介绍到。阅读本篇文章的时候，大家知道有这么个东西就可以了。</p>
+</blockquote>
+<p>每个 Java 类都有一个引用指向加载它的
+<code>ClassLoader</code>。不过，数组类不是通过 <code>ClassLoader</code>
+创建的，而是 JVM
+在需要的时候自动创建的，数组类通过<code>getClassLoader()</code>方法获取
+<code>ClassLoader</code> 的时候和该数组的元素类型的
+<code>ClassLoader</code> 是一致的。</p>
+<p>一个非数组类的加载阶段（加载阶段获取类的二进制字节流的动作）是可控性最强的阶段，这一步我们可以去完成还可以自定义类加载器去控制字节流的获取方式（重写一个类加载器的
+<code>loadClass()</code> 方法）。</p>
+<p>加载阶段与连接阶段的部分动作(如一部分字节码文件格式验证动作)是交叉进行的，加载阶段尚未结束，连接阶段可能就已经开始了。</p>
+<h2 id="验证">验证</h2>
+<p><strong>验证是连接阶段的第一步，这一阶段的目的是确保 Class
+文件的字节流中包含的信息符合《Java
+虚拟机规范》的全部约束要求，保证这些信息被当作代码运行后不会危害虚拟机自身的安全。</strong></p>
+<p>验证阶段这一步在整个类加载过程中耗费的资源还是相对较多的，但很有必要，可以有效防止恶意代码的执行。任何时候，程序安全都是第一位。</p>
+<p>不过，验证阶段也不是必须要执行的阶段。如果程序运行的全部代码(包括自己编写的、第三方包中的、从外部加载的、动态生成的等所有代码)都已经被反复使用和验证过，在生产环境的实施阶段就可以考虑使用
+<code>-Xverify:none</code>
+参数来关闭大部分的类验证措施，以缩短虚拟机类加载的时间。</p>
+<p>验证阶段主要由四个检验阶段组成：</p>
+<ol type="1">
+<li>文件格式验证（Class 文件格式检查）</li>
+<li>元数据验证（字节码语义检查）</li>
+<li>字节码验证（程序语义检查）</li>
+<li>符号引用验证（类的正确性检查）</li>
+</ol>
+<figure>
+<img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403281149128.png"
+alt="验证阶段示意图" />
+<figcaption aria-hidden="true">验证阶段示意图</figcaption>
+</figure>
+<p>文件格式验证这一阶段是基于该类的二进制字节流进行的，主要目的是保证输入的字节流能正确地解析并存储于方法区之内，格式上符合描述一个
+Java
+类型信息的要求。除了这一阶段之外，其余三个验证阶段都是基于方法区的存储结构上进行的，不会再直接读取、操作字节流了。</p>
+<blockquote>
+<p>方法区属于是 JVM
+运行时数据区域的一块逻辑区域，是各个线程共享的内存区域。当虚拟机要使用一个类时，它需要读取并解析
+Class
+文件获取相关信息，再将信息存入到方法区。方法区会存储已被虚拟机加载的
+<strong>类信息、字段信息、方法信息、常量、静态变量、即时编译器编译后的代码缓存等数据</strong>。</p>
+<p>关于方法区的详细介绍，推荐阅读 <a
+target="_blank" rel="noopener" href="https://javaguide.cn/java/jvm/memory-area.html">Java
+内存区域详解open in new window</a> 这篇文章。</p>
+</blockquote>
+<p>符号引用验证发生在类加载过程中的解析阶段，具体点说是 JVM
+将符号引用转化为直接引用的时候（解析阶段会介绍符号引用和直接引用）。</p>
+<p>符号引用验证的主要目的是确保解析阶段能正常执行，如果无法通过符号引用验证，JVM
+会抛出异常，比如：</p>
+<ul>
+<li><code>java.lang.IllegalAccessError</code>：当类试图访问或修改它没有权限访问的字段，或调用它没有权限访问的方法时，抛出该异常。</li>
+<li><code>java.lang.NoSuchFieldError</code>：当类试图访问或修改一个指定的对象字段，而该对象不再包含该字段时，抛出该异常。</li>
+<li><code>java.lang.NoSuchMethodError</code>：当类试图访问一个指定的方法，而该方法不存在时，抛出该异常。</li>
+<li>……</li>
+</ul>
+<h2 id="准备">准备</h2>
+<p><strong>准备阶段是正式为类变量分配内存并设置类变量初始值的阶段</strong>，这些内存都将在方法区中分配。对于该阶段有以下几点需要注意：</p>
+<ol type="1">
+<li>这时候进行内存分配的仅包括类变量（ Class Variables ，即静态变量，被
+<code>static</code>
+关键字修饰的变量，只与类相关，因此被称为类变量），而不包括实例变量。实例变量会在对象实例化时随着对象一块分配在
+Java 堆中。</li>
+<li>从概念上讲，类变量所使用的内存都应当在 <strong>方法区</strong>
+中进行分配。不过有一点需要注意的是：JDK 7 之前，HotSpot
+使用永久代来实现方法区的时候，实现是完全符合这种逻辑概念的。 而在 JDK 7
+及之后，HotSpot
+已经把原本放在永久代的字符串常量池、静态变量等移动到堆中，这个时候类变量则会随着
+Class 对象一起存放在 Java 堆中。相关阅读：<a
+target="_blank" rel="noopener" href="https://github.com/fenixsoft/jvm_book/issues/75">《深入理解 Java
+虚拟机（第 3 版）》勘误#75open in new window</a></li>
+<li>这里所设置的初始值"通常情况"下是数据类型默认的零值（如
+0、0L、null、false
+等），比如我们定义了<code>public static int value=111</code> ，那么
+value 变量在准备阶段的初始值就是 0 而不是
+111（初始化阶段才会赋值）。特殊情况：比如给 value 变量加上了 final
+关键字<code>public static final int value=111</code> ，那么准备阶段
+value 的值就被赋值为 111。</li>
+</ol>
+<p><strong>基本数据类型的零值</strong>：(图片来自《深入理解 Java
+虚拟机》第 3 版 7.33 )</p>
+<figure>
+<img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403281150766.png"
+alt="基本数据类型的零值" />
+<figcaption aria-hidden="true">基本数据类型的零值</figcaption>
+</figure>
+<h2 id="解析">解析</h2>
+<p><strong>解析阶段是虚拟机将常量池内的符号引用替换为直接引用的过程。</strong>
+解析动作主要针对类或接口、字段、类方法、接口方法、方法类型、方法句柄和调用限定符
+7 类符号引用进行。</p>
+<p>《深入理解 Java 虚拟机》7.34
+节第三版对符号引用和直接引用的解释如下：</p>
+<figure>
+<img
+src="https://cdn.jsdelivr.net/gh/JUSTINAYA/My-ImgHost@main/img/202403281150770.png"
+alt="符号引用和直接引用" />
+<figcaption aria-hidden="true">符号引用和直接引用</figcaption>
+</figure>
+<p>举个例子：在程序执行方法时，系统需要明确知道这个方法所在的位置。Java
+虚拟机为每个类都准备了一张方法表来存放类中所有的方法。当需要调用一个类的方法的时候，只要知道这个方法在方法表中的偏移量就可以直接调用该方法了。通过解析操作符号引用就可以直接转变为目标方法在类中方法表的位置，从而使得方法可以被调用。</p>
+<p>综上，解析阶段是虚拟机将常量池内的符号引用替换为直接引用的过程，也就是得到类或者字段、方法在内存中的指针或者偏移量。</p>
+<h2 id="初始化">初始化</h2>
+<p>举个例子：在程序执行方法时，系统需要明确知道这个方法所在的位置。Java
+虚拟机为每个类都准备了一张方法表来存放类中所有的方法。当需要调用一个类的方法的时候，只要知道这个方法在方法表中的偏移量就可以直接调用该方法了。通过解析操作符号引用就可以直接转变为目标方法在类中方法表的位置，从而使得方法可以被调用。</p>
+<p>综上，解析阶段是虚拟机将常量池内的符号引用替换为直接引用的过程，也就是得到类或者字段、方法在内存中的指针或者偏移量。</p>
+<h2 id="类卸载">类卸载</h2>
+<p><strong>卸载类即该类的 Class 对象被 GC。</strong></p>
+<p>卸载类需要满足 3 个要求:</p>
+<ol type="1">
+<li>该类的所有的实例对象都已被 GC，也就是说堆不存在该类的实例对象。</li>
+<li>该类没有在其他任何地方被引用</li>
+<li>该类的类加载器的实例已被 GC</li>
+</ol>
+<p>所以，在 JVM 生命周期内，由 jvm
+自带的类加载器加载的类是不会被卸载的。但是由我们自定义的类加载器加载的类是可能被卸载的。</p>
+<p>只要想通一点就好了，JDK 自带的 <code>BootstrapClassLoader</code>,
+<code>ExtClassLoader</code>, <code>AppClassLoader</code> 负责加载 JDK
+提供的类，所以它们(类加载器的实例)肯定不会被回收。而我们自定义的类加载器的实例是可以被回收的，所以使用我们自定义加载器加载的类是可以被卸载掉的。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Java/" rel="tag"># Java</a>
+              <a href="/tags/%E5%85%AB%E8%82%A1/" rel="tag"># 八股</a>
+              <a href="/tags/JVM/" rel="tag"># JVM</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/03/27/Java/%E5%B9%B6%E5%8F%91/%E7%BA%BF%E7%A8%8B%E6%B1%A0/" rel="prev" title="线程池">
+                  <i class="fa fa-angle-left"></i> 线程池
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2024/03/28/Java/JVM/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8/" rel="next" title="类加载器">
+                  类加载器 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">文文的短发</span>
+  </div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+    本站访客数：<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+
+  
+  <script type="text/javascript"
+  color="0,0,0" opacity='0.3' zIndex="-1" count="75" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
+
+</body>
+</html>
